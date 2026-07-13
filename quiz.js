@@ -23,36 +23,10 @@
 
         // Límite gratuito: solo se muestran las primeras 50 preguntas
         const LIMITE_GRATIS = 50;
-
-        // Aleatorizar textos de opciones por pregunta (una sola vez por carga)
-        // manteniendo etiquetas a), b), c) al renderizar
-        window.quizData.forEach(function (item) {
-            if (item._shuffledOptions) return;
-            var opts = item.options.slice();
-            for (var a = opts.length - 1; a > 0; a--) {
-                var b = Math.floor(Math.random() * (a + 1));
-                var t = opts[a];
-                opts[a] = opts[b];
-                opts[b] = t;
-            }
-            item._shuffledOptions = opts;
-            item._shuffledCorrect = opts.indexOf(item.options[item.correct]);
-        });
-
-        var quizOrder = window.quizData.map(function (q, i) {
-            return { item: q, originalIndex: i };
-        });
-        for (var s = quizOrder.length - 1; s > 0; s--) {
-            var j = Math.floor(Math.random() * (s + 1));
-            var tmp = quizOrder[s];
-            quizOrder[s] = quizOrder[j];
-            quizOrder[j] = tmp;
-        }
-        var visibleCount = Math.min(quizOrder.length, LIMITE_GRATIS);
+        const visibleCount = Math.min(window.quizData.length, LIMITE_GRATIS);
 
         for (let index = 0; index < visibleCount; index++) {
-            var entry = quizOrder[index];
-            const item = entry.item;
+            const item = window.quizData[index];
             const card = document.createElement("div");
             card.className = "question-card";
 
@@ -64,10 +38,10 @@
             const list = document.createElement("ul");
             list.className = "options-list";
 
-            item._shuffledOptions.forEach(function (opt, idx) {
+            item.options.forEach(function (opt, idx) {
                 const li = document.createElement("li");
                 li.className = "option";
-                li.innerText = String.fromCharCode(97 + idx) + ") " + opt.replace(/^[a-z]\)\s*/i, "");
+                li.innerText = opt;
                 li.addEventListener("click", function () {
                     responder(list, li, idx, item, index);
                 });
@@ -101,10 +75,10 @@
                 card.appendChild(qText);
                 const list = document.createElement("ul");
                 list.className = "options-list";
-                item._shuffledOptions.forEach(function (opt, idx) {
+                item.options.forEach(function (opt, idx) {
                     const li = document.createElement("li");
                     li.className = "option";
-                    li.innerText = String.fromCharCode(97 + idx) + ") " + opt.replace(/^[a-z]\)\s*/i, "");
+                    li.innerText = opt;
                     li.addEventListener("click", function () {
                         responder(list, li, idx, item, index);
                     });
@@ -188,22 +162,22 @@
         const fb = document.getElementById("fb-" + index);
         fb.style.display = "block";
 
-        if (idxElegido === item._shuffledCorrect) {
+        if (idxElegido === item.correct) {
             liSeleccionado.classList.add("selected-correct");
             fb.className = "feedback correct";
             fb.innerHTML = "<strong>&iexcl;Correcto!</strong> " + (item.retro || "");
         } else {
             liSeleccionado.classList.add("selected-incorrect");
-            todas[item._shuffledCorrect].classList.add("show-correct");
+            todas[item.correct].classList.add("show-correct");
             fb.className = "feedback incorrect";
             fb.innerHTML =
                 "<strong>&iexcl;Incorrecto!</strong> La respuesta correcta es: <em>" +
-                item._shuffledOptions[item._shuffledCorrect] +
+                item.options[item.correct] +
                 "</em>.<br>" +
                 (item.retro ? "<br>" + item.retro : "");
         }
 
-        aciertos[index] = (idxElegido === item._shuffledCorrect);
+        aciertos[index] = (idxElegido === item.correct);
     }
 
     if (document.readyState === "loading") {

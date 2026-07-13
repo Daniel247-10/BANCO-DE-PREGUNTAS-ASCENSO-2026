@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Banco de Preguntas - PARTE 6</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Banco de Preguntas - PARTE 6</h1>
+        <div class="subtitle">Examen de Ascenso 2026</div>
+    </header>
+
+    <nav class="hub">
+        <a href="index.html">&larr; Inicio</a>
+    </nav>
+
+    <div id="quiz-container"></div>
+
+    <script>
+        window.quizData = [
+    {
+        "q": "501. Según Gimeno Sacristán, ¿qué función cumple el currículo al asociar contenidos, grados y edades?",
+        "options": [
+            "a) Actúa como un simple inventario de libros de texto.",
+            "b) Funciona como un regulador de las personas y su progreso escolar.",
+            "c) Sirve para eliminar la necesidad de evaluación docente."
+        ],
+        "correct": 1,
+        "retro": "El currículo ordena el tiempo escolar y define lo que se entiende por progresión de los sujetos [1]."
+    },
+    {
+        "q": "502. ¿Cuál es el epicentro cerebral de la atención ejecutiva y la planificación de mayor orden?",
+        "options": [
+            "a) Los lóbulos prefrontales.",
+            "b) El cerebelo reptiliano.",
+            "c) El lóbulo occipital sensorial."
+        ],
+        "correct": 0,
+        "retro": "En los lóbulos prefrontales reside la capacidad de planificar y tomar decisiones complejas [2]."
+    },
+    {
+        "q": "503. Según el Reglamento de Inclusiva, ¿qué documento describe la trayectoria educativa de un estudiante?",
+        "options": [
+            "a) El boletín de notas centralizador.",
+            "b) El historial cronológico y secuencial de sus capacidades y apoyos.",
+            "c) El carnet de discapacidad vigente."
+        ],
+        "correct": 1,
+        "retro": "La trayectoria educativa permite dar continuidad a los procesos de apoyo del estudiante [3]."
+    },
+    {
+        "q": "504. ¿Qué neurotransmisor genera la sensación de satisfacción tras lograr un objetivo?",
+        "options": [
+            "a) Adrenalina.",
+            "b) Cortisol.",
+            "c) Serotonina."
+        ],
+        "correct": 2,
+        "retro": "La serotonina cierra el circuito DAS aportando calma y bienestar al finalizar una meta [4]."
+    },
+    {
+        "q": "505. En el ciclo de innovación de la UNESCO, ¿qué pregunta guía la fase de 'Planificación'?",
+        "options": [
+            "a) ¿Cómo lo vamos a hacer?",
+            "b) ¿Qué se quiere transformar?",
+            "c) ¿Con qué recursos contamos?"
+        ],
+        "correct": 0,
+        "retro": "La planificación define los pasos y la metodología para implementar el cambio [5]."
+    },
+    {
+        "q": "506. ¿Bajo qué condición puede ser removido un maestro inscrito en el Escalafón según el Art. 73?",
+        "options": [
+            "a) Por simple decisión del Director Distrital.",
+            "b) Tras una sentencia ejecutoriada resultante de un proceso disciplinario.",
+            "c) Si los padres de familia no están de acuerdo con su método."
+        ],
+        "correct": 1,
+        "retro": "La estabilidad laboral protege al docente, exigiendo un proceso previo con derecho a la defensa [6, 7]."
+    },
+    {
+        "q": "507. ¿Qué es el 'oficio de alumno' según Philippe Perrenoud?",
+        "options": [
+            "a) El conjunto de reglas y rutinas que el estudiante aprende para socializarse en la escuela.",
+            "b) Una beca de trabajo que reciben los mejores estudiantes.",
+            "c) El aprendizaje de técnicas manuales como carpintería."
+        ],
+        "correct": 0,
+        "retro": "La socialización escolar implica aprender a navegar las exigencias y normas del sistema [1]."
+    },
+    {
+        "q": "508. ¿Qué sanción establece la ley para quien mate a otro en estado de emoción violenta excusable?",
+        "options": [
+            "a) 30 años sin indulto.",
+            "b) Reclusión de 1 a 6 años.",
+            "c) Trabajo comunitario por un mes."
+        ],
+        "correct": 1,
+        "retro": "Es una circunstancia atenuante tipificada en el Código Penal boliviano [8]."
+    },
+    {
+        "q": "509. ¿Qué capacidad cerebral permite al cerebro reorganizarse tras privaciones de experiencias?",
+        "options": [
+            "a) Neuroplasticidad.",
+            "b) Imprinting genético.",
+            "c) Poda neuronal."
+        ],
+        "correct": 0,
+        "retro": "La plasticidad permite al cerebro remodelarse funcionalmente a lo largo de la vida [8, 9]."
+    },
+    {
+        "q": "510. Según la Guía de Violencia, ¿qué son las 'conductas regresivas' en la niñez?",
+        "options": [
+            "a) Comportamientos de etapas ya superadas, como orinarse en la cama.",
+            "b) El deseo de repetir el mismo curso escolar por gusto.",
+            "c) La capacidad de recordar eventos de vidas pasadas."
+        ],
+        "correct": 0,
+        "retro": "El trauma por violencia suele provocar retrocesos en el desarrollo conductual del niño [10]."
+    },
+    {
+        "q": "511. ¿Cuál es el promedio de atención sostenida de un adulto según el neuroaprendizaje?",
+        "options": [
+            "a) 45 minutos.",
+            "b) 5 minutos.",
+            "c) 18 minutos."
+        ],
+        "correct": 2,
+        "retro": "Tras aproximadamente 18 minutos, la atención decae si no hay un cambio de estímulo [11, 12]."
+    },
+    {
+        "q": "512. ¿En qué consiste la técnica de 'Cambio de Roles' en la evaluación?",
+        "options": [
+            "a) Los alumnos diseñan y corrigen las pruebas de sus propios compañeros.",
+            "b) El director da la clase y el maestro se sienta como alumno.",
+            "c) Los padres de familia toman el examen a los maestros."
+        ],
+        "correct": 0,
+        "retro": "Busca involucrar activamente al estudiante en el proceso de aprendizaje y evaluación [13]."
+    },
+    {
+        "q": "513. ¿Qué margen de desfase de edad se admite en primaria para niños con discapacidad intelectual?",
+        "options": [
+            "a) Máximo 12 meses.",
+            "b) Hasta 24 meses.",
+            "c) No se admite ningún desfase."
+        ],
+        "correct": 1,
+        "retro": "Permite una mejor integración de los estudiantes con necesidades especiales en su grupo etario [8]."
+    },
+    {
+        "q": "514. Según Sacristán, ¿cuál es el peligro de un libro de texto que monopoliza el saber?",
+        "options": [
+            "a) Que sea muy caro para la economía familiar.",
+            "b) Que anule la curiosidad y la capacidad crítica del alumno.",
+            "c) Que las hojas se rompan fácilmente con el uso."
+        ],
+        "correct": 1,
+        "retro": "El libro de texto a menudo simplifica la cultura a verdades cerradas e incuestionables [14]."
+    },
+    {
+        "q": "515. ¿Qué sanción administrativa corresponde a una 'Falta Muy Grave' en el magisterio?",
+        "options": [
+            "a) Amonestación escrita.",
+            "b) Suspensión de 15 a 60 días.",
+            "c) Destitución o suspensión definitiva de la carrera docente."
+        ],
+        "correct": 2,
+        "retro": "Las faltas muy graves atentan contra la integridad de la educación y los alumnos [15]."
+    },
+    {
+        "q": "516. ¿Qué neurotransmisor se libera ante una sorpresa positiva o algo novedoso?",
+        "options": [
+            "a) Dopamina.",
+            "b) Melatonina.",
+            "c) Cortisol."
+        ],
+        "correct": 0,
+        "retro": "La dopamina es el sustrato del deseo y se activa ante la novedad y el placer [4]."
+    },
+    {
+        "q": "517. ¿Cuál es el fin último de la atención a la diversidad según el enfoque inclusivo?",
+        "options": [
+            "a) Lograr que todos los niños sean iguales y piensen igual.",
+            "b) Brindar igualdad de oportunidades real reconociendo las diferencias personales.",
+            "c) Clasificar a los alumnos en grupos de más o menos inteligentes."
+        ],
+        "correct": 1,
+        "retro": "La inclusión busca la universalización del derecho a aprender sin exclusiones ."
+    },
+    {
+        "q": "518. ¿Qué es la 'provención' según Francisco Cascón?",
+        "options": [
+            "a) Educar en el conflicto para desarrollar capacidades de resolución no violenta.",
+            "b) Castigar a los alumnos antes de que cometan una falta.",
+            "c) Prohibir cualquier tipo de discusión en el aula."
+        ],
+        "correct": 0,
+        "retro": "Busca intervenir pedagógicamente antes de que el conflicto escale a violencia [16]."
+    },
+    {
+        "q": "519. En el proceso de resolución de problemas, ¿qué significa que la importancia sea 'subjetiva'?",
+        "options": [
+            "a) Que el director del colegio tiene la última palabra sobre el valor de una solución.",
+            "b) Que depende de los valores, necesidades y opiniones de cada persona.",
+            "c) Que el manual de la UNESCO prohíbe las opiniones personales."
+        ],
+        "correct": 1,
+        "retro": "La valoración de las consecuencias varía según la perspectiva del sujeto involucrado [17]."
+    },
+    {
+        "q": "520. ¿Qué red atencional permite enfocarse en una tarea e inhibir distracciones?",
+        "options": [
+            "a) Red de orientación sensorial.",
+            "b) Atención ejecutiva.",
+            "c) Foco de alerta reptiliano."
+        ],
+        "correct": 1,
+        "retro": "La atención ejecutiva gestiona la concentración profunda y el autocontrol [2]."
+    },
+    {
+        "q": "521. ¿Qué es el 'currículo real' para Philippe Perrenoud?",
+        "options": [
+            "a) La copia exacta de los planes y programas oficiales.",
+            "b) El conjunto de experiencias y tareas que efectivamente ocurren en el aula.",
+            "c) El reglamento de disciplina del centro escolar."
+        ],
+        "correct": 1,
+        "retro": "Es el currículo vivido que resulta de la transposición que hace el docente [18]."
+    },
+    {
+        "q": "522. ¿Cuál es el porcentaje de bonificación por antigüedad para la 2da categoría?",
+        "options": [
+            "a) 75%.",
+            "b) 60%.",
+            "c) 90%."
+        ],
+        "correct": 0,
+        "retro": "El ascenso a la 2da categoría otorga un beneficio del 75% sobre el básico [15]."
+    },
+    {
+        "q": "523. ¿Qué zona cerebral actúa como 'filtro emocional' de la información entrante?",
+        "options": [
+            "a) La amígdala.",
+            "b) El hipocampo.",
+            "c) El cerebelo."
+        ],
+        "correct": 0,
+        "retro": "La amígdala decide si el estímulo permite el aprendizaje o activa una respuesta de amenaza [2, 19]."
+    },
+    {
+        "q": "524. ¿Qué es un 'recreo cerebral' o neuro-acción?",
+        "options": [
+            "a) Un descanso de 30 minutos para jugar fútbol.",
+            "b) Una pausa corta con movimiento para oxigenar el cerebro y reactivar la atención.",
+            "c) El periodo de vacaciones de invierno."
+        ],
+        "correct": 1,
+        "retro": "Estas pausas nivelan estados emocionales mediante el cuerpo para facilitar la cognición [11]."
+    },
+    {
+        "q": "525. Según la Ley 223, ¿quién es el ente rector de políticas de discapacidad en Bolivia?",
+        "options": [
+            "a) El Banco Central de Bolivia.",
+            "b) CONALPEDIS.",
+            "c) La Defensoría del Pueblo."
+        ],
+        "correct": 1,
+        "retro": "El Comité Nacional de Personas con Discapacidad es la autoridad competente ."
+    },
+    {
+        "q": "526. ¿A qué se refiere la 'poda neuronal' en el desarrollo del cerebro?",
+        "options": [
+            "a) A la muerte de neuronas por falta de alimento.",
+            "b) Al proceso de eficiencia que elimina sinapsis débiles para fortalecer las redes principales.",
+            "c) A la pérdida de memoria por la edad avanzada."
+        ],
+        "correct": 1,
+        "retro": "Es un proceso natural de optimización de los recursos cerebrales en crecimiento [20]."
+    },
+    {
+        "q": "527. ¿Qué fase del ciclo de innovación UNESCO busca 'aprender de la experiencia'?",
+        "options": [
+            "a) Sistematización / Difusión.",
+            "b) Implementación.",
+            "c) Identificación de recursos."
+        ],
+        "correct": 0,
+        "retro": "La sistematización convierte la práctica en saber pedagógico para enriquecer el sistema [5, 21]."
+    },
+    {
+        "q": "528. ¿Qué sanción penal tiene quien instigue al suicidio si la muerte se consuma?",
+        "options": [
+            "a) 1 a 3 años.",
+            "b) 2 a 6 años.",
+            "c) 10 a 20 años."
+        ],
+        "correct": 1,
+        "retro": "Es un delito grave contemplado en la normativa de protección de personas [8]."
+    },
+    {
+        "q": "529. ¿Qué es el 'Downtime' atencional en el aula?",
+        "options": [
+            "a) El momento de máxima captación sensorial externa.",
+            "b) El estado ideal para procesar, reflexionar y consolidar lo aprendido.",
+            "c) El periodo de almuerzo escolar."
+        ],
+        "correct": 1,
+        "retro": "En el Downtime el cerebro realiza diálogo interno y asociaciones visuales [22]."
+    },
+    {
+        "q": "530. Según Sacristán, ¿por qué la escuela segmenta los saberes en asignaturas estancas?",
+        "options": [
+            "a) Para facilitar la comprensión global de la realidad.",
+            "b) Por una inercia organizativa que ignora las conexiones reales entre disciplinas.",
+            "c) Porque así lo manda la ley de gravedad."
+        ],
+        "correct": 1,
+        "retro": "La 'balcanización curricular' fragmenta el conocimiento de forma artificial [23, 24]."
+    },
+    {
+        "q": "531. ¿Qué es la 'contrarreferencia' tras una denuncia por violencia escolar?",
+        "options": [
+            "a) La respuesta de la DNA indicando acciones y recomendaciones para la víctima.",
+            "b) El informe de descargo del maestro acusado.",
+            "c) El acta de expulsión definitiva del alumno agresor."
+        ],
+        "correct": 0,
+        "retro": "Informa a la dirección escolar sobre el seguimiento externo del caso derivado [25]."
+    },
+    {
+        "q": "532. ¿Qué neurotransmisor motiva la curiosidad inicial y el deseo de aprender?",
+        "options": [
+            "a) Serotonina.",
+            "b) Dopamina.",
+            "c) Adrenalina."
+        ],
+        "correct": 1,
+        "retro": "La dopamina es el motor químico de la búsqueda de novedad y gratificación [4]."
+    },
+    {
+        "q": "533. ¿Cuál es el primer paso ante un relato espontáneo de violencia por parte de un niño?",
+        "options": [
+            "a) Escuchar con empatía sin manifestar rechazo ni emitir juicios.",
+            "b) Llamar inmediatamente a la policía.",
+            "c) Interrumpir el relato para que lo cuente ante un juez."
+        ],
+        "correct": 0,
+        "retro": "La validación y contención inicial son claves para la protección de la víctima [26]."
+    },
+    {
+        "q": "534. ¿Qué es el DPA en el marco de la educación inclusiva?",
+        "options": [
+            "a) Diseño Plural para los Aprendizajes.",
+            "b) Departamento de Pruebas Académicas.",
+            "c) Documento de Planificación Administrativa."
+        ],
+        "correct": 0,
+        "retro": "Es la herramienta pedagógica para planificar atendiendo a toda la diversidad [3]."
+    },
+    {
+        "q": "535. ¿Cuál es el promedio de atención sostenida para el nivel inicial según la neurociencia?",
+        "options": [
+            "a) 15 a 18 minutos.",
+            "b) 5 a 8 minutos.",
+            "c) 45 minutos sin interrupción."
+        ],
+        "correct": 1,
+        "retro": "Los niños más pequeños requieren cambios de estímulo mucho más frecuentes [12]."
+    },
+    {
+        "q": "536. Según Lowman, el perfil del 'Maestro Completo' combina:",
+        "options": [
+            "a) Seriedad extrema y dominio del reglamento.",
+            "b) Alta estimulación intelectual y excelente relación interpersonal.",
+            "c) Muchos años de antigüedad y uso exclusivo de libros."
+        ],
+        "correct": 1,
+        "retro": "Equilibra el rigor académico con la calidez humana en el aula [8]."
+    },
+    {
+        "q": "537. ¿Qué sanción establece el Escalafón por 'castigos corporales y vejaciones'?",
+        "options": [
+            "a) Amonestación verbal privada.",
+            "b) De 1 a 20 puntos de demérito.",
+            "c) Suspensión definitiva inmediata."
+        ],
+        "correct": 1,
+        "retro": "Se considera un abuso contra los alumnos con impacto en el puntaje del Escalafón [15]."
+    },
+    {
+        "q": "538. ¿Qué es el estado de 'Uptime' sensorial?",
+        "options": [
+            "a) El momento de alerta máxima enfocado a captar información del exterior.",
+            "b) Cuando el alumno está profundamente dormido en clase.",
+            "c) Un periodo de diálogo interno intenso."
+        ],
+        "correct": 0,
+        "retro": "En el Uptime los sentidos están alertas y receptivos a la información global [22]."
+    },
+    {
+        "q": "539. En resolución de problemas, ¿cuál es el propósito de 'los cinco porqués'?",
+        "options": [
+            "a) Interrogar a un alumno sobre una travesura.",
+            "b) Hallar la causa raíz o más profunda de una dificultad.",
+            "c) Aprender a contar secuencialmente."
+        ],
+        "correct": 1,
+        "retro": "Permite profundizar más allá de lo superficial para encontrar el origen del problema [27]."
+    },
+    {
+        "q": "540. ¿Cuál es la bonificación por antigüedad para un maestro en la 5ta categoría?",
+        "options": [
+            "a) 30%.",
+            "b) 15%.",
+            "c) 45%."
+        ],
+        "correct": 0,
+        "retro": "Es el porcentaje inicial de bono tras el ingreso al magisterio normalista [15]."
+    },
+    {
+        "q": "541. Según el Reglamento de Faltas, ¿cuál es el plazo para dictar el fallo disciplinario?",
+        "options": [
+            "a) 24 horas.",
+            "b) 5 días hábiles.",
+            "c) Un mes calendario."
+        ],
+        "correct": 1,
+        "retro": "El tribunal tiene 5 días para emitir su resolución final tras el proceso [15]."
+    },
+    {
+        "q": "542. ¿Qué dispone la norma anticorrupción sobre el fuero o inmunidad?",
+        "options": [
+            "a) No reconoce inmunidad, fuero o privilegio alguno ante delitos de corrupción.",
+            "b) Que los directores tienen inmunidad total durante su gestión.",
+            "c) Que solo se aplica a funcionarios de nivel central."
+        ],
+        "correct": 0,
+        "retro": "Establece la igualdad absoluta ante la ley en la lucha contra la corrupción [8]."
+    },
+    {
+        "q": "543. ¿Qué neurotransmisor se libera ante una amenaza real o percibida (lucha o huida)?",
+        "options": [
+            "a) Serotonina.",
+            "b) Dopamina.",
+            "c) Adrenalina y Cortisol."
+        ],
+        "correct": 2,
+        "retro": "Preparan al cuerpo para el estrés pero bloquean los procesos cognitivos superiores [4]."
+    },
+    {
+        "q": "544. ¿Qué es la 'transposición pragmática' mencionada por Philippe Perrenoud?",
+        "options": [
+            "a) Copiar el programa oficial sin cambiar ni una coma.",
+            "b) El ajuste que hace el docente del currículo formal a la realidad viva del aula.",
+            "c) Cambiar de escuela cada año lectivo."
+        ],
+        "correct": 1,
+        "retro": "Es la mediación pedagógica necesaria para que la enseñanza funcione [18]."
+    },
+    {
+        "q": "545. ¿Cuál es el alcance territorial del apoyo inclusivo de Modalidad Indirecta?",
+        "options": [
+            "a) Solo el perímetro de la escuela.",
+            "b) Puede ser intermunicipal para dar mayor cobertura.",
+            "c) Solo las capitales de departamento."
+        ],
+        "correct": 1,
+        "retro": "Busca llegar a estudiantes donde no existan centros especializados cercanos [3]."
+    },
+    {
+        "q": "546. ¿Qué es el 'secuestro amigdalar' en un estudiante estresado?",
+        "options": [
+            "a) Una técnica de estudio intensa.",
+            "b) El bloqueo del neocórtex racional por una respuesta emocional intensa.",
+            "c) El rapto del niño por extraños."
+        ],
+        "correct": 1,
+        "retro": "La amígdala toma el mando para la supervivencia, anulando la razón [28]."
+    },
+    {
+        "q": "547. ¿Cuál es el objetivo principal de la Lección 1 del Manual de RP de UNICEF?",
+        "options": [
+            "a) Aprender ecuaciones matemáticas complejas.",
+            "b) Identificar qué es un problema y normalizarlos en la vida.",
+            "c) Sancionar a los responsables de un conflicto."
+        ],
+        "correct": 1,
+        "retro": "Busca tomar conciencia de que los problemas son parte natural de la existencia humana [29]."
+    },
+    {
+        "q": "548. ¿A qué se denomina 'mediación entre iguales'?",
+        "options": [
+            "a) Un diálogo entre directores de la misma edad.",
+            "b) Un programa donde los propios alumnos median en conflictos de sus compañeros.",
+            "c) Una pelea regulada por el profesor de física."
+        ],
+        "correct": 1,
+        "retro": "Fomenta la autonomía y participación pacífica de los estudiantes ."
+    },
+    {
+        "q": "549. ¿Qué sanción administrativa corresponde a una 'Falta Leve'?",
+        "options": [
+            "a) Suspensión definitiva.",
+            "b) Amonestación verbal privada o escrita.",
+            "c) Una multa de 10 días de salario."
+        ],
+        "correct": 1,
+        "retro": "Son faltas de menor gravedad que no ameritan procesos complejos [15]."
+    },
+    {
+        "q": "550. ¿Qué neurotransmisor regula los ciclos de descanso y el estado de Downtime?",
+        "options": [
+            "a) Dopamina.",
+            "b) Melatonina.",
+            "c) Adrenalina."
+        ],
+        "correct": 1,
+        "retro": "La melatonina es vital para el procesamiento interno y la consolidación del saber [30]."
+    },
+    {
+        "q": "551. Según Sacristán, ¿cuál es el 'tercer plano' del currículo?",
+        "options": [
+            "a) Las intenciones del gobierno de turno.",
+            "b) El currículo aprendido (lo que de verdad se consigue).",
+            "c) El costo de impresión de los libros."
+        ],
+        "correct": 1,
+        "retro": "Es el resultado real de la educación tras pasar por la intención y la práctica [31]."
+    },
+    {
+        "q": "552. ¿Qué significa 'Activa' en el criterio SAFE de UNICEF?",
+        "options": [
+            "a) Correr rápidamente por el pasillo del colegio.",
+            "b) Involucrar al alumno mediante actividades lúdicas, diálogo y roles.",
+            "c) Que el profesor grite muy fuerte para despertar a los alumnos."
+        ],
+        "correct": 1,
+        "retro": "El aprendizaje es más efectivo cuando el alumno participa en la experiencia [32]."
+    },
+    {
+        "q": "553. ¿Cuál es la bonificación económica para un maestro en la 1ra categoría?",
+        "options": [
+            "a) 100%.",
+            "b) 85%.",
+            "c) 75%."
+        ],
+        "correct": 0,
+        "retro": "Es el tope máximo de ascenso por antigüedad en el magisterio boliviano [15]."
+    },
+    {
+        "q": "554. ¿A qué edad se tipifica el delito de 'estupro' si hay seducción o engaño?",
+        "options": [
+            "a) Menores de 12 años.",
+            "b) Entre 14 y 18 años.",
+            "c) Solo mayores de 18 años."
+        ],
+        "correct": 1,
+        "retro": "Es la definición legal citada en los protocolos de actuación escolar [8]."
+    },
+    {
+        "q": "555. En mediación escolar, ¿qué ocurre si NO existe voluntariedad de las partes?",
+        "options": [
+            "a) Se les obliga a mediar bajo amenaza de multa.",
+            "b) La mediación no puede iniciarse, pues la voluntariedad es requisito.",
+            "c) El mediador decide quién tiene la razón sin escucharlos."
+        ],
+        "correct": 1,
+        "retro": "Nadie puede ser forzado a participar en un proceso de mediación pacífica [33]."
+    },
+    {
+        "q": "556. ¿Qué es el 'practicum' en la formación de los maestros?",
+        "options": [
+            "a) Un espacio de aprendizaje y experiencia personal en el aula real.",
+            "b) La obligación de limpiar las aulas de la Normal.",
+            "c) Un examen escrito de 500 preguntas sobre leyes."
+        ],
+        "correct": 0,
+        "retro": "Es donde se integra la teoría pedagógica con la vivencia escolar [1]."
+    },
+    {
+        "q": "557. ¿Qué red atencional regula la toma de decisiones y el autocontrol?",
+        "options": [
+            "a) Atención ejecutiva.",
+            "b) Red de orientación sensorial.",
+            "c) Foco de conciencia reptil."
+        ],
+        "correct": 0,
+        "retro": "Gestiona la concentración profunda y la planificación racional [2]."
+    },
+    {
+        "q": "558. ¿Cuál es el plazo máximo para que un funcionario denuncie violencia sexual detectada?",
+        "options": [
+            "a) Inmediatamente o máximo en 24 horas.",
+            "b) Al final del trimestre educativo.",
+            "c) Siete días hábiles después."
+        ],
+        "correct": 0,
+        "retro": "La denuncia oportuna es una obligación legal del servidor público [34]."
+    },
+    {
+        "q": "559. ¿Qué define biológicamente a las sensaciones en el neuroaprendizaje?",
+        "options": [
+            "a) Pensamientos lógicos sobre el futuro.",
+            "b) Respuesta inmediata de los sentidos ante estímulos externos.",
+            "c) El hambre que siente el alumno a las 11 am."
+        ],
+        "correct": 1,
+        "retro": "Son la 'materia prima' sensorial que luego el cerebro procesa [12]."
+    },
+    {
+        "q": "560. Según UNESCO, ¿qué riesgo hay al ver la innovación como un 'producto'?",
+        "options": [
+            "a) Caer en la rutina y perder la capacidad de cambio constante.",
+            "b) Que el producto se gaste físicamente muy rápido.",
+            "c) Que los alumnos aprendan demasiado rápido."
+        ],
+        "correct": 0,
+        "retro": "La innovación debe ser un proceso vivo de revisión crítica continua [35]."
+    },
+    {
+        "q": "561. ¿Qué es la 'reparación' en un enfoque humanista de conflictos?",
+        "options": [
+            "a) Acciones para sanar la relación y compensar el daño emocional.",
+            "b) Comprar un banco nuevo si el anterior se rompió.",
+            "c) Expulsar al agresor de la escuela para siempre."
+        ],
+        "correct": 0,
+        "retro": "Busca restaurar la convivencia armónica tras un daño ."
+    },
+    {
+        "q": "562. ¿Qué es la 'poda neuronal' en términos de eficiencia biológica?",
+        "options": [
+            "a) La eliminación de sinapsis no usadas para mejorar el procesamiento.",
+            "b) El corte de cabello obligatorio para el acto cívico.",
+            "c) Perder neuronas por falta de sueño."
+        ],
+        "correct": 0,
+        "retro": "Optimiza los recursos del cerebro al especializar las redes más usadas [20]."
+    },
+    {
+        "q": "563. Según UNICEF, ¿cuál es el cuarto paso de la resolución de problemas?",
+        "options": [
+            "a) Evaluar posibles soluciones analizando pros y contras.",
+            "b) Identificar la dificultad central.",
+            "c) Realizar el seguimiento de la solución elegida."
+        ],
+        "correct": 0,
+        "retro": "Tras idear soluciones, deben filtrarse mediante el análisis crítico [36]."
+    },
+    {
+        "q": "564. ¿Qué es el estado de 'Uptime' sensorial en el aula?",
+        "options": [
+            "a) Percepción global enfocada al exterior con sentidos alertas.",
+            "b) Cuando el alumno está profundamente dormido.",
+            "c) Momento de soñar despierto."
+        ],
+        "correct": 0,
+        "retro": "Es la fase ideal para captar información nueva del entorno [22]."
+    },
+    {
+        "q": "565. ¿Qué significa 'Focalizada' en el manual de resolución de problemas?",
+        "options": [
+            "a) Centrarse en un objetivo y conceptos clave específicos por lección.",
+            "b) Usar una linterna para ver los errores de los alumnos.",
+            "c) Mirar siempre fijo al profesor sin parpadear."
+        ],
+        "correct": 0,
+        "retro": "Asegura aprendizajes concretos evitando la dispersión del tema [32]."
+    },
+    {
+        "q": "566. Según Sacristán, ¿cuál es el peligro de los 'reduccionismos' curriculares?",
+        "options": [
+            "a) Que el libro de texto sea demasiado pequeño.",
+            "b) Reducir la formación humana a meras listas de temas técnicos fragmentados.",
+            "c) Que se aumenten demasiadas horas a una materia."
+        ],
+        "correct": 1,
+        "retro": "Empobrecen la complejidad de los saberes en favor de lo procedimental [19]."
+    },
+    {
+        "q": "567. ¿Cuál es el porcentaje de bonificación para la 4ta categoría del magisterio?",
+        "options": [
+            "a) 30%.",
+            "b) 45%.",
+            "c) 60%."
+        ],
+        "correct": 1,
+        "retro": "Corresponde al 45% de bonificación sobre el básico del cargo [15]."
+    },
+    {
+        "q": "568. ¿Qué significa 'Secuencial' en el manual de UNICEF?",
+        "options": [
+            "a) Lecciones con secuencia lógica y gradual paso a paso.",
+            "b) Sancionar a los alumnos según su número de lista.",
+            "c) Mantener el silencio absoluto secuencialmente."
+        ],
+        "correct": 0,
+        "retro": "Garantiza que el conocimiento se construya sobre bases previas sólidas [32]."
+    },
+    {
+        "q": "569. ¿Qué neurotransmisor se despierta con los recreos cerebrales?",
+        "options": [
+            "a) Dopamina.",
+            "b) Cortisol.",
+            "c) Melatonina."
+        ],
+        "correct": 0,
+        "retro": "La dopamina oxigena el cerebro y mejora la predisposición atencional [30]."
+    },
+    {
+        "q": "570. ¿En qué consiste la técnica de los 'Cinco Segundos'?",
+        "options": [
+            "a) Responder por sí o no a preguntas orales mediante papelitos.",
+            "b) Correr de una pared a otra en cinco segundos.",
+            "c) Mirar fijamente al docente durante cinco segundos."
+        ],
+        "correct": 0,
+        "retro": "Busca la participación de todo el grupo al mismo tiempo sin rezagados [37]."
+    },
+    {
+        "q": "571. ¿Cuál es la primera fase del ciclo de innovación de la UNESCO?",
+        "options": [
+            "a) Evaluación final de resultados.",
+            "b) Intencionalidad (¿Qué se quiere transformar y por qué?).",
+            "c) Compra de materiales tecnológicos."
+        ],
+        "correct": 1,
+        "retro": "Comienza dándole un sentido y propósito consciente al cambio buscado [5]."
+    },
+    {
+        "q": "572. ¿Qué dispone la Ley Marcelo Quiroga Santa Cruz sobre el fuero o inmunidad?",
+        "options": [
+            "a) No reconoce inmunidad alguna ante cargos de corrupción.",
+            "b) Que los directores tienen inmunidad por 5 años.",
+            "c) Que solo se aplica a funcionarios de nivel central."
+        ],
+        "correct": 0,
+        "retro": "Es un principio de igualdad ante la ley en delitos contra el Estado [8]."
+    },
+    {
+        "q": "573. ¿Cuántos años de servicio se requieren para ascender a la 1ra categoría?",
+        "options": [
+            "a) 15 años.",
+            "b) 20 años.",
+            "c) 25 años."
+        ],
+        "correct": 1,
+        "retro": "Los ascensos se dan periódicamente cada 5 años hasta llegar a la 1ra [15]."
+    },
+    {
+        "q": "574. ¿Qué es el 'Downtime' atencional en el aula?",
+        "options": [
+            "a) Momento de diálogo interno y asociación de saberes.",
+            "b) Alerta sensorial máxima enfocada al exterior.",
+            "c) Periodo de almuerzo escolar."
+        ],
+        "correct": 0,
+        "retro": "Es vital para procesar y consolidar la información recibida [22]."
+    },
+    {
+        "q": "575. ¿Qué es el 'currículo oculto' según Sacristán?",
+        "options": [
+            "a) El programa de estudios que se guarda bajo llave.",
+            "b) Aprendizajes de normas y valores que se transmiten sin estar escritos.",
+            "c) Un libro de texto prohibido."
+        ],
+        "correct": 1,
+        "retro": "Son lecciones implícitas dadas por la estructura y convivencia escolar [1]."
+    },
+    {
+        "q": "576. ¿Cuál es el promedio de atención sostenida para secundaria?",
+        "options": [
+            "a) 5 a 10 minutos.",
+            "b) 15 a 18 minutos.",
+            "c) 45 a 60 minutos."
+        ],
+        "correct": 1,
+        "retro": "Tras este periodo, el cerebro necesita una pausa o cambio de estímulo [12]."
+    },
+    {
+        "q": "577. ¿Qué es el DPA en el fortalecimiento de la educación inclusiva?",
+        "options": [
+            "a) Diseño Plural para los Aprendizajes.",
+            "b) Documento de Planificación Anual.",
+            "c) Derecho a Procesos Académicos."
+        ],
+        "correct": 0,
+        "retro": "Es la herramienta pedagógica para incluir a toda la diversidad [3]."
+    },
+    {
+        "q": "578. ¿Qué neurotransmisor regula los ciclos de sueño y descanso (Downtime)?",
+        "options": [
+            "a) Dopamina.",
+            "b) Melatonina.",
+            "c) Cortisol."
+        ],
+        "correct": 1,
+        "retro": "La melatonina es fundamental para los estados de procesamiento interno [30]."
+    },
+    {
+        "q": "579. ¿Qué es la 'transposición pragmática' del currículo real?",
+        "options": [
+            "a) El ajuste que hace el docente del programa a la realidad del aula.",
+            "b) Copiar el libro de texto exactamente igual.",
+            "c) Cambiar de escuela cada dos meses."
+        ],
+        "correct": 0,
+        "retro": "Es la mediación necesaria para que el currículo funcione realmente [18]."
+    },
+    {
+        "q": "580. Según UNESCO, ¿por qué la innovación es un 'proceso en espiral'?",
+        "options": [
+            "a) Porque cada fase se relaciona con la anterior y permite reformular.",
+            "b) Porque marea a los docentes con tantos cambios.",
+            "c) Porque siempre vuelve al mismo punto inicial."
+        ],
+        "correct": 0,
+        "retro": "La innovación es dinámica y permite el aprendizaje sobre la marcha [38]."
+    },
+    {
+        "q": "581. ¿Qué sanción establece el reglamento para una 'Falta Grave'?",
+        "options": [
+            "a) Suspensión de 15 a 60 días sin goce de haberes.",
+            "b) Amonestación verbal privada.",
+            "c) Destitución definitiva de la carrera docente."
+        ],
+        "correct": 0,
+        "retro": "Tienen un impacto administrativo directo en el file del maestro [15]."
+    },
+    {
+        "q": "582. En resolución de problemas, ¿qué significa el criterio SAFE 'F' (Focalizada)?",
+        "options": [
+            "a) Abordar un objetivo particular y definir conceptos clave claros.",
+            "b) Usar una linterna para ver los errores.",
+            "c) Mirar fijamente al docente durante la lección."
+        ],
+        "correct": 0,
+        "retro": "Asegura que el aprendizaje sea estructurado y sin dispersión [32]."
+    },
+    {
+        "q": "583. ¿Qué capacidad permite al cerebro remodelarse constantemente?",
+        "options": [
+            "a) Plasticidad neuronal.",
+            "b) Estabilidad inamovible.",
+            "c) Visión periférica."
+        ],
+        "correct": 0,
+        "retro": "El cerebro es maleable y cambia con cada pensamiento y aprendizaje [9]."
+    },
+    {
+        "q": "584. ¿Cuál es la finalidad de la Ruta 2 en los protocolos de actuación?",
+        "options": [
+            "a) Atender casos menores de indisciplina.",
+            "b) Establecer pasos legales específicos ante delitos de violencia sexual.",
+            "c) Organizar el orden de materias en el boletín."
+        ],
+        "correct": 1,
+        "retro": "Es la ruta diferenciada para proteger a víctimas de agresiones sexuales [39]."
+    },
+    {
+        "q": "585. ¿Qué beneficio otorga la Ley 223 sobre trámites de diplomas académicos?",
+        "options": [
+            "a) Gratuidad total para personas con discapacidad certificadas.",
+            "b) Descuento del 20% si el trámite es en grupo.",
+            "c) Obligación de entregar solo copia digital."
+        ],
+        "correct": 0,
+        "retro": "Es un derecho para facilitar el acceso a la educación superior ."
+    },
+    {
+        "q": "586. ¿Cuál es el rol del mediador escolar en un conflicto entre pares?",
+        "options": [
+            "a) Actuar como juez y dictar sentencia.",
+            "b) Facilitar el diálogo y ayudar a que las partes hallen su acuerdo.",
+            "c) Cobrar una multa a los padres involucrados."
+        ],
+        "correct": 1,
+        "retro": "El mediador es neutral y no impone soluciones externas [40]."
+    },
+    {
+        "q": "587. ¿Qué red atencional orienta los sentidos ante un estímulo brusco del medio?",
+        "options": [
+            "a) Atención ejecutiva.",
+            "b) Red de orientación o foco sensorial.",
+            "c) Foco de conciencia reptil."
+        ],
+        "correct": 1,
+        "retro": "Es el nivel primario de alerta ante ruidos o cambios inesperados [2]."
+    },
+    {
+        "q": "588. ¿En qué plazo máximo debe un tribunal disciplinario dictar su fallo?",
+        "options": [
+            "a) 48 horas.",
+            "b) 5 días hábiles.",
+            "c) Un mes calendario."
+        ],
+        "correct": 1,
+        "retro": "Es el término legal establecido en el reglamento de faltas [15]."
+    },
+    {
+        "q": "589. Según Sacristán, ¿qué constituye el 'tercer plano' del currículo?",
+        "options": [
+            "a) La intención política del gobierno.",
+            "b) El efecto real (currículo aprendido) tras la implementación.",
+            "c) El costo de impresión de los planes."
+        ],
+        "correct": 1,
+        "retro": "Es el resultado de lo que de verdad se consigue en educación [31]."
+    },
+    {
+        "q": "590. ¿Qué neurotransmisor motiva la curiosidad y búsqueda de novedad?",
+        "options": [
+            "a) Dopamina.",
+            "b) Serotonina.",
+            "c) Cortisol."
+        ],
+        "correct": 0,
+        "retro": "Es el motor químico del deseo de aprender algo nuevo [4]."
+    },
+    {
+        "q": "591. ¿Qué es el DPA en el fortalecimiento de la educación inclusiva?",
+        "options": [
+            "a) Diseño Plural para los Aprendizajes.",
+            "b) Documento de Planificación Anual.",
+            "c) Departamento de Pruebas."
+        ],
+        "correct": 0,
+        "retro": "Herramienta pedagógica para incluir a toda la diversidad [3]."
+    },
+    {
+        "q": "592. ¿Qué neurotransmisor genera calma tras lograr una meta (Satisfacción)?",
+        "options": [
+            "a) Cortisol.",
+            "b) Serotonina.",
+            "c) Adrenalina."
+        ],
+        "correct": 1,
+        "retro": "La serotonina cierra el ciclo DAS con bienestar tras el logro [4]."
+    },
+    {
+        "q": "593. ¿Qué es el 'Arreglo Normativo' en resolución de conflictos?",
+        "options": [
+            "a) Soluciones basadas en las normas de convivencia aceptadas por el grupo.",
+            "b) Una pelea física pactada bajo supervisión.",
+            "c) La expulsión automática del alumno."
+        ],
+        "correct": 0,
+        "retro": "Aplica reglas comunitarias para restablecer el orden pacíficamente [41]."
+    },
+    {
+        "q": "594. ¿Cuál es el ente rector de las políticas de discapacidad en Bolivia?",
+        "options": [
+            "a) CONALPEDIS.",
+            "b) El Banco Central.",
+            "c) La Defensoría únicamente."
+        ],
+        "correct": 0,
+        "retro": "Consejo Nacional que planifica y defiende sus derechos ."
+    },
+    {
+        "q": "595. ¿Qué implica ser 'autor' de la innovación para un docente?",
+        "options": [
+            "a) Crear, definir su papel y ser causa de la acción educativa.",
+            "b) Seguir fielmente el libro que mandó el Ministerio.",
+            "c) Escribir un libro en lugar de dar clases."
+        ],
+        "correct": 0,
+        "retro": "El docente autor transforma activamente su realidad pedagógica [42]."
+    },
+    {
+        "q": "596. ¿Qué sanción tiene el delito de pornografía infantil (Art. 323 Bis)?",
+        "options": [
+            "a) Pena de prisión conforme a la gravedad del acto.",
+            "b) Una multa de 50 bolivianos.",
+            "c) Amonestación escrita en el registro."
+        ],
+        "correct": 0,
+        "retro": "Es un delito grave para proteger la integridad de menores [8]."
+    },
+    {
+        "q": "597. ¿Qué capacidad permite compensar privación de experiencias previas?",
+        "options": [
+            "a) Neuroplasticidad.",
+            "b) Imprinting rígido.",
+            "c) Memoria episódica."
+        ],
+        "correct": 0,
+        "retro": "El cerebro puede reorganizarse ante nuevos estímulos [9]."
+    },
+    {
+        "q": "598. ¿Cuál es el objetivo primordial del registro de casos de violencia?",
+        "options": [
+            "a) Obtener datos estadísticos para orientar la prevención escolar.",
+            "b) Expulsar a todos los alumnos conflictivos.",
+            "c) Publicar los nombres en la pizarra."
+        ],
+        "correct": 0,
+        "retro": "La información permite tomar decisiones preventivas basadas en evidencia ."
+    },
+    {
+        "q": "599. ¿Qué neurotransmisor se libera ante una amenaza real o percibida?",
+        "options": [
+            "a) Adrenalina y Cortisol.",
+            "b) Serotonina.",
+            "c) Dopamina."
+        ],
+        "correct": 0,
+        "retro": "Preparan para lucha/huida pero bloquean aprendizaje superior [4]."
+    },
+    {
+        "q": "600. ¿Cuál es la primera fase del ciclo de innovación de la UNESCO?",
+        "options": [
+            "a) Intencionalidad (¿Qué se quiere transformar y por qué?).",
+            "b) Implementación de materiales.",
+            "c) Evaluación final."
+        ],
+        "correct": 0,
+        "retro": "Comienza dándole un sentido y propósito al cambio buscado [5]."
+    }
+];
+    </script>
+    <script src="codes.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>

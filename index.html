@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Banco de Preguntas - Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Banco de Preguntas - Examen de Ascenso 2026</h1>
+        <div class="subtitle">Seleccione un cuestionario para practicar</div>
+    </header>
+
+    <nav class="hub">
+        <a href="parte1.html">PARTE 1</a>
+        <a href="parte2.html">PARTE 2</a>
+        <a href="parte3.html">PARTE 3</a>
+        <a href="parte4.html">PARTE 4</a>
+        <a href="parte5.html">PARTE 5</a>
+        <a href="parte6.html">PARTE 6</a>
+        <a href="parte7.html">PARTE 7</a>
+        <a href="parte8.html">PARTE 8</a>
+        <a href="parte9.html">PARTE 9</a>
+        <a href="parte10.html">PARTE 10</a>
+        <a href="parte11.html">PARTE 11</a>
+        <a href="parte12.html">PARTE 12</a>
+        <a href="parte13.html">PARTE 13</a>
+        <a href="parte14.html">PARTE 14</a>
+        <a href="parte15.html">PARTE 15</a>
+        <a href="parte16.html">PARTE 16</a>
+        <a href="parte17.html">PARTE 17</a>
+        <a href="parte18.html">PARTE 18</a>
+        <a href="parte19.html">PARTE 19</a>
+        <a href="parte20.html">PARTE 20</a>
+        <a href="parte21.html">PARTE 21</a>
+        <a href="parte22.html">PARTE 22</a>
+        <a href="parte23.html">PARTE 23</a>
+        <a href="parte24.html">PARTE 24</a>
+        <a href="parte25.html">PARTE 25</a>
+    </nav>
+
+    <div class="premium-wrap">
+        <a href="#" class="premium-btn" id="premiumBtn">★ PREMIUM ★</a>
+        <p class="premium-text">Desbloquea cuestionarios exclusivos y sin límites</p>
+    </div>
+
+    <div id="premiumBadgeHome" class="premium-badge" style="display:none">★ MODO PREMIUM ACTIVO</div>
+
+    <!-- Ventana flotante Premium -->
+    <div class="modal-overlay" id="premiumModal">
+        <div class="modal-box">
+            <button class="modal-close" id="premiumClose" aria-label="Cerrar">×</button>
+            <h2 class="modal-title">★ Solicita tu código</h2>
+            <p class="modal-text">Para desbloquear el contenido PREMIUM, solicita tu código de acceso contactándonos por WhatsApp.</p>
+            <div class="code-box">
+                <input type="text" id="modalCodeInput" maxlength="4" placeholder="Código (4 caracteres)" autocomplete="off">
+                <button type="button" id="modalCodeBtn">Desbloquear</button>
+                <div id="modalCodeMsg" class="code-msg"></div>
+            </div>
+            <a class="modal-wa" href="https://wa.link/kmeemk" target="_blank" rel="noopener">Enviar solicitud por WhatsApp</a>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            var btn = document.getElementById('premiumBtn');
+            var modal = document.getElementById('premiumModal');
+            var close = document.getElementById('premiumClose');
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                modal.classList.add('active');
+            });
+            close.addEventListener('click', function () {
+                modal.classList.remove('active');
+            });
+            modal.addEventListener('click', function (e) {
+                if (e.target === modal) modal.classList.remove('active');
+            });
+
+            var input = document.getElementById('modalCodeInput');
+            var mBtn = document.getElementById('modalCodeBtn');
+            var mMsg = document.getElementById('modalCodeMsg');
+            function validar() {
+                var val = (input.value || '').trim().toUpperCase();
+                var lista = window.PREMIUM_CODES || [];
+                if (val.length === 4 && lista.indexOf(val) !== -1) {
+                    try { localStorage.setItem('premiumUnlocked', '1'); } catch (e) {}
+                    mMsg.style.color = '#155724';
+                    mMsg.textContent = '¡Código válido! Acceso PREMIUM desbloqueado.';
+                    setTimeout(function () { window.location.href = 'parte1.html'; }, 900);
+                } else {
+                    mMsg.style.color = '#dc3545';
+                    mMsg.textContent = 'Código no válido. Solicítalo por WhatsApp.';
+                }
+            }
+            mBtn.addEventListener('click', validar);
+            input.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter') validar();
+            });
+        })();
+    </script>
+    <script src="codes.js"></script>
+    <script>
+        (function () {
+            try {
+                if (localStorage.getItem('premiumUnlocked') === '1') {
+                    var b = document.getElementById('premiumBadgeHome');
+                    if (b) b.style.display = 'inline-block';
+                }
+            } catch (e) {}
+        })();
+    </script>
+</body>
+</html>

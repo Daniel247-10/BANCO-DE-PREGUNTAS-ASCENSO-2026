@@ -1,0 +1,361 @@
+/* ===== Estilos compartidos para todos los cuestionarios ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: #222;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px 16px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+header h1 {
+    font-size: 1.6rem;
+    color: #1e3c72;
+}
+
+header .subtitle {
+    font-size: 0.95rem;
+    color: #555;
+    margin-top: 6px;
+}
+
+nav.hub {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+nav.hub a {
+    display: inline-block;
+    background: #ffffff;
+    color: #1e3c72;
+    text-decoration: none;
+    padding: 8px 14px;
+    margin: 4px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.15s ease, background 0.15s ease;
+}
+
+nav.hub a:hover {
+    transform: translateY(-2px);
+    background: #ffd966;
+}
+
+#quiz-container {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.question-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 18px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+    border-left: 6px solid #2a5298;
+}
+
+.question-text {
+    font-size: 1.02rem;
+    margin-bottom: 12px;
+    color: #1a1a1a;
+}
+
+.options-list {
+    list-style: none;
+}
+
+.option {
+    padding: 10px 14px;
+    margin: 8px 0;
+    background: #f1f4fb;
+    border: 2px solid #d6def0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.option:hover {
+    background: #e2e9fb;
+    border-color: #2a5298;
+}
+
+.option.disabled {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.85;
+}
+
+.option.selected-correct {
+    background: #d4edda;
+    border-color: #28a745;
+    color: #155724;
+    font-weight: 600;
+}
+
+.option.selected-incorrect {
+    background: #f8d7da;
+    border-color: #dc3545;
+    color: #721c24;
+    font-weight: 600;
+}
+
+/* Muestra la respuesta correcta cuando el usuario se equivoca */
+.option.show-correct {
+    background: #d4edda;
+    border-color: #28a745;
+    color: #155724;
+    font-weight: 600;
+}
+
+.feedback {
+    margin-top: 12px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    display: none;
+}
+
+.feedback.correct {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.feedback.incorrect {
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin: 30px auto 10px;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* ===== Botón Premium en el menú principal ===== */
+.premium-wrap {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.premium-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    color: #5a2d00;
+    text-decoration: none;
+    padding: 14px 34px;
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(253, 160, 133, 0.5);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.premium-btn:hover {
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 6px 22px rgba(253, 160, 133, 0.7);
+}
+
+.premium-text {
+    margin-top: 10px;
+    color: #ffffff;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* ===== Ventana flotante Premium (modal) ===== */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    z-index: 1000;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-box {
+    position: relative;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px 28px;
+    max-width: 360px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    transform: translateY(-20px);
+    transition: transform 0.2s ease;
+}
+
+.modal-overlay.active .modal-box {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    line-height: 1;
+    color: #888;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: #333;
+}
+
+.modal-title {
+    color: #f6a623;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.modal-text {
+    color: #444;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.modal-wa {
+    display: inline-block;
+    background: #25d366;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: background 0.15s ease;
+}
+
+.modal-wa:hover {
+    background: #1ebe5b;
+}
+
+/* ===== Bloqueo PREMIUM tras 5 preguntas gratis ===== */
+.premium-lock {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px 20px;
+    margin: 18px 0;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+    border: 2px dashed #f6a623;
+}
+
+.premium-lock h3 {
+    color: #f6a623;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.premium-lock p {
+    color: #444;
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+}
+
+.premium-lock .code-box,
+.modal-box .code-box {
+    margin-bottom: 16px;
+}
+
+.premium-lock #codeInput,
+.modal-box #modalCodeInput {
+    width: 160px;
+    padding: 10px 12px;
+    border: 2px solid #d6def0;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    outline: none;
+}
+
+.premium-lock #codeInput:focus,
+.modal-box #modalCodeInput:focus {
+    border-color: #f6a623;
+}
+
+.premium-lock #codeBtn,
+.modal-box #modalCodeBtn {
+    margin-left: 8px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #f6a623;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.premium-lock #codeBtn:hover,
+.modal-box #modalCodeBtn:hover {
+    background: #e0941a;
+}
+
+.premium-lock .code-msg,
+.modal-box .code-msg {
+    margin-top: 10px;
+    font-size: 0.88rem;
+    min-height: 18px;
+}
+
+/* ===== Badge MODO PREMIUM ACTIVO (fijo y persistente) ===== */
+.premium-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    color: #5a2d00;
+    font-weight: 800;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    padding: 10px 22px;
+    border-radius: 30px;
+    margin: 14px auto;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(253, 160, 133, 0.5);
+}
+
+/* Badge fijo en esquina inferior derecha dentro de cuestionarios */
+body > .premium-badge:last-child {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    z-index: 900;
+    margin: 0;
+}

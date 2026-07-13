@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Banco de Preguntas - PARTE 4</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Banco de Preguntas - PARTE 4</h1>
+        <div class="subtitle">Examen de Ascenso 2026</div>
+    </header>
+
+    <nav class="hub">
+        <a href="index.html">&larr; Inicio</a>
+    </nav>
+
+    <div id="quiz-container"></div>
+
+    <script>
+        window.quizData = [
+    {
+        "q": "301. ¿En cuántas habilidades del Marco Global de UNICEF está basado el Manual de Resolución de Problemas?",
+        "options": [
+            "a) 5 habilidades fundamentales.",
+            "b) 12 habilidades transferibles.",
+            "c) 20 habilidades cognitivas."
+        ],
+        "correct": 1,
+        "retro": "El manual se alinea con las 12 habilidades del Marco Global de Habilidades Transferibles de UNICEF [1]."
+    },
+    {
+        "q": "302. Según el manual de UNICEF, ¿qué implica técnicamente la resolución de problemas?",
+        "options": [
+            "a) Identificar una dificultad, tomar medidas lógicas y supervisar la implementación.",
+            "b) Ignorar los conflictos menores para centrarse en los grandes.",
+            "c) Sancionar a los responsables de generar el problema en la escuela."
+        ],
+        "correct": 0,
+        "retro": "Se define como un proceso lógico que va desde la detección hasta el seguimiento de la solución [2]."
+    },
+    {
+        "q": "303. ¿Para qué se utiliza la estrategia de 'los cinco porqués' en la práctica docente?",
+        "options": [
+            "a) Para interrogar a un estudiante sobre una falta disciplinaria.",
+            "b) Para que el alumno aprenda a contar de cinco en cinco.",
+            "c) Para encontrar la causa raíz o más profunda de un problema."
+        ],
+        "correct": 2,
+        "retro": "Esta técnica permite profundizar más allá de lo superficial para hallar el origen real [3]."
+    },
+    {
+        "q": "304. ¿Cuál es el enfoque central de la Lección 6 del Manual de Resolución de Problemas?",
+        "options": [
+            "a) La identificación de los culpables.",
+            "b) El análisis de los pros y contras de las soluciones generadas.",
+            "c) La división del curso en grupos de trabajo."
+        ],
+        "correct": 1,
+        "retro": "Se busca que los estudiantes reflexionen críticamente sobre las consecuencias de cada opción [4]."
+    },
+    {
+        "q": "305. ¿Qué se espera alcanzar al concluir la última lección del manual de UNICEF?",
+        "options": [
+            "a) Poner en práctica lo aprendido resolviendo un problema de la comunidad escolar.",
+            "b) Realizar un examen final memorístico sobre los pasos guía.",
+            "c) Entregar un reporte de conducta de cada alumno."
+        ],
+        "correct": 0,
+        "retro": "La lección final se orienta a la aplicación práctica de los conocimientos adquiridos [5]."
+    },
+    {
+        "q": "306. Según el Manual de RP, la 'importancia de una consecuencia' es un factor:",
+        "options": [
+            "a) Determinado estrictamente por el director.",
+            "b) Objetivo e igual para todos los involucrados.",
+            "c) Personal y subjetivo, basado en valores y opiniones."
+        ],
+        "correct": 2,
+        "retro": "La valoración de una consecuencia depende de la perspectiva de cada sujeto ."
+    },
+    {
+        "q": "307. ¿Qué acción recomienda el manual cuando un problema es demasiado amplio o complejo?",
+        "options": [
+            "a) Abandonar el problema y buscar uno más sencillo.",
+            "b) Dividir el problema para abordarlo por partes (ej. autocontrol, políticas).",
+            "c) Esperar a que el consejo de maestros tome la decisión."
+        ],
+        "correct": 1,
+        "retro": "Dividir el problema facilita su análisis y la búsqueda de soluciones específicas [6]."
+    },
+    {
+        "q": "308. ¿Cuál es el rol del docente en la resolución de problemas según UNICEF?",
+        "options": [
+            "a) Impulsar los logros académicos y el bienestar integral del grupo.",
+            "b) Ser el único que tiene las respuestas correctas a los dilemas.",
+            "c) Dictar las soluciones y castigar a quien no las siga."
+        ],
+        "correct": 0,
+        "retro": "El docente actúa como formador que fortalece habilidades para la vida [5]."
+    },
+    {
+        "q": "309. ¿Cómo se logra la maestría en la resolución de problemas según el manual?",
+        "options": [
+            "a) Leyendo el manual una sola vez con mucha atención.",
+            "b) Practicando constantemente los cinco pasos guía.",
+            "c) Solicitando la intervención de expertos externos siempre."
+        ],
+        "correct": 1,
+        "retro": "La habilidad se desarrolla mediante la práctica sistemática [7]."
+    },
+    {
+        "q": "310. ¿Cuál es el cuarto paso guía para resolver un problema?",
+        "options": [
+            "a) Identificar la dificultad central.",
+            "b) Generar una lluvia de ideas sin juzgar.",
+            "c) Evaluar posibles soluciones analizando sus pros y contras."
+        ],
+        "correct": 2,
+        "retro": "Es el paso crítico de evaluación antes de elegir la mejor alternativa ."
+    },
+    {
+        "q": "311. Gimeno Sacristán afirma que el currículum actúa como un 'contenedor':",
+        "options": [
+            "a) Puramente técnico y científico.",
+            "b) No neutro de los contenidos y la cultura.",
+            "c) Desechable que cambia cada bimestre."
+        ],
+        "correct": 1,
+        "retro": "El currículo selecciona y jerarquiza saberes según un proyecto social [8]."
+    },
+    {
+        "q": "312. Según Feito Alonso, ¿qué temas suelen omitirse en el currículum oficial a pesar de su importancia?",
+        "options": [
+            "a) Salud (medicina), derecho y uso crítico de medios.",
+            "b) Matemáticas, lenguaje y ciencias naturales.",
+            "c) El estudio de la historia antigua de Grecia y Roma."
+        ],
+        "correct": 0,
+        "retro": "El autor critica la falta de saberes prácticos y ciudadanos en los programas [9]."
+    },
+    {
+        "q": "313. ¿Qué principio sostiene Feito sobre el aprendizaje de la democracia en la escuela?",
+        "options": [
+            "a) Se aprende escuchando conferencias de expertos.",
+            "b) Se aprende leyendo libros de ética y civismo.",
+            "c) No se aprende escuchando, se practica cotidianamente."
+        ],
+        "correct": 2,
+        "retro": "La convivencia democrática es una vivencia escolar y no solo un tema teórico [10]."
+    },
+    {
+        "q": "314. En el análisis del currículo oculto, la escuela a menudo pretende ser igualitaria pero:",
+        "options": [
+            "a) El éxito y fracaso se distribuyen desigualmente entre clases sociales.",
+            "b) Todos los alumnos logran los mismos resultados exactos.",
+            "c) Las niñas siempre tienen mejores notas que los niños en todo."
+        ],
+        "correct": 0,
+        "retro": "El análisis crítico detecta desigualdades que el discurso formal oculta [10]."
+    },
+    {
+        "q": "315. ¿Qué riesgo presenta un libro de texto que espera una reiteración pasiva del alumno?",
+        "options": [
+            "a) Que el alumno aprenda demasiado rápido y se aburra.",
+            "b) Que se convierta en una fuente indiscutible que anula la curiosidad.",
+            "c) Que el libro se gaste físicamente por el uso excesivo."
+        ],
+        "correct": 1,
+        "retro": "El libro de texto a menudo simplifica el saber a verdades cerradas [11]."
+    },
+    {
+        "q": "316. Philippe Perrenoud describe el proceso de socialización escolar como:",
+        "options": [
+            "a) Unas vacaciones pagadas por el Estado.",
+            "b) Aprender el 'oficio de alumno'.",
+            "c) Una pérdida de tiempo para los niños genios."
+        ],
+        "correct": 1,
+        "retro": "El alumno debe aprender las reglas, rutinas y expectativas del sistema [12]."
+    },
+    {
+        "q": "317. ¿Cómo define el texto el concepto de 'practicum' en la formación docente?",
+        "options": [
+            "a) Como un espacio complejo de aprendizaje y experiencia personal.",
+            "b) Como un examen de opción múltiple muy difícil.",
+            "c) Como la obligación de limpiar las aulas de la normal."
+        ],
+        "correct": 0,
+        "retro": "Es el lugar donde se integra la teoría pedagógica con la realidad del aula ."
+    },
+    {
+        "q": "318. El criterio epistemológico en la selección de contenidos curriculares se refiere a:",
+        "options": [
+            "a) La cantidad de hojas que tiene el plan de estudios.",
+            "b) El carácter y la naturaleza de cada ciencia y disciplina.",
+            "c) El gusto personal del maestro por un tema."
+        ],
+        "correct": 1,
+        "retro": "Busca respetar el rigor y la estructura de los saberes científicos [13]."
+    },
+    {
+        "q": "319. ¿Qué riesgo menciona el texto al aplicar 'últimos paradigmas científicos' a la escuela elemental?",
+        "options": [
+            "a) Que los maestros se declaren en huelga de hambre.",
+            "b) Que las computadoras dejen de funcionar por la complejidad.",
+            "c) Que el conocimiento vulgar sustituya la construcción del científico."
+        ],
+        "correct": 2,
+        "retro": "La transposición didáctica debe ser cuidadosa para no desvirtuar el saber [13]."
+    },
+    {
+        "q": "320. Sacristán afirma que el currículo asocia contenidos, grados y edades, actuando como un:",
+        "options": [
+            "a) Regulador de personas.",
+            "b) Inventario de muebles.",
+            "c) Recetario de cocina."
+        ],
+        "correct": 0,
+        "retro": "El currículo ordena la vida y el progreso de los sujetos en el sistema ."
+    },
+    {
+        "q": "321. ¿Qué descubrimiento fundamental sobre las neuronas confirmó Otto Loewi en 1921?",
+        "options": [
+            "a) Que las neuronas son cables eléctricos continuos.",
+            "b) Que se comunican por la liberación de sustancias químicas.",
+            "c) Que el cerebro no tiene nada que ver con el pensamiento."
+        ],
+        "correct": 1,
+        "retro": "Descubrió los neurotransmisores, específicamente la acetilcolina [14]."
+    },
+    {
+        "q": "322. ¿Qué capacidad permite al cerebro compensar la privación de experiencias previas?",
+        "options": [
+            "a) La visión de rayos X.",
+            "b) La neuroplasticidad.",
+            "c) El crecimiento de los huesos."
+        ],
+        "correct": 1,
+        "retro": "El cerebro puede reorganizarse funcionalmente a lo largo de la vida ."
+    },
+    {
+        "q": "323. En el circuito de recompensa DAS, ¿qué neurotransmisor se asocia con la Acción?",
+        "options": [
+            "a) Adrenalina.",
+            "b) Dopamina.",
+            "c) Serotonina."
+        ],
+        "correct": 0,
+        "retro": "Deseo (Dopamina), Acción (Adrenalina), Satisfacción (Serotonina) [8, 15]."
+    },
+    {
+        "q": "324. ¿Qué neurotransmisor genera la sensación de calma tras lograr un objetivo?",
+        "options": [
+            "a) Cortisol.",
+            "b) Serotonina.",
+            "c) Melatonina."
+        ],
+        "correct": 1,
+        "retro": "La serotonina cierra el ciclo de recompensa tras la satisfacción del logro ."
+    },
+    {
+        "q": "325. Aproximadamente, ¿qué porcentaje del genoma humano organiza el sistema nervioso?",
+        "options": [
+            "a) El 10%.",
+            "b) Casi el 50% (15,000 genes).",
+            "c) El 100% de los genes."
+        ],
+        "correct": 1,
+        "retro": "Una gran parte de nuestra carga genética está destinada a modelar el cerebro ."
+    },
+    {
+        "q": "326. ¿Qué estructura cerebral actúa como un 'filtro emocional' de la información?",
+        "options": [
+            "a) El cerebelo.",
+            "b) El hipocampo.",
+            "c) La amígdala."
+        ],
+        "correct": 2,
+        "retro": "La amígdala decide si el estímulo es una amenaza o permite el aprendizaje ."
+    },
+    {
+        "q": "327. El estado de 'Uptime' atencional se caracteriza por:",
+        "options": [
+            "a) Sentidos alertas y percepción enfocada al exterior.",
+            "b) Diálogo interno profundo y ojos cerrados.",
+            "c) Sueño pesado durante la tarde."
+        ],
+        "correct": 0,
+        "retro": "Es el momento de captación de datos del entorno ."
+    },
+    {
+        "q": "328. ¿Por qué es vital el estado 'Downtime' para el estudiante?",
+        "options": [
+            "a) Para poder correr más rápido en educación física.",
+            "b) Para procesar, reflexionar y consolidar la información recibida.",
+            "c) Para olvidar lo que el maestro enseñó."
+        ],
+        "correct": 1,
+        "retro": "Permite el diálogo interno y la asociación de saberes ."
+    },
+    {
+        "q": "329. ¿Dónde se localiza el epicentro de la atención ejecutiva y la planificación?",
+        "options": [
+            "a) En el lóbulo occipital.",
+            "b) En los lóbulos prefrontales.",
+            "c) En el tronco encefálico."
+        ],
+        "correct": 1,
+        "retro": "Allí residen las funciones ejecutivas superiores del aprendizaje ."
+    },
+    {
+        "q": "330. ¿Qué es la 'poda neuronal' en términos biológicos?",
+        "options": [
+            "a) Eliminación de sinapsis débiles para ganar eficiencia.",
+            "b) El crecimiento de pelo en el cuero cabelludo.",
+            "c) La muerte de neuronas por falta de azúcar."
+        ],
+        "correct": 0,
+        "retro": "Es un proceso adaptativo que optimiza las redes más utilizadas ."
+    },
+    {
+        "q": "331. Según la UNESCO, ¿por qué la escuela es el 'territorio' de la innovación?",
+        "options": [
+            "a) Porque tiene muchos metros cuadrados de construcción.",
+            "b) Porque es donde se asientan y viven los procesos de cambio.",
+            "c) Porque el Ministerio de Educación no tiene oficinas."
+        ],
+        "correct": 1,
+        "retro": "La innovación ocurre en el espacio real de interacción pedagógica [16]."
+    },
+    {
+        "q": "332. ¿Cómo define UNESCO la innovación educativa?",
+        "options": [
+            "a) Como un acto deliberado y planificado de solución de problemas.",
+            "b) Como un suceso accidental que ocurre por suerte.",
+            "c) Como la compra obligatoria de tablets cada año."
+        ],
+        "correct": 0,
+        "retro": "Requiere intencionalidad y una ruta crítica de mejora ."
+    },
+    {
+        "q": "333. ¿Qué pregunta define a la fase de 'Intencionalidad' en el ciclo innovador?",
+        "options": [
+            "a) ¿Cuánto dinero vamos a gastar?",
+            "b) ¿Quién es el jefe del proyecto?",
+            "c) ¿Qué se quiere transformar y por qué?"
+        ],
+        "correct": 2,
+        "retro": "Busca darle sentido y propósito al cambio propuesto [17]."
+    },
+    {
+        "q": "334. ¿Qué se logra con la 'sistematización' de una experiencia innovadora?",
+        "options": [
+            "a) Construir saber pedagógico a partir de la reflexión crítica.",
+            "b) Ordenar los expedientes de los alumnos alfabéticamente.",
+            "c) Justificar el despido de maestros que no usan internet."
+        ],
+        "correct": 0,
+        "retro": "Transforma la práctica de aula en teoría compartida ."
+    },
+    {
+        "q": "335. La innovación educativa se describe como un proceso en:",
+        "options": [
+            "a) Línea recta sin retorno.",
+            "b) Espiral de mejora continua.",
+            "c) Círculo cerrado que no cambia."
+        ],
+        "correct": 1,
+        "retro": "Siempre permite reformular y avanzar hacia nuevos niveles de calidad [17]."
+    },
+    {
+        "q": "336. ¿Qué concepto de Paulo Freire impulsa la movilización para innovar?",
+        "options": [
+            "a) Conciencia utópica.",
+            "b) Educación bancaria.",
+            "c) Resignación histórica."
+        ],
+        "correct": 0,
+        "retro": "Es la voluntad consciente de crear un nuevo orden de prácticas [18]."
+    },
+    {
+        "q": "337. ¿Cuál es el principal obstáculo personal para el cambio según UNESCO?",
+        "options": [
+            "a) La falta de uniformes nuevos.",
+            "b) Los modelos mentales muy arraigados.",
+            "c) La distancia de la casa al colegio."
+        ],
+        "correct": 1,
+        "retro": "Nuestras creencias previas actúan como barreras a lo nuevo [19]."
+    },
+    {
+        "q": "338. ¿Qué actividades definen la fase de 'Implementación'?",
+        "options": [
+            "a) Actuar, registrar, evaluar y reformular.",
+            "b) Solo comprar los materiales y guardarlos.",
+            "c) Hacer una fiesta de inauguración sin trabajar."
+        ],
+        "correct": 0,
+        "retro": "Es la puesta en marcha real de la planificación ."
+    },
+    {
+        "q": "339. El propósito de la 'Difusión' en un proyecto educativo es:",
+        "options": [
+            "a) Cobrar por la información a otros centros.",
+            "b) Compartir los aprendizajes para enriquecer el sistema.",
+            "c) Mantener el éxito en secreto para ser los mejores."
+        ],
+        "correct": 1,
+        "retro": "La innovación debe ser socializada para generar impacto ."
+    },
+    {
+        "q": "340. ¿Qué significa la metáfora de tocar 'jazz' aplicada a la innovación?",
+        "options": [
+            "a) Que el maestro debe tocar instrumentos en clase.",
+            "b) Que la educación es puro ruido sin sentido.",
+            "c) Que se crean y corren límites a medida que se actúa."
+        ],
+        "correct": 2,
+        "retro": "Implica improvisación estructurada y creatividad en la acción [20]."
+    },
+    {
+        "q": "341. ¿Cuál es la bonificación por antigüedad para la 1ra categoría del Escalafón?",
+        "options": [
+            "a) 50%.",
+            "b) 80%.",
+            "c) 100%."
+        ],
+        "correct": 2,
+        "retro": "Es el tope máximo de promoción económica por años de servicio ."
+    },
+    {
+        "q": "342. ¿Qué bonificación corresponde a la 2da categoría del magisterio?",
+        "options": [
+            "a) 75%.",
+            "b) 60%.",
+            "c) 90%."
+        ],
+        "correct": 0,
+        "retro": "Corresponde al 75% sobre el haber básico del cargo ."
+    },
+    {
+        "q": "343. ¿Qué porcentaje de bono percibe un maestro en la 3ra categoría?",
+        "options": [
+            "a) 45%.",
+            "b) 60%.",
+            "c) 70%."
+        ],
+        "correct": 1,
+        "retro": "La 3ra categoría asigna un 60% de bonificación ."
+    },
+    {
+        "q": "344. ¿Cuál es el beneficio económico de la 4ta categoría del Escalafón?",
+        "options": [
+            "a) 45%.",
+            "b) 30%.",
+            "c) 15%."
+        ],
+        "correct": 0,
+        "retro": "Corresponde al 45% sobre el básico del ítem ."
+    },
+    {
+        "q": "345. ¿Qué bonificación recibe un docente al ingresar a la 5ta categoría?",
+        "options": [
+            "a) 20%.",
+            "b) 30%.",
+            "c) 40%."
+        ],
+        "correct": 1,
+        "retro": "Es el primer escalón de bonificación del magisterio calificado ."
+    },
+    {
+        "q": "346. El 'uso de castigos corporales y vejaciones graves' se sanciona con:",
+        "options": [
+            "a) Una amonestación verbal privada.",
+            "b) De 1 a 20 puntos de demérito en el Escalafón.",
+            "c) Felicitación en el expediente."
+        ],
+        "correct": 1,
+        "retro": "Es una falta grave contra la integridad del alumno [21]."
+    },
+    {
+        "q": "347. ¿Cuántos días hábiles tiene un docente para apelar ante el Tribunal Nacional?",
+        "options": [
+            "a) 24 horas.",
+            "b) 3 días hábiles.",
+            "c) 10 días calendario."
+        ],
+        "correct": 1,
+        "retro": "Es el término legal para presentar apelación y agravios ."
+    },
+    {
+        "q": "348. ¿En qué plazo máximo debe dictar fallo un tribunal disciplinario?",
+        "options": [
+            "a) 5 días.",
+            "b) 48 horas.",
+            "c) Un mes."
+        ],
+        "correct": 0,
+        "retro": "El tribunal tiene 5 días para emitir su resolución final ."
+    },
+    {
+        "q": "349. Tras una apelación, ¿en qué tiempo deben remitirse los obrados al tribunal superior?",
+        "options": [
+            "a) 12 horas.",
+            "b) 24 horas.",
+            "c) 48 horas."
+        ],
+        "correct": 2,
+        "retro": "Garantiza la celeridad en la resolución del conflicto ."
+    },
+    {
+        "q": "350. La 'Estabilidad Laboral' garantiza que ningún trabajador sea removido sin:",
+        "options": [
+            "a) Que se pruebe su culpabilidad en proceso previo.",
+            "b) Que el director distrital lo decida en una reunión.",
+            "c) Que los padres de familia firmen una carta."
+        ],
+        "correct": 0,
+        "retro": "Es un derecho fundamental de la carrera docente ."
+    },
+    {
+        "q": "351. ¿Qué significan las siglas DPA en inclusión?",
+        "options": [
+            "a) Derecho a Procesos Académicos.",
+            "b) Diseño Plural para los Aprendizajes.",
+            "c) Departamento de Pruebas Anuales."
+        ],
+        "correct": 1,
+        "retro": "Es la herramienta para planificar atendiendo a la diversidad ."
+    },
+    {
+        "q": "352. Los maestros de apoyo de modalidad indirecta dependen técnicamente de:",
+        "options": [
+            "a) El Centro de Educación Especial (CEE).",
+            "b) La alcaldía municipal local.",
+            "c) El regente de la unidad educativa."
+        ],
+        "correct": 0,
+        "retro": "Su control y gestión recae en las direcciones de los CEE ."
+    },
+    {
+        "q": "353. ¿Qué margen de desfase de edad se admite para niños con discapacidad intelectual?",
+        "options": [
+            "a) Hasta 12 meses.",
+            "b) Ninguno, debe ser la misma edad.",
+            "c) Hasta 24 meses respecto a sus pares."
+        ],
+        "correct": 2,
+        "retro": "Permite una integración adecuada con su grupo etario ."
+    },
+    {
+        "q": "354. La carga horaria individualizada para apoyo en Discapacidad Visual es de:",
+        "options": [
+            "a) 12 horas mensuales.",
+            "b) 4 horas mensuales.",
+            "c) 20 horas mensuales."
+        ],
+        "correct": 0,
+        "retro": "Es el estándar establecido en la gestión organizacional ."
+    },
+    {
+        "q": "355. La Educación Inclusiva es considerada actualmente como una:",
+        "options": [
+            "a) Opción voluntaria de cada colegio.",
+            "b) Política de Estado prioritaria.",
+            "c) Rama de la medicina general."
+        ],
+        "correct": 1,
+        "retro": "Busca la universalización del derecho a aprender sin exclusiones ."
+    },
+    {
+        "q": "356. ¿Cuál es la responsabilidad mayor del Director en inclusión?",
+        "options": [
+            "a) Garantizar la matriculación y los apoyos pertinentes.",
+            "b) Cobrar cuotas especiales por cada niño con discapacidad.",
+            "c) Impedir que los alumnos con dificultades se inscriban."
+        ],
+        "correct": 0,
+        "retro": "El director es el garante administrativo de la inclusión ."
+    },
+    {
+        "q": "357. En casos de necesidad extrema, la labor del apoyo educativo puede ser:",
+        "options": [
+            "a) Suspendida indefinidamente.",
+            "b) Intermunicipal (extenderse geográficamente).",
+            "c) Solo dentro del aula del CEE."
+        ],
+        "correct": 1,
+        "retro": "Busca dar cobertura donde no existen centros especializados cercanos ."
+    },
+    {
+        "q": "358. ¿Qué aptitud básica se exige a un maestro de apoyo?",
+        "options": [
+            "a) Conocimiento profundo del enfoque inclusivo.",
+            "b) Ser el maestro con más años de servicio de la unidad.",
+            "c) Tener un título médico cirujano."
+        ],
+        "correct": 0,
+        "retro": "Debe dominar las estrategias de sensibilización y guía [22]."
+    },
+    {
+        "q": "359. La 'Trayectoria Educativa' de un estudiante con discapacidad es:",
+        "options": [
+            "a) El promedio de sus notas finales.",
+            "b) Su historial cronológico y secuencial de capacidades e intervenciones.",
+            "c) El número de veces que faltó a clases."
+        ],
+        "correct": 1,
+        "retro": "Permite dar continuidad a los apoyos a lo largo del tiempo ."
+    },
+    {
+        "q": "360. Las instituciones deben inscribir a estudiantes con discapacidad:",
+        "options": [
+            "a) Independientemente de su grado de discapacidad.",
+            "b) Solo si la discapacidad es leve o moderada.",
+            "c) Solo si traen su propio maestro particular."
+        ],
+        "correct": 0,
+        "retro": "Se prohíbe el rechazo por condición de discapacidad ."
+    },
+    {
+        "q": "361. El concepto de 'Provención' propuesto por Francisco Cascón busca:",
+        "options": [
+            "a) Castigar por sospecha de conflicto.",
+            "b) Prohibir el diálogo entre estudiantes.",
+            "c) Educar en valores para resolver antes de la crisis."
+        ],
+        "correct": 2,
+        "retro": "Desarrolla capacidades para gestionar el conflicto pacíficamente ."
+    },
+    {
+        "q": "362. En resolución de conflictos, la 'Reparación' consiste en:",
+        "options": [
+            "a) Acciones para sanar relaciones y compensar el daño.",
+            "b) Pagar una multa en efectivo al director.",
+            "c) Expulsar al alumno que cometió el error."
+        ],
+        "correct": 0,
+        "retro": "Es un elemento esencial del enfoque humanista de Galtung ."
+    },
+    {
+        "q": "363. El rol del mediador escolar es estrictamente:",
+        "options": [
+            "a) Dictar quién tiene la razón y quién no.",
+            "b) Facilitar la comunicación entre las partes.",
+            "c) Aplicar el reglamento de sanciones de inmediato."
+        ],
+        "correct": 1,
+        "retro": "El mediador no impone soluciones; ayuda a que las partes las hallen ."
+    },
+    {
+        "q": "364. ¿Cuándo se recurre al 'Arbitraje' en la escuela?",
+        "options": [
+            "a) Cuando las partes someten la solución a un tercero con autoridad.",
+            "b) Cuando se quiere ver quién gana una pelea física.",
+            "c) Siempre que hay un conflicto de notas mínimo."
+        ],
+        "correct": 0,
+        "retro": "Se utiliza cuando la mediación voluntaria no prospera ."
+    },
+    {
+        "q": "365. ¿Cuál es la diferencia entre Conciliación y Mediación?",
+        "options": [
+            "a) El conciliador es más activo y puede proponer soluciones.",
+            "b) La mediación solo la hace el director.",
+            "c) No hay diferencia, son palabras iguales por ley."
+        ],
+        "correct": 0,
+        "retro": "El mediador solo guía el diálogo; el conciliador sugiere salidas ."
+    },
+    {
+        "q": "366. La negociación 'razonada' busca un resultado de tipo:",
+        "options": [
+            "a) Yo gano - Tú pierdes.",
+            "b) Ambos perdemos por igual.",
+            "c) Ganar - Ganar (beneficio mutuo)."
+        ],
+        "correct": 2,
+        "retro": "Busca soluciones sostenibles que cuiden la relación interpersonal ."
+    },
+    {
+        "q": "367. ¿Cuál es la primera condición para iniciar una mediación?",
+        "options": [
+            "a) La orden directa del Ministerio.",
+            "b) La voluntariedad de las partes en conflicto.",
+            "c) El pago de los honorarios del mediador."
+        ],
+        "correct": 1,
+        "retro": "Nadie puede ser forzado a participar en un proceso de mediación ."
+    },
+    {
+        "q": "368. ¿Qué es un 'contrato con los agresores'?",
+        "options": [
+            "a) Un documento para iniciar un juicio penal.",
+            "b) Un acuerdo de compromisos mutuos para cesar la violencia.",
+            "c) Una multa económica mensual."
+        ],
+        "correct": 1,
+        "retro": "Es una herramienta de compromiso personal para restaurar la paz ."
+    },
+    {
+        "q": "369. ¿A qué se denomina 'Mediación entre iguales'?",
+        "options": [
+            "a) Cuando los maestros pelean entre ellos.",
+            "b) Cuando alumnos median en conflictos de sus propios compañeros.",
+            "c) Cuando el director habla con otros directores."
+        ],
+        "correct": 1,
+        "retro": "Fomenta la autonomía y participación estudiantil ."
+    },
+    {
+        "q": "370. El fin último de la 'atención a la diversidad' es brindar:",
+        "options": [
+            "a) Regalos a los alumnos más necesitados.",
+            "b) Igualdad de oportunidades real reconociendo las diferencias.",
+            "c) Exámenes más fáciles a todos para que nadie repruebe."
+        ],
+        "correct": 1,
+        "retro": "Reconoce que tratar a todos igual puede ser injusto si no se atienden necesidades ."
+    },
+    {
+        "q": "371. El objeto principal de la Ley N° 223 es:",
+        "options": [
+            "a) Garantizar el ejercicio pleno de derechos y deberes de personas con discapacidad.",
+            "b) Construir rampas de cemento en todas las esquinas.",
+            "c) Cobrar impuestos a quienes no tengan discapacidad."
+        ],
+        "correct": 0,
+        "retro": "Busca la igualdad y protección integral de esta población [23]."
+    },
+    {
+        "q": "372. ¿Cómo se define el Grado de Discapacidad 'Muy Grave'?",
+        "options": [
+            "a) Deficiencia que requiere asistencia permanente y dependencia total.",
+            "b) Uso ocasional de silla de ruedas o muletas.",
+            "c) Tener dificultades leves para leer letras pequeñas."
+        ],
+        "correct": 0,
+        "retro": "Es el nivel máximo de limitación funcional según la ley [7]."
+    },
+    {
+        "q": "373. Según el Art. 34 de la Ley 223, los padres de hijos con discapacidad gozan de:",
+        "options": [
+            "a) Vacaciones pagadas de tres meses.",
+            "b) Inamovilidad laboral.",
+            "c) Sueldo triple por parte del Estado."
+        ],
+        "correct": 1,
+        "retro": "Protege el sustento de la familia de la persona con discapacidad [24]."
+    },
+    {
+        "q": "374. El principio de 'Trato Preferente' implica:",
+        "options": [
+            "a) Acciones para eliminar desventajas e igualar condiciones.",
+            "b) Ser el dueño de la escuela.",
+            "c) No asistir a clases pero aprobar igual."
+        ],
+        "correct": 0,
+        "retro": "Garantiza equidad real frente a las barreras del entorno [25]."
+    },
+    {
+        "q": "375. ¿Cuál es el ente rector de las políticas de discapacidad en Bolivia?",
+        "options": [
+            "a) El Banco Central de Bolivia.",
+            "b) CONALPEDIS.",
+            "c) La confederación de choferes."
+        ],
+        "correct": 1,
+        "retro": "Es el Consejo Nacional de Personas con Discapacidad ."
+    },
+    {
+        "q": "376. ¿Cuál es el deber de la familia hacia la persona con discapacidad según la ley?",
+        "options": [
+            "a) Mantenerla aislada en el hogar para que no sufra.",
+            "b) Promover su autonomía, autodeterminación y protección.",
+            "c) Administrar todos sus bienes de forma arbitraria."
+        ],
+        "correct": 1,
+        "retro": "La familia debe ser el primer soporte para su vida independiente ."
+    },
+    {
+        "q": "377. Las personas con discapacidad tienen derecho a la libreta de servicio militar:",
+        "options": [
+            "a) Solo si pagan el doble de la tasa normal.",
+            "b) De forma gratuita y sin marchar.",
+            "c) Está prohibido que la tengan."
+        ],
+        "correct": 1,
+        "retro": "Es un beneficio estatal de gratuidad administrativa ."
+    },
+    {
+        "q": "378. ¿Qué beneficio otorga el Art. 31 de la Ley 223 en Educación Superior?",
+        "options": [
+            "a) Gratuidad en diplomas académicos y títulos profesionales.",
+            "b) Becas solo para estudiar en el extranjero.",
+            "c) Obligación de aprobar sin necesidad de estudiar."
+        ],
+        "correct": 0,
+        "retro": "Facilita la titulación de personas certificadas [15]."
+    },
+    {
+        "q": "379. ¿Cómo define la ley la 'Deficiencia'?",
+        "options": [
+            "a) Como la pérdida de una estructura o función psicológica o anatómica.",
+            "b) Como tener malas notas en matemáticas.",
+            "c) Como la falta total de amigos en la escuela."
+        ],
+        "correct": 0,
+        "retro": "Es el término técnico para identificar la barrera biológica ."
+    },
+    {
+        "q": "380. ¿Qué obligación tiene el Estado sobre los sistemas de comunicación?",
+        "options": [
+            "a) Prohibir el uso de señas en actos oficiales.",
+            "b) Garantizar el acceso a LSB, Braille y otros sistemas.",
+            "c) Cobrar por el uso de intérpretes."
+        ],
+        "correct": 1,
+        "retro": "Es un derecho lingüístico fundamental ."
+    },
+    {
+        "q": "381. ¿Cuál es el plazo máximo para que un funcionario denuncie violencia detectada?",
+        "options": [
+            "a) 48 horas tras el hecho.",
+            "b) 24 horas tras la detección.",
+            "c) Al final del trimestre educativo."
+        ],
+        "correct": 1,
+        "retro": "La denuncia inmediata es obligatoria para proteger a la víctima ."
+    },
+    {
+        "q": "382. El documento de retorno tras una denuncia se denomina:",
+        "options": [
+            "a) Contrarreferencia.",
+            "b) Carta de disculpas.",
+            "c) Informe de expulsión."
+        ],
+        "correct": 0,
+        "retro": "Informa a la escuela sobre las acciones de la DNA/SLIM ."
+    },
+    {
+        "q": "383. Ante sospecha de violencia sexual, la contención debe realizarla preferentemente:",
+        "options": [
+            "a) El profesor de educación física.",
+            "b) El portero de la unidad.",
+            "c) Personal capacitado de la Defensoría (DNA)."
+        ],
+        "correct": 2,
+        "retro": "Busca evitar daños psicológicos adicionales por falta de pericia ."
+    },
+    {
+        "q": "384. ¿Qué es la 'Revictimización' según los protocolos?",
+        "options": [
+            "a) Dar un premio a la víctima por su valentía.",
+            "b) Obligar a la víctima a relatar el trauma repetidamente.",
+            "c) Cambiar al agresor de colegio de inmediato."
+        ],
+        "correct": 1,
+        "retro": "Expone nuevamente a la víctima al sufrimiento emocional ."
+    },
+    {
+        "q": "385. La 'Ruta 2' del protocolo de actuación se aplica específicamente ante:",
+        "options": [
+            "a) Violencia física o psicológica.",
+            "b) Falta de pago de pensiones.",
+            "c) Hechos de violencia sexual."
+        ],
+        "correct": 2,
+        "retro": "Establece pasos legales diferenciados para delitos sexuales ."
+    },
+    {
+        "q": "386. El delito de 'Estupro' se tipifica cuando la víctima tiene:",
+        "options": [
+            "a) Menos de 12 años.",
+            "b) Entre 14 y 18 años (con seducción o engaño).",
+            "c) Solo mayores de 21 años."
+        ],
+        "correct": 1,
+        "retro": "Es la definición legal incluida en los protocolos escolares ."
+    },
+    {
+        "q": "387. ¿Cuál es la sanción penal para el delito de estupro?",
+        "options": [
+            "a) 3 a 6 años de prisión.",
+            "b) 1 a 2 años de trabajo comunitario.",
+            "c) 30 años sin derecho a indulto."
+        ],
+        "correct": 0,
+        "retro": "Está establecida en el Código Penal boliviano ."
+    },
+    {
+        "q": "388. Quien instigue al suicidio a otra persona, si la muerte ocurre, tiene una pena de:",
+        "options": [
+            "a) 10 a 20 años.",
+            "b) 2 a 6 años.",
+            "c) Una multa económica mínima."
+        ],
+        "correct": 1,
+        "retro": "Es un delito grave tipificado en la normativa de protección ."
+    },
+    {
+        "q": "389. Matar a otro en estado de 'emoción violenta excusable' tiene una sanción de:",
+        "options": [
+            "a) 1 a 6 años de reclusión.",
+            "b) Libertad inmediata con fianza.",
+            "c) Pena de muerte obligatoria."
+        ],
+        "correct": 0,
+        "retro": "Es un atenuante contemplado por la ley bajo ciertas circunstancias ."
+    },
+    {
+        "q": "390. ¿Qué señal conductual es típica de un niño maltratado intrafamiliarmente?",
+        "options": [
+            "a) Deseo de comer más dulces de lo normal.",
+            "b) Conductas regresivas como orinarse en la cama (enuresis).",
+            "c) Hablar más rápido y con vocabulario complejo."
+        ],
+        "correct": 1,
+        "retro": "El trauma provoca vueltas a etapas del desarrollo ya superadas ."
+    },
+    {
+        "q": "391. El principio de 'Jerarquía de contenido' sostiene que los saberes deben:",
+        "options": [
+            "a) Ser dictados sin ningún orden específico.",
+            "b) Organizarse de lo fundamental a lo accesorio.",
+            "c) Ser elegidos al azar por los estudiantes."
+        ],
+        "correct": 1,
+        "retro": "Asegura una estructura lógica que facilita el aprendizaje [26]."
+    },
+    {
+        "q": "392. El perfil de 'Maestro Completo' según Lowman exige:",
+        "options": [
+            "a) Alta estimulación intelectual y excelente relación interpersonal.",
+            "b) Ser muy serio y no hablar con los alumnos nunca.",
+            "c) Saber mucha teoría aunque no sepa explicarla."
+        ],
+        "correct": 0,
+        "retro": "Es el docente que equilibra el saber con la calidez humana ."
+    },
+    {
+        "q": "393. ¿Qué característica distingue a las 'Competencias Genéricas'?",
+        "options": [
+            "a) Sirven solo para aprobar una materia de 1er grado.",
+            "b) Son transferibles a múltiples situaciones de la vida.",
+            "c) Son secretas y el alumno no debe conocerlas."
+        ],
+        "correct": 1,
+        "retro": "Son habilidades para la vida y el desempeño profesional diverso ."
+    },
+    {
+        "q": "394. Perrenoud define el 'Oficio de Alumno' como un trabajo:",
+        "options": [
+            "a) Voluntario, privado y con sueldo mensual.",
+            "b) Obligatorio, evaluado públicamente y sin salario.",
+            "c) Donde el alumno manda sobre el maestro."
+        ],
+        "correct": 1,
+        "retro": "Tiene características sociológicas únicas en la sociedad ."
+    },
+    {
+        "q": "395. Las 'Escuelas Pacíficas' gestionan el conflicto mediante:",
+        "options": [
+            "a) La prohibición de que los alumnos hablen en el recreo.",
+            "b) El diálogo, la justicia y la reparación del daño.",
+            "c) La expulsión inmediata de cualquier alumno que discuta."
+        ],
+        "correct": 1,
+        "retro": "Buscan transformar la convivencia desde la no violencia ."
+    },
+    {
+        "q": "396. ¿Qué ocurre biológicamente durante un 'Secuestro Amigdalar'?",
+        "options": [
+            "a) El estrés bloquea el funcionamiento del neocórtex racional.",
+            "b) El cerebro se vuelve más inteligente bajo presión extrema.",
+            "c) Se pierde la visión de forma permanente."
+        ],
+        "correct": 0,
+        "retro": "La amígdala toma el control para la supervivencia, anulando la razón ."
+    },
+    {
+        "q": "397. ¿Cuál es el objetivo principal de la Lección 1 del Manual de RP de UNICEF?",
+        "options": [
+            "a) Identificar qué es un problema y normalizarlos en la vida.",
+            "b) Resolver ecuaciones de segundo grado complejas.",
+            "c) Aprender los nombres de los próceres de la independencia."
+        ],
+        "correct": 0,
+        "retro": "Busca tomar conciencia de que los problemas son parte natural de la existencia ."
+    },
+    {
+        "q": "398. ¿Para qué sirve técnicamente la herramienta de 'Comparar y Contrastar'?",
+        "options": [
+            "a) Para copiar la tarea del compañero de al lado.",
+            "b) Para evaluar alternativas mediante similitudes y diferencias.",
+            "c) Para memorizar listas de palabras sin sentido."
+        ],
+        "correct": 1,
+        "retro": "Es una destreza de pensamiento crítico para la toma de decisiones ."
+    },
+    {
+        "q": "399. ¿Qué dispone la Ley Marcelo Quiroga Santa Cruz sobre la inmunidad?",
+        "options": [
+            "a) No reconoce inmunidad, fuero o privilegio alguno en su aplicación.",
+            "b) Que los directores tienen inmunidad total ante cargos de corrupción.",
+            "c) Que solo se aplica a ciudadanos que no trabajan en el Estado."
+        ],
+        "correct": 0,
+        "retro": "Es un principio de igualdad ante la ley contra la corrupción ."
+    },
+    {
+        "q": "400. El propósito biológico final de la 'Poda Neuronal' es:",
+        "options": [
+            "a) Que el cerebro pese menos para que no duela la cabeza.",
+            "b) Lograr la especialización y eficiencia de las redes principales.",
+            "c) Eliminar el hambre que siente el alumno durante las clases."
+        ],
+        "correct": 1,
+        "retro": "Optimiza los recursos cerebrales eliminando conexiones redundantes ."
+    }
+];
+    </script>
+    <script src="codes.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>

@@ -9,1016 +9,612 @@
 <body>
     <header>
         <h1>Banco de Preguntas - PARTE 2</h1>
-        <div class="subtitle">Examen de Ascenso 2026 (Preguntas 101 - 200)</div>
+        <div class="subtitle">Examen de Ascenso 2026 (Preguntas 101-200)</div>
     </header>
-
-    <nav class="hub">
-        <a href="index.html">&larr; Inicio</a>
-    </nav>
 
     <div id="quiz-container"></div>
 
     <script>
         window.quizData = [
     {
-        "q": "101. Según Sacristán, ¿qué representó el currículo para la crítica progresista frente al conocimiento academicista asentado como saber escolar?",
-        "options": [
-            "a) Un instrumento de control burocrático absoluto.",
-            "b) Un campo de batalla para democratizar el saber y la cultura.",
-            "c) Un simple listado de libros obligatorios."
-        ],
+        "q": "101. Según Sacristán, ¿qué representó el currículo para la crítica progresista frente al academicismo?",
+        "options": ["El territorio acotado del conocimiento, un plan propuesto e impuesto.", "Una guía opcional sugerida por los docentes.", "Un manual de disciplina para el comportamiento escolar."],
+        "correct": 0,
+        "retro": "El currículum significó el territorio acotado del conocimiento, un plan propuesto e impuesto (Diseño, desarrollo e innovación del currículum, p. 25)."
+    },
+    {
+        "q": "102. En programas de mediación entre iguales, ¿qué es lo primero que se trata de alcanzar?",
+        "options": ["El aislamiento de las partes.", "Un acuerdo previo de las partes para colaborar.", "La identificación de un culpable único."],
         "correct": 1,
-        "retro": "Para la crítica progresista, el currículo es el espacio donde se disputa la relevancia y democratización del conocimiento social."
+        "retro": "Se requiere un acuerdo previo de las partes para colaborar (Convivencia escolar y resolución pacífica de conflictos, p. 73)."
     },
     {
-        "q": "102. De acuerdo con el texto “Convivencia escolar y resolución pacífica de conflictos”, en los programas de mediación entre iguales, los mediadores siguen un proceso simple. En primer lugar, ¿qué se trata de alcanzar?",
-        "options": [
-            "a) Dictar una sentencia de castigo para el culpable.",
-            "b) Que las partes acepten las reglas y se comprometan con el proceso.",
-            "c) Expulsar a los alumnos conflictivos del centro."
-        ],
+        "q": "103. ¿Qué caracteriza la naturaleza del practicum en la formación docente?",
+        "options": ["Es solo un espacio de evaluación teórica.", "Un componente curricular y complejo espacio de aprendizaje.", "Un requisito administrativo sin impacto personal."],
         "correct": 1,
-        "retro": "El primer paso de la mediación es establecer el encuadre y lograr el consentimiento voluntario de las partes."
+        "retro": "Se presenta como componente curricular, espacio de aprendizaje y experiencia personal (Diseño, desarrollo e innovación del currículum, p. 74)."
     },
     {
-        "q": "103. El practicum se presenta como un componente curricular, como un complejo espacio de aprendizaje y como experiencia personal. Desde esta triple dimensión, ¿cuál de las siguientes afirmaciones caracteriza correctamente su naturaleza en el marco de la formación docente?",
-        "options": [
-            "a) Es un periodo de vacaciones pagadas para el estudiante.",
-            "b) Es el espacio de socialización profesional y articulación teoría-práctica.",
-            "c) Es solo una formalidad administrativa sin valor pedagógico."
-        ],
+        "q": "104. Un buen reglamento escolar disminuye los problemas de indisciplina en beneficio de:",
+        "options": ["La recaudación de fondos municipales.", "El prestigio de los directivos.", "Un clima de orden y seguridad indispensable para aprender."],
+        "correct": 2,
+        "retro": "Beneficia un clima de orden y seguridad para el aprendizaje (Convivencia escolar y resolución pacífica de conflictos, p. 43)."
+    },
+    {
+        "q": "105. ¿Qué deben contener los informes de Inspección Ocular de los Institutos?",
+        "options": ["Evaluación de infraestructura, mobiliario y equipamiento.", "Solo la cantidad de estudiantes inscritos.", "Únicamente el currículum de los docentes."],
+        "correct": 0,
+        "retro": "Deben evaluar infraestructura, mobiliario y equipamiento (Reglamento para el fortalecimiento de la educación inclusiva en el SEP, p. 24)."
+    },
+    {
+        "q": "106. Sobre acciones de prevención para directivos, ¿cuál de estas es CORRECTA?",
+        "options": ["Instalar cámaras en los baños de estudiantes.", "Elaborar de forma participativa el Plan de Convivencia Armónica.", "Prohibir toda comunicación por WhatsApp con los padres."],
         "correct": 1,
-        "retro": "El prácticum es fundamental para integrar el saber teórico con la realidad de la praxis docente."
+        "retro": "Elaborar participativamente el plan de convivencia es una medida clave (Protocolo de prevención y actuación, p. 53)."
     },
     {
-        "q": "104. Un buen reglamento escolar disminuye los problemas de comportamiento y de indisciplina, en beneficio de:",
-        "options": [
-            "a) La recaudación de multas económicas.",
-            "b) La convivencia pacífica y el clima institucional.",
-            "c) La autoridad autoritaria del director."
-        ],
+        "q": "107. Según la neurociencia, ¿cuántos genes están encargados de modelar el cerebro?",
+        "options": ["Aproximadamente 5,000 genes.", "Cerca de 15,000 genes.", "La totalidad de los 30,000 genes."],
         "correct": 1,
-        "retro": "Un reglamento claro y consensuado mejora el clima de aula y favorece el aprendizaje."
+        "retro": "Unos quince mil genes están encargados de modelar el cerebro (Neurociencia Neuroaprendizaje: Las emociones y el aprendizaje, p. 52)."
     },
     {
-        "q": "105. ¿Qué elementos deben contener obligatoriamente los informes de Inspección Ocular de Evaluación de Infraestructura, Mobiliario y Equipamiento de los Institutos?",
-        "options": [
-            "a) El estado físico de aulas, laboratorios, servicios básicos y seguridad.",
-            "b) Solo la lista de nombres de los maestros antiguos.",
-            "c) El color de la pintura de la fachada únicamente."
-        ],
+        "q": "108. ¿Qué error comete un director si aplica criterios curriculares como una simple lista de verificación?",
+        "options": ["Reduccionismo técnico y falta de reflexión sobre el contexto.", "Exceso de burocracia administrativa.", "Falta de control sobre el personal docente."],
         "correct": 0,
-        "retro": "La inspección evalúa las condiciones técnicas y de seguridad que garantizan el servicio educativo."
+        "retro": "Ignora que el diseño es una opción cultural y no una cuestión técnica (Diseño, desarrollo e innovación del currículum, p. 19)."
     },
     {
-        "q": "106. Una directora de unidad educativa, al inicio de la gestión escolar, realiza las siguientes cuatro acciones: (1) instala cámaras en pasillos y baños, (2) autoriza WhatsApp con copia a padres, (3) elabora el Plan de Convivencia con la comunidad, y (4) prohíbe actividades fuera de horario. ¿Cuántas acciones son CORRECTAS según las medidas de prevención?",
-        "options": [
-            "a) Solo una acción.",
-            "b) Dos acciones (la 2 y la 3).",
-            "c) Todas son correctas."
-        ],
+        "q": "109. ¿Cómo se clasifican las consecuencias de la agresión física a mediano plazo?",
+        "options": ["Primarias, secundarias y terciarias.", "Emocionales, cognitivas y conductuales.", "Leves, graves y muy graves."],
         "correct": 1,
-        "retro": "Instalar cámaras en baños vulnera la privacidad (1) y prohibir actividades extracurriculares por norma general puede ser excesivo si son pedagógicas (4). La comunicación transparente (2) y el Plan participativo (3) son correctas."
-    },
-    {
-        "q": "107. Según la neurociencia, del total de treinta mil genes del genoma humano, ¿cuántos están encargados de modelar el cerebro?",
-        "options": [
-            "a) Aproximadamente el 50% (quince mil genes).",
-            "b) Menos del 1%.",
-            "c) Todos los genes sin excepción."
-        ],
-        "correct": 0,
-        "retro": "Casi la mitad del genoma humano está dedicado exclusivamente a la estructura y funcionamiento cerebral."
-    },
-    {
-        "q": "108. Un director encarga a su equipo técnico la selección de contenidos escolares aplicando los criterios epistemológico, psicológico y pedagógico como una lista de verificación. Según el texto «Diseñar el currículum», ¿qué error de fondo comete?",
-        "options": [
-            "a) Tratar la selección como un proceso técnico administrativo y no como una opción cultural.",
-            "b) Usar demasiados criterios de evaluación.",
-            "c) No incluir al portero en la comisión."
-        ],
-        "correct": 0,
-        "retro": "Clemente Linuesa advierte que la selección de contenidos es siempre una decisión valorativa y cultural, no un trámite burocrático."
-    },
-    {
-        "q": "109. ¿Cuál de las siguientes clasificaciones distribuye las consecuencias a mediano plazo de la agresión física entre las categorías emocional, cognitiva y conductual?",
-        "options": [
-            "a) Miedo, dificultades de atención y aislamiento social.",
-            "b) Solo hematomas y fracturas.",
-            "c) Hambre, sed y sueño."
-        ],
-        "correct": 0,
-        "retro": "El impacto de la violencia abarca el estado afectivo, el rendimiento intelectual y la relación con los pares."
-    },
-    {
-        "q": "110. Considerando los indicadores generales en niñas, niños y adolescentes víctimas de violencia, ¿cuál de las siguientes opciones corresponde a una de las conductas que se identifican en la institución educativa?",
-        "options": [
-            "a) Cambios bruscos de humor, hiperactividad o retraimiento excesivo.",
-            "b) Sacar siempre 100 en todas las materias.",
-            "c) Pedir permiso para ir al baño."
-        ],
-        "correct": 0,
-        "retro": "La desregulación emocional y el cambio repentino de conducta son señales de alerta en el entorno escolar."
-    },
-    {
-        "q": "111. ¿Cuál de las siguientes opciones corresponde a una consecuencia cognitiva a largo plazo en víctimas de violencia?",
-        "options": [
-            "a) Baja autoestima y retraso en el desarrollo del lenguaje o aprendizaje.",
-            "b) Una memoria fotográfica perfecta.",
-            "c) Aumento de la capacidad de concentración."
-        ],
-        "correct": 0,
-        "retro": "El trauma crónico afecta las áreas cerebrales encargadas del procesamiento cognitivo superior."
-    },
-    {
-        "q": "112. Según «Diseñar el currículum», ¿qué ocurre cuando los niveles de los estudiantes actúan como freno para trabajar ciertos contenidos?",
-        "options": [
-            "a) Se produce una reducción y simplificación excesiva de la cultura enseñada.",
-            "b) Los alumnos aprenden más rápido por esfuerzo propio.",
-            "c) El Ministerio despide al maestro automáticamente."
-        ],
-        "correct": 0,
-        "retro": "Adaptar el contenido a niveles bajos sin desafío puede empobrecer la calidad de la oferta educativa."
-    },
-    {
-        "q": "113. En una clase, los estudiantes trabajan con lentitud sostenida... lo que obliga al maestro a dejar sin cubrir temas. ¿Qué concepto explica ese resultado según Perrenoud?",
-        "options": [
-            "a) La negociación del currículo real (ritmo de trabajo).",
-            "b) La pereza colectiva organizada.",
-            "c) Un error en el reloj de la escuela."
-        ],
-        "correct": 0,
-        "retro": "El currículo real es resultado de la negociación implícita entre el docente y el ritmo real del grupo."
-    },
-    {
-        "q": "114. Sobre la Innovación Educativa, ¿hacia qué propósito orienta su acción la educación en el contexto de la sociedad de la información?",
-        "options": [
-            "a) Al desarrollo de capacidades para gestionar información y transformarla en conocimiento.",
-            "b) A memorizar todas las páginas de Wikipedia.",
-            "c) A prohibir el uso de teléfonos celulares."
-        ],
-        "correct": 0,
-        "retro": "La innovación busca que el sujeto sea crítico y autónomo frente al flujo masivo de datos actual."
-    },
-    {
-        "q": "115. Desde la concepción tradicional del proceso de aprendizaje, ¿cuál de las siguientes caracteriza con mayor precisión el rol que desempeña el docente en la gestión del conocimiento dentro del aula?",
-        "options": [
-            "a) Transmisor y única fuente legítima de saber escolar.",
-            "b) Facilitador de la creatividad disruptiva.",
-            "c) Guía emocional del grupo."
-        ],
-        "correct": 0,
-        "retro": "La pedagogía tradicional es enciclopedista y centrada en la autoridad del maestro como emisor."
-    },
-    {
-        "q": "116. Según Martinic en el texto de Innovación Educativa... ¿qué elementos comprenden dichos cambios?",
-        "options": [
-            "a) Cambios en las creencias, prácticas y modelos mentales del docente.",
-            "b) Solo el cambio de uniforme escolar.",
-            "c) La compra de nuevas pizarras acrílicas."
-        ],
-        "correct": 0,
-        "retro": "La innovación real pasa por la transformación de la subjetividad y el quehacer pedagógico."
-    },
-    {
-        "q": "117. Desde la perspectiva de la innovación educativa... ¿qué implica esta afirmación respecto a la naturaleza de la innovación?",
-        "options": [
-            "a) Que la innovación no ignora el pasado, sino que lo recrea y mejora.",
-            "b) Que hay que destruir todo lo antiguo para innovar.",
-            "c) Que innovar es volver a la educación del siglo XVIII."
-        ],
-        "correct": 0,
-        "retro": "Toda innovación dialoga con la cultura previa de la institución escolar."
-    },
-    {
-        "q": "118. Las entidades públicas deben emplear los bienes y servicios... adicionalmente, están obligadas a:",
-        "options": [
-            "a) Rendir cuentas y asegurar la transparencia del gasto público.",
-            "b) Prestar los vehículos a los vecinos del barrio.",
-            "c) Guardar el dinero en una caja fuerte secreta."
-        ],
-        "correct": 0,
-        "retro": "La Ley 1178 obliga al uso eficaz y transparente de los recursos del Estado."
-    },
-    {
-        "q": "119. Según los principios del neuroaprendizaje aplicados al aula, ¿cuál es el propósito neurológico de repetir un contenido con variantes novedosas?",
-        "options": [
-            "a) Fortalecer la conexión sináptica mediante la plasticidad (LTP).",
-            "b) Que el alumno se aburra y se duerma.",
-            "c) Ahorrar tiempo al maestro para no preparar temas nuevos."
-        ],
-        "correct": 0,
-        "retro": "La repetición con novedad consolida la memoria de largo plazo sin causar habituación."
-    },
-    {
-        "q": "120. ¿Qué conducta configura el delito de sustracción de utilidades de actividades económicas familiares?",
-        "options": [
-            "a) Apropiarse del dinero generado por el trabajo de la pareja o hijos mediante engaño o fuerza.",
-            "b) Pedir un préstamo al banco con intereses altos.",
-            "c) Trabajar horas extras sin cobrar bono."
-        ],
-        "correct": 0,
-        "retro": "Es una forma de violencia económica tipificada en la Ley 348."
-    },
-    {
-        "q": "121. ¿Qué riesgo específico genera el uso excesivo de recompensas según la visión conductista?",
-        "options": [
-            "a) Desplazar la motivación intrínseca por una dependencia externa del premio.",
-            "b) Que el alumno se vuelva demasiado inteligente.",
-            "c) Un aumento en la generosidad de los niños."
-        ],
-        "correct": 0,
-        "retro": "Si solo se estudia por el premio, desaparece el deseo natural de aprender."
-    },
-    {
-        "q": "122. La propuesta de implementar el aprendizaje orientado a proyectos se enmarca en una estructura curricular que se caracteriza por ser:",
-        "options": [
-            "a) Integrada y centrada en problemas de la realidad.",
-            "b) Fragmentada en materias aisladas sin conexión.",
-            "c) Basada solo en la memorización de fechas."
-        ],
-        "correct": 0,
-        "retro": "El ABP rompe los compartimentos estancos del saber escolar tradicional."
-    },
-    {
-        "q": "123. Según el libro “Neurociencias Neuroaprendizaje” ¿Qué herramientas se necesitan para que ocurran los aprendizajes estratégicos?",
-        "options": [
-            "a) Metacognición, autorregulación y motivación consciente.",
-            "b) Una regla de madera para castigar el error.",
-            "c) Solo una buena conexión a internet."
-        ],
-        "correct": 0,
-        "retro": "El aprendizaje estratégico requiere que el alumno sea consciente de cómo aprende."
-    },
-    {
-        "q": "124. La siguiente definición de conflicto: “Los conflictos son situaciones en las que dos o más personas entran en oposición... Corresponde a:",
-        "options": [
-            "a) Torrego.",
-            "b) Galtung.",
-            "c) Freud."
-        ],
-        "correct": 0,
-        "retro": "Definición técnica que vincula posiciones, intereses y emociones (Torrego, 2000)."
-    },
-    {
-        "q": "125. ¿Qué disposiciones debe aplicar la Dirección Administrativa respecto de la articulación con el sector productivo?",
-        "options": [
-            "a) Convenios de pasantías y formación técnica vinculada al mercado laboral local.",
-            "b) Prohibir que los alumnos trabajen.",
-            "c) Cobrar una comisión por cada estudiante que egresa."
-        ],
-        "correct": 0,
-        "retro": "La educación superior técnica debe responder a las necesidades del sector productivo."
-    },
-    {
-        "q": "126. Según el enfoque de innovación educativa... ¿cuál es el rol que cumplen las estructuras y procesos micropolíticos?",
-        "options": [
-            "a) Son el motor o el freno real de cualquier cambio en la escuela.",
-            "b) Son chismes sin importancia entre profesores.",
-            "c) Son reglamentos que vienen impresos desde el Ministerio."
-        ],
-        "correct": 0,
-        "retro": "Las relaciones de poder internas determinan la viabilidad de la innovación."
-    },
-    {
-        "q": "127. ¿Hasta cuándo tiene vigencia la Resolución Ministerial de autorización de Apertura y Funcionamiento de un Instituto?",
-        "options": [
-            "a) Tiene vigencia indefinida mientras no se disponga lo contrario por falta.",
-            "b) Caduca exactamente a los dos meses.",
-            "c) Hay que renovarla cada lunes por la mañana."
-        ],
-        "correct": 0,
-        "retro": "La RM otorga personería jurídica y técnica permanente bajo cumplimiento de norma."
-    },
-    {
-        "q": "128. En el campo de la Innovación Educativa... ¿cuál describe con mayor precisión dicho carácter?",
-        "options": [
-            "a) La innovación como un proceso social de aprendizaje institucional continuo.",
-            "b) La innovación como un objeto que se compra en la tienda.",
-            "c) El rechazo total a cualquier cambio por seguridad."
-        ],
-        "correct": 0,
-        "retro": "La innovación en educación no es tecnología, es cambio en la cultura de aprendizaje."
-    },
-    {
-        "q": "129. ¿Cuál de las siguientes afirmaciones describe correctamente las características de la Subsede de un Centro de Capacitación Artística?",
-        "options": [
-            "a) Es una unidad dependiente administrativa y académicamente de la Sede Central.",
-            "b) Es un instituto totalmente independiente con su propia RM.",
-            "c) Solo puede funcionar en el extranjero."
-        ],
-        "correct": 0,
-        "retro": "Las subsedes extienden el servicio de la sede principal bajo su misma estructura legal."
-    },
-    {
-        "q": "130. Los estilos de aprendizaje son diversos enfoques... ¿Cuál es el estilo de los estudiantes reflexivos?",
-        "options": [
-            "a) Analizar experiencias desde distintas perspectivas y recoger datos antes de concluir.",
-            "b) Lanzarse a actuar sin pensar en las consecuencias.",
-            "c) Buscar solo la aplicación práctica inmediata."
-        ],
-        "correct": 0,
-        "retro": "El reflexivo prioriza la observación y la recolección exhaustiva de información."
-    },
-    {
-        "q": "131. El conductismo se centra solo en aspectos observables... ¿Qué teorías se pueden incluir?",
-        "options": [
-            "a) Condicionamiento Clásico (Pavlov) y Operante (Skinner).",
-            "b) Psicoanálisis y Gestalt.",
-            "c) Constructivismo social únicamente."
-        ],
-        "correct": 0,
-        "retro": "Son las bases del modelo de estímulo-respuesta en el aprendizaje."
-    },
-    {
-        "q": "132. Este tipo de aprendizaje «puede proporcionar dimensiones y oportunidades adicionales...». ¿A qué teoría se adecúa?",
-        "options": [
-            "a) Teoría del Aprendizaje Social (Bandura).",
-            "b) Conductismo radical.",
-            "c) Teoría del caos."
-        ],
-        "correct": 0,
-        "retro": "Bandura enfatiza el aprendizaje por observación o vicario como complemento a la experiencia directa."
-    },
-    {
-        "q": "133. La educación es central a la formación de una cultura de innovación... ¿qué implica ello para evitar trampas?",
-        "options": [
-            "a) Planificación, reflexión crítica y valoración de la experiencia previa.",
-            "b) Cambiar todo cada año por sistema.",
-            "c) Comprar el software más nuevo sin capacitar a nadie."
-        ],
-        "correct": 0,
-        "retro": "La innovación requiere sentido y continuidad, no es cambio cosmético."
-    },
-    {
-        "q": "134. Según el Reglamento del Escalafón Nacional... ¿cuál es el requisito de edad para ingresar al sector docente?",
-        "options": [
-            "a) Haber cumplido 18 años de edad.",
-            "b) Mínimo 25 años y tener hijos.",
-            "c) No hay límite de edad, incluso niños pueden ser maestros."
-        ],
-        "correct": 0,
-        "retro": "La mayoría de edad es el requisito básico de capacidad jurídica para el cargo."
-    },
-    {
-        "q": "135. Según el “Manual de resolución de problemas”... ¿en qué consiste el beneficio de Reducción del estrés?",
-        "options": [
-            "a) En sentir control sobre las situaciones difíciles mediante un método lógico.",
-            "b) En tomar una pastilla para dormir antes del examen.",
-            "c) En que el maestro haga la tarea por el alumno."
-        ],
-        "correct": 0,
-        "retro": "Tener herramientas para abordar problemas disminuye la ansiedad ante la incertidumbre."
-    },
-    {
-        "q": "136. A partir de la 'Guía para la Identificación y Denuncia de la Violencia Intrafamiliar'... ¿cuál corresponde al área emocional en la niñez?",
-        "options": [
-            "a) Sentimientos de culpa, miedo persistente y baja autoestima.",
-            "b) Dificultad para resolver ecuaciones de segundo grado.",
-            "c) Dolor de estómago por hambre."
-        ],
-        "correct": 0,
-        "retro": "Son daños psicológicos internos causados por el entorno violento."
-    },
-    {
-        "q": "137. Según el texto Innovación Educativa, las investigaciones revelan que el “estado” político de una organización escolar está constituido por:",
-        "options": [
-            "a) El conjunto de intereses, alianzas y conflictos de poder entre sus miembros.",
-            "b) El número de banderas que tiene el instituto.",
-            "c) El partido político al que pertenece el portero."
-        ],
-        "correct": 0,
-        "retro": "La micropolítica define el equilibrio de fuerzas dentro de la escuela."
-    },
-    {
-        "q": "138. ¿Cuál de las siguientes opciones presenta correctamente la tipificación de sanciones correspondiente a cada categoría de falta grave?",
-        "options": [
-            "a) Suspensión de funciones de 15 a 60 días sin goce de haberes.",
-            "b) Una llamada de atención verbal en privado.",
-            "c) El despido inmediato definitivo."
-        ],
-        "correct": 0,
-        "retro": "El Reglamento de Faltas gradúa la sanción según la gravedad de la infracción."
-    },
-    {
-        "q": "139. ¿Qué sanciones corresponden cuando... se comprueba que hubo deserción elevada de alumnos por ineptitud del maestro?",
-        "options": [
-            "a) Suspensión o remoción según proceso disciplinario.",
-            "b) Un premio por tener menos trabajo en el aula.",
-            "c) Aumento de sueldo por peligrosidad."
-        ],
-        "correct": 0,
-        "retro": "La falta de rendimiento y maltrato son causales de sanción grave o muy grave."
-    },
-    {
-        "q": "140. Un maestro nota que ciertos estudiantes manifiestan malestar reiterado... ¿Para qué sirve el «botiquín de primeros auxilios emocionales»?",
-        "options": [
-            "a) Para brindar contención emocional inmediata y validar los sentimientos del niño.",
-            "b) Para curar heridas físicas como cortes o raspaduras.",
-            "c) Para regalar dulces a los que lloran."
-        ],
-        "correct": 0,
-        "retro": "Es una estrategia de neuroaprendizaje para nivelar estados afectivos bloqueadores."
-    },
-    {
-        "q": "141. ¿Qué efecto tiene el Control Posterior Interno o Externo sobre los actos administrativos que pusieron término a los reclamos de los particulares?",
-        "options": [
-            "a) No los suspende ni anula, pero establece responsabilidades sobre los mismos.",
-            "b) Los borra automáticamente de la historia.",
-            "c) Obliga al particular a pedir perdón al Estado."
-        ],
-        "correct": 0,
-        "retro": "El control posterior evalúa la legalidad y eficiencia del acto ya ejecutado."
-    },
-    {
-        "q": "142. ¿Cuáles son los tres elementos que el docente debe transformar para que su compromiso incida genuinamente en los procesos de innovación?",
-        "options": [
-            "a) Creencias, prácticas y sentimientos hacia la enseñanza.",
-            "b) Zapatos, maletín y lapiceros.",
-            "c) El horario de ingreso, el de salida y el de almuerzo."
-        ],
-        "correct": 0,
-        "retro": "La innovación requiere un cambio holístico en la identidad profesional del maestro."
-    },
-    {
-        "q": "143. Según el Reglamento para el Fortalecimiento de la Educación Inclusiva... inscribirán a todos... independientemente de:",
-        "options": [
-            "a) Su condición de discapacidad, procedencia social o económica.",
-            "b) Si traen o no traen merienda al recreo.",
-            "c) Su preferencia por un equipo de fútbol."
-        ],
-        "correct": 0,
-        "retro": "La educación inclusiva garantiza el acceso universal sin discriminación de ningún tipo."
-    },
-    {
-        "q": "144. ¿A partir de qué modelo surgió la concepción imperante sobre el proceso de aprendizaje a comienzos del siglo XX y a qué propósito sirvió?",
-        "options": [
-            "a) Modelo fabril/mecanicista para formar trabajadores dóciles.",
-            "b) Modelo artístico para formar pintores.",
-            "c) Modelo espacial para colonizar Marte."
-        ],
-        "correct": 0,
-        "retro": "La escuela tradicional emuló la estructura de la fábrica de la era industrial."
-    },
-    {
-        "q": "145. Según el libro «Estilos de Aprendizaje y Métodos de Enseñanza», ¿cuál es la característica principal que distingue a la impronta?",
-        "options": [
-            "a) Ocurre en un periodo crítico temprano y es muy resistente al cambio.",
-            "b) Se aprende leyendo libros de historia en secundaria.",
-            "c) Es la marca de los zapatos en el suelo."
-        ],
-        "correct": 0,
-        "retro": "La impronta es un aprendizaje biológico básico y duradero (Lorentz)."
-    },
-    {
-        "q": "146. Según Baldridge (1970)... ¿qué característica define al cambio en las organizaciones escolares tradicionales?",
-        "options": [
-            "a) El conflicto y la negociación entre grupos de interés.",
-            "b) La paz absoluta y el silencio total.",
-            "c) La obediencia ciega a un solo líder carismático."
-        ],
-        "correct": 0,
-        "retro": "Baldridge ve la escuela como un sistema político donde el cambio surge de la pugna de intereses."
-    },
-    {
-        "q": "147. La noción de currículum oculto emerge vinculada a una visión racionalista de la escuela porque:",
-        "options": [
-            "a) Supone que lo que no está escrito en el plan no debería existir.",
-            "b) Porque solo los maestros inteligentes saben que existe.",
-            "c) Porque se enseña matemáticas en secreto."
-        ],
-        "correct": 0,
-        "retro": "El racionalismo curricular ignora los aprendizajes colaterales no planificados."
-    },
-    {
-        "q": "148. Según el libro “Neurociencias Neuroaprendizaje”... ¿Cuáles son los tips que favorecen el equilibrio del sistema límbico?",
-        "options": [
-            "a) Ejercicio físico, sueño reparador y vínculos afectivos positivos.",
-            "b) Comer comida chatarra y ver películas de terror.",
-            "c) Gritar fuerte en el patio todos los días."
-        ],
-        "correct": 0,
-        "retro": "Estos hábitos regulan la química cerebral necesaria para el bienestar y el aprendizaje."
-    },
-    {
-        "q": "149. De acuerdo con la “Guía para la Identificación y Denuncia de la Violencia Intrafamiliar”... ¿cómo se clasifica la violencia?",
-        "options": [
-            "a) Violencia física, psicológica, sexual y económica.",
-            "b) Violencia alta, media y baja de volumen.",
-            "c) Violencia de lunes, martes y miércoles."
-        ],
-        "correct": 0,
-        "retro": "Son las tipologías legales y técnicas para el abordaje de casos."
-    },
-    {
-        "q": "150. ¿Qué condiciones caracterizan al trabajo colaborativo como estrategia para sostener la innovación educativa?",
-        "options": [
-            "a) Confianza mutua, metas compartidas y liderazgo distribuido.",
-            "b) Que uno solo trabaje y los demás firmen el informe.",
-            "c) Estar en la misma sala pero sin hablarse."
-        ],
-        "correct": 0,
-        "retro": "La innovación es un proceso colectivo que requiere sinergia y compromiso grupal."
-    },
-    {
-        "q": "151. Según el texto Innovación Educativa... ¿qué rasgos definen al trabajo mancomunado?",
-        "options": [
-            "a) La construcción de redes pedagógicas y comunidades de aprendizaje.",
-            "b) Hacer lo que el director ordene sin cuestionar nada.",
-            "c) Comprar materiales entre todos los padres."
-        ],
-        "correct": 0,
-        "retro": "El trabajo en red potencia la transformación desde la base docente."
-    },
-    {
-        "q": "152. Según José Manuel Sáez López, ¿qué característica esencial distingue al aprendizaje como proceso cognitivo?",
-        "options": [
-            "a) La mediación y procesamiento interno de la información por el sujeto.",
-            "b) La copia exacta de lo que dice el profesor.",
-            "c) La recepción pasiva de estímulos."
-        ],
-        "correct": 0,
-        "retro": "El aprendizaje implica una actividad mental constructiva del alumno."
-    },
-    {
-        "q": "153. Según el modelo del «Cerebro triuno», ¿cuál de los instintos del cerebro reptil establece que a mayor poder corresponde mayor posición?",
-        "options": [
-            "a) El sentido de jerarquía y dominancia.",
-            "b) El instinto de búsqueda de comida.",
-            "c) El deseo de aprender a leer."
-        ],
-        "correct": 0,
-        "retro": "El cerebro reptiliano gestiona el estatus y el poder dentro del grupo para la supervivencia."
-    },
-    {
-        "q": "154. ¿Cuáles son los objetivos generales del Sistema de Control Gubernamental Interno?",
-        "options": [
-            "a) Promover la eficacia, eficiencia y transparencia en la gestión pública.",
-            "b) Castigar a todos los empleados por igual.",
-            "c) Evitar que se gaste el presupuesto en educación."
-        ],
-        "correct": 0,
-        "retro": "Busca la mejora del desempeño institucional y la protección del patrimonio."
-    },
-    {
-        "q": "155. Para el funcionamiento anual... ¿qué deben hacer los sistemas nacionales de Planificación e Inversión Pública?",
-        "options": [
-            "a) Establecer las metas estratégicas y asignar los techos presupuestarios.",
-            "b) Dibujar los planos de todas las escuelas.",
-            "c) Contratar a los porteros de los institutos."
-        ],
-        "correct": 0,
-        "retro": "La planificación nacional guía la programación operativa de cada entidad."
-    },
-    {
-        "q": "156. ¿Cuál de las siguientes es una responsabilidad de los directores... en el marco de la educación inclusiva?",
-        "options": [
-            "a) Garantizar la eliminación de barreras arquitectónicas y pedagógicas.",
-            "b) Rechazar alumnos que no tengan diagnóstico médico previo.",
-            "c) Cobrar una cuota extra por concepto de inclusión."
-        ],
-        "correct": 0,
-        "retro": "La gestión debe ser facilitadora del acceso y permanencia del estudiante con discapacidad."
-    },
-    {
-        "q": "157. ¿Qué tipo de sujetos busca construir la innovación educativa cuando se orienta con un sentido crítico?",
-        "options": [
-            "a) Ciudadanos activos, reflexivos y transformadores de su realidad.",
-            "b) Personas que obedezcan órdenes sin pensar.",
-            "c) Expertos en videojuegos exclusivamente."
-        ],
-        "correct": 0,
-        "retro": "La educación crítica busca la emancipación y la justicia social."
-    },
-    {
-        "q": "158. Según Berkowitz (1996)... ¿cuál de los siguientes factores es un precursor de violencia en la etapa adulta?",
-        "options": [
-            "a) La exposición a modelos violentos y el maltrato en la infancia.",
-            "b) Jugar ajedrez durante el recreo.",
-            "c) Leer muchos libros de poesía."
-        ],
-        "correct": 0,
-        "retro": "La violencia se aprende y se reproduce cíclicamente si no hay intervención."
-    },
-    {
-        "q": "159. De acuerdo con la “Guía de Identificación y Denuncia de Violencia Intrafamiliar”... supone un mayor riesgo de:",
-        "options": [
-            "a) Deserción escolar y reproducción de conductas agresivas.",
-            "b) Ganar una beca de estudios en el extranjero.",
-            "c) Ser el mejor alumno de la clase de gimnasia."
-        ],
-        "correct": 0,
-        "retro": "La violencia trunca el proyecto de vida y el desarrollo integral del menor."
-    },
-    {
-        "q": "160. De acuerdo con el “Manual de resolución de problemas”... La importancia de una solución es:",
-        "options": [
-            "a) Subjetiva y depende de los valores y necesidades de los involucrados.",
-            "b) Universal e idéntica para todo el planeta.",
-            "c) Una cifra matemática que no cambia."
-        ],
-        "correct": 0,
-        "retro": "Lo que es prioritario para un grupo puede no serlo para otro."
-    },
-    {
-        "q": "161. “Viabilizar espacios de coordinación con maestras, maestros y comunidad educativa...”, corresponde a:",
-        "options": [
-            "a) Responsabilidad del Director de la Unidad Educativa.",
-            "b) Una tarea del Ministerio de Salud.",
-            "c) Obligación del presidente de curso."
-        ],
-        "correct": 0,
-        "retro": "El director es el gestor de las redes de apoyo inclusivo en su establecimiento."
-    },
-    {
-        "q": "162. ¿Qué tipo de memoria guarda esquemas de procedimientos que se realizan automáticamente?",
-        "options": [
-            "a) Memoria Procedimental.",
-            "b) Memoria Semántica.",
-            "c) Memoria de corto plazo."
-        ],
-        "correct": 0,
-        "retro": "Es la memoria de 'saber cómo' (andar en bici, escribir a máquina)."
-    },
-    {
-        "q": "163. ¿Cuál de las siguientes descripciones se ajusta a una limitación de los libros de texto según Sacristán?",
-        "options": [
-            "a) Reducen la complejidad de la cultura a fragmentos digeribles y a menudo empobrecidos.",
-            "b) Son demasiado baratos y cualquiera puede comprarlos.",
-            "c) Tienen demasiadas páginas en blanco."
-        ],
-        "correct": 0,
-        "retro": "El libro de texto actúa como un 'reductor' de la experiencia cultural real."
-    },
-    {
-        "q": "164. Según Perrenoud ¿Qué distingue, estructuralmente, el trabajo escolar de cualquier otro tipo de trabajo?",
-        "options": [
-            "a) Que es una actividad impuesta, evaluada públicamente y bajo supervisión constante.",
-            "b) Que se hace sentado en un pupitre.",
-            "c) Que no tiene importancia para el futuro."
-        ],
-        "correct": 0,
-        "retro": "El 'oficio de alumno' implica una exposición permanente al juicio del maestro."
-    },
-    {
-        "q": "165. Según el Artículo 6 parágrafo III de la R.M. 350-2023... ¿qué requisitos debe cumplir la Subsede?",
-        "options": [
-            "a) Tener una estructura organizativa básica y un Responsable Académico.",
-            "b) Ser un edificio de más de 20 pisos.",
-            "c) No tener ningún profesor contratado."
-        ],
-        "correct": 0,
-        "retro": "La subsede debe garantizar la calidad mínima operativa bajo supervisión de la sede central."
-    },
-    {
-        "q": "166. ¿Qué distingue a las estrategias de aprendizaje de las simples técnicas?",
-        "options": [
-            "a) La intencionalidad, el monitoreo y la toma de decisiones consciente del alumno.",
-            "b) El color del bolígrafo con que se escribe.",
-            "c) Que la técnica es más difícil que la estrategia."
-        ],
-        "correct": 0,
-        "retro": "La estrategia implica saber por qué y para qué se usa una herramienta."
-    },
-    {
-        "q": "167. El documento “Convivencia escolar y resolución pacífica de conflictos”... el alumnado recibe retroacciones positivas... percibiendo que su centro valora:",
-        "options": [
-            "a) El esfuerzo, la responsabilidad y el buen trato.",
-            "b) Solo la nota final del examen.",
-            "c) La marca de su mochila."
-        ],
-        "correct": 0,
-        "retro": "El refuerzo social consolida conductas de convivencia armónica."
-    },
-    {
-        "q": "168. Según Sáez López... dos estudiantes aplican técnicas memorizadas... ¿Qué característica están ignorando?",
-        "options": [
-            "a) El carácter reflexivo y regulador de la estrategia.",
-            "b) La velocidad para terminar el examen.",
-            "c) La obediencia al dictado del profesor."
-        ],
-        "correct": 0,
-        "retro": "Sin reflexión no hay estrategia, solo ejecución mecánica."
-    },
-    {
-        "q": "169. Las competencias genéricas... se caracterizan porque:",
-        "options": [
-            "a) Son transversales, transferibles y necesarias para múltiples contextos.",
-            "b) Solo sirven para la clase de matemáticas.",
-            "c) Se olvidan apenas se sale de la escuela."
-        ],
-        "correct": 0,
-        "retro": "Las genéricas (como resolución de problemas) son fundamentales para la vida."
-    },
-    {
-        "q": "170. Una institución escolar es evaluada negativamente... ¿Qué dimensión del poder regulador del currículum explica este resultado?",
-        "options": [
-            "a) La hegemonía del currículo formal sobre la práctica real.",
-            "b) La falta de pintura en el aula.",
-            "c) Que los inspectores no saben nada de pedagogía."
-        ],
-        "correct": 0,
-        "retro": "A menudo la burocracia evalúa el cumplimiento de la norma y no la calidad de la innovación."
-    },
-    {
-        "q": "171. Según el texto “Guía para la Identificación y Denuncia de la Violencia Intrafamiliar”... se deben defender estos derechos siendo guardianes de:",
-        "options": [
-            "a) La integridad física y emocional de los menores.",
-            "b) La limpieza del patio del recreo.",
-            "c) El silencio absoluto en la biblioteca."
-        ],
+        "retro": "Se distribuyen entre categorías emocionales, cognitivas y conductuales (Guía para la identificación y denuncia de la violencia intrafamiliar, p. 28)."
+    },
+    {
+        "q": "110. ¿Cuál es una conducta de víctimas de violencia en la institución educativa?",
+        "options": ["Aislamiento, cambios bruscos de humor y bajo rendimiento.", "Aumento excesivo de la participación en clases.", "Interés desmedido por la limpieza del aula."],
         "correct": 0,
-        "retro": "Toda la comunidad educativa es responsable de la protección de los NNA."
-    },
-    {
-        "q": "172. El texto “Convivencia escolar y resolución pacífica de conflictos” señala que el arbitraje es el proceso por el cual las partes someten la solución a:",
-        "options": [
-            "a) La decisión de un tercero que dicta un laudo obligatorio.",
-            "b) La suerte tirando una moneda.",
-            "c) Una pelea física en el patio."
-        ],
+        "retro": "El aislamiento y bajo rendimiento son señales clave (Guía para la identificación y denuncia de la violencia intrafamiliar, p. 29)."
+    },
+    {
+        "q": "111. ¿Cuál es una consecuencia cognitiva a largo plazo de la violencia?",
+        "options": ["Baja autoestima permanente.", "Dificultades severas de aprendizaje y memoria.", "Aumento de la capacidad de concentración."],
+        "correct": 1,
+        "retro": "La violencia genera un impacto severo en el desarrollo cognitivo (Guía para la identificación y denuncia de la violencia intrafamiliar, p. 30)."
+    },
+    {
+        "q": "112. ¿Qué ocurre cuando los niveles de los estudiantes frenan el trabajo de contenidos?",
+        "options": ["Se produce una simplificación y reducción del currículum.", "El maestro debe renunciar a enseñar esa materia.", "Se aumenta automáticamente el presupuesto escolar."],
         "correct": 0,
-        "retro": "A diferencia de la mediación, en el arbitraje el tercero sí decide la solución."
-    },
-    {
-        "q": "173. ¿Qué característica tiene la vigencia de la Ley Integral para Garantizar a las Mujeres una Vida Libre de Violencia respecto a otras normas?",
-        "options": [
-            "a) Es de cumplimiento obligatorio y prevalece sobre cualquier otra norma interna.",
-            "b) Es solo una sugerencia para el fin de semana.",
-            "c) Solo se aplica si la mujer lo pide por escrito tres veces."
-        ],
+        "retro": "Se produce una reducción de saberes en la práctica (Diseño, desarrollo e innovación del currículum, p. 72)."
+    },
+    {
+        "q": "113. Según Perrenoud, ¿qué concepto explica que la lentitud estudiantil cambie lo previsto?",
+        "options": ["Currículum real negociado en la práctica.", "Falta de autoridad del docente.", "Ineficiencia del sistema administrativo."],
         "correct": 0,
-        "retro": "La Ley 348 es de orden público e interés social nacional."
-    },
-    {
-        "q": "174. ¿Qué factor preponderante explica que el libro de texto se haya configurado como el libro dominante en la escolaridad?",
-        "options": [
-            "a) Su capacidad para organizar el tiempo y el trabajo del maestro y alumnos.",
-            "b) Que es el único libro que existe en el mundo.",
-            "c) Que los alumnos prefieren los dibujos a la realidad."
-        ],
+        "retro": "El currículum real se aparta de la intención por la dinámica del aula (Diseño, desarrollo e innovación del currículum, p. 95)."
+    },
+    {
+        "q": "114. ¿Hacia qué propósito orienta su acción la educación en la sociedad de la información?",
+        "options": ["Hacia la memorización de enciclopedias.", "Hacia la formación de sujetos con juicio crítico e innovación.", "Hacia la obediencia ciega a las normativas."],
+        "correct": 1,
+        "retro": "Se busca construir una cultura de innovación permanente (Innovación Educativa - UNESCO, p. 3)."
+    },
+    {
+        "q": "115. En la concepción tradicional, ¿cuál es el rol del docente en la gestión del conocimiento?",
+        "options": ["Transmisor de verdades acabadas y autoridad única.", "Facilitador del diálogo entre iguales.", "Mediador emocional de los conflictos."],
         "correct": 0,
-        "retro": "El libro de texto es una herramienta de gestión del currículo muy eficiente para la burocracia."
-    },
-    {
-        "q": "175. ¿Cuál es la característica que distingue a las ciencias de transferencia de las ciencias puras?",
-        "options": [
-            "a) Su orientación hacia la resolución de problemas prácticos y aplicación técnica.",
-            "b) Que no usan números.",
-            "c) Que son mucho más fáciles de aprobar."
-        ],
+        "retro": "El modelo tradicional centra el saber en el maestro como única fuente (Diseño, desarrollo e innovación del currículum, p. 42)."
+    },
+    {
+        "q": "116. Según Martinic, ¿qué involucra la alteración de sentidos en la educación?",
+        "options": ["Cambios en las personas y el compromiso docente.", "Cambio de uniformes y horarios escolares.", "Modificación de la estructura física de los edificios."],
         "correct": 0,
-        "retro": "Las ciencias de transferencia actúan como puente entre la teoría y la producción."
-    },
-    {
-        "q": "176. Desde la perspectiva del neuroaprendizaje, ¿cuál es la función neurológica de introducir variantes novedosas?",
-        "options": [
-            "a) Activar el sistema de recompensa y captar la atención mediante la curiosidad.",
-            "b) Confundir al alumno para que no aprenda nada.",
-            "c) Que el profesor parezca más creativo frente al director."
-        ],
+        "retro": "La innovación es un proceso social que altera sentidos y requiere compromiso (Innovación Educativa - UNESCO, p. 11)."
+    },
+    {
+        "q": "117. ¿Qué implica que la innovación tenga una relación profunda con la tradición?",
+        "options": ["Que innovar es copiar el pasado sin cambios.", "Que la innovación dialoga con lo existente para transformarlo.", "Que la tradición impide siempre la innovación."],
+        "correct": 1,
+        "retro": "Produce modificaciones pero arraigadas en la cultura previa (Innovación Educativa - UNESCO, p. 16)."
+    },
+    {
+        "q": "118. ¿A qué están obligadas las entidades públicas respecto a bienes contratados?",
+        "options": ["A usarlos solo para fines privados del personal.", "A emplearlos en los fines previstos por la programación.", "A donarlos anualmente a otras instituciones."],
+        "correct": 1,
+        "retro": "Deben emplearlos estrictamente en los fines previstos institucionalmente (Reglamento de Faltas y Sanciones, p. 15)."
+    },
+    {
+        "q": "119. ¿Cuál es el propósito neurológico de repetir contenido con variantes novedosas?",
+        "options": ["Aburrir al estudiante para que se discipline.", "Generar nuevas redes neuronales y fortalecer la plasticidad.", "Gastar menos energía cerebral durante el día."],
+        "correct": 1,
+        "retro": "Cada actividad novedosa permite fortalecer las redes sinápticas (Neurociencia Neuroaprendizaje: Las emociones y el aprendizaje, p. 45)."
+    },
+    {
+        "q": "120. ¿Qué conducta configura el delito de sustracción de utilidades económicas familiares?",
+        "options": ["Pagar los impuestos a tiempo.", "Apartar a la mujer de la administración de bienes comunes.", "Realizar compras de víveres en el supermercado."],
+        "correct": 1,
+        "retro": "Configura violencia económica apartar de la gestión de utilidades (Guía para la identificación y denuncia de la violencia intrafamiliar, p. 13)."
+    },
+    {
+        "q": "121. ¿Qué riesgo genera el uso excesivo de recompensas externas según el conductismo?",
+        "options": ["Aumento de la inteligencia innata.", "Pérdida de la motivación intrínseca por aprender.", "Mejora en la salud física del estudiante."],
+        "correct": 1,
+        "retro": "Las recompensas externas pueden desvirtuar el placer de aprender (Diseño, desarrollo e innovación del currículum, p. 100)."
+    },
+    {
+        "q": "122. La propuesta de aprendizaje por proyectos se enmarca en una estructura:",
+        "options": ["Rígida e inamovible.", "Flexible, interdisciplinar e integradora.", "Fragmentada y orientada solo a la memorización."],
+        "correct": 1,
+        "retro": "Requiere una estructura que permita la indagación y colaboración (Innovación Educativa - UNESCO, p. 39)."
+    },
+    {
+        "q": "123. ¿Qué herramientas se necesitan para los aprendizajes estratégicos?",
+        "options": ["Solo papel y lápiz.", "Conocimiento, análisis y capacidad de crear.", "Instrucciones cerradas del profesor."],
+        "correct": 1,
+        "retro": "Requiere procesar, aplicar y transformar la información (Neurociencia Neuroaprendizaje: Las emociones y el aprendizaje, p. 35)."
+    },
+    {
+        "q": "124. La definición de conflicto como situación de oposición donde juegan emociones corresponde a:",
+        "options": ["Deutsch (1973).", "Cascón (2001).", "Lederach (1996)."],
+        "correct": 1,
+        "retro": "Cascón destaca el papel de los sentimientos en la resolución de conflictos (Convivencia escolar y resolución pacífica de conflictos, p. 52)."
+    },
+    {
+        "q": "125. ¿Qué debe aplicar la Dirección Administrativa sobre la articulación productiva?",
+        "options": ["Ignorar las solicitudes externas.", "Normas de gestión financiera y transparencia.", "Cobros discrecionales a los empresarios."],
+        "correct": 1,
+        "retro": "Debe regirse por los sistemas de administración y control gubernamental (Reglamento para el fortalecimiento de la educación inclusiva en el SEP, p. 24)."
+    },
+    {
+        "q": "126. ¿Cuál es el rol de los procesos micropolíticos en la innovación educativa?",
+        "options": ["Son obstáculos que deben eliminarse por completo.", "Son el escenario de negociación e intereses para el cambio.", "No tienen importancia en la vida escolar."],
+        "correct": 1,
+        "retro": "La micropolítica determina la viabilidad de los cambios (Innovación Educativa - UNESCO, p. 25)."
+    },
+    {
+        "q": "127. ¿Hasta cuándo tiene vigencia la RM de Apertura de un Instituto fiscal?",
+        "options": ["Solo por un año de gestión.", "Indefinidamente, sujeta a evaluación periódica.", "Hasta que cambie el director del centro."],
+        "correct": 1,
+        "retro": "Mantiene vigencia mientras cumpla las normas de seguimiento (Reglamento para el fortalecimiento de la educación inclusiva en el SEP, p. 13)."
+    },
+    {
+        "q": "128. ¿Qué carácter otorga la escuela a la innovación educativa?",
+        "options": ["Carácter burocrático y lineal.", "Carácter grupal, mediado por diálogo y negociación.", "Carácter técnico de simple aplicación de software."],
+        "correct": 1,
+        "retro": "Es un proceso grupal de diálogo y negociación de posiciones (Innovación Educativa - UNESCO, p. 11)."
+    },
+    {
+        "q": "129. ¿Qué afirma correctamente sobre la Subsede de Formación Artística?",
+        "options": ["No requiere autoridad máxima propia.", "Es una unidad desconcentrada del instituto principal.", "Tiene total independencia económica y legal."],
+        "correct": 1,
+        "retro": "Depende de la sede central para su gestión administrativa (Reglamento para el fortalecimiento de la educación inclusiva en el SEP, p. 26)."
+    },
+    {
+        "q": "130. ¿Cuál es el estilo de los estudiantes reflexivos?",
+        "options": ["Actuar antes de pensar.", "Observar y considerar experiencias desde distintas perspectivas.", "Competir agresivamente por las notas."],
+        "correct": 1,
+        "retro": "Prefieren mirar y atender antes de participar (Estilos de aprendizaje y métodos de enseñanza, p. 4)."
+    },
+    {
+        "q": "131. ¿Qué teorías se incluyen bajo la categoría del conductismo?",
+        "options": ["Constructivismo y Humanismo.", "Condicionamiento clásico y operante.", "Inteligencias múltiples."],
+        "correct": 1,
+        "retro": "Se basan en conexiones de estímulo y respuesta (Estilos de aprendizaje y métodos de enseñanza, p. 6)."
+    },
+    {
+        "q": "132. Este aprendizaje da oportunidades adicionales al alumno fuera de su experiencia personal:",
+        "options": ["Aprendizaje por observación (vicario).", "Aprendizaje memorístico.", "Aprendizaje instintivo."],
         "correct": 0,
-        "retro": "La novedad libera dopamina, lo que predispone al cerebro para memorizar mejor."
-    },
-    {
-        "q": "177. ¿Qué rol cumplen las TIC frente a la nueva economía mundial y los cambios sociales?",
-        "options": [
-            "a) Son el motor de la globalización y la gestión de la información.",
-            "b) Son un obstáculo para el crecimiento de las empresas.",
-            "c) No tienen ninguna influencia fuera de la oficina."
-        ],
+        "retro": "Permite aprender de las consecuencias ambientales de otros (Estilos de aprendizaje y métodos de enseñanza, p. 8)."
+    },
+    {
+        "q": "133. Para evitar la trampa del 'cambio por el cambio', la innovación debe ser:",
+        "options": ["Una moda de temporada.", "Una cultura reflexiva fundamentada en principios.", "Un rechazo total al pasado."],
+        "correct": 1,
+        "retro": "Debe convertirse en cultura y no solo en una moda pasajera (Innovación Educativa - UNESCO, p. 16)."
+    },
+    {
+        "q": "134. Según el Escalafón, ¿cuál es el requisito de edad para ejercer el magisterio?",
+        "options": ["Haber cumplido 18 años.", "Ser mayor de 25 años.", "No existe requisito de edad."],
         "correct": 0,
-        "retro": "Las TIC han transformado radicalmente la producción y el acceso al saber."
-    },
-    {
-        "q": "178. Los fines educativos que Sacristán propone... invierte la lógica habitual del currículum. ¿Cuál es?",
-        "options": [
-            "a) Priorizar el desarrollo de capacidades humanas sobre el listado de temas disciplinares.",
-            "b) Eliminar todas las materias y dejar solo el recreo.",
-            "c) Que los alumnos dicten la clase y el maestro tome notas."
-        ],
+        "retro": "Se requiere ser mayor de edad según la ley vigente (Reglamento del Escalafón Nacional, p. 1)."
+    },
+    {
+        "q": "135. ¿En qué consiste el beneficio de 'Reducción del estrés' en resolución de problemas?",
+        "options": ["En ignorar las tareas difíciles.", "En identificar causas para superar obstáculos.", "En dejar que otros decidan por uno."],
+        "correct": 1,
+        "retro": "Permite superar obstáculos y reducir la carga emocional (Manual de resolución de problemas, p. 12)."
+    },
+    {
+        "q": "136. ¿Qué enunciado corresponde al área emocional en la niñez víctima de violencia?",
+        "options": ["Aumento de la estatura física.", "Baja autoestima, culpa y miedo constante.", "Habilidades matemáticas avanzadas."],
+        "correct": 1,
+        "retro": "La culpa y el miedo son consecuencias directas (Guía para la identificación y denuncia de la violencia intrafamiliar, p. 28)."
+    },
+    {
+        "q": "137. ¿Por qué está constituido el 'estado' político de una organización escolar?",
+        "options": ["Por la cantidad de aulas pintadas.", "Por intereses, ideologías y control de grupos.", "Únicamente por el salario de los maestros."],
+        "correct": 1,
+        "retro": "Intereses y conflictos de poder forman la política interna (Innovación Educativa - UNESCO, p. 25)."
+    },
+    {
+        "q": "138. ¿Qué sanción corresponde a una falta muy grave según el reglamento?",
+        "options": ["Llamada de atención verbal.", "Suspensión de funciones o destitución.", "Una felicitación escrita."],
+        "correct": 1,
+        "retro": "Las faltas muy graves implican sanciones severas de alejamiento (Reglamento de Faltas y Sanciones, p. 5)."
+    },
+    {
+        "q": "139. ¿Qué sanción corresponde a la deserción elevada por malos tratos del maestro?",
+        "options": ["Destitución del cargo.", "Suspensión por 15 a 30 días.", "Multa de un día de haber."],
         "correct": 0,
-        "retro": "El currículo debe servir al sujeto y no el sujeto al programa oficial."
-    },
-    {
-        "q": "179. ¿Qué carácter tienen las políticas y normas establecidas por la máxima autoridad del Sistema de Tesorería del Estado?",
-        "options": [
-            "a) Carácter obligatorio y vinculante para todas las entidades públicas.",
-            "b) Son consejos amistosos que se pueden ignorar.",
-            "c) Solo se aplican en la ciudad de La Paz."
-        ],
+        "retro": "El maltrato que causa deserción es causal de destitución (Reglamento de Faltas y Sanciones, p. 6)."
+    },
+    {
+        "q": "140. ¿Para qué sirve el 'botiquín de primeros auxilios emocionales'?",
+        "options": ["Para curar heridas físicas leves.", "Para nivelar estados emocionales negativos en el aula.", "Para guardar medicamentos controlados."],
+        "correct": 1,
+        "retro": "Ayuda a que el estudiante se sienta contenido afectivamente (Neurociencia Neuroaprendizaje: Las emociones y el aprendizaje, p. 75)."
+    },
+    {
+        "q": "141. ¿Qué efecto tiene el Control Posterior sobre actos que terminaron reclamos de particulares?",
+        "options": ["Anula automáticamente cualquier contrato previo.", "Verifica la legalidad y cumplimiento de objetivos.", "No tiene ningún efecto legal."],
+        "correct": 1,
+        "retro": "Evalúa los resultados de la gestión administrativa realizada (Reglamento de Faltas y Sanciones, p. 20)."
+    },
+    {
+        "q": "142. ¿Qué elementos debe transformar el docente para incidir en la innovación?",
+        "options": ["Su vestimenta, su oficina y su auto.", "Sus creencias, sus concepciones y sus prácticas.", "Únicamente el programa oficial del ministerio."],
+        "correct": 1,
+        "retro": "La innovación requiere cambiar modelos mentales previos (Innovación Educativa - UNESCO, p. 11)."
+    },
+    {
+        "q": "143. Según el Reglamento, las instituciones inscribirán a estudiantes independientemente de:",
+        "options": ["Su lugar de nacimiento.", "Su discapacidad, dificultades o talento extraordinario.", "Su preferencia por deportes específicos."],
+        "correct": 1,
+        "retro": "Garantiza acceso sin discriminación a la educación inclusiva (Reglamento para el fortalecimiento de la educación inclusiva en el SEP, p. 12)."
+    },
+    {
+        "q": "144. ¿A partir de qué modelo surgió la concepción de aprendizaje del siglo XX?",
+        "options": ["Modelo democrático y participativo.", "Modelo industrial y mecanicista.", "Modelo digital y multimedia."],
+        "correct": 1,
+        "retro": "Sirvió al propósito de la formación masiva para el trabajo industrial (Diseño, desarrollo e innovación del currículum, p. 89)."
+    },
+    {
+        "q": "145. ¿Qué distingue a la impronta de un estilo de aprendizaje?",
+        "options": ["Su carácter permanente y difícil de cambiar.", "Que cambia todos los días según el clima.", "Que es igual para todos los seres humanos."],
         "correct": 0,
-        "retro": "La tesorería nacional regula el flujo lícito de todos los fondos del Estado."
-    },
-    {
-        "q": "180. ¿Cuál es la definición de “Deficiencia” que establece la Ley 223?",
-        "options": [
-            "a) Pérdida o anormalidad de una estructura o función psicológica, fisiológica o anatómica.",
-            "b) Falta de dinero para comprar libros.",
-            "c) Tener mala suerte en los exámenes."
-        ],
+        "retro": "Son indicadores relativamente estables en el tiempo (Estilos de aprendizaje y métodos de enseñanza, p. 4)."
+    },
+    {
+        "q": "146. Según Baldridge, ¿qué define al cambio en organizaciones tradicionales?",
+        "options": ["Que es impuesto 'desde arriba' sin participación.", "Que es un proceso espontáneo de los niños.", "Que no requiere recursos financieros."],
         "correct": 0,
-        "retro": "Es el concepto técnico-médico base para la calificación de discapacidad."
-    },
-    {
-        "q": "181. ¿Cuál de las siguientes afirma con mayor precisión la función de las TIC como instrumentos de aprendizaje cognitivo en entornos colaborativos?",
-        "options": [
-            "a) Facilitan la construcción conjunta del conocimiento y la interacción horizontal.",
-            "b) Permiten que el maestro no tenga que hablar nunca más.",
-            "c) Sirven para que los alumnos se distraigan con videos."
-        ],
+        "retro": "Se distingue del cambio genuino por su falta de participación (Innovación Educativa - UNESCO, p. 12)."
+    },
+    {
+        "q": "147. El currículum oculto emerge vinculado a una visión racionalista porque:",
+        "options": ["Solo importa lo que está escrito en las leyes.", "Reconoce que la escuela enseña cosas no previstas en el programa.", "Obliga a que todos los niños piensen igual."],
+        "correct": 1,
+        "retro": "Saca a la luz concepciones implícitas sobre lo valioso (Diseño, desarrollo e innovación del currículum, p. 10)."
+    },
+    {
+        "q": "148. ¿Qué tips favorecen el equilibrio del sistema límbico mediante neurotransmisores?",
+        "options": ["El aislamiento y el silencio absoluto.", "Alimentación, ejercicio físico y juegos de estrategia.", "La repetición mecánica de definiciones."],
+        "correct": 1,
+        "retro": "Estas actividades generan nuevas redes neuronales positivas (Neurociencia Neuroaprendizaje: Las emociones y el aprendizaje, p. 45)."
+    },
+    {
+        "q": "149. ¿Cómo se clasifica la violencia según el comportamiento o expresión?",
+        "options": ["En física, psicológica y sexual.", "En azul, verde y roja.", "En rápida, lenta y estática."],
         "correct": 0,
-        "retro": "La tecnología potencia el trabajo cooperativo si tiene sentido pedagógico."
-    },
-    {
-        "q": "182. ¿Qué papel cumplen los errores que viven los docentes al probar nuevas prácticas pedagógicas?",
-        "options": [
-            "a) Son oportunidades de aprendizaje institucional y mejora de la propuesta.",
-            "b) Son pruebas de que el maestro es incompetente y debe ser despedido.",
-            "c) No tienen ningún valor y deben ocultarse."
-        ],
+        "retro": "Es la clasificación básica por modalidad de agresión (Guía para la identificación y denuncia de la violencia intrafamiliar, p. 13)."
+    },
+    {
+        "q": "150. ¿Qué caracteriza al trabajo colaborativo en la innovación?",
+        "options": ["La competencia por ser el mejor del grupo.", "El debate, diálogo y negociación de posiciones.", "Que el director decide todo por los demás."],
+        "correct": 1,
+        "retro": "Es la resultante de un proceso grupal mediado por el diálogo (Innovación Educativa - UNESCO, p. 11)."
+    },
+    {
+        "q": "151. ¿Qué rasgos definen al trabajo mancomunado para la transformación?",
+        "options": ["La división estricta de tareas sin hablar entre sí.", "La construcción colectiva del saber pedagógico.", "El uso obligatorio de uniformes iguales."],
+        "correct": 1,
+        "retro": "Requiere redes que potencien la renovación de prácticas (Innovación Educativa - UNESCO, p. 11)."
+    },
+    {
+        "q": "152. Según Sáez López, ¿qué distingue al aprendizaje como proceso cognitivo?",
+        "options": ["Que es puramente mecánico.", "Que requiere transformar la información en conocimiento propio.", "Que es un proceso que termina al salir del aula."],
+        "correct": 1,
+        "retro": "Aprender es explorar, conceptualizar e interactuar (Estilos de aprendizaje y métodos de enseñanza, p. 10)."
+    },
+    {
+        "q": "153. Según el modelo triuno, ¿qué instinto reptil liga poder con posición social?",
+        "options": ["El sentido de imitación.", "El sentido de jerarquías sociales.", "El sentido de reproducción."],
+        "correct": 1,
+        "retro": "A mayor poder corresponde mayor posición en el grupo (Neurociencia Neuroaprendizaje: Las emociones y el aprendizaje, p. 16)."
+    },
+    {
+        "q": "154. ¿Cuáles son objetivos del Sistema de Control Gubernamental Interno?",
+        "options": ["Garantizar la transparencia y eficiencia de la gestión.", "Esconder los errores administrativos.", "Aumentar los gastos discrecionales."],
         "correct": 0,
-        "retro": "En innovación, el error es parte constitutiva del proceso de investigación-acción."
-    },
-    {
-        "q": "183. ¿Cómo se describen los impedimentos y resistencias que obstaculizan la apertura al cambio en las instituciones educativas?",
-        "options": [
-            "a) Barreras culturales, organizativas y miedos personales a la incertidumbre.",
-            "b) Falta de pintura roja en las paredes.",
-            "c) El exceso de lluvias durante el invierno."
-        ],
+        "retro": "Busca la eficacia de los sistemas y el cumplimiento de resultados (Reglamento de Faltas y Sanciones, p. 15)."
+    },
+    {
+        "q": "155. ¿Qué deben hacer los sistemas de Planificación e Inversión Pública anualmente?",
+        "options": ["Cambiar las leyes nacionales cada mes.", "Asegurar la compatibilidad con el programa monetario.", "Definir los sueldos de forma aleatoria."],
+        "correct": 1,
+        "retro": "Deben operar coordinadamente con el presupuesto estatal (Reglamento de Faltas y Sanciones, p. 15)."
+    },
+    {
+        "q": "156. ¿Cuál es una responsabilidad de directores en educación inclusiva?",
+        "options": ["Prohibir la entrada a niños con muletas.", "Efectivizar la atención educativa con calidad y calidez.", "Delegar toda la enseñanza a los padres."],
+        "correct": 1,
+        "retro": "Es su deber garantizar el acceso y permanencia (Reglamento para el fortalecimiento de la educación inclusiva en el SEP, p. 13)."
+    },
+    {
+        "q": "157. ¿Qué tipo de sujetos busca construir la innovación crítica?",
+        "options": ["Sujetos pasivos que solo escuchan.", "Sujetos creadores, productores de saber y autónomos.", "Sujetos que solo repiten el libro de texto."],
+        "correct": 1,
+        "retro": "Convierte al sujeto en creador y reorienta su quehacer (Innovación Educativa - UNESCO, p. 11)."
+    },
+    {
+        "q": "158. Según Berkowitz (1996), ¿cuál es un precursor de violencia adulta?",
+        "options": ["El haber tenido buenas notas en primaria.", "Sufrir o estar expuesto a abuso crónico en la niñez.", "Haber practicado deportes grupales."],
+        "correct": 1,
+        "retro": "La violencia sufrida en la infancia se proyecta en la adultez (Convivencia escolar y resolución pacífica de conflictos, p. 15)."
+    },
+    {
+        "q": "159. Según la Guía, la violencia impacta el desarrollo y supone un riesgo de:",
+        "options": ["Deserción escolar y conductas autodestructivas.", "Éxito profesional inmediato.", "Mejora en las relaciones sociales."],
         "correct": 0,
-        "retro": "La resistencia al cambio es un fenómeno complejo ligado a la identidad profesional."
-    },
-    {
-        "q": "184. Un director institucional afirma que su equipo “no está preparado”... ¿qué naturaleza tienen esas afirmaciones?",
-        "options": [
-            "a) Reflejan modelos mentales defensivos ante la pérdida de control o comodidad.",
-            "b) Son verdades científicas irrefutables.",
-            "c) Son poemas líricos sobre la escuela."
-        ],
+        "retro": "Afecta gravemente las posibilidades de vida del estudiante (Guía para la identificación y denuncia de la violencia intrafamiliar, p. 15)."
+    },
+    {
+        "q": "160. Según el manual de resolución de problemas, la importancia de una solución es:",
+        "options": ["Algo objetivo definido por una ley física.", "Algo personal y subjetivo según el grupo involucrado.", "Idéntica para todas las personas del mundo."],
+        "correct": 1,
+        "retro": "La valoración depende de las necesidades propias y ajenas (Manual de resolución de problemas, p. 150)."
+    },
+    {
+        "q": "161. 'Viabilizar espacios de coordinación con maestros' es responsabilidad de:",
+        "options": ["El portero del instituto.", "La Directora o Director de Unidad Educativa.", "Únicamente de los padres de familia."],
+        "correct": 1,
+        "retro": "Es una función clave de la gestión directiva inclusiva (Reglamento para el fortalecimiento de la educación inclusiva en el SEP, p. 13)."
+    },
+    {
+        "q": "162. ¿Qué tipo de memoria guarda esquemas de procedimientos automáticos?",
+        "options": ["Memoria semántica.", "Memoria procedimental.", "Memoria episódica."],
+        "correct": 1,
+        "retro": "Realiza tareas sin intervención constante de la conciencia (Neurociencia Neuroaprendizaje: Las emociones y el aprendizaje, p. 58)."
+    },
+    {
+        "q": "163. ¿Cuál es una limitación de los libros de texto según Sacristán?",
+        "options": ["Que son demasiado divertidos para los niños.", "Que simplifican y reducen excesivamente la cultura.", "Que son gratuitos en todos los países."],
+        "correct": 1,
+        "retro": "Pretenden la reiteración pasiva y mecánica de opiniones (Diseño, desarrollo e innovación del currículum, p. 72)."
+    },
+    {
+        "q": "164. ¿Qué distingue estructuralmente el trabajo escolar según Perrenoud?",
+        "options": ["Que es una actividad voluntaria y muy bien pagada.", "Que es una actividad impuesta, fragmentada y supervisada.", "Que no tiene ninguna relación con el aprendizaje."],
+        "correct": 1,
+        "retro": "Es un trabajo distinto porque carece de utilidad inmediata visible (Diseño, desarrollo e innovación del currículum, p. 110)."
+    },
+    {
+        "q": "165. ¿Qué requisitos debe cumplir una Subsede según la RM 350-2023?",
+        "options": ["Independencia total del rector de la sede.", "Estructura organizativa dependiente de la sede central.", "Tener un edificio en otro país."],
+        "correct": 1,
+        "retro": "La subsede forma parte de la estructura del instituto principal (Reglamento para el fortalecimiento de la educación inclusiva en el SEP, p. 26)."
+    },
+    {
+        "q": "166. ¿Qué distingue a las estrategias de aprendizaje de las técnicas?",
+        "options": ["Que las estrategias son más baratas.", "La consciencia, intencionalidad y reflexión sobre el proceso.", "Que las técnicas solo las usan los maestros."],
+        "correct": 1,
+        "retro": "Las estrategias implican una elección coordinada de pasos (Estilos de aprendizaje y métodos de enseñanza, p. 10)."
+    },
+    {
+        "q": "167. Un buen sistema de reconocimiento recurre a refuerzos para que el alumno perciba:",
+        "options": ["Que el centro valora sus buenas conductas.", "Que el centro quiere castigarlo siempre.", "Que las notas son lo único que importa."],
         "correct": 0,
-        "retro": "A menudo la 'falta de preparación' es una excusa para mantener el statu quo."
-    },
-    {
-        "q": "185. El estilo de aprendizaje es un conjunto de elementos... ¿Cuáles son los indicadores relativamente estables?",
-        "options": [
-            "a) Rasgos cognitivos, afectivos y fisiológicos.",
-            "b) El color de ojos y la estatura del alumno.",
-            "c) El saldo bancario de la familia."
-        ],
+        "retro": "Los refuerzos sociales promueven la convivencia positiva (Convivencia escolar y resolución pacífica de conflictos, p. 43)."
+    },
+    {
+        "q": "168. Estudiantes que aplican técnicas mecánicas sin adaptar el enfoque ignoran:",
+        "options": ["La cantidad de hojas que deben usar.", "La flexibilidad y reflexión sobre su propio proceso.", "El nombre del autor del libro."],
+        "correct": 1,
+        "retro": "Las estrategias requieren ajuste según la complejidad del tema (Estilos de aprendizaje y métodos de enseñanza, p. 10)."
+    },
+    {
+        "q": "169. Las competencias genéricas se caracterizan porque:",
+        "options": ["Son útiles para una sola tarea específica.", "Son soporte imprescindible para el desempeño laboral y la vida.", "Solo se aprenden en la universidad."],
+        "correct": 1,
+        "retro": "Permiten desenvolverse con éxito en diversos ámbitos (Estilos de aprendizaje y métodos de enseñanza, p. 12)."
+    },
+    {
+        "q": "170. Una evaluación negativa pese a la innovación docente refleja:",
+        "options": ["El poder regulador del currículum oficial y las pruebas externas.", "Que los maestros no saben enseñar nada.", "Que la escuela necesita más presupuesto para pintura."],
         "correct": 0,
-        "retro": "Keefe define el estilo mediante estos tres ejes biopsicosociales."
-    },
-    {
-        "q": "186. ¿Qué características tienen los «Maestros Completos» según el modelo de Lowman?",
-        "options": [
-            "a) Alta habilidad en el dominio del contenido y excelente relación interpersonal.",
-            "b) Que saben cocinar y también enseñar física.",
-            "c) Que nunca llegan tarde y siempre usan corbata."
-        ],
+        "retro": "Las pruebas externas suelen privilegiar lo memorístico (Diseño, desarrollo e innovación del currículum, p. 81)."
+    },
+    {
+        "q": "171. En el proceso educativo se deben defender los derechos siendo guardianes de:",
+        "options": ["La disciplina rígida y el castigo.", "La integridad y el bienestar de niñas, niños y adolescentes.", "Los bienes materiales de la escuela."],
+        "correct": 1,
+        "retro": "El rol docente implica ser garante de los derechos del menor (Guía para la identificación y denuncia de la violencia intrafamiliar, p. 15)."
+    },
+    {
+        "q": "172. ¿Qué es el arbitraje en resolución de conflictos?",
+        "options": ["Una pelea física supervisada.", "Someter la solución a la decisión de un tercero elegido por las partes.", "Ignorar el problema hasta que desaparezca."],
+        "correct": 1,
+        "retro": "Se utiliza un árbitro para dar una solución vinculante (Convivencia escolar y resolución pacífica de conflictos, p. 53)."
+    },
+    {
+        "q": "173. ¿Qué característica tiene la vigencia de la Ley 348?",
+        "options": ["Es opcional para las instituciones privadas.", "Es de cumplimiento obligatorio y prevalece sobre otras normas en la materia.", "Solo rige durante los fines de semana."],
+        "correct": 1,
+        "retro": "Garantiza a las mujeres una vida libre de violencia de forma integral (Guía para la identificación y denuncia de la violencia intrafamiliar, p. 13)."
+    },
+    {
+        "q": "174. ¿Qué factor explica que el libro de texto sea el dominante?",
+        "options": ["Que es el recurso más barato de todos.", "La burocracia de las administraciones y la tradición escolar.", "Que los niños no quieren usar computadoras."],
+        "correct": 1,
+        "retro": "Se ha configurado como el monopolio de la información en el aula (Diseño, desarrollo e innovación del currículum, p. 10)."
+    },
+    {
+        "q": "175. ¿Qué distingue a las ciencias de transferencia de las puras?",
+        "options": ["Que no usan matemáticas.", "Su interés por la aplicación práctica de los conocimientos.", "Que son menos importantes para la sociedad."],
+        "correct": 1,
+        "retro": "Buscan resolver problemas reales mediante la tecnología (Diseño, desarrollo e innovación del currículum, p. 89)."
+    },
+    {
+        "q": "176. ¿Cuál es la función neurológica de introducir variantes novedosas?",
+        "options": ["Confundir al estudiante para que estudie más.", "Activar la atención y facilitar la creación de nuevas sinapsis.", "Reducir la cantidad de dopamina en el cuerpo."],
+        "correct": 1,
+        "retro": "La novedad es un estímulo clave para el aprendizaje cerebral (Neurociencia Neuroaprendizaje: Las emociones y el aprendizaje, p. 45)."
+    },
+    {
+        "q": "177. ¿Qué rol cumplen las TIC en la nueva economía mundial?",
+        "options": ["Son un lujo innecesario para la educación.", "Son instrumentos esenciales para procesar información y conocimiento.", "Sustituyen por completo la necesidad de maestros."],
+        "correct": 1,
+        "retro": "El acuerdo de Lisboa destaca su rol en la economía del conocimiento (Diseño, desarrollo e innovación del currículum, p. 88)."
+    },
+    {
+        "q": "178. Los fines educativos de Sacristán más allá de contenidos comparten:",
+        "options": ["La intención de homogeneizar a todos los sujetos.", "La inversión de la lógica habitual priorizando al sujeto.", "La idea de que la escuela no sirve para nada."],
+        "correct": 1,
+        "retro": "Busca seres singulares y no solo copias del programa (Diseño, desarrollo e innovación del currículum, p. 48)."
+    },
+    {
+        "q": "179. ¿Qué carácter tienen las políticas del Sistema de Tesorería del Estado?",
+        "options": ["Son simples sugerencias para los municipios.", "Son normas de cumplimiento obligatorio para el manejo de fondos.", "No se aplican a los institutos de convenio."],
+        "correct": 1,
+        "retro": "Regulan la administración financiera de forma centralizada (Reglamento de Faltas y Sanciones, p. 15)."
+    },
+    {
+        "q": "180. ¿Cómo define la Ley 223 la 'Deficiencia'?",
+        "options": ["Como una falta de voluntad para trabajar.", "Como la pérdida o anormalidad de una estructura anatómica o función.", "Como la pobreza extrema de una familia."],
+        "correct": 1,
+        "retro": "Se refiere a aspectos psicológicos, fisiológicos o anatómicos (Ley N° 223 para Personas con Discapacidad, p. 2)."
+    },
+    {
+        "q": "181. ¿Cómo potencian las TIC el aprendizaje cognitivo en entornos colaborativos?",
+        "options": ["Permitiendo que los alumnos hablen menos entre ellos.", "Facilitando la construcción conjunta de conocimientos mediante redes.", "Haciendo que la tarea sea más difícil de terminar."],
+        "correct": 1,
+        "retro": "Funcionan como instrumentos de mediación social (Innovación Educativa - UNESCO, p. 37)."
+    },
+    {
+        "q": "182. ¿Qué papel cumplen los errores docentes al probar nuevas prácticas?",
+        "options": ["Son motivo de destitución inmediata.", "Son oportunidades de aprendizaje y reflexión para mejorar.", "Deben ocultarse para no perder autoridad."],
+        "correct": 1,
+        "retro": "La innovación implica aprender del error y reformular (Innovación Educativa - UNESCO, p. 39)."
+    },
+    {
+        "q": "183. ¿Cómo se describen los impedimentos al cambio en las instituciones?",
+        "options": ["Como muros de concreto imposibles de mover.", "Como factores personales, conductuales y culturales.", "Solo como falta de dinero en efectivo."],
+        "correct": 1,
+        "retro": "Intervienen múltiples dimensiones que dificultan el cambio (Innovación Educativa - UNESCO, p. 20)."
+    },
+    {
+        "q": "184. Afirmar que el equipo 'no está preparado' para innovar es predominantemente:",
+        "options": ["Una verdad científica absoluta.", "Una resistencia basada en modelos mentales y miedos.", "Una falta de respeto al director."],
+        "correct": 1,
+        "retro": "A menudo revela el temor a salir de la zona de confort (Innovación Educativa - UNESCO, p. 25)."
+    },
+    {
+        "q": "185. ¿Cuáles son los indicadores estables del estilo de aprendizaje?",
+        "options": ["Rasgos cognitivos, afectivos y fisiológicos.", "La marca de zapatos y el color de cabello.", "La velocidad para correr en educación física."],
         "correct": 0,
-        "retro": "Lowman equilibra la competencia académica con la asertividad emocional."
+        "retro": "Definen cómo el alumno percibe y responde al ambiente (Estilos de aprendizaje y métodos de enseñanza, p. 4)."
+    },
+    {
+        "q": "186. ¿Qué características tienen los 'Maestros Completos' (Lowman)?",
+        "options": ["Saben mucho pero no saben comunicarse.", "Tienen alta capacidad intelectual y gran habilidad interpersonal.", "Son muy amigables pero no saben el contenido."],
+        "correct": 1,
+        "retro": "Combinan el dominio de la materia con el afecto en el aula (Neurociencia Neuroaprendizaje: Las emociones y el aprendizaje, p. 69)."
     },
     {
         "q": "187. Según el neuroaprendizaje, ¿cómo se define a las sensaciones?",
-        "options": [
-            "a) Procesamiento cerebral de los estímulos captados por los órganos de los sentidos.",
-            "b) Ideas mágicas que aparecen en la mente por la noche.",
-            "c) El sudor frío antes de un examen solamente."
-        ],
+        "options": ["Como la información que los sentidos captan del mundo.", "Como los pensamientos abstractos sobre el futuro.", "Como las reglas gramaticales escritas."],
         "correct": 0,
-        "retro": "La sensación es el primer nivel de contacto biológico con el entorno."
+        "retro": "Es el primer registro de la información en el cerebro (Neurociencia Neuroaprendizaje: Las emociones y el aprendizaje, p. 58)."
     },
     {
-        "q": "188. ¿Cómo se caracterizan las iniciativas de cambio... cuando se encuentran en un grado incipiente?",
-        "options": [
-            "a) Como mejoras aisladas que aún no transforman la cultura del centro.",
-            "b) Como revoluciones totales que cambian todo en un día.",
-            "c) Como fracasos garantizados."
-        ],
-        "correct": 0,
-        "retro": "La innovación inicial suele ser fragmentada antes de volverse institucional."
+        "q": "188. Iniciativas de cambio incipientes se caracterizan por:",
+        "options": ["Estar totalmente consolidadas en el centro.", "Ser esfuerzos aislados que aún no permean la cultura escolar.", "No tener ningún apoyo de los docentes."],
+        "correct": 1,
+        "retro": "Están en grado de desarrollo inicial hacia la innovación (Innovación Educativa - UNESCO, p. 15)."
     },
     {
-        "q": "189. ¿Qué carácter tienen los presupuestos de gastos del Banco Central y entidades financieras bajo vigilancia?",
-        "options": [
-            "a) Carácter indicativo y sujeto a normas específicas de solvencia.",
-            "b) Son totalmente secretos y nadie los conoce.",
-            "c) Se publican en el periódico de chistes cada domingo."
-        ],
-        "correct": 0,
-        "retro": "Tienen un régimen especial de control por su impacto en la estabilidad monetaria."
+        "q": "189. ¿Qué carácter tienen los presupuestos del Banco Central?",
+        "options": ["Son secretos y no se publican.", "Están sometidos al programa monetario y vigilancia estatal.", "Son decididos por los clientes del banco."],
+        "correct": 1,
+        "retro": "Deben alinearse con la política económica nacional (Reglamento de Faltas y Sanciones, p. 15)."
     },
     {
-        "q": "190. ¿Qué carácter tienen los presupuestos de gastos de las entidades con autonomía de gestión cuyos ingresos provienen de venta de servicios?",
-        "options": [
-            "a) Son presupuestos de ejecución directa bajo responsabilidad de su MAE.",
-            "b) Los maneja el alcalde del pueblo vecino.",
-            "c) No existen, gastan según les parece en el momento."
-        ],
-        "correct": 0,
-        "retro": "La autonomía implica responsabilidad propia sobre la generación y uso de recursos."
+        "q": "190. ¿Qué carácter tienen los presupuestos de entidades con autonomía de patrimonio?",
+        "options": ["Sus ingresos vienen solo del tesoro general.", "Provienen exclusivamente por venta de bienes o servicios.", "No tienen presupuesto oficial."],
+        "correct": 1,
+        "retro": "Se financian con su propia gestión económica (Reglamento de Faltas y Sanciones, p. 15)."
     },
     {
-        "q": "191. ¿De qué manera inciden el compromiso y la voluntad de los docentes en los procesos de innovación educativa?",
-        "options": [
-            "a) Son el factor determinante para la sostenibilidad y éxito de la mejora.",
-            "b) No influyen en nada, lo importante es el decreto supremo.",
-            "c) Solo sirven para decorar el mural de la escuela."
-        ],
-        "correct": 0,
-        "retro": "Sin la implicación subjetiva del docente, la innovación es pura cosmética administrativa."
+        "q": "191. ¿Cómo inciden el compromiso y voluntad docente en la innovación?",
+        "options": ["Son irrelevantes si hay tecnología.", "Son la condición fundamental para que el cambio sea sostenible.", "Solo sirven si el director les paga extra."],
+        "correct": 1,
+        "retro": "Sin compromiso personal no hay transformación real (Innovación Educativa - UNESCO, p. 3)."
     },
     {
-        "q": "192. Desde la neurociencia del aprendizaje, ¿qué son los neurotransmisores?",
-        "options": [
-            "a) Mensajeros químicos que permiten la comunicación entre neuronas (sinapsis).",
-            "b) Cables de cobre que recorren la columna vertebral.",
-            "c) Pensamientos positivos que se envían por correo electrónico."
-        ],
-        "correct": 0,
-        "retro": "Sustancias como la dopamina o serotonina regulan el estado óptimo para aprender."
+        "q": "192. ¿Qué son los neurotransmisores en neurociencia?",
+        "options": ["Partes del sistema digestivo.", "Mensajeros químicos que transmiten impulsos entre neuronas.", "Leyes del sistema educativo."],
+        "correct": 1,
+        "retro": "Determinan los estados de ánimo y el aprendizaje (Neurociencia Neuroaprendizaje: Las emociones y el aprendizaje, p. 35)."
     },
     {
-        "q": "193. Las competencias genéricas constituyen un soporte imprescindible... ¿Cuál describe mejor su naturaleza?",
-        "options": [
-            "a) Capacidades humanas amplias que permiten adaptarse a cambios y resolver problemas.",
-            "b) Saber usar una llave inglesa de forma perfecta.",
-            "c) Memorizar el nombre de todos los presidentes del mundo."
-        ],
+        "q": "193. Las competencias genéricas tienen la naturaleza de ser:",
+        "options": ["Transversales y aplicables en diversos contextos de vida.", "Específicas para una sola profesión.", "Solo teóricas sin aplicación práctica."],
         "correct": 0,
-        "retro": "Son competencias para la vida que trascienden una disciplina específica."
+        "retro": "Son fundamentales para el éxito integral de la persona (Estilos de aprendizaje y métodos de enseñanza, p. 12)."
     },
     {
-        "q": "194. En la Innovación Educativa, ¿qué son los modelos mentales?",
-        "options": [
-            "a) Mapas internos arraigados que filtran cómo percibimos la realidad y el cambio.",
-            "b) Dibujos del cerebro realizados por alumnos de inicial.",
-            "c) Un tipo de computadora muy avanzada."
-        ],
-        "correct": 0,
-        "retro": "Si el modelo mental del docente es rígido, rechazará cualquier innovación por buena que sea."
+        "q": "194. ¿Por qué los modelos mentales obstaculizan el cambio?",
+        "options": ["Porque son pensamientos que no existen.", "Porque son supuestos arraigados que filtran nuestra realidad.", "Porque el cerebro no puede pensar cosas nuevas."],
+        "correct": 1,
+        "retro": "Requieren ser transformados para adoptar nuevas prácticas (Innovación Educativa - UNESCO, p. 25)."
     },
     {
-        "q": "195. En el ámbito de la matemática educativa... ¿Cuál caracteriza mejor a dichas comunidades?",
-        "options": [
-            "a) Espacios de investigación y reflexión para mejorar la didáctica de la materia.",
-            "b) Grupos de personas que odian los números.",
-            "c) Clubes sociales para organizar fiestas de fin de año."
-        ],
-        "correct": 0,
-        "retro": "Buscan transformar la enseñanza de la matemática basándose en evidencia científica."
+        "q": "195. ¿Qué propósito tienen las comunidades de matemática educativa?",
+        "options": ["Resolver exámenes por los alumnos.", "Investigar y reflexionar sobre la problemática de su enseñanza.", "Vender libros de texto a los padres."],
+        "correct": 1,
+        "retro": "Buscan mejorar la didáctica mediante la investigación-acción (Diseño, desarrollo e innovación del currículum, p. 76)."
     },
     {
-        "q": "196. ¿Cuál es la característica de las organizaciones educativas denominadas «dinámicas»?",
-        "options": [
-            "a) Su alta capacidad de adaptación, aprendizaje constante y apertura al entorno.",
-            "b) Que todos los alumnos están corriendo todo el tiempo.",
-            "c) Que cambian de nombre cada semana."
-        ],
-        "correct": 0,
-        "retro": "La organización dinámica aprende de su propia práctica y de los desafíos externos."
+        "q": "196. ¿Cuál es la característica de las organizaciones 'dinámicas'?",
+        "options": ["Que nunca cambian sus normas.", "Que aprenden del entorno y se adaptan evolutivamente.", "Que son estáticas y rígidas."],
+        "correct": 1,
+        "retro": "Se comportan como organismos vivos que crecen (Innovación Educativa - UNESCO, p. 11)."
     },
     {
-        "q": "197. Las organizaciones educativas son seres vivos... ¿en qué se caracterizan los centros denominados «paseantes»?",
-        "options": [
-            "a) Realizan cambios superficiales y temporales para cumplir la norma sin compromiso real.",
-            "b) Son escuelas que se mudan de lugar cada mes.",
-            "c) Institutos donde solo se enseña geografía del mundo."
-        ],
-        "correct": 0,
-        "retro": "Los 'paseantes' imitan la innovación pero mantienen su cultura tradicional intacta."
+        "q": "197. ¿En qué se caracterizan los centros educativos 'paseantes'?",
+        "options": ["En que los alumnos siempre están en el recreo.", "En que no tienen una dirección clara hacia la mejora.", "En que son los más exitosos del país."],
+        "correct": 1,
+        "retro": "Carecen de procesos sistemáticos de innovación (Innovación Educativa - UNESCO, p. 20)."
     },
     {
-        "q": "198. De acuerdo con el texto “Convivencia escolar y resolución pacífica de conflictos” ¿Cuál es la definición de escuelas pacíficas?",
-        "options": [
-            "a) Aquellas que educan en valores de respeto, diálogo y justicia como eje central.",
-            "b) Escuelas donde nadie habla para evitar discusiones.",
-            "c) Centros que tienen prohibida la entrada a personas con carácter fuerte."
-        ],
-        "correct": 0,
-        "retro": "La paz escolar es una construcción activa basada en la gestión democrática del conflicto."
+        "q": "198. ¿Cuál es la definición de escuelas pacíficas?",
+        "options": ["Lugares donde no hay ningún tipo de ruido.", "Centros que gestionan conflictos mediante diálogo y no-violencia.", "Escuelas que no tienen alumnos."],
+        "correct": 1,
+        "retro": "La resolución no violenta es esencial en su convivencia (Convivencia escolar y resolución pacífica de conflictos, p. 45)."
     },
     {
-        "q": "199. En la Innovación Educativa... ¿qué son en realidad esas resistencias en muchos casos?",
-        "options": [
-            "a) Mecanismos de defensa ante el miedo a lo desconocido o al fracaso.",
-            "b) Ganas de molestar al director por puro gusto.",
-            "c) Falta de vitaminas en la dieta del profesorado."
-        ],
-        "correct": 0,
-        "retro": "La resistencia es natural y debe abordarse con empatía y formación, no con castigo."
+        "q": "199. Afirmar 'no se está preparado para cambios' es en realidad:",
+        "options": ["Una falta de inteligencia de los maestros.", "Una resistencia emocional y cultural al riesgo.", "Una regla del ministerio."],
+        "correct": 1,
+        "retro": "El cambio genera incertidumbre y miedo al error (Innovación Educativa - UNESCO, p. 20)."
     },
     {
-        "q": "200. Según el texto de Innovación Educativa... ¿qué son en realidad y cómo se originan las ideas que quitan seguridad?",
-        "options": [
-            "a) Prejuicios y temores infundados nacidos de experiencias negativas previas.",
-            "b) Mensajes subliminales que vienen en la televisión.",
-            "c) Órdenes directas del Ministerio para asustar maestros."
-        ],
+        "q": "200. ¿Cómo se originan las ideas que restan confianza para aprender?",
+        "options": ["A partir de experiencias negativas previas y miedos.", "Por falta de vitaminas en la dieta.", "Porque el maestro habla demasiado fuerte."],
         "correct": 0,
-        "retro": "Los bloqueos al aprendizaje a menudo tienen una raíz emocional no resuelta."
+        "retro": "Las vivencias negativas pueden obstruir el nuevo aprendizaje (Innovación Educativa - UNESCO, p. 25)."
     }
 ];
     </script>

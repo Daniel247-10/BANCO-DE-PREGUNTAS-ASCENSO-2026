@@ -21,8 +21,8 @@
             return;
         }
 
-        // Límite gratuito: solo se muestran las primeras 50 preguntas
-        const LIMITE_GRATIS = 50;
+        // Límite gratuito: solo se muestran las primeras 10 preguntas
+        const LIMITE_GRATIS = 10;
         const visibleCount = Math.min(window.quizData.length, LIMITE_GRATIS);
 
         for (let index = 0; index < visibleCount; index++) {
@@ -96,7 +96,7 @@
             lock.className = "premium-lock";
             lock.innerHTML =
                 "<h3>SOLICITA TU ACCESO PREMIUN</h3>" +
-                "<p>Has explorado tus 50 preguntas gratis de este cuestionario.</p>" +
+                "<p>Has explorado tus " + LIMITE_GRATIS + " preguntas gratis de este cuestionario.</p>" +
                 "<div class='code-box'>" +
                 "<input type='text' id='codeInput' maxlength='4' placeholder='Código (4 caracteres)' autocomplete='off'>" +
                 "<button type='button' id='codeBtn'>Desbloquear</button>" +

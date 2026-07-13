@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banco de Preguntas 2026</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -10,6 +11,19 @@
         <h1>BANCO DE PREGUNTAS 2026</h1>
         <div class="subtitle">Seleccione un cuestionario para practicar</div>
     </header>
+
+    <div class="premium-wrap" style="display:none">
+        <a href="#" class="premium-btn" id="premiumBtn">★ PREMIUM ★</a>
+        <p class="premium-text">Desbloquea cuestionarios exclusivos y sin límites</p>
+    </div>
+
+    <div class="premium-wrap" style="display:none">
+        <button type="button" id="logoutBtn" class="logout-btn">Cerrar Sesión</button>
+    </div>
+
+    <div class="premium-wrap">
+        <a href="https://wa.link/kmeemk" target="_blank" rel="noopener" class="contact-btn">Contacto</a>
+    </div>
 
     <nav class="hub">
         <a href="parte1.html">PARTE 1</a>
@@ -39,13 +53,6 @@
         <a href="parte25.html">PARTE 25</a>
     </nav>
 
-    <div class="premium-wrap">
-        <a href="#" class="premium-btn" id="premiumBtn">★ PREMIUM ★</a>
-        <p class="premium-text">Desbloquea cuestionarios exclusivos y sin límites</p>
-    </div>
-
-    <div id="premiumBadgeHome" class="premium-badge" style="display:none">★ MODO PREMIUM ACTIVO</div>
-
     <!-- Ventana flotante Premium -->
     <div class="modal-overlay" id="premiumModal">
         <div class="modal-box">
@@ -66,10 +73,11 @@
             var btn = document.getElementById('premiumBtn');
             var modal = document.getElementById('premiumModal');
             var close = document.getElementById('premiumClose');
-            btn.addEventListener('click', function (e) {
+            function abrirModal(e) {
                 e.preventDefault();
                 modal.classList.add('active');
-            });
+            }
+            btn.addEventListener('click', abrirModal);
             close.addEventListener('click', function () {
                 modal.classList.remove('active');
             });
@@ -85,6 +93,9 @@
                 var lista = window.PREMIUM_CODES || [];
                 if (val.length === 4 && lista.indexOf(val) !== -1) {
                     try { localStorage.setItem('premiumUnlocked', '1'); } catch (e) {}
+                    btn.textContent = '★ PREMIUM ACTIVO ★';
+                    btn.classList.add('activo');
+                    btn.removeEventListener('click', abrirModal);
                     mMsg.style.color = '#155724';
                     mMsg.textContent = '¡Código válido! Acceso PREMIUM desbloqueado.';
                     setTimeout(function () { window.location.href = 'parte1.html'; }, 900);
@@ -104,10 +115,24 @@
         (function () {
             try {
                 if (localStorage.getItem('premiumUnlocked') === '1') {
-                    var b = document.getElementById('premiumBadgeHome');
-                    if (b) b.style.display = 'inline-block';
+                    var b = document.getElementById('premiumBtn');
+                    if (b) {
+                        b.textContent = '★ PREMIUM ACTIVO ★';
+                        b.classList.add('activo');
+                        b.addEventListener('click', function (e) { e.preventDefault(); });
+                    }
                 }
             } catch (e) {}
+        })();
+    </script>
+    <script>
+        (function () {
+            var btn = document.getElementById('logoutBtn');
+            if (!btn) return;
+            btn.addEventListener('click', function () {
+                try { localStorage.removeItem('premiumUnlocked'); } catch (e) {}
+                location.reload();
+            });
         })();
     </script>
 </body>

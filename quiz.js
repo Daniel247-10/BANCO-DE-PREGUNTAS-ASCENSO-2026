@@ -11,6 +11,8 @@
 (function () {
     "use strict";
 
+    var aciertos = {};   // registro de respuestas: index -> true/false
+
     function renderQuiz() {
         const container = document.getElementById("quiz-container");
         if (!container) return;
@@ -19,12 +21,38 @@
             return;
         }
 
-        // Límite gratuito: solo se muestran las primeras 5 preguntas
-        const LIMITE_GRATIS = 5;
-        const total = Math.min(window.quizData.length, LIMITE_GRATIS);
+        // Límite gratuito: solo se muestran las primeras 50 preguntas
+        const LIMITE_GRATIS = 50;
 
-        for (let index = 0; index < total; index++) {
-            const item = window.quizData[index];
+        // Aleatorizar textos de opciones por pregunta (una sola vez por carga)
+        // manteniendo etiquetas a), b), c) al renderizar
+        window.quizData.forEach(function (item) {
+            if (item._shuffledOptions) return;
+            var opts = item.options.slice();
+            for (var a = opts.length - 1; a > 0; a--) {
+                var b = Math.floor(Math.random() * (a + 1));
+                var t = opts[a];
+                opts[a] = opts[b];
+                opts[b] = t;
+            }
+            item._shuffledOptions = opts;
+            item._shuffledCorrect = opts.indexOf(item.options[item.correct]);
+        });
+
+        var quizOrder = window.quizData.map(function (q, i) {
+            return { item: q, originalIndex: i };
+        });
+        for (var s = quizOrder.length - 1; s > 0; s--) {
+            var j = Math.floor(Math.random() * (s + 1));
+            var tmp = quizOrder[s];
+            quizOrder[s] = quizOrder[j];
+            quizOrder[j] = tmp;
+        }
+        var visibleCount = Math.min(quizOrder.length, LIMITE_GRATIS);
+
+        for (let index = 0; index < visibleCount; index++) {
+            var entry = quizOrder[index];
+            const item = entry.item;
             const card = document.createElement("div");
             card.className = "question-card";
 
@@ -36,10 +64,10 @@
             const list = document.createElement("ul");
             list.className = "options-list";
 
-            item.options.forEach(function (opt, idx) {
+            item._shuffledOptions.forEach(function (opt, idx) {
                 const li = document.createElement("li");
                 li.className = "option";
-                li.innerText = opt;
+                li.innerText = String.fromCharCode(97 + idx) + ") " + opt.replace(/^[a-z]\)\s*/i, "");
                 li.addEventListener("click", function () {
                     responder(list, li, idx, item, index);
                 });
@@ -73,10 +101,10 @@
                 card.appendChild(qText);
                 const list = document.createElement("ul");
                 list.className = "options-list";
-                item.options.forEach(function (opt, idx) {
+                item._shuffledOptions.forEach(function (opt, idx) {
                     const li = document.createElement("li");
                     li.className = "option";
-                    li.innerText = opt;
+                    li.innerText = String.fromCharCode(97 + idx) + ") " + opt.replace(/^[a-z]\)\s*/i, "");
                     li.addEventListener("click", function () {
                         responder(list, li, idx, item, index);
                     });
@@ -89,16 +117,12 @@
                 card.appendChild(fb);
                 container.appendChild(card);
             });
-            return;
-        }
-
-        // Si hay más preguntas, se bloquea el resto mostrando el mensaje PREMIUM
-        if (window.quizData.length > LIMITE_GRATIS) {
+        } else if (window.quizData.length > LIMITE_GRATIS) {
             const lock = document.createElement("div");
             lock.className = "premium-lock";
             lock.innerHTML =
                 "<h3>SOLICITA TU ACCESO PREMIUN</h3>" +
-                "<p>Has explorado tus 5 preguntas gratis de este cuestionario.</p>" +
+                "<p>Has explorado tus 50 preguntas gratis de este cuestionario.</p>" +
                 "<div class='code-box'>" +
                 "<input type='text' id='codeInput' maxlength='4' placeholder='Código (4 caracteres)' autocomplete='off'>" +
                 "<button type='button' id='codeBtn'>Desbloquear</button>" +
@@ -116,7 +140,6 @@
                 const lista = window.PREMIUM_CODES || [];
                 if (val.length === 4 && lista.indexOf(val) !== -1) {
                     try { localStorage.setItem("premiumUnlocked", "1"); } catch (e) {}
-                    // Recargar el cuestionario completo
                     location.reload();
                 } else {
                     msg.textContent = "Código no válido. Solicítalo por WhatsApp.";
@@ -128,10 +151,35 @@
                 if (e.key === "Enter") intentar();
             });
         }
+
+        // Pie de cuestionario: botón Finalizar (muestra % de aciertos) e Inicio
+        const footer = document.createElement("div");
+        footer.className = "quiz-footer flotante";
+        footer.innerHTML =
+            "<button type='button' id='finalizarBtn'>Finalizar</button>" +
+            "<a href='index.html' class='inicio-btn'>&larr; Inicio</a>" +
+            "<div id='resultadoFinal' class='resultado-final'></div>";
+        container.appendChild(footer);
+
+        document.body.style.paddingBottom = "80px";
+
+        const fBtn = document.getElementById("finalizarBtn");
+        const rFinal = document.getElementById("resultadoFinal");
+        fBtn.addEventListener("click", function () {
+            let respondidas = 0, correctas = 0;
+            for (const k in aciertos) {
+                respondidas++;
+                if (aciertos[k]) correctas++;
+            }
+            const pct = respondidas ? Math.round((correctas / respondidas) * 100) : 0;
+            rFinal.style.display = "block";
+            rFinal.innerHTML = "Acertaste " + correctas + " de " + respondidas +
+                " pregunta(s) respondida(s) &mdash; " + pct + "% de aciertos";
+            rFinal.scrollIntoView({ behavior: "smooth", block: "center" });
+        });
     }
 
     function responder(list, liSeleccionado, idxElegido, item, index) {
-        // Bloquear todas las opciones (solo una respuesta permitida)
         const todas = list.querySelectorAll(".option");
         todas.forEach(function (l) {
             l.classList.add("disabled");
@@ -140,42 +188,29 @@
         const fb = document.getElementById("fb-" + index);
         fb.style.display = "block";
 
-        if (idxElegido === item.correct) {
-            // Respuesta correcta
+        if (idxElegido === item._shuffledCorrect) {
             liSeleccionado.classList.add("selected-correct");
             fb.className = "feedback correct";
             fb.innerHTML = "<strong>&iexcl;Correcto!</strong> " + (item.retro || "");
         } else {
-            // Respuesta incorrecta: marcar la elegida y REVELAR la correcta
             liSeleccionado.classList.add("selected-incorrect");
-            todas[item.correct].classList.add("show-correct");
+            todas[item._shuffledCorrect].classList.add("show-correct");
             fb.className = "feedback incorrect";
             fb.innerHTML =
                 "<strong>&iexcl;Incorrecto!</strong> La respuesta correcta es: <em>" +
-                item.options[item.correct] +
+                item._shuffledOptions[item._shuffledCorrect] +
                 "</em>.<br>" +
                 (item.retro ? "<br>" + item.retro : "");
         }
+
+        aciertos[index] = (idxElegido === item._shuffledCorrect);
     }
 
-    // Muestra un badge fijo indicando que el MODO PREMIUM está activo
-    function mostrarBadgePremium() {
-        if (document.getElementById("premiumBadge")) return;
-        const badge = document.createElement("div");
-        badge.id = "premiumBadge";
-        badge.className = "premium-badge";
-        badge.innerHTML = "★ MODO PREMIUM ACTIVO";
-        document.body.appendChild(badge);
-    }
-
-    // Ejecutar cuando el DOM esté listo
     if (document.readyState === "loading") {
         document.addEventListener("DOMContentLoaded", function () {
             renderQuiz();
-            try { if (localStorage.getItem("premiumUnlocked") === "1") mostrarBadgePremium(); } catch (e) {}
         });
     } else {
         renderQuiz();
-        try { if (localStorage.getItem("premiumUnlocked") === "1") mostrarBadgePremium(); } catch (e) {}
     }
 })();

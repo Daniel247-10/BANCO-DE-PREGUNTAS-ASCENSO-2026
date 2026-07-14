@@ -10,13 +10,9 @@
     <header>
         <h1>BANCO DE PREGUNTAS 2026</h1>
         <footer class="main-footer">
-            <p>Este material fue creado por el Lic. Daniel Llanos. Agradecemos cualquier observación o aporte que contribuya a su mejora; para ello, puede comunicarse con el autor.</p>
+            <p>Este material fue elaborado por el Lic. Daniel Llanos. Agradecemos cualquier observación o aporte que contribuya a su mejora; para ello, puede comunicarse con el autor.</p>
         </footer>
-    <div class="header-buttons">
-        <div class="premium-wrap" id="premiumWrap" style="display:none">
-            <a href="#" class="premium-btn" id="premiumBtn">★ PREMIUM ★</a>
-            <p class="premium-text">Desbloquea cuestionarios exclusivos y sin límites</p>
-        </div>
+    <div class="premium-wrap">
         <a href="https://wa.link/kmeemk" target="_blank" rel="noopener" class="contact-btn">Contacto</a>
     </div>
     <div class="subtitle">Seleccione un cuestionario para practicar</div>
@@ -50,81 +46,5 @@
         <a href="parte25.html">PARTE 25</a>
     </nav>
 
-    <!-- Ventana flotante Premium -->
-    <div class="modal-overlay" id="premiumModal">
-        <div class="modal-box">
-            <button class="modal-close" id="premiumClose" aria-label="Cerrar">×</button>
-            <h2 class="modal-title">★ Solicita tu código</h2>
-            <p class="modal-text">Para desbloquear el contenido PREMIUM, solicita tu código de acceso contactándonos por WhatsApp.</p>
-            <div class="code-box">
-                <input type="text" id="modalCodeInput" maxlength="4" placeholder="Código (4 caracteres)" autocomplete="off">
-                <button type="button" id="modalCodeBtn">Desbloquear</button>
-                <div id="modalCodeMsg" class="code-msg"></div>
-            </div>
-            <a class="modal-wa" href="https://wa.link/kmeemk" target="_blank" rel="noopener">Enviar solicitud por WhatsApp</a>
-        </div>
-    </div>
-
-    <script>
-        (function () {
-            var btn = document.getElementById('premiumBtn');
-            var modal = document.getElementById('premiumModal');
-            var close = document.getElementById('premiumClose');
-            function abrirModal(e) {
-                e.preventDefault();
-                modal.classList.add('active');
-            }
-            btn.addEventListener('click', abrirModal);
-            close.addEventListener('click', function () {
-                modal.classList.remove('active');
-            });
-            modal.addEventListener('click', function (e) {
-                if (e.target === modal) modal.classList.remove('active');
-            });
-
-            var input = document.getElementById('modalCodeInput');
-            var mBtn = document.getElementById('modalCodeBtn');
-            var mMsg = document.getElementById('modalCodeMsg');
-            function validar() {
-                var val = (input.value || '').trim().toUpperCase();
-                var lista = window.PREMIUM_CODES || [];
-                if (val.length === 4 && lista.indexOf(val) !== -1) {
-                    try { localStorage.setItem('premiumUnlocked', '1'); } catch (e) {}
-                    btn.textContent = '★ PREMIUM ACTIVO ★';
-                    btn.classList.add('activo');
-                    btn.removeEventListener('click', abrirModal);
-                    mMsg.style.color = '#155724';
-                    mMsg.textContent = '¡Código válido! Acceso PREMIUM desbloqueado.';
-                    setTimeout(function () { window.location.href = 'parte1.html'; }, 900);
-                } else {
-                    mMsg.style.color = '#dc3545';
-                    mMsg.textContent = 'Código no válido. Solicítalo por WhatsApp.';
-                }
-            }
-            mBtn.addEventListener('click', validar);
-            input.addEventListener('keydown', function (e) {
-                if (e.key === 'Enter') validar();
-            });
-        })();
-    </script>
-    <script src="codes.js"></script>
-    <script>
-        (function () {
-            var premiumWrap = document.getElementById('premiumWrap');
-            var premiumBtn = document.getElementById('premiumBtn');
-            try {
-                if (localStorage.getItem('premiumUnlocked') === '1') {
-                    if (premiumWrap) {
-                        premiumWrap.style.display = 'block';
-                    }
-                    if (premiumBtn) {
-                        premiumBtn.textContent = '★ PREMIUM ACTIVO ★';
-                        premiumBtn.classList.add('activo');
-                        premiumBtn.addEventListener('click', function (e) { e.preventDefault(); });
-                    }
-                }
-            } catch (e) {}
-        })();
-    </script>
 </body>
 </html>

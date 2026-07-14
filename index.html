@@ -12,22 +12,15 @@
         <footer class="main-footer">
             <p>Este material fue creado por el Lic. Daniel Llanos. Agradecemos cualquier observación o aporte que contribuya a su mejora; para ello, puede comunicarse con el autor.</p>
         </footer>
-        <div class="premium-wrap">
-            <a href="https://wa.link/kmeemk" target="_blank" rel="noopener" class="contact-btn">Contacto</a>
+    <div class="header-buttons">
+        <div class="premium-wrap" id="premiumWrap" style="display:none">
+            <a href="#" class="premium-btn" id="premiumBtn">★ PREMIUM ★</a>
+            <p class="premium-text">Desbloquea cuestionarios exclusivos y sin límites</p>
         </div>
-        <div class="subtitle">Seleccione un cuestionario para practicar</div>
-    </header>
-
-    
-
-    <div class="premium-wrap" style="display:none">
-        <a href="#" class="premium-btn" id="premiumBtn">★ PREMIUM ★</a>
-        <p class="premium-text">Desbloquea cuestionarios exclusivos y sin límites</p>
+        <a href="https://wa.link/kmeemk" target="_blank" rel="noopener" class="contact-btn">Contacto</a>
     </div>
-
-    <div class="premium-wrap" style="display:none">
-        <button type="button" id="logoutBtn" class="logout-btn">Cerrar Sesión</button>
-    </div>
+    <div class="subtitle">Seleccione un cuestionario para practicar</div>
+</header>
 
     <nav class="hub">
         <a href="parte1.html">PARTE 1</a>
@@ -117,26 +110,20 @@
     <script src="codes.js"></script>
     <script>
         (function () {
+            var premiumWrap = document.getElementById('premiumWrap');
+            var premiumBtn = document.getElementById('premiumBtn');
             try {
                 if (localStorage.getItem('premiumUnlocked') === '1') {
-                    var b = document.getElementById('premiumBtn');
-                    if (b) {
-                        b.textContent = '★ PREMIUM ACTIVO ★';
-                        b.classList.add('activo');
-                        b.addEventListener('click', function (e) { e.preventDefault(); });
+                    if (premiumWrap) {
+                        premiumWrap.style.display = 'block';
+                    }
+                    if (premiumBtn) {
+                        premiumBtn.textContent = '★ PREMIUM ACTIVO ★';
+                        premiumBtn.classList.add('activo');
+                        premiumBtn.addEventListener('click', function (e) { e.preventDefault(); });
                     }
                 }
             } catch (e) {}
-        })();
-    </script>
-    <script>
-        (function () {
-            var btn = document.getElementById('logoutBtn');
-            if (!btn) return;
-            btn.addEventListener('click', function () {
-                try { localStorage.removeItem('premiumUnlocked'); } catch (e) {}
-                location.reload();
-            });
         })();
     </script>
 </body>

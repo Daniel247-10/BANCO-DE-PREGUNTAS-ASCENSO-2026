@@ -21,8 +21,8 @@
             return;
         }
 
-        // Límite gratuito: solo se muestran las primeras 20 preguntas
-const LIMITE_GRATIS = 20;
+        // Límite gratuito: solo se muestran las primeras 10 preguntas
+const LIMITE_GRATIS = 10;
         const visibleCount = Math.min(window.quizData.length, LIMITE_GRATIS);
 
         for (let index = 0; index < visibleCount; index++) {
@@ -65,8 +65,9 @@ const LIMITE_GRATIS = 20;
         })();
 
         if (desbloqueado) {
-            // Render completo sin límite
-            window.quizData.forEach(function (item, index) {
+            // Render completo sin límite, continuando desde la pregunta 11
+            for (let index = LIMITE_GRATIS; index < window.quizData.length; index++) {
+                const item = window.quizData[index];
                 const card = document.createElement("div");
                 card.className = "question-card";
                 const qText = document.createElement("div");
@@ -90,7 +91,7 @@ const LIMITE_GRATIS = 20;
                 fb.className = "feedback";
                 card.appendChild(fb);
                 container.appendChild(card);
-            });
+            }
         } else if (window.quizData.length > LIMITE_GRATIS) {
             const lock = document.createElement("div");
             lock.className = "premium-lock";
@@ -151,6 +152,7 @@ const LIMITE_GRATIS = 20;
                 " pregunta(s) respondida(s) &mdash; " + pct + "% de aciertos";
             rFinal.scrollIntoView({ behavior: "smooth", block: "center" });
         });
+
     }
 
     function responder(list, liSeleccionado, idxElegido, item, index) {

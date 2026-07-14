@@ -160,9 +160,17 @@ nav.hub a:hover {
 }
 
 /* ===== Botón Premium en el menú principal ===== */
+.header-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
 .premium-wrap {
     text-align: center;
-    margin-top: 10px;
 }
 
 .logout-btn {
@@ -251,15 +259,18 @@ nav.hub a:hover {
 }
 
 .premium-btn.activo {
-    color: #155724;
-    background: linear-gradient(135deg, #d4edda 0%, #a8e6b0 100%);
-    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.5);
+    color: #5a2d00;
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 50%, #ffa500 100%);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.6);
     cursor: default;
+    padding: 8px 20px;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
 }
 
 .premium-btn.activo:hover {
     transform: none;
-    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.5);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.6);
 }
 
 .premium-text {

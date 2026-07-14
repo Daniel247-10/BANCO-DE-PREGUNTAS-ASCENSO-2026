@@ -3,6 +3,7 @@
    - Permite seleccionar UNA SOLA respuesta por pregunta.
    - Al responder se bloquea la pregunta.
    - Muestra SIEMPRE la respuesta correcta (aunque falle).
+   - Las opciones de respuesta se randomizan en cada carga.
    Depende de una variable global `quizData` definida en
    cada archivo HTML (parte1.html, parte2.html, ...).
    Cada elemento: { q, options:[...], correct, retro }
@@ -13,6 +14,15 @@
 
     var aciertos = {};   // registro de respuestas: index -> true/false
 
+    function shuffleArray(array) {
+        const shuffled = array.slice();
+        for (let i = shuffled.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+        return shuffled;
+    }
+
     function renderQuiz() {
         const container = document.getElementById("quiz-container");
         if (!container) return;
@@ -22,7 +32,7 @@
         }
 
         // Límite gratuito: solo se muestran las primeras 10 preguntas
-const LIMITE_GRATIS = 10;
+        const LIMITE_GRATIS = 10;
         const visibleCount = Math.min(window.quizData.length, LIMITE_GRATIS);
 
         for (let index = 0; index < visibleCount; index++) {
@@ -38,12 +48,26 @@ const LIMITE_GRATIS = 10;
             const list = document.createElement("ul");
             list.className = "options-list";
 
-            item.options.forEach(function (opt, idx) {
+            // Randomizar opciones y rastrear la nueva posición de la respuesta correcta
+            const originalOptions = item.options.slice();
+            const correctAnswer = originalOptions[item.correct];
+            const shuffledOptions = shuffleArray(originalOptions);
+            const newCorrectIndex = shuffledOptions.indexOf(correctAnswer);
+            
+            // Crear una copia del item con las opciones randomizadas
+            const randomizedItem = {
+                q: item.q,
+                options: shuffledOptions,
+                correct: newCorrectIndex,
+                retro: item.retro
+            };
+
+            shuffledOptions.forEach(function (opt, idx) {
                 const li = document.createElement("li");
                 li.className = "option";
                 li.innerText = opt;
                 li.addEventListener("click", function () {
-                    responder(list, li, idx, item, index);
+                    responder(list, li, idx, randomizedItem, index);
                 });
                 list.appendChild(li);
             });
@@ -76,12 +100,27 @@ const LIMITE_GRATIS = 10;
                 card.appendChild(qText);
                 const list = document.createElement("ul");
                 list.className = "options-list";
-                item.options.forEach(function (opt, idx) {
+                
+                // Randomizar opciones y rastrear la nueva posición de la respuesta correcta
+                const originalOptions = item.options.slice();
+                const correctAnswer = originalOptions[item.correct];
+                const shuffledOptions = shuffleArray(originalOptions);
+                const newCorrectIndex = shuffledOptions.indexOf(correctAnswer);
+                
+                // Crear una copia del item con las opciones randomizadas
+                const randomizedItem = {
+                    q: item.q,
+                    options: shuffledOptions,
+                    correct: newCorrectIndex,
+                    retro: item.retro
+                };
+                
+                shuffledOptions.forEach(function (opt, idx) {
                     const li = document.createElement("li");
                     li.className = "option";
                     li.innerText = opt;
                     li.addEventListener("click", function () {
-                        responder(list, li, idx, item, index);
+                        responder(list, li, idx, randomizedItem, index);
                     });
                     list.appendChild(li);
                 });

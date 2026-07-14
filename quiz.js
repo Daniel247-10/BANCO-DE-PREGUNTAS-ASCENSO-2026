@@ -21,8 +21,8 @@
             return;
         }
 
-        // Límite gratuito: solo se muestran las primeras 10 preguntas
-        const LIMITE_GRATIS = 10;
+        // Límite gratuito: solo se muestran las primeras 20 preguntas
+const LIMITE_GRATIS = 20;
         const visibleCount = Math.min(window.quizData.length, LIMITE_GRATIS);
 
         for (let index = 0; index < visibleCount; index++) {

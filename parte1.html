@@ -3,18 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Banco de Preguntas - PARTE 1 (1-100)</title>
+    <title>Banco de Preguntas - PARTE 1</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <h1>Banco de Preguntas - PARTE 1</h1>
-        <div class="subtitle">Examen de Ascenso 2026 (Preguntas 1-100)</div>
+        <div class="subtitle">Examen de Ascenso 2026</div>
     </header>
-
-    <nav class="hub">
-        <a href="index.html">&larr; Inicio</a>
-    </nav>
 
     <div id="quiz-container"></div>
 
@@ -22,603 +18,1003 @@
         window.quizData = [
     {
         "q": "1. ¿Quién fue el primer científico en proponer la plasticidad en la fuerza y el número de las conexiones neuronales como base del aprendizaje y la memoria?",
-        "options": ["a) Santiago Ramón y Cajal.", "b) Ivan Pavlov.", "c) Camillo Golgi."],
+        "options": [
+            "a) William James.",
+            "b) Santiago Ramón y Cajal.",
+            "c) Donald Hebb."
+        ],
         "correct": 0,
-        "retro": "Santiago Ramón y Cajal propuso la plasticidad neuronal como el fundamento biológico del aprendizaje (Neurociencia Neuroaprendizaje: Las emociones y el aprendizaje, p. 52)."
+        "retro": "William James (1890) fue el primer científico en proponer que el aprendizaje se basa en la plasticidad de las conexiones neuronales. [5, pág. 23]"
     },
     {
-        "q": "2. ¿Qué riesgo enfrenta una educación que ignora los cambios en la socialización y habilidades en el contexto tecnológico actual?",
-        "options": ["a) Aumento de la deserción docente.", "b) El riesgo de insignificancia y obsolescencia.", "c) Reducción del presupuesto estatal."],
-        "correct": 1,
-        "retro": "Ignorar estos cambios arriesga que la educación sea obsoleta frente a un mundo que demanda flexibilidad (Diseño, desarrollo e innovación del currículum, p. 74)."
+        "q": "2. ¿Qué riesgo enfrenta una educación que ignora los cambios en la socialización, el pensamiento y las habilidades diferenciadas en el contexto tecnológico actual?",
+        "options": [
+            "a) Un riesgo de obsolescencia y desfasaje respecto a la realidad del estudiante.",
+            "b) Un aumento en la carga administrativa docente.",
+            "c) La pérdida de financiamiento estatal inmediato."
+        ],
+        "correct": 0,
+        "retro": "Ignorar la evolución tecnológica y social genera una brecha que vuelve obsoleta la práctica escolar. [1, pág. 36]"
     },
     {
         "q": "3. ¿Qué tipo de atención requiere un gasto energético alto?",
-        "options": ["a) La atención involuntaria.", "b) La atención espontánea.", "c) La atención voluntaria."],
-        "correct": 2,
-        "retro": "La atención voluntaria consume alta energía al requerir un esfuerzo consciente del foco (Neurociencia Neuroaprendizaje: Las emociones y el aprendizaje, p. 56)."
+        "options": [
+            "a) Atención Voluntaria (Ejecutiva).",
+            "b) Atención Involuntaria.",
+            "c) Atención Automática."
+        ],
+        "correct": 0,
+        "retro": "La atención voluntaria es un proceso consciente que demanda un esfuerzo metabólico y energético superior del cerebro. [5, pág. 51]"
     },
     {
-        "q": "4. Según la definición de estilo de aprendizaje, ¿cuáles son los indicadores estables de interacción con el ambiente?",
-        "options": ["a) Rasgos cognitivos, afectivos y fisiológicos.", "b) Factores socioeconómicos y culturales.", "c) Preferencias de estudio temporales."],
-        "correct": 0,
-        "retro": "Los estilos se definen por rasgos cognitivos, afectivos y fisiológicos estables (Estilos de aprendizaje y métodos de enseñanza, p. 4)."
+        "q": "4. Según la definición de estilo de aprendizaje como conjunto de elementos exteriores que influyen en el contexto de la situación de aprendizaje, ¿cuáles son los indicadores estables que los alumnos perciben, interaccionan y responden a sus ambientes de aprendizaje?",
+        "options": [
+            "a) Factores económicos y sociales.",
+            "b) Rasgos cognitivos, afectivos y fisiológicos.",
+            "c) La velocidad de lectura y la caligrafía."
+        ],
+        "correct": 1,
+        "retro": "Keefe define los estilos de aprendizaje como la combinación de rasgos cognitivos, afectivos y fisiológicos. [3, pág. 11]"
     },
     {
         "q": "5. ¿Con qué áreas neuroanatómicas está vinculado el proceso de codificación y registro de la información?",
-        "options": ["a) Áreas visual y auditiva.", "b) Áreas prefrontales únicamente.", "c) Áreas motoras finas."],
-        "correct": 0,
-        "retro": "La codificación inicial se vincula principalmente con los sentidos de la vista y el oído (Neurociencia Neuroaprendizaje: Las emociones y el aprendizaje, p. 58)."
-    },
-    {
-        "q": "6. ¿Cuáles son las tres corrientes teóricas sobresalientes sobre la motivación?",
-        "options": ["a) Conductista, humanista y cognitiva.", "b) Clínica, social y experimental.", "c) Técnica, pedagógica y didáctica."],
-        "correct": 0,
-        "retro": "Se identifican las corrientes conductista, humanista y cognitiva (Estilos de aprendizaje y métodos de enseñanza, p. 6)."
-    },
-    {
-        "q": "7. Una docente cuyo esposo le confisca el salario e impide comprar materiales sufre violencia:",
-        "options": ["a) Violencia institucional.", "b) Violencia económica y patrimonial.", "c) Violencia psicológica leve."],
-        "correct": 1,
-        "retro": "El control sobre ingresos y medios de trabajo propios constituye violencia económica (Protocolo de prevención y actuación en casos de violencia, p. 13)."
-    },
-    {
-        "q": "8. El acto intencionado que trata de socavar la valoración que el niño tiene de sí mismo es:",
-        "options": ["a) Violencia física indirecta.", "b) Maltrato por negligencia.", "c) Violencia psicológica."],
+        "options": [
+            "a) Con los nervios periféricos de las extremidades.",
+            "b) Únicamente con el lóbulo occipital de la visión.",
+            "c) Con la corteza cerebral y el sistema límbico."
+        ],
         "correct": 2,
-        "retro": "Dañar la autoestima se define como violencia psicológica (Guía para la identificación y denuncia de la violencia intrafamiliar, p. 15)."
+        "retro": "La información es procesada y codificada mediante la interacción de la corteza y el sistema emocional. [5, pág. 51]"
     },
     {
-        "q": "9. Poner en peligro la integridad del menor por descuido de los cuidadores se considera:",
-        "options": ["a) Maltrato por negligencia u omisión.", "b) Violencia sexual por proximidad.", "c) Un método de disciplina tradicional."],
+        "q": "6. La motivación es de particular interés para los psicólogos educativos debido al papel crucial que juega en el aprendizaje de los estudiantes. Los teóricos han expresado diferentes puntos de vista sobre la motivación. ¿Cuáles son las tres corrientes sobresalientes que se identifican?",
+        "options": [
+            "a) Conductista, Cognitiva y Humanista.",
+            "b) Biológica, Química y Física.",
+            "c) Tradicional, Moderna y Postmoderna."
+        ],
         "correct": 0,
-        "retro": "La falta de cuidado básico de los responsables es maltrato por negligencia (Guía para la identificación y denuncia de la violencia intrafamiliar, p. 13)."
+        "retro": "Estas tres corrientes explican desde distintos enfoques el impulso del estudiante hacia el saber. [3, pág. 12]"
     },
     {
-        "q": "10. ¿Cuáles de los siguientes actos corresponden a delitos contra la libertad sexual?",
-        "options": ["a) Aislamiento y gritos.", "b) Abuso sexual, violación y estupro.", "c) Negligencia alimentaria."],
+        "q": "7. Una docente de un instituto denuncia que su esposo le retiró el acceso a la cuenta bancaria conjunta, le confiscó su salario mensual argumentando que él “administra mejor el dinero” y le impide comprar sus propios materiales de trabajo. ¿Qué tipo de violencia describe esta situación?",
+        "options": [
+            "a) Violencia psicológica.",
+            "b) Violencia económica.",
+            "c) Violencia física."
+        ],
         "correct": 1,
-        "retro": "Estos actos son delitos tipificados en la normativa penal de protección (Guía para la identificación y denuncia de la violencia intrafamiliar, p. 16)."
+        "retro": "La Ley 348 define la violencia económica como toda acción que afecte el salario o los recursos de la mujer. [7, pág. 15]"
     },
     {
-        "q": "11. La definición de conflicto basada en desacuerdo por recursos y metas incompatibles es de:",
-        "options": ["a) Ross (1995).", "b) Lederach (1996).", "c) Cascón (2001)."],
-        "correct": 0,
-        "retro": "Ross enfoca el conflicto en la incompatibilidad de metas e intereses (Convivencia escolar y resolución pacífica de conflictos, p. 52)."
-    },
-    {
-        "q": "12. ¿Qué condiciones necesita el sistema límbico de un estudiante para funcionar correctamente?",
-        "options": ["a) Silencio absoluto y disciplina rígida.", "b) Interacción social, bienestar emocional y vínculos positivos.", "c) Competencia extrema entre pares."],
-        "correct": 1,
-        "retro": "El cerebro emocional requiere un ambiente seguro y vínculos afectivos para aprender (Neurociencia Neuroaprendizaje: Las emociones y el aprendizaje, p. 50)."
-    },
-    {
-        "q": "13. Ante un caso de violencia sexual detectado, el director de la unidad educativa debe:",
-        "options": ["a) Comunicar inmediatamente a la Defensoría de la Niñez (DNA).", "b) Sancionar administrativamente al maestro sin denunciar.", "c) Intentar una conciliación entre las familias."],
-        "correct": 0,
-        "retro": "La normativa exige la denuncia inmediata ante las autoridades de protección (Protocolo de prevención y actuación en casos de violencia, p. 53)."
-    },
-    {
-        "q": "14. ¿Cuáles son las dos tareas que definen la fase conclusiva del diseño por proyectos?",
-        "options": ["a) Planificación y presupuesto.", "b) Difusión y sistematización.", "c) Calificación y examen final."],
-        "correct": 1,
-        "retro": "El diseño de proyectos concluye compartiendo resultados y organizando la experiencia (Innovación Educativa - UNESCO, p. 39)."
-    },
-    {
-        "q": "15. ¿Cuál es la finalidad de la auditoría cuando una entidad pública es condenada a pagar daños?",
-        "options": ["a) Establecer el grado de responsabilidad civil de los servidores.", "b) Modificar el reglamento de la institución.", "c) Aumentar los impuestos municipales."],
-        "correct": 0,
-        "retro": "La auditoría busca determinar quiénes deben resarcir el daño económico al Estado (Reglamento de Faltas y Sanciones, p. 20)."
-    },
-    {
-        "q": "16. Los sistemas de Control Interno y Externo Posterior deben garantizar:",
-        "options": ["a) La rotación de personal docente.", "b) La transparencia y el cumplimiento de resultados.", "c) La compra de material de escritorio."],
-        "correct": 1,
-        "retro": "Deben coadyuvar al logro transparente de los objetivos institucionales (Reglamento de Faltas y Sanciones, p. 15)."
-    },
-    {
-        "q": "17. El aspecto clave del aprendizaje activo que los alumnos deben reconocer es:",
-        "options": ["a) La autoridad absoluta del profesor.", "b) Su propia responsabilidad y autonomía.", "c) El valor de la memorización rápida."],
-        "correct": 1,
-        "retro": "El alumno debe ser el constructor activo de su propio conocimiento (Estilos de aprendizaje y métodos de enseñanza, p. 10)."
-    },
-    {
-        "q": "18. Una reacción de la amígdala ante una amenaza puede manifestarse en el aula como:",
-        "options": ["a) Mayor capacidad de análisis lógico.", "b) Agresividad, bloqueo cognitivo o llanto.", "c) Silencio voluntario y reflexivo."],
-        "correct": 1,
-        "retro": "La amígdala activa respuestas instintivas de supervivencia que impiden el aprendizaje (Neurociencia Neuroaprendizaje: Las emociones y el aprendizaje, p. 63)."
-    },
-    {
-        "q": "19. ¿Cuál es una de las siete claves para la crianza positiva y afectiva?",
-        "options": ["a) Uso de castigo físico moderado.", "b) Ignorar los caprichos del menor.", "c) Establecer normas claras y límites afectuosos."],
+        "q": "8. La “Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo” refiere que un acto de naturaleza intencionada o cualquier esfuerzo que trata de socavar la valoración que tiene la niña, el niño y/o adolescente de sí mismo es:",
+        "options": [
+            "a) Violencia física.",
+            "b) Violencia sexual.",
+            "c) Violencia psicológica o emocional."
+        ],
         "correct": 2,
-        "retro": "Promueve la disciplina sin violencia basada en el respeto mutuo (Guía para la identificación y denuncia de la violencia intrafamiliar, p. 25)."
+        "retro": "La violencia psicológica busca socavar la autoestima y la valoración personal que el niño tiene de sí mismo. [7, pág. 16]"
     },
     {
-        "q": "20. En el modelo tradicional, ¿cuál es la finalidad principal de la evaluación?",
-        "options": ["a) La clasificación, selección y control.", "b) El desarrollo de la creatividad infantil.", "c) La retroalimentación formativa continua."],
+        "q": "9. Según la “Guía para la Identificación y Denuncia de Violencia Intrafamiliar en el Ámbito Educativo”, cuando progenitores, encargados de su custodia, guardadores o tutores ponen en peligro la integridad física o psicológica de la niña, niño o adolescente, ¿qué tipo de violencia se considera?",
+        "options": [
+            "a) Violencia contra la niñez y adolescencia.",
+            "b) Violencia institucional.",
+            "c) Conflicto familiar menor."
+        ],
         "correct": 0,
-        "retro": "El modelo tradicional usa la evaluación para jerarquizar según la reproducción de contenidos (Diseño, desarrollo e innovación del currículum, p. 42)."
+        "retro": "Se considera violencia contra la niñez cuando los responsables de su cuidado vulneran su integridad. [7, pág. 13]"
     },
     {
-        "q": "21. El Escalafón Nacional del Servicio de Educación tiene como finalidad:",
-        "options": ["a) Regular el ingreso y garantizar la continuidad de maestros.", "b) Definir los contenidos de las materias básicas.", "c) Organizar las juntas de padres de familia."],
-        "correct": 0,
-        "retro": "Establece los derechos de carrera, jerarquías y categorías (Reglamento del Escalafón Nacional del Servicio de Educación, p. 1)."
-    },
-    {
-        "q": "22. La amígdala influye de manera determinante en el aprendizaje porque:",
-        "options": ["a) Almacena información de largo plazo.", "b) Actúa como un filtro afectivo que consolida información.", "c) Es la encargada de las funciones motoras."],
+        "q": "10. Considerando la violencia por acción, la tabla de tipologías de violencia sexual y los delitos contra la libertad sexual, ¿cuáles de los siguientes enunciados corresponden a delitos, según la “Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo”?",
+        "options": [
+            "a) El maltrato verbal y los gritos constantes.",
+            "b) La violación, el estupro y el abuso sexual.",
+            "c) La negligencia en la alimentación."
+        ],
         "correct": 1,
-        "retro": "Permite el paso de información al neocórtex solo si el ambiente es emocionalmente seguro (Neurociencia Neuroaprendizaje: Las emociones y el aprendizaje, p. 63)."
+        "retro": "La violación y el estupro son delitos contra la libertad sexual tipificados en la norma. [7, pág. 16]"
     },
     {
-        "q": "23. Las estrategias coinstruccionales tienen la función de:",
-        "options": ["a) Preparar al alumno antes de la clase.", "b) Mantener la atención y detectar información durante la instrucción.", "c) Evaluar el resultado final del aprendizaje."],
+        "q": "11. La siguiente definición de conflicto: “El conflicto ocurre cuando las partes se hallan en desacuerdo con respecto a la distribución de recursos materiales o simbólicos y actúan movidas por la incompatibilidad de metas o por una profunda divergencia de intereses.” corresponde a:",
+        "options": [
+            "a) Piaget (1960).",
+            "b) Torrego (2000).",
+            "c) Vygotsky (1970)."
+        ],
         "correct": 1,
-        "retro": "Se emplean durante el proceso para apoyar la conceptualización (Diseño, desarrollo e innovación del currículum, p. 42)."
+        "retro": "Torrego enfatiza la divergencia de intereses y recursos como origen del conflicto escolar. [11, pág. 52]"
     },
     {
-        "q": "24. El ciudadano que oculta el incremento patrimonial de un funcionario comete el delito de:",
-        "options": ["a) Legitimación de ganancias ilícitas.", "b) Malversación de fondos.", "c) Uso indebido de influencias."],
+        "q": "12. Considerando que las emociones inciden positiva o negativamente en el aprendizaje, ¿qué condiciones necesita un estudiante para que el sistema límbico funcione correctamente?",
+        "options": [
+            "a) Silencio absoluto y falta de contacto.",
+            "b) Un ambiente de competitividad extrema.",
+            "c) Un clima de confianza, seguridad afectiva y validación emocional."
+        ],
+        "correct": 2,
+        "retro": "El bienestar emocional es la 'llave' que permite la apertura cognitiva del neocórtex. [5, pág. 87]"
+    },
+    {
+        "q": "13. Entre las responsabilidades de prevención de la violencia asignadas a directoras y directores de unidades educativas, existe una distinción entre acciones que involucran exclusivamente a actores internos de la comunidad educativa y acciones que necesariamente requieren la intervención de actores externos. ¿Cuál de las siguientes afirmaciones es correcta?",
+        "options": [
+            "a) Deben coordinar con instancias de protección externa y activar protocolos internos.",
+            "b) Solo deben sancionar sin informar a los padres.",
+            "c) Su única función es la vigilancia física."
+        ],
         "correct": 0,
-        "retro": "Prestar el nombre para ocultar bienes ilícitos constituye este delito (Reglamento de Faltas y Sanciones, p. 5)."
+        "retro": "El director articula la prevención interna con la red de protección social externa (DNA). [6, pág. 37]"
     },
     {
-        "q": "25. El servidor que omite registrar inmuebles en su declaración jurada comete:",
-        "options": ["a) Peculado culposo.", "b) Enriquecimiento ilícito con afectación al Estado.", "c) Concusión agravada."],
+        "q": "14. En el diseño del aprendizaje basado en proyectos, la etapa final contempla dos tareas simultáneas e inseparables. ¿Cuáles son esas dos tareas que definen la fase conclusiva de dicho diseño?",
+        "options": [
+            "a) Cobro de materiales y limpieza.",
+            "b) Difusión y Sistematización.",
+            "c) Evaluación y Examen oral."
+        ],
         "correct": 1,
-        "retro": "La ocultación deliberada de bienes en la función pública configura este tipo penal (Reglamento de Faltas y Sanciones, p. 5)."
+        "retro": "La etapa final busca sistematizar la experiencia vivida y difundir los logros alcanzados. [8, pág. 14]"
     },
     {
-        "q": "26. Dar a los caudales administrados una aplicación distinta a la destinada es el delito de:",
-        "options": ["a) Malversación.", "b) Cohecho pasivo.", "c) Estafa al Estado."],
+        "q": "15. Cuando una entidad pública es condenada judicialmente al pago de daños y perjuicios, ¿cuál es la finalidad específica de la auditoría que debe efectuar o contratar la entidad que ejerce tuición?",
+        "options": [
+            "a) Determinar si existe responsabilidad civil de algún servidor público.",
+            "b) Anular la sentencia judicial mediante informe.",
+            "c) Ocultar el hecho ante la prensa local."
+        ],
         "correct": 0,
-        "retro": "La malversación es el desvío de fondos públicos de su objetivo presupuestado (Reglamento de Faltas y Sanciones, p. 5)."
+        "retro": "La auditoría identifica responsables para resarcir el daño económico causado al Estado. [Ley 1178]"
     },
     {
-        "q": "27. Apropiarse de dinero o bienes bajo custodia por el ejercicio del cargo es:",
-        "options": ["a) Peculado.", "b) Prevaricato.", "c) Negligencia administrativa."],
+        "q": "16. Además de procurar la eficiencia de los sistemas de administración, ¿qué deben hacer los sistemas de Control Interno y de Control Externo Posterior?",
+        "options": [
+            "a) Evaluar la eficacia, economía y transparencia en el uso de recursos.",
+            "b) Prohibir la autonomía de los directores.",
+            "c) Aumentar los trámites de cada compra."
+        ],
         "correct": 0,
-        "retro": "El peculado implica la apropiación de recursos que el funcionario custodia por su cargo (Reglamento de Faltas y Sanciones, p. 5)."
+        "retro": "El control gubernamental asegura la probidad y transparencia en la gestión pública. [Ley 1178]"
     },
     {
-        "q": "28. El uso de vehículos institucionales para traslados familiares personales es:",
-        "options": ["a) Uso indebido de bienes y servicios públicos.", "b) Beneficio en razón del cargo.", "c) Omisión de deberes."],
-        "correct": 0,
-        "retro": "Es el empleo de recursos del Estado para beneficios privados (Reglamento de Faltas y Sanciones, p. 5)."
-    },
-    {
-        "q": "29. Son signos físicos evidentes de violencia en el menor:",
-        "options": ["a) Tristeza y aislamiento.", "b) Hematomas, quemaduras o laceraciones.", "c) Bajo rendimiento escolar repentino."],
+        "q": "17. Según el libro «Estilos de Aprendizaje y Métodos de Enseñanza», ¿cuál es el aspecto clave del aprendizaje activo que los estudiantes deben reconocer?",
+        "options": [
+            "a) Que deben obedecer sin cuestionar.",
+            "b) Su propia responsabilidad y protagonismo en el proceso de aprender.",
+            "c) Que el aprendizaje solo ocurre dentro del aula."
+        ],
         "correct": 1,
-        "retro": "Son indicadores corporales de agresión que deben detectarse (Guía para la identificación y denuncia de la violencia intrafamiliar, p. 28)."
+        "retro": "El aprendizaje activo requiere que el estudiante se asuma como centro y gestor de su saber. [3, pág. 12]"
     },
     {
-        "q": "30. Individualizar el estilo de enseñanza permite:",
-        "options": ["a) Atender a la diversidad de ritmos y estilos de los alumnos.", "b) Que todos los estudiantes lleguen a la misma respuesta.", "c) Ahorrar tiempo en la corrección de tareas."],
+        "q": "18. Desde la neurociencia educativa, cuando la amígdala detecta una amenaza activa una respuesta de lucha liberando cortisol y adrenalina, generando reacciones observables en el estudiante. ¿De qué formas puede manifestarse dicha reacción en el aula?",
+        "options": [
+            "a) Mediante conductas de agresividad, huida o bloqueo intelectual.",
+            "b) Con un aumento en la capacidad de memorización.",
+            "c) A través de un sueño profundo."
+        ],
         "correct": 0,
-        "retro": "La enseñanza eficaz adapta la mediación a la singularidad del alumno (Estilos de aprendizaje y métodos de enseñanza, p. 10)."
+        "retro": "El estrés crónico dispara respuestas instintivas de supervivencia que anulan la razón. [5, pág. 35]"
     },
     {
-        "q": "31. El propósito de individualizar el estilo de enseñanza es lograr:",
-        "options": ["a) Un aprendizaje significativo y relevante.", "b) La obediencia ciega a las instrucciones.", "c) El cumplimiento estricto del currículum oficial."],
+        "q": "19. ¿Cuál de las siguientes opciones corresponde exactamente a una de las siete claves para la crianza positiva y afectiva en el hogar, según la “Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo”?",
+        "options": [
+            "a) Usar el castigo físico moderado.",
+            "b) Ignorar conductas rebeldes para evitar conflictos.",
+            "c) Establecer límites claros y promover su aplicación por todos los miembros."
+        ],
+        "correct": 2,
+        "retro": "La disciplina positiva se fundamenta en límites claros, afecto y respeto mutuo. [7, pág. 37]"
+    },
+    {
+        "q": "20. En el modelo pedagógico tradicional, ¿cuál de las siguientes describe con mayor precisión la finalidad principal que se asigna al proceso de evaluación del aprendizaje estudiantil?",
+        "options": [
+            "a) La verificación del dominio de contenidos memorísticos para calificar.",
+            "b) La retroalimentación constante para mejorar.",
+            "c) El desarrollo de la autonomía del alumno."
+        ],
         "correct": 0,
-        "retro": "Se reconoce la diversidad para que todos aprendan de verdad (Estilos de aprendizaje y métodos de enseñanza, p. 10)."
+        "retro": "Históricamente, la escuela tradicional usa la evaluación para medir la repetición fiel. [1, pág. 81]"
     },
     {
-        "q": "32. Para fomentar la participación, la decisión más fundamentada es:",
-        "options": ["a) Sancionar el silencio en el aula.", "b) Crear condiciones ambientales favorables y motivadoras.", "c) Subir las notas arbitrariamente."],
+        "q": "21. ¿Cuál es una de las finalidades del Escalafón Nacional del Servicio de Educación?",
+        "options": [
+            "a) Prohibir actividades sindicales.",
+            "b) Regular el ingreso y garantiza la continuidad de los maestros y funcionarios.",
+            "c) Establecer el color del uniforme docente."
+        ],
         "correct": 1,
-        "retro": "El aprendizaje requiere bienestar emocional y un entorno facilitador (Estilos de aprendizaje y métodos de enseñanza, p. 10)."
+        "retro": "El escalafón norma el ingreso y la estabilidad laboral en la carrera docente. [2, Art. 1]"
     },
     {
-        "q": "33. El aprendizaje multimedia se caracteriza por la combinación de:",
-        "options": ["a) Libros de texto únicamente.", "b) Códigos verbales, visuales y auditivos.", "c) Ejercicios físicos al aire libre."],
+        "q": "22. Un maestro diseña un aula con normas claras, trato respetuoso y actividades desafiantes pero alcanzadles. Desde la neurociencia, esta decisión impacta directamente sobre el cerebro profundo. ¿Por qué el funcionamiento de la amígdala influye de manera determinante en el aprendizaje?",
+        "options": [
+            "a) Porque actúa como un filtro emocional que habilita o bloquea la cognición.",
+            "b) Porque guarda las tablas de multiplicar.",
+            "c) Porque controla movimientos musculares finos."
+        ],
+        "correct": 0,
+        "retro": "La amígdala evalúa si el entorno es seguro para permitir el procesamiento racional. [5, pág. 87]"
+    },
+    {
+        "q": "23. Al diseñar una secuencia de enseñanza orientada a que el estudiante resignifique sus paradigmas y desarrolle una interpretación consciente de su entorno, ¿qué tipo de estrategia cumple con mayor precisión la función de mantener la atención del estudiante, detectar información principal y conceptualizar el contenido durante el desarrollo mismo de la instrucción?",
+        "options": [
+            "a) Estrategias de castigo por falta de atención.",
+            "b) Estrategias coinstruccionales como organizadores gráficos y preguntas guía.",
+            "c) Copia literal de textos largos."
+        ],
         "correct": 1,
-        "retro": "El uso de diversos soportes tecnológicos facilita la asimilación (Estilos de aprendizaje y métodos de enseñanza, p. 15)."
+        "retro": "Las estrategias coinstruccionales sostienen el aprendizaje durante la fase de desarrollo. [3, pág. 12]"
     },
     {
-        "q": "34. El aprendizaje episódico se distingue porque registra:",
-        "options": ["a) Hechos personales y el estado mental del momento.", "b) Datos enciclopédicos sobre historia universal.", "c) Fórmulas matemáticas y procedimientos."],
+        "q": "24. Un ciudadano particular permite que un servidor público registre a su nombre la compra de varios inmuebles y vehículos de lujo con el propósito de ocultar el incremento patrimonial injustificado de dicho funcionario ante las autoridades investigadoras. ¿Qué delito tipificado en la normativa de lucha contra la corrupción describe con mayor precisión la conducta del ciudadano particular?",
+        "options": [
+            "a) Legitimación de Ganancias Ilícitas.",
+            "b) Cohecho Pasivo Propio.",
+            "c) Malversación de Fondos."
+        ],
         "correct": 0,
-        "retro": "Es la memoria de las vivencias propias del sujeto (Neurociencia Neuroaprendizaje: Las emociones y el aprendizaje, p. 58)."
+        "retro": "Participar en la ocultación del origen de bienes ilícitos constituye este delito. [Ley Anticorrupción]"
     },
     {
-        "q": "35. La diferencia entre currículum formal y real radica en que el formal es:",
-        "options": ["a) Un trabajo negociado en el aula.", "b) Una imagen de cultura digna (plan propuesto).", "c) El resultado de la evaluación externa."],
+        "q": "25. Un servidor público omite deliberadamente registrar inmuebles en su declaración jurada. ¿Qué delito tipificado en la normativa de lucha contra la corrupción describe con mayor precisión la conducta de dicho funcionario?",
+        "options": [
+            "a) Uso Indebido de Influencias.",
+            "b) Peculado por Apropiación.",
+            "c) Falsedad en la Declaración Jurada de Bienes y Rentas."
+        ],
+        "correct": 2,
+        "retro": "Ocultar bienes en la declaración jurada oficial es un delito de falsedad ideológica. [Ley Anticorrupción]"
+    },
+    {
+        "q": "26. La servidora o el servidor público que diere a los caudales que administra una aplicación distinta de aquella a que estuvieren destinados. ¿A qué delito corresponde?",
+        "options": [
+            "a) Malversación.",
+            "b) Peculado.",
+            "c) Concusión."
+        ],
+        "correct": 0,
+        "retro": "La malversación consiste en desviar fondos de su destino presupuestario original. [Ley Anticorrupción]"
+    },
+    {
+        "q": "27. La servidora o el servidor público que aprovechando del cargo se apropiare de dinero o bienes bajo su custodia. ¿A qué delito corresponde?",
+        "options": [
+            "a) Negociaciones Incompatibles.",
+            "b) Peculado.",
+            "c) Enriquecimiento Ilícito."
+        ],
         "correct": 1,
-        "retro": "El formal es la intención; el real es la práctica vivida (Diseño, desarrollo e innovación del currículum, p. 95)."
+        "retro": "El peculado es la apropiación personal de recursos del Estado por parte del custodio. [Ley Anticorrupción]"
     },
     {
-        "q": "36. Según la mejor práctica docente, ¿cuántos objetivos se recomiendan por sesión?",
-        "options": ["a) Pocos (uno o dos) por sesión.", "b) Más de diez para cubrir el programa.", "c) No es necesario definir objetivos específicos."],
+        "q": "28. El director de un instituto utiliza vehículos institucionales para trasladar a sus familiares en fines de semana. ¿Qué delito describe esta conducta?",
+        "options": [
+            "a) Uso Indebido de Bienes y Servicios Públicos.",
+            "b) Beneficios en razón del cargo.",
+            "c) Concusión agravada."
+        ],
         "correct": 0,
-        "retro": "Pocos objetivos permiten mayor profundidad y asimilación (Estilos de aprendizaje y métodos de enseñanza, p. 12)."
+        "retro": "Los bienes públicos no pueden ser utilizados para fines familiares o privados. [Ley Anticorrupción]"
     },
     {
-        "q": "37. Hacer de la educación una herramienta de comunicación viva y aprendizaje solidario es:",
-        "options": ["a) Una de las finalidades de la Cultura de Paz.", "b) Un requisito para el ascenso automático.", "c) El objetivo del modelo tradicional."],
-        "correct": 0,
-        "retro": "La paz positiva busca transformaciones sociales desde la participación (Convivencia escolar y resolución pacífica de conflictos, p. 14)."
-    },
-    {
-        "q": "38. La depresión y la violencia son clasificadas como emociones de tipo:",
-        "options": ["a) Primarias o básicas.", "b) Secundarias o sociomorales negativas.", "c) Positivas o adaptativas."],
+        "q": "29. A partir de la tabla de indicadores generales en niñas, niños y adolescentes que han sido víctimas de violencia, planteada en la “Guía para la Identificación y Denuncia de Violencia Intrafamiliar en el Ámbito Educativo”, ¿cuál de las siguientes opciones corresponde a signos o indicadores físicos evidentes?",
+        "options": [
+            "a) Cambios de humor y llanto frecuente.",
+            "b) Hematomas, quemaduras o señales de dolor al caminar o sentarse.",
+            "c) Olvido de tareas y falta de participación."
+        ],
         "correct": 1,
-        "retro": "Estas emociones inhiben el bienestar y el desarrollo cognitivo (Neurociencia Neuroaprendizaje: Las emociones y el aprendizaje, p. 60)."
+        "retro": "Las lesiones visibles en el cuerpo son evidencia primaria de maltrato físico o sexual. [7, pág. 29]"
     },
     {
-        "q": "39. ¿Cuál es una condición indispensable para que la innovación educativa sea sostenida?",
-        "options": ["a) Un clima de confianza y apoyo institucional.", "b) El cambio anual de directivos.", "c) La compra masiva de equipos electrónicos."],
+        "q": "30. Los principios psicológicos de enseñanza pueden hacer que la enseñanza sea más eficaz y más eficiente al ayudarnos a crear las condiciones que apoyan el aprendizaje de los estudiantes. Para ello, se aconseja utilizar una variedad de principios. En particular, se puede «individualizar el estilo de enseñanza», porque permite:",
+        "options": [
+            "a) Atender a la diversidad de ritmos y estilos de aprendizaje de cada alumno.",
+            "b) Lograr que todos piensen igual que el maestro.",
+            "c) Reducir el tiempo de clase."
+        ],
         "correct": 0,
-        "retro": "La innovación requiere permiso institucional para aprender del riesgo (Innovación Educativa - UNESCO, p. 29)."
+        "retro": "La individualización reconoce que cada estudiante tiene una forma singular de aprender. [3, pág. 12]"
     },
     {
-        "q": "40. Los maestros de apoyo o itinerantes deben alcanzar una cobertura:",
-        "options": ["a) Radio territorial intermunicipal o interdistrital.", "b) Solo en su propia unidad educativa fiscal.", "c) A nivel nacional desde la sede central."],
+        "q": "31. Una maestra de secundaria nota que sus estudiantes tienen distintas formas de aprender y decide adaptar su práctica docente. Según los principios psicológicos de la enseñanza, ¿cuál es el propósito del principio «Individualizar el estilo de enseñanza»?",
+        "options": [
+            "a) Adaptar la metodología para que el aprendizaje sea pertinente para todos.",
+            "b) Separar a los alumnos según su nivel de inteligencia.",
+            "c) Evitar que interactúen entre sí."
+        ],
         "correct": 0,
-        "retro": "Deben cubrir diversas unidades de su jurisdicción geográfica (Reglamento para el fortalecimiento de la educación inclusiva en el SEP, p. 24)."
+        "retro": "La adaptación docente garantiza que el contenido llegue efectivamente a cada alumno. [3, pág. 12]"
     },
     {
-        "q": "41. Presentar un caso real sobre contaminación favorece los estilos de aprendizaje:",
-        "options": ["a) Pasivo y memorístico.", "b) Reflexivo y activo.", "c) Teórico puro y técnico."],
+        "q": "32. Un maestro observa que sus grupos no participan espontáneamente, un colega le sugiere usar calificaciones altas como incentivo permanente y otro le recomienda crear condiciones ambientales favorables. Debe decidir qué estrategia aplicar. Considerando el texto de Sáez López, ¿cuál es la decisión más fundamentada y por qué?",
+        "options": [
+            "a) Crear condiciones ambientales y afectivas que fomenten la motivación intrínseca.",
+            "b) Aplicar el sistema de premios para asegurar obediencia.",
+            "c) Ignorar el desinterés, es responsabilidad del alumno."
+        ],
+        "correct": 0,
+        "retro": "El entorno y el vínculo emocional generan mayor compromiso que el premio externo. [3, pág. 12]"
+    },
+    {
+        "q": "33. Según el libro «Estilos de Aprendizajey Métodos de Enseñanza», ¿qué caracteriza específicamente al aprendizaje multimedia?",
+        "options": [
+            "a) La integración estratégica de canales visuales, auditivos y textuales.",
+            "b) El uso de una sola computadora para todo el curso.",
+            "c) La prohibición de usar libros de papel."
+        ],
+        "correct": 0,
+        "retro": "Lo multimedia utiliza múltiples canales sensoriales para mejorar la retención. [3, pág. 12]"
+    },
+    {
+        "q": "34. ¿Qué distingue al aprendizaje episódico de otros tipos de aprendizaje?",
+        "options": [
+            "a) Memorización de conceptos abstractos.",
+            "b) Se refiere al recuerdo de eventos específicos y experiencias vividas.",
+            "c) Ocurre solo al leer novelas."
+        ],
         "correct": 1,
-        "retro": "Conecta la teoría con la acción y el análisis de problemas (Estilos de aprendizaje y métodos de enseñanza, p. 18)."
+        "retro": "El aprendizaje episódico vincula la información con el 'contexto vivido'. [3, pág. 12]"
     },
     {
-        "q": "42. Los servicios de atención para mujeres en violencia deben ser extensivos a:",
-        "options": ["a) Sus hijos e hijas.", "b) El entorno laboral del agresor.", "c) Únicamente a la mujer víctima."],
+        "q": "35. Perrenoud distingue entre currículum formal y currículum real señalando que no son de la misma naturaleza. ¿Qué diferencia estructural fundamental explica que ambos currículums operen en planos distintos dentro del sistema educativo?",
+        "options": [
+            "a) Que el formal es secreto y el real es público.",
+            "b) Que no hay ninguna diferencia.",
+            "c) Que el real es fruto de la negociación diaria entre maestro y alumnos en el aula."
+        ],
+        "correct": 2,
+        "retro": "El currículo real es lo que efectivamente sucede y se aprende en la práctica del aula. [1, pág. 94]"
+    },
+    {
+        "q": "36. Según el texto «Estilos de Aprendizaje y Métodos de Enseñanza», ¿cuántos objetivos de aprendizaje recomienda la mejor práctica?",
+        "options": [
+            "a) Un número limitado y claro para asegurar el foco y la profundidad.",
+            "b) Por lo menos cincuenta objetivos distintos.",
+            "c) Ninguno, debe ser espontáneo."
+        ],
         "correct": 0,
-        "retro": "La protección integral debe incluir a los dependientes de la mujer (Protocolo de prevención y actuación en casos de violencia, p. 42)."
+        "retro": "Tener metas acotadas permite una planificación y evaluación más rigurosa. [3, pág. 12]"
     },
     {
-        "q": "43. El Diagnóstico de habilidades se puede aplicar dos veces como evaluación:",
-        "options": ["a) Diaria y semanal.", "b) “Pre” al inicio y “Post” al final.", "c) Solo en el primer trimestre."],
+        "q": "37. Según “Convivencia escolar y resolución pacífica de conflictos”, hacer de la educación (formal e informal) una herramienta de comunicación viva, de aprendizaje solidario, de crítica constructiva y pensamiento abierto, capaz de suscitar transformaciones sociales a través de la participación responsable de una ciudadanía que sabe afrontar los conflictos de manera pacífica, es:",
+        "options": [
+            "a) La esencia de la Cultura de Paz en las instituciones educativas.",
+            "b) Una pérdida de tiempo.",
+            "c) Una tarea exclusiva de partidos políticos."
+        ],
+        "correct": 0,
+        "retro": "La paz es una competencia cívica activa que se cultiva desde la escuela. [11, pág. 13]"
+    },
+    {
+        "q": "38. Desde la neurociencia del aprendizaje, la depresión y la violencia son clasificadas como emociones de tipo:",
+        "options": [
+            "a) Reacciones de menos de un segundo.",
+            "b) Estados o condiciones afectivas complejas y persistentes.",
+            "c) Talento genético inalterable."
+        ],
         "correct": 1,
-        "retro": "Permite comparar los niveles de habilidad antes y después (Manual de resolución de problemas, p. 10)."
+        "retro": "Estas condiciones requieren abordajes pedagógicos y emocionales especializados. [5, pág. 21]"
     },
     {
-        "q": "44. Afirmar que se codificó la experiencia primero con la palabra revela un sesgo de:",
-        "options": ["a) Logocentrismo.", "b) Empirismo.", "c) Humanismo."],
+        "q": "39. ¿Cuál es una condición institucional indispensable para que la innovación educativa pueda desarrollarse de manera sostenida en los sistemas educativos?",
+        "options": [
+            "a) Un liderazgo democrático y un clima de colaboración entre docentes.",
+            "b) Una autoridad centralizada y rígida.",
+            "c) Que el edificio sea nuevo."
+        ],
         "correct": 0,
-        "retro": "Prioriza el lenguaje verbal sobre otras formas de expresión humana (Diseño, desarrollo e innovación del currículum, p. 117)."
+        "retro": "La innovación florece en entornos de participación, confianza y equipo. [8, pág. 11]"
     },
     {
-        "q": "45. Cuando una institución adapta la normativa externa a sus características, refleja:",
-        "options": ["a) Autonomía institucional.", "b) Falta de respeto a la autoridad.", "c) Mala gestión administrativa."],
-        "correct": 0,
-        "retro": "Es la capacidad de los centros para desarrollar su propio proyecto (Diseño, desarrollo e innovación del currículum, p. 13)."
+        "q": "40. ¿Qué cobertura deben alcanzar los maestros de apoyo o los maestros itinerantes, según el Reglamento para el Fortalecimiento de la Educación Inclusiva en el Sistema Educativo Plurinacional — Modalidad Indirecta?",
+        "options": [
+            "a) Solo colegios privados urbanos.",
+            "b) Todas las escuelas del país, sin importar la distancia.",
+            "c) Las unidades educativas fiscales y de convenio en su radio de acción."
+        ],
+        "correct": 2,
+        "retro": "El sistema busca garantizar el apoyo técnico a la diversidad en su área de influencia. [10, pág. 25]"
     },
     {
-        "q": "46. La mediación, según Lederach (1996), consiste en:",
-        "options": ["a) Un tercero que facilita el diálogo para acuerdos.", "b) Un juez que dicta la sanción inapelable.", "c) Un policía que vigila el recreo escolar."],
+        "q": "41. Una maestra de Tarija presenta un caso real sobre contaminación del río Bermejo. ¿Qué estilos favorece esta técnica?",
+        "options": [
+            "a) Estilo Pragmático y Activo.",
+            "b) Estilo Teórico y Pasivo.",
+            "c) Estilo Memorístico."
+        ],
         "correct": 0,
-        "retro": "El mediador ayuda a las partes a encontrar su propia solución (Convivencia escolar y resolución pacífica de conflictos, p. 53)."
+        "retro": "El estudio de casos vincula el saber con la resolución de problemas reales. [3, pág. 12]"
     },
     {
-        "q": "47. El cambio en las finalidades educativas desde el siglo XIX expresa que la economía exige:",
-        "options": ["a) Mano de obra adaptable y altamente cualificada.", "b) Trabajadores manuales de baja formación.", "c) El cierre de las escuelas técnicas."],
-        "correct": 0,
-        "retro": "Los objetivos escolares se ajustan a las demandas del mercado tecnológico (Diseño, desarrollo e innovación del currículum, p. 89)."
+        "q": "42. ¿A quiénes debe ser extensivo todo servicio de atención para mujeres en situación de violencia, además de la propia mujer?",
+        "options": [
+            "a) Únicamente a sus padres.",
+            "b) A sus hijas, hijos y personas dependientes de su cuidado.",
+            "c) A las vecinas testigos."
+        ],
+        "correct": 1,
+        "retro": "La ley protege integralmente a la mujer y a su núcleo familiar dependiente. [Ley 348]"
     },
     {
-        "q": "48. Se entiende por innovación educativa según la UNESCO:",
-        "options": ["a) Un acto deliberado y planificado de solución de problemas.", "b) La aplicación espontánea de técnicas extranjeras.", "c) El uso exclusivo de textos oficiales nuevos."],
-        "correct": 0,
-        "retro": "Busca mayor calidad superando el aprendizaje pasivo (Innovación Educativa - UNESCO, p. 3)."
+        "q": "43. El “Manual de resolución de problemas”, refiere que el Diagnóstico de habilidades se compone de preguntas de opción múltiple cuidadosamente seleccionadas y se puede aplicar dos veces:",
+        "options": [
+            "a) Cada lunes y cada viernes.",
+            "b) Una vez al inicio (pre) y otra al final del curso (post).",
+            "c) Solo una vez en la vida."
+        ],
+        "correct": 1,
+        "retro": "La aplicación doble permite medir el progreso real alcanzado en el proceso. [12, pág. 12]"
     },
     {
-        "q": "49. La cultura escolar en la práctica pedagógica se caracteriza por:",
-        "options": ["a) Rutinas, hábitos y normas del entramado escolar.", "b) Los discursos políticos del ministerio.", "c) Las leyes aprobadas por el parlamento."],
+        "q": "44. La afirmación de que la especie humana codificó su experiencia primero con la palabra y luego básicamente con la imagen y otros signos, ¿qué sesgo implícito revela?",
+        "options": [
+            "a) Un sesgo hacia la metodología libresca y la preeminencia del texto.",
+            "b) Respeto por culturas sin escritura.",
+            "c) Que las imágenes son más importantes."
+        ],
         "correct": 0,
-        "retro": "Es el conjunto de hechos reales que ocurren de verdad en aula (Diseño, desarrollo e innovación del currículum, p. 10)."
+        "retro": "Históricamente, la escuela ha privilegiado el código escrito sobre otros lenguajes. [1, pág. 117]"
     },
     {
-        "q": "50. Diferencia fundamental: la postura realista ve el conocimiento como:",
-        "options": ["a) Reflejo de una realidad externa objetiva.", "b) Construcción social útil para el grupo.", "c) Algo subjetivo sin valor práctico."],
-        "correct": 0,
-        "retro": "La postura realista busca fidelidad a la realidad externa (Diseño, desarrollo e innovación del currículum, p. 14)."
+        "q": "45. Cuando una institución educativa adapta e incluso recrea la normativa externa a sus características concretas, esto refleja principalmente:",
+        "options": [
+            "a) Falta de disciplina sancionable.",
+            "b) La micropolítica institucional y la autonomía del centro.",
+            "c) Que el director no leyó bien."
+        ],
+        "correct": 1,
+        "retro": "Las escuelas reinterpretan la norma según sus propios intereses y cultura. [8, pág. 10]"
     },
     {
-        "q": "51. El crecimiento de los centros educativos se entiende como su transformación en:",
-        "options": ["a) Organizaciones que aprenden.", "b) Edificios más grandes con más aulas.", "c) Instituciones jerárquicas militares."],
-        "correct": 0,
-        "retro": "Deben dinamizarse para responder a los cambios sociales (Innovación Educativa - UNESCO, p. 11)."
+        "q": "46. De acuerdo con el texto “Convivencia escolar y resolución pacífica de conflictos”, la mediación, como explica Lederach (1996), es:",
+        "options": [
+            "a) Un juicio sumario donde se dicta culpa.",
+            "b) Un proceso de castigo compartido.",
+            "c) Una técnica donde un tercero ayuda a las partes a llegar a acuerdos."
+        ],
+        "correct": 2,
+        "retro": "El mediador facilita el diálogo, pero no impone la solución al conflicto. [11, pág. 69]"
     },
     {
-        "q": "52. El estereotipo cultural sobre la experiencia personal reducida presupone que:",
-        "options": ["a) El conocimiento legítimo debe estar codificado fuera del sujeto.", "b) Solo importa lo que el alumno vive en su hogar.", "c) No hace falta estudiar libros del pasado."],
+        "q": "47. El desplazamiento en el modo de formular las finalidades educativas entre el siglo XIX y la actualidad expresa:",
+        "options": [
+            "a) El cambio hacia la formación de una ciudadanía global y digital.",
+            "b) El deseo de volver a métodos antiguos.",
+            "c) La eliminación de humanidades."
+        ],
         "correct": 0,
-        "retro": "Se asume que aprender es acceder a archivos externos (Diseño, desarrollo e innovación del currículum, p. 115)."
+        "retro": "Hoy se busca formar competencias para actuar en una sociedad compleja. [8, pág. 3]"
     },
     {
-        "q": "53. El aprendizaje de la Cultura de Paz precisa adoptar una:",
-        "options": ["a) Perspectiva crítica que use el conflicto como transformación.", "b) Racionalidad que niegue y oculte los conflictos.", "c) Disciplina que expulse a los conflictivos."],
-        "correct": 0,
-        "retro": "No se debe negar el conflicto sino abordarlo para mejorar estructuras (Convivencia escolar y resolución pacífica de conflictos, p. 29)."
+        "q": "48. ¿Qué se entiende por innovación educativa?",
+        "options": [
+            "a) Compra de equipos sin cambio de método.",
+            "b) Un cambio planificado y deliberado para mejorar la calidad educativa.",
+            "c) Cambiar horarios cada mes."
+        ],
+        "correct": 1,
+        "retro": "Innovar es transformar la práctica de forma intencionada para la mejora. [8, pág. 3]"
     },
     {
-        "q": "54. La buena calidad de relaciones entre dirección y profesorado genera:",
-        "options": ["a) Un clima escolar positivo para la innovación.", "b) Menos horas de trabajo para los maestros.", "c) Un aumento automático en los salarios."],
+        "q": "49. La cultura escolar, tal como opera en la práctica pedagógica concreta, se caracteriza por:",
+        "options": [
+            "a) Ser un espacio de tensión entre la reproducción social y la creatividad.",
+            "b) Seguir fielmente manuales antiguos.",
+            "c) Estar aislada del barrio."
+        ],
         "correct": 0,
-        "retro": "La confianza mutua favorece el compromiso docente (Convivencia escolar y resolución pacífica de conflictos, p. 43)."
+        "retro": "La cultura del aula es un campo vivo donde se negocian significados. [1, Intro]"
     },
     {
-        "q": "55. Pasar del currículum formal (trama) al real (enseñanza) requiere:",
-        "options": ["a) Transposición y mediación didáctica del docente.", "b) Copia fiel de los objetivos del ministerio.", "c) Eliminar todo plan previo de clase."],
+        "q": "50. Según «Diseñar el currículum», ¿cuál es la diferencia fundamental respecto al valor que atribuyen al conocimiento?",
+        "options": [
+            "a) La oposición entre el academicismo logocéntrico y la escuela a la medida.",
+            "b) Libros caros vs libros gratuitos.",
+            "c) Que el saber no tiene valor en internet."
+        ],
         "correct": 0,
-        "retro": "El docente recrea el plan oficial para su práctica de aula (Diseño, desarrollo e innovación del currículum, p. 31)."
+        "retro": "La tensión está entre priorizar el contenido puro o las necesidades del niño. [1, pág. 43]"
     },
     {
-        "q": "56. Ante sospecha de abuso sexual, la conversación con el menor debe hacerla:",
-        "options": ["a) Personal especializado de la DNA.", "b) El portero o regente de la escuela.", "c) El director a solas en su oficina."],
-        "correct": 0,
-        "retro": "Para evitar la revictimización, el docente no debe interrogar (Guía para la identificación y denuncia de la violencia intrafamiliar, p. 53)."
+        "q": "51. Los centros educativos requieren potenciar su crecimiento entendido este como:",
+        "options": [
+            "a) Construir más aulas.",
+            "b) El desarrollo de su capacidad de aprender como organización (OA).",
+            "c) Aumentar el número de inscritos."
+        ],
+        "correct": 1,
+        "retro": "Una escuela que aprende es capaz de adaptarse a su contexto social. [8, pág. 7]"
     },
     {
-        "q": "57. La protección familiar a la persona con discapacidad no puede entenderse como:",
-        "options": ["a) Limitación al ejercicio de sus derechos y autonomía.", "b) Apoyo constante para su bienestar físico.", "c) Integración en actividades de la comunidad."],
+        "q": "52. La afirmación de que en sociedades medianamente complejas el ámbito de la experiencia personal directa es muy reducido, ¿qué estereotipo cultural presupone?",
+        "options": [
+            "a) La necesidad de acudir al archivo de la experiencia codificada de otros.",
+            "b) Que no hay que salir de casa.",
+            "c) Que la vida real es peligrosa."
+        ],
         "correct": 0,
-        "retro": "El apoyo familiar debe promover su independencia (Ley N° 223 para Personas con Discapacidad, p. 2)."
+        "retro": "El saber humano acumulado supera lo que un solo individuo puede vivir. [1, pág. 115]"
     },
     {
-        "q": "58. Para representar el currículum real, Perrenoud propone usar una:",
-        "options": ["a) Gradación continua entre lo patente y lo invisible.", "b) Oposición total entre lo oculto y lo oficial.", "c) Lista única de objetivos administrativos."],
-        "correct": 0,
-        "retro": "Supera la dicotomía al ver el aula como un tejido complejo (Diseño, desarrollo e innovación del currículum, p. 98)."
+        "q": "53. El documento “Convivencia escolar y resolución pacífica de conflictos” señala que el aprendizaje que sostiene la Cultura de Paz no puede abordarse desde una racionalidad que niegue los conflictos que se dan en el seno de la organización escolar, controlando su aparición bajo los principios del control normativo, sino que se precisa la adopción de:",
+        "options": [
+            "a) Un manual de castigos severos.",
+            "b) La prohibición de temas sociales.",
+            "c) Una perspectiva crítica que reconozca y gestione el conflicto social."
+        ],
+        "correct": 2,
+        "retro": "La paz se construye enfrentando pacíficamente las divergencias sociales. [11, pág. 29]"
     },
     {
-        "q": "59. Capacitar al personal administrativo y de servicio garantizará:",
-        "options": ["a) Atención educativa con calidad y calidez sin barreras.", "b) Ahorro de recursos en la gestión escolar.", "c) El reemplazo de maestros por auxiliares."],
-        "correct": 0,
-        "retro": "El personal debe apoyar integralmente a los estudiantes (Reglamento para el fortalecimiento de la educación inclusiva en el SEP, p. 17)."
+        "q": "54. El documento “Convivencia escolar...” indica que la calidad de las relaciones dirección-profesorado se traduce en:",
+        "options": [
+            "a) Espionaje mutuo.",
+            "b) Una estrecha y recíproca colaboración que beneficia al alumnado.",
+            "c) Bonos de puntualidad."
+        ],
+        "correct": 1,
+        "retro": "La gestión compartida es el motor de una convivencia institucional positiva. [11, pág. 47]"
     },
     {
-        "q": "60. Una innovación paradigmática se distingue porque implica:",
-        "options": ["a) Repensar todo el orden establecido de forma permanente.", "b) Pequeños ajustes aislados en un solo curso.", "c) Seguir haciendo lo mismo con computadoras."],
+        "q": "55. Cuando el currículum formal es «trama» y la enseñanza «tejido», la metáfora implica que el paso requiere:",
+        "options": [
+            "a) Un proceso activo de construcción y mediación pedagógica.",
+            "b) Receta de cocina rígida.",
+            "c) No hacer ninguna modificación."
+        ],
         "correct": 0,
-        "retro": "No es un ajuste, es un cambio en el ADN del hecho educativo (Innovación Educativa - UNESCO, p. 32)."
+        "retro": "El docente 'teje' la realidad del aula sobre la base del plan formal. [1, Intro]"
     },
     {
-        "q": "61. Realizar informes trimestrales sobre el desarrollo del estudiante inclusivo es función del:",
-        "options": ["a) Maestro de Apoyo Educativo.", "b) Portero de la unidad educativa.", "c) Tutor externo pagado por la familia."],
-        "correct": 0,
-        "retro": "Deben reportar avances y logros trimestralmente a la dirección (Reglamento para el fortalecimiento de la educación inclusiva en el SEP, p. 21)."
+        "q": "56. De acuerdo a la “Guía...”, cuando se sospeche de abuso sexual, la conversación deberá ser realizada por:",
+        "options": [
+            "a) Personal de servicio.",
+            "b) Personal especializado para evitar la revictimización.",
+            "c) El profesor de gimnasia."
+        ],
+        "correct": 1,
+        "retro": "El tratamiento de estos casos exige un manejo técnico y protector extremo. [7, pág. 30]"
     },
     {
-        "q": "62. El tránsito del currículum por instancias de decisión se caracteriza por:",
-        "options": ["a) La transposición pragmática del contenido.", "b) La conservación total del plan original.", "c) El aumento de la rigidez administrativa."],
+        "q": "57. En el marco de los derechos de personas con discapacidad, la protección familiar nunca podrá entenderse como...",
+        "options": [
+            "a) Una limitación al ejercicio de sus derechos y autonomía personal.",
+            "b) Una pensión vitalicia obligatoria.",
+            "c) Permiso para no ir a clases."
+        ],
         "correct": 0,
-        "retro": "Los contenidos pierden fidelidad al ser traducidos por actores (Diseño, desarrollo e innovación del currículum, p. 94)."
+        "retro": "La familia debe promover la independencia del sujeto con discapacidad. [9, Art. 19]"
     },
     {
-        "q": "63. A mayor formación del profesorado, Feito sugiere conceder:",
-        "options": ["a) Mayores niveles de autonomía curricular.", "b) Menos presupuesto para el aula.", "c) Más supervisión externa diaria."],
-        "correct": 0,
-        "retro": "El docente cualificado necesita libertad para decidir sobre el aula (Diseño, desarrollo e innovación del currículum, p. 88)."
+        "q": "58. Para representar el currículum real, Perrenoud propone abandonar la oposición manifiesto/oculto en favor de:",
+        "options": [
+            "a) Notas secretas.",
+            "b) El concepto de 'oficio de alumno' y la socialización efectiva.",
+            "c) Eliminar el currículum formal."
+        ],
+        "correct": 1,
+        "retro": "Lo relevante es el aprendizaje social efectivo que ocurre en el aula. [1, pág. 104]"
     },
     {
-        "q": "64. Ante señales de alerta de dificultades de aprendizaje, el maestro debe aplicar:",
-        "options": ["a) Guía de Observación - Detección de Signos de Riesgo.", "b) El reglamento de faltas y sanciones.", "c) Un examen de reprobación inmediata."],
+        "q": "59. Según el Reglamento de Educación Inclusiva, la capacitación del personal administrativo garantizará:",
+        "options": [
+            "a) Trámites en 5 minutos.",
+            "b) Un trato de respeto, calidez y apoyo pertinente a la diversidad.",
+            "c) Manejo de software contable."
+        ],
+        "correct": 1,
+        "retro": "La inclusión debe permear todos los servicios del centro educativo. [10, pág. 12]"
+    },
+    {
+        "q": "60. De acuerdo con el planteamiento sobre innovación educativa recogido en la bibliografía de referencia, se afirma que la verdadera innovación no consiste en la mera incorporación de cambios progresivos, sino en la implantación de un nuevo «paradigma educativo» que contemple la innovación permanente como elemento constitutivo del hecho educativo. ¿Qué criterio permite distinguir con mayor precisión una innovación paradigmática de una innovación progresiva?",
+        "options": [
+            "a) La transformación de aspectos estructurales y modelos mentales.",
+            "b) El número de PCs compradas.",
+            "c) La cantidad de páginas del libro oficial."
+        ],
         "correct": 0,
-        "retro": "Es el primer paso normado antes de la derivación (Reglamento para el fortalecimiento de la educación inclusiva en el SEP, p. 22)."
+        "retro": "Lo paradigmático rompe con el esquema tradicional de enseñanza. [8, pág. 11]"
+    },
+    {
+        "q": "61. Según el “Reglamento para el Fortalecimiento de la Educación Inclusiva en el SEP - Modalidad Indirecta”, realizar informes trimestrales sobre el desarrollo educativo, avances y logros del estudiante y presentarlos a la dirección educativa, es:",
+        "options": [
+            "a) Una responsabilidad del maestro de apoyo en la modalidad indirecta.",
+            "b) Tarea opcional.",
+            "c) Trámite de los padres."
+        ],
+        "correct": 0,
+        "retro": "El seguimiento técnico-pedagógico es deber central del maestro de apoyo. [10, pág. 21]"
+    },
+    {
+        "q": "62. Cuando el currículum transita por distintas instancias de decisión, su contenido no permanece intacto. ¿Qué proceso caracteriza estructuralmente ese tránsito?",
+        "options": [
+            "a) Permanencia estática.",
+            "b) Su interpretación y redefinición constante por parte de los agentes.",
+            "c) Traducción a códigos secretos."
+        ],
+        "correct": 1,
+        "retro": "El currículo se transforma al ser asumido por docentes y centros. [1, pág. 36]"
+    },
+    {
+        "q": "63. ¿Qué relación establece Feito entre la calidad de la formación del profesorado y el grado de autonomía curricular que puede concederse a los centros educativos?",
+        "options": [
+            "a) A mejor formación docente, mayor posibilidad de autonomía efectiva.",
+            "b) Sin autonomía para formados.",
+            "c) Autonomía solo en ciudades capitales."
+        ],
+        "correct": 0,
+        "retro": "La profesionalización es la base para una toma de decisiones responsable. [1, pág. 88]"
+    },
+    {
+        "q": "64. Conforme al Reglamento para el Fortalecimiento de la Educación Inclusiva en el SEP-Modalidad Indirecta, una vez que la maestra o maestro de aula de Educación Regular observe señales de alerta de posibles dificultades en el aprendizaje en alguno de sus estudiantes, deberá aplicar:",
+        "options": [
+            "a) La Guía de Observación y Detección de Signos de Riesgo.",
+            "b) Examen sorpresa avanzado.",
+            "c) Amonestación escrita."
+        ],
+        "correct": 0,
+        "retro": "La detección asertiva permite activar oportunamente el apoyo especial. [10, pág. 21]"
     },
     {
         "q": "65. La innovación en el ámbito escolar es entendida como:",
-        "options": ["a) Un proceso grupal de negociación y diálogo.", "b) Una orden directa bajada del ministerio.", "c) La compra de tabletas para cada alumno."],
+        "options": [
+            "a) Un proceso inconcluso de búsqueda y mejora de la calidad.",
+            "b) Caja cerrada terminada.",
+            "c) Orden ministerial de 24 horas."
+        ],
         "correct": 0,
-        "retro": "Requiere construir consensos colectivos en el centro (Innovación Educativa - UNESCO, p. 11)."
+        "retro": "La innovación es una actitud permanente de reflexión y cambio. [8, pág. 11]"
     },
     {
-        "q": "66. La estructura de escalas jerárquicas del magisterio se divide en:",
-        "options": ["a) Carrera Docente y Carrera Administrativa.", "b) Urbana y Rural solamente.", "c) Inspectores y Directores únicamente."],
+        "q": "66. ¿Cuál es la estructura correcta de las escalas jerárquicas y de promociones establecidas para el personal del magisterio boliviano?",
+        "options": [
+            "a) Categorías desde la Quinta (ingreso) hasta la Primera (máxima).",
+            "b) Grados del 1 al 10.",
+            "c) Niveles A, B y C."
+        ],
         "correct": 0,
-        "retro": "Son los dos sectores que integran el servicio de educación (Reglamento del Escalafón Nacional del Servicio de Educación, p. 1)."
+        "retro": "El escalafón organiza la carrera docente por antigüedad en cinco categorías. [2, Art. 37]"
     },
     {
-        "q": "67. Ver la imagen como 'llamada de atención para relajarse' revela el sesgo de:",
-        "options": ["a) Considerar la imagen como recurso secundario.", "b) Valorar la imagen por encima del texto.", "c) Despreciar la alfabetización visual."],
-        "correct": 0,
-        "retro": "Menosprecia el valor cognitivo de la codificación visual (Diseño, desarrollo e innovación del currículum, p. 118)."
+        "q": "67. La caracterización de la imagen como una llamada de atención para relajarse del arduo proceso de descodificar la escritura, ¿qué sesgo revela?",
+        "options": [
+            "a) Respeto por el arte digital.",
+            "b) Sesgo hacia la cultura centrada en el texto escrito (libresca).",
+            "c) Que los alumnos no saben leer."
+        ],
+        "correct": 1,
+        "retro": "Revela la desconfianza histórica de la escuela ante el poder de la imagen. [1, pág. 117]"
     },
     {
-        "q": "68. Creer que la experiencia directa genera conocimiento 'imborrable' revela un sesgo:",
-        "options": ["a) Epistemológico empirista.", "b) Constructivista social.", "c) Racionalista extremo."],
+        "q": "68. La afirmación de que la experiencia directa y personal genera un conocimiento seguro e imborrable revela un sesgo epistemológico implícito. ¿Cuál es?",
+        "options": [
+            "a) Realismo epistemológico ingenuo.",
+            "b) Idealismo platónico.",
+            "c) Constructivismo avanzado."
+        ],
         "correct": 0,
-        "retro": "Ignora que el aprendizaje también es reflexivo y vicario (Diseño, desarrollo e innovación del currículum, p. 115)."
+        "retro": "Se asume erróneamente que el contacto directo basta para la verdad. [1, pág. 115]"
     },
     {
-        "q": "69. En el texto, la no-violencia es concebida como:",
-        "options": ["a) Elemento esencial de la convivencia que supera la disciplina.", "b) Una forma de debilidad frente al alumno.", "c) Una sugerencia opcional para centros privados."],
-        "correct": 0,
-        "retro": "Es un valor constitutivo de la cultura institucional pacífica (Convivencia escolar y resolución pacífica de conflictos, p. 45)."
+        "q": "69. En el texto “Convivencia escolar y resolución pacífica de conflictos”, ¿cómo es concebida la no- violencia?",
+        "options": [
+            "a) Falta de fuerza física.",
+            "b) Quedarse callado al ser insultado.",
+            "c) Como un cambio de cultura y una forma positiva de gestionar conflictos."
+        ],
+        "correct": 2,
+        "retro": "La noviolencia es una fuerza activa de transformación social y ética. [11, pág. 51]"
     },
     {
-        "q": "70. Efectivizar la atención con calidad y calidez a estudiantes con discapacidad es:",
-        "options": ["a) El objetivo central del fortalecimiento inclusivo.", "b) Una recomendación que no es obligatoria.", "c) Función exclusiva de los centros médicos."],
+        "q": "70. De acuerdo al Reglamento para el Fortalecimiento de la Educación Inclusiva en el SEP-Modalidad Indirecta, “Efectivizar la Atención Educativa de estudiantes con discapacidad, dificultades en el aprendizaje o talento extraordinario con calidad y calidez en los diferentes años de escolaridad, niveles y modalidades del Sistema Educativo Plurinacional”, corresponde a:",
+        "options": [
+            "a) Un objetivo central de la educación inclusiva en el SEP.",
+            "b) Favor personal del maestro.",
+            "c) Tarea de centros privados."
+        ],
         "correct": 0,
-        "retro": "Es el fin último de la normativa inclusiva para el SEP (Reglamento para el fortalecimiento de la educación inclusiva en el SEP, p. 17)."
+        "retro": "La calidez en la atención es un derecho humano en el ámbito educativo. [10, pág. 7]"
     },
     {
-        "q": "71. Las comunidades y redes pedagógicas expresan la dimensión de innovación de:",
-        "options": ["a) Construcción colectiva del saber pedagógico.", "b) Control burocrático desde el Estado.", "c) Competencia individual por bonos."],
+        "q": "71. Las dinámicas de intercambio y trabajo compartido generadas por la innovación educativa de la primera década del siglo XXI, como las comunidades educativas y redes pedagógicas, ¿qué dimensión de la innovación expresan respecto al cambio “desde abajo”?",
+        "options": [
+            "a) La dimensión del cambio 'desde abajo' y la colaboración profesional.",
+            "b) Control jerárquico ministerial.",
+            "c) Competencia individualista."
+        ],
         "correct": 0,
-        "retro": "Muestra el cambio impulsado desde los propios docentes (Innovación Educativa - UNESCO, p. 11)."
+        "retro": "Las redes de maestros son el motor genuino de la innovación real. [8, UNESCO]"
     },
     {
-        "q": "72. Presentar contenidos como verdades históricamente construidas es una decisión de:",
-        "options": ["a) Criterio socioideológico.", "b) Criterio meramente técnico.", "c) Criterio biológico."],
-        "correct": 0,
-        "retro": "Se opta por una visión cultural del saber en lugar de dogmática (Diseño, desarrollo e innovación del currículum, p. 19)."
+        "q": "72. Una maestra decide presentar los contenidos de su asignatura como verdades históricamente construidas en lugar de verdades absolutas. Según el texto «Diseñar el currículum», ¿qué tipo de decisión está tomando?",
+        "options": [
+            "a) Decisión administrativa.",
+            "b) Una decisión de orden socio-ideológico y crítico.",
+            "c) Decisión equivocada."
+        ],
+        "correct": 1,
+        "retro": "Cuestionar el saber absoluto es propio de una pedagogía transformadora. [1, pág. 43]"
     },
     {
-        "q": "73. Tras la emisión de una RM de instituto, la Dirección Departamental recibe:",
-        "options": ["a) Copia legalizada de la Resolución Ministerial.", "b) Solo un aviso telefónico informal.", "c) El título original de propiedad del edificio."],
+        "q": "73. ¿Qué tipo de documento recibe la Dirección Departamental de Educación correspondiente a la jurisdicción del instituto solicitante, en el marco de la Documentación y Archivo de la Resolución Ministerial emitida en su favor?",
+        "options": [
+            "a) Copia de la Resolución Ministerial y documentación de archivo.",
+            "b) Cheque en blanco.",
+            "c) Medalla de honor."
+        ],
         "correct": 0,
-        "retro": "Sirve para el archivo y control administrativo en su jurisdicción (Reglamento para el fortalecimiento de la educación inclusiva en el SEP, p. 13)."
+        "retro": "La DDE custodia la legalidad del funcionamiento administrativo del centro. [Reglamento de Institutos]"
     },
     {
-        "q": "74. La tensión entre individualización y homogeneización se presenta como:",
-        "options": ["a) Dilema estructural de la escuela obligatoria.", "b) Un problema resuelto en el siglo pasado.", "c) Una falta leve cometida por directores."],
+        "q": "74. La tensión entre diferenciación individualizadora y socialización homogeneizadora en la educación se presenta como:",
+        "options": [
+            "a) Un reto estructural de la escuela obligatoria universal.",
+            "b) Problema de escuelas rurales.",
+            "c) Resuelto en el siglo XIX."
+        ],
         "correct": 0,
-        "retro": "Es la lucha entre integrar a todos e igualarlos en un patrón (Diseño, desarrollo e innovación del currículum, p. 56)."
+        "retro": "La escuela debe equilibrar el ser común con la identidad singular. [1, pág. 51]"
     },
     {
-        "q": "75. Deutsch define el conflicto como:",
-        "options": ["a) Cualquier tipo de actividad incompatible entre las partes.", "b) Solo una pelea física violenta.", "c) El incumplimiento de tareas escolares."],
-        "correct": 0,
-        "retro": "Se enfoca en la interacción de acciones contrapuestas (Convivencia escolar y resolución pacífica de conflictos, p. 52)."
+        "q": "75. ¿Cómo define Deutsch el conflicto?",
+        "options": [
+            "a) Pelea física ganadora.",
+            "b) Ignorar al diferente.",
+            "c) Como una situación en la que existe una actividad incompatible."
+        ],
+        "correct": 2,
+        "retro": "El conflicto surge cuando las metas de las partes son excluyentes. [11, pág. 52]"
     },
     {
-        "q": "76. La innovación ligada a la acción transformadora del mundo remite a la:",
-        "options": ["a) Praxis pedagógica.", "b) Teoría memorística.", "c) Administración pasiva."],
+        "q": "76. Según texto de Innovación Educativa de la UNESCO, la afirmación de que la innovación está fundamentada sobre el aprendizaje porque éste se encuentra ligado a la acción transformadora del mundo, remite específicamente a:",
+        "options": [
+            "a) Una concepción pedagógica donde el aprendizaje es poder y cambio.",
+            "b) Viajar por el planeta.",
+            "c) Dejar de usar papel."
+        ],
         "correct": 0,
-        "retro": "El aprendizaje no es pasivo, sino ligado a la acción real (Innovación Educativa - UNESCO, p. 16)."
+        "retro": "Aprender para la UNESCO implica ser capaz de mejorar la realidad vivida. [8, pág. 3]"
     },
     {
-        "q": "77. Dedicar 2/3 a lingüística y 1/3 a literatura siglos XIX-XX encierra la paradoja de:",
-        "options": ["a) Recurrir a un absurdo epítome (resumen) de autores.", "b) No enseñar nada de gramática.", "c) Darle demasiada importancia a los poetas."],
-        "correct": 0,
-        "retro": "Se fragmenta la cultura en píldoras inútiles por falta de espacio (Diseño, desarrollo e innovación del currículum, p. 72)."
+        "q": "77. ¿Qué paradoja implícita encierra el hecho de que un texto escolar dedique dos tercios a la lingüística y solo un tercio a toda la literatura en castellano de los siglos XIX y XX?",
+        "options": [
+            "a) Literatura fácil.",
+            "b) El reduccionismo cultural y el predominio de lo formal sobre lo vital.",
+            "c) Alumnos que hablan mejor."
+        ],
+        "correct": 1,
+        "retro": "El academicismo prioriza la forma técnica sobre el goce estético literario. [1, pág. 72]"
     },
     {
-        "q": "78. La dinámica de acciones con aprendizajes en la innovación establece:",
-        "options": ["a) Una reflexión permanente para aprender de errores.", "b) La prohibición de cambiar los planes originales.", "c) La sanción a los docentes que fallan."],
+        "q": "78. De acuerdo con los aspectos fundamentales de la innovación educativa, ¿qué establece la dinámica de acciones con aprendizajes que construye la innovación?",
+        "options": [
+            "a) Una reflexión permanente que permite aprender de los errores.",
+            "b) Lista de tareas sin porqué.",
+            "c) Compra obligada de libros."
+        ],
         "correct": 0,
-        "retro": "Permite reformular la práctica docente constantemente (Innovación Educativa - UNESCO, p. 11)."
+        "retro": "La innovación es un proceso de aprendizaje institucional continuo. [8, pág. 11]"
     },
     {
-        "q": "79. La violencia por omisión representa negligencia y es difícil de identificar por:",
-        "options": ["a) La falta de agresión física directa visible.", "b) El ruido excesivo que genera.", "c) Los documentos que deja el agresor."],
-        "correct": 0,
-        "retro": "Al ser abandono, no suele dejar marcas externas físicas (Guía para la identificación y denuncia de la violencia intrafamiliar, p. 13)."
+        "q": "79. De acuerdo con la “Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo”, la violencia por omisión y supresión presenta mayores dificultades para su identificación, ya que representa:",
+        "options": [
+            "a) Marcas físicas claras.",
+            "b) Es invisible y se naturaliza como falta de cuidado o negligencia.",
+            "c) Confesión del agresor."
+        ],
+        "correct": 1,
+        "retro": "El abandono es una forma silenciosa pero devastadora de violencia. [7, pág. 14]"
     },
     {
-        "q": "80. La valoración del riesgo de violencia se define según los niveles:",
-        "options": ["a) Alto, Medio y Bajo.", "b) Rojo, Amarillo y Verde.", "c) Pasado, Presente y Futuro."],
+        "q": "80. La “Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo” refiere que la valoración del riesgo es importante para la intervención en un posible caso de violencia y estará definida de acuerdo a:",
+        "options": [
+            "a) El análisis de factores individuales, familiares y sociales del caso.",
+            "b) Dinero en cuenta bancaria.",
+            "c) Número de hermanos."
+        ],
         "correct": 0,
-        "retro": "Determinan el tipo de intervención y ruta de actuación (Guía para la identificación y denuncia de la violencia intrafamiliar, p. 30)."
+        "retro": "La asertividad en la protección exige comprender todo el contexto. [7, pág. 37]"
     },
     {
-        "q": "81. Llevar a cabo el manual de resolución de problemas implica:",
-        "options": ["a) Trabajo continuo para ampliar capacidad de escucha.", "b) Memorizar todas las lecciones en una semana.", "c) Ignorar las opiniones de los alumnos."],
+        "q": "81. Para llevar a cabo efectivamente este “Manual de resolución de problemas”, ¿implica?",
+        "options": [
+            "a) Un trabajo continuo para ampliar la capacidad de participación y escucha.",
+            "b) Leerlo una vez y guardarlo.",
+            "c) Resolver sin usar tiza."
+        ],
         "correct": 0,
-        "retro": "El docente debe modelar la humildad y participación que enseña (Manual de resolución de problemas, p. 5)."
+        "retro": "El docente debe ser el primer facilitador del diálogo y la escucha. [12, pág. 12]"
     },
     {
-        "q": "82. Kilpatrick define un proyecto didáctico como:",
-        "options": ["a) Actividad intencionada realizada de todo corazón.", "b) Tarea impuesta por el director sin motivo.", "c) Lista de ejercicios matemáticos repetitivos."],
+        "q": "82. Según Kilpatrick, ¿cómo se define un proyecto didáctico?",
+        "options": [
+            "a) Como una actividad intencionada que se desarrolla en un entorno social.",
+            "b) Examen del 100%.",
+            "c) Maqueta de cartón."
+        ],
         "correct": 0,
-        "retro": "Subraya la voluntad y el propósito del estudiante (Diseño, desarrollo e innovación del currículum, p. 74)."
+        "retro": "El proyecto dota de sentido y propósito social al aprendizaje escolar. [8, pág. 14]"
     },
     {
-        "q": "83. Los jóvenes deben saber que el conflicto es:",
-        "options": ["a) Connatural a toda relación humana.", "b) Un error que nunca debería ocurrir.", "c) Motivo de expulsión inmediata."],
-        "correct": 0,
-        "retro": "Debe aprenderse a afrontarlo positivamente (Convivencia escolar y resolución pacífica de conflictos, p. 61)."
+        "q": "83. El documento “Convivencia escolar y resolución pacífica de conflictos” menciona que los jóvenes deben saber que el conflicto es:",
+        "options": [
+            "a) Falta grave.",
+            "b) Un aspecto normal y permanente de la vida y las relaciones humanas.",
+            "c) Error de los mal educados."
+        ],
+        "correct": 1,
+        "retro": "Naturalizar el conflicto es el primer paso para aprender a negociar. [11, pág. 51]"
     },
     {
-        "q": "84. Los GAM deben constituir para las multas de atención integral:",
-        "options": ["a) Un fondo específico para los Servicios de Atención.", "b) Una cuenta para el pago de salarios extras.", "c) Un depósito para la compra de patrullas."],
+        "q": "84. ¿Qué instrumento financiero deben constituir los Gobiernos Autónomos Municipales para administrar las multas destinadas a los Servicios de Atención Integral?",
+        "options": [
+            "a) Una cuenta específica destinada a los Servicios de Atención Integral.",
+            "b) Caja a nombre del Alcalde.",
+            "c) Fondo de salarios."
+        ],
         "correct": 0,
-        "retro": "El dinero recaudado debe destinarse por ley a protección social (Ley N° 223 para Personas con Discapacidad, p. 5)."
+        "retro": "Los recursos de sanciones deben fortalecer la protección a víctimas. [Ley 348]"
     },
     {
-        "q": "85. En la actualidad, la Cultura de Paz supone una:",
-        "options": ["a) Acción integrada entre educativo, social y democrático.", "b) Ausencia total de discusiones en clase.", "c) Disciplina militar aplicada al estudio."],
-        "correct": 0,
-        "retro": "No es solo ausencia de guerra, sino participación justa (Convivencia escolar y resolución pacífica de conflictos, p. 14)."
+        "q": "85. Según lo descrito en el texto “Convivencia escolar y resolución pacífica de conflictos”, en la actualidad, la Cultura de Paz supone:",
+        "options": [
+            "a) Silencio ante el director.",
+            "b) Eliminación de recreos.",
+            "c) Una perspectiva socio-crítica de la organización escolar y sus conflictos."
+        ],
+        "correct": 2,
+        "retro": "La paz institucional nace de la justicia y la resolución no violenta. [11, pág. 13]"
     },
     {
-        "q": "86. Promover la matrícula sin discriminación es responsabilidad del:",
-        "options": ["a) Directora o Director de Unidad Educativa.", "b) Portero o personal de servicio.", "c) Representante de los padres solamente."],
+        "q": "86. La afirmación: “Promover la matriculación sin discriminación alguna...”, según el Reglamento para el Fortalecimiento de la Educación Inclusiva corresponde a:",
+        "options": [
+            "a) Una responsabilidad fundamental de las autoridades del SEP.",
+            "b) Trámite opcional.",
+            "c) Solo para talentos superiores."
+        ],
         "correct": 0,
-        "retro": "Deben garantizar el derecho inclusivo en su centro (Reglamento para el fortalecimiento de la educación inclusiva en el SEP, p. 13)."
+        "retro": "Garantizar el acceso es la primera responsabilidad de la inclusión estatal. [10, pág. 10]"
     },
     {
-        "q": "87. A estudiantes en el Sistema de Información de Institutos se les otorga un:",
-        "options": ["a) Número de registro único.", "b) Celular institucional.", "c) Bono económico de permanencia."],
+        "q": "87. ¿Qué se otorga a las y los estudiantes inscritos al ser registrados en el Sistema de Información de Institutos?",
+        "options": [
+            "a) Un número de registro único para su seguimiento académico.",
+            "b) Medalla de bronce.",
+            "c) Laptop gratuita."
+        ],
         "correct": 0,
-        "retro": "Permite el seguimiento académico centralizado (Reglamento para el fortalecimiento de la educación inclusiva en el SEP, p. 25)."
+        "retro": "La identidad digital en el sistema avala toda la vida académica del alumno. [Reglamento de Institutos]"
     },
     {
-        "q": "88. Innovar como capacidad humana se describe como pasar del:",
-        "options": ["a) Lenguaje de los actores al de los autores.", "b) Silencio a la queja constante.", "c) Papel a la computadora solamente."],
+        "q": "88. Según el texto de Innovación Educativa, ¿cuál de las siguientes afirmaciones describe con mayor precisión la concepción de innovación como capacidad humana?",
+        "options": [
+            "a) Como la habilidad de adaptarse y transformar el entorno creativamente.",
+            "b) Don de genios e inventores.",
+            "c) Capacidad de comprar gadgets."
+        ],
         "correct": 0,
-        "retro": "El sujeto se convierte en autor de su quehacer pedagógico (Innovación Educativa - UNESCO, p. 37)."
+        "retro": "Innovar es una potencia humana orientada a la mejora colectiva. [8, pág. 3]"
     },
     {
-        "q": "89. Educar en y para el conflicto ofrece descubrir la:",
-        "options": ["a) Perspectiva positiva del conflicto.", "b) Forma de ganar siempre las peleas.", "c) Manera de ignorar a los agresores."],
-        "correct": 0,
-        "retro": "Permite aprender de la complejidad y transformar (Convivencia escolar y resolución pacífica de conflictos, p. 55)."
+        "q": "89. De acuerdo con el documento “Convivencia escolar y resolución pacífica de conflictos\", ¿qué ofrece educar en y para el conflicto?",
+        "options": [
+            "a) Ganar peleas físicas.",
+            "b) Oportunidades para desarrollar habilidades de diálogo y negociación.",
+            "c) Razones para desertar."
+        ],
+        "correct": 1,
+        "retro": "El conflicto es el aula real donde se aprende la democracia vivida. [11, pág. 56]"
     },
     {
-        "q": "90. Aprender a vivir en espacios superpoblados y diferir deseos es del:",
-        "options": ["a) Currículum oculto.", "b) Currículum formal.", "c) Currículum digital."],
-        "correct": 0,
-        "retro": "Son normas sociales aprendidas por la estructura escolar (Diseño, desarrollo e innovación del currículum, p. 100)."
+        "q": "90. Cuando un alumno aprende a vivir en un espacio superpoblado, a tolerar interrupciones y a diferir la satisfacción de sus deseos, ¿qué tipo de aprendizaje está adquiriendo fundamentalmente?",
+        "options": [
+            "a) Contenidos de geografía.",
+            "b) Supervivencia en la selva.",
+            "c) Aprendizajes del currículum oculto relacionados con el control social."
+        ],
+        "correct": 2,
+        "retro": "La escuela educa implícitamente en la disciplina y la falta de privacidad. [1, pág. 100]"
     },
     {
-        "q": "91. La conflictividad escolar se ha convertido en un:",
-        "options": ["a) Elemento decisivo en la configuración de convivencia social.", "b) Pasatiempo para los alumnos del recreo.", "c) Tema sin importancia para los docentes."],
+        "q": "91. El documento “Convivencia escolar y resolución pacífica de conflictos” menciona que en la actualidad, la conflictividad escolar se ha convertido en:",
+        "options": [
+            "a) Una de las preocupaciones mayores de las sociedades contemporáneas.",
+            "b) Tema prohibido.",
+            "c) Invento de la prensa."
+        ],
         "correct": 0,
-        "retro": "La escuela refleja y anticipa el entorno social (Convivencia escolar y resolución pacífica de conflictos, p. 45)."
+        "retro": "La convivencia es hoy un indicador clave de la calidad educativa mundial. [11, pág. 50]"
     },
     {
-        "q": "92. Aprendizaje al margen de objetivos oficiales (Eggleston) es la:",
-        "options": ["a) Disciplina y sumisión no prescritas.", "b) Resolución de problemas matemáticos.", "c) Lectura de clásicos literarios."],
+        "q": "92. ¿Cuál de las siguientes situaciones ejemplifica un aprendizaje que, según Eggleston, el funcionamiento escolar produce regularmente al margen de los objetivos oficiales?",
+        "options": [
+            "a) Aprender a satisfacer las expectativas del maestro para obtener estima.",
+            "b) Cálculos de 3er grado.",
+            "c) Cantar el himno."
+        ],
         "correct": 0,
-        "retro": "Es lo que la escuela produce por su solo funcionamiento (Diseño, desarrollo e innovación del currículum, p. 100)."
+        "retro": "El éxito escolar exige dominar las reglas no escritas de la institución. [1, pág. 104]"
     },
     {
-        "q": "93. La comunidad educativa constituye una:",
-        "options": ["a) Micro-sociedad.", "b) Empresa con fines de lucro.", "c) Agencia de viajes infantiles."],
+        "q": "93. El documento “Convivencia escolar y resolución pacífica de conflictos” menciona que la calidad de la convivencia educativa es un elemento decisivo en la configuración de la convivencia social, pues la comunidad educativa constituye:",
+        "options": [
+            "a) Un espacio privilegiado de formación y ejercicio de ciudadanía.",
+            "b) Lugar aburrido mientras padres trabajan.",
+            "c) Oficina para entregar títulos."
+        ],
         "correct": 0,
-        "retro": "Anticipa las formas de relación de la sociedad mayor (Convivencia escolar y resolución pacífica de conflictos, p. 45)."
+        "retro": "En la escuela se ensaya cotidianamente la vida en una sociedad justa. [11, pág. 13]"
     },
     {
-        "q": "94. Un 'efecto perverso' (Boudon) en el currículum real es un aprendizaje:",
-        "options": ["a) Ajeno al proyecto didáctico resultante de la práctica.", "b) Planificado cuidadosamente por el docente.", "c) Útil para aprobar exámenes nacionales."],
-        "correct": 0,
-        "retro": "Son efectos no deseados ni previstos inicialmente (Diseño, desarrollo e innovación del currículum, p. 96)."
+        "q": "94. ¿Cuál de las siguientes situaciones ejemplifica lo que Boudon denomina como efecto perverso en el contexto del currículum real?",
+        "options": [
+            "a) Que todos saquen 100.",
+            "b) Que el docente profundice temas no previstos debido a la lentitud del grupo.",
+            "c) Director reemplazado por IA."
+        ],
+        "correct": 1,
+        "retro": "Decisiones individuales lógicas pueden alterar el plan colectivo original. [1, pág. 94]"
     },
     {
-        "q": "95. Tras la autorización, el propietario del instituto recibe la:",
-        "options": ["a) Resolución Ministerial original de funcionamiento.", "b) Llave simbólica de la ciudad.", "c) Foto legalizada de los docentes."],
+        "q": "95. ¿Qué documento recibe el propietario o representante legal del instituto como resultado del proceso de autorización de funcionamiento, en materia de Documentación y Archivo?",
+        "options": [
+            "a) El original de la Resolución Ministerial que autoriza la apertura.",
+            "b) Medalla del Ministro.",
+            "c) Carta para el banco."
+        ],
         "correct": 0,
-        "retro": "Es el título legal habilitante para el servicio (Reglamento para el fortalecimiento de la educación inclusiva en el SEP, p. 13)."
+        "retro": "La RM es el título legal que habilita el funcionamiento del instituto. [Reglamento de Institutos]"
     },
     {
-        "q": "96. Constituye una falta muy grave según el reglamento:",
-        "options": ["a) Malversación de fondos o acoso sexual.", "b) Llegar cinco minutos tarde una vez.", "c) No usar el uniforme del colegio."],
-        "correct": 0,
-        "retro": "Son vulneraciones graves a la ética y legalidad (Reglamento de Faltas y Sanciones, p. 5)."
+        "q": "96. ¿Cuál de las siguientes situaciones constituye una falta muy grave?",
+        "options": [
+            "a) Tarde 5 minutos el lunes.",
+            "b) El uso de castigos corporales o vejaciones graves contra los alumnos.",
+            "c) Olvidar el bolígrafo rojo."
+        ],
+        "correct": 1,
+        "retro": "Atentar contra la integridad física o moral del niño es una falta máxima. [4, Art. 10]"
     },
     {
-        "q": "97. Desarrollar la detección temprana de señales de alerta es función de:",
-        "options": ["a) Maestra o Maestro de Aula.", "b) Ministro de Educación solamente.", "c) Asociación de padres de familia."],
+        "q": "97. Una maestra de aula que atiende a estudiantes con discapacidad intelectual y autismo “desarrolla la detección temprana de señales de alerta en el grado y nivel de la Unidad Educativa del nivel de Educación Inicial en Familia Comunitaria o Primaria Comunitaria Vocacional del Subsistema de Educación Regular”, según el Reglamento para el Fortalecimiento de la Educación Inclusiva en el SEP, cumple:",
+        "options": [
+            "a) Una función específica de detección temprana y responsabilidad docente.",
+            "b) Acto de discriminación.",
+            "c) Tarea médica."
+        ],
         "correct": 0,
-        "retro": "El docente de aula es el primer filtro de detección (Reglamento para el fortalecimiento de la educación inclusiva en el SEP, p. 22)."
+        "retro": "El docente es el primer vigilante del desarrollo integral del estudiante. [10, pág. 19]"
     },
     {
-        "q": "98. Hacer visible lo oculto en el currículum conduce a un:",
-        "options": ["a) Debate sobre su legitimidad.", "b) Silencio administrativo absoluto.", "c) Aumento de la indisciplina."],
-        "correct": 0,
-        "retro": "Permite analizar su valor educativo real (Diseño, desarrollo e innovación del currículum, p. 98)."
+        "q": "98. Según Perrenoud, hacer visible lo que estaba oculto en el currículum no conduce a su eliminación sino a:",
+        "options": [
+            "a) Castigar a curiosos.",
+            "b) Su análisis consciente y a una mejor gestión de la socialización.",
+            "c) Escribir mil páginas."
+        ],
+        "correct": 1,
+        "retro": "Saber qué enseñamos implícitamente permite mejorar la calidad del aula. [1, pág. 97]"
     },
     {
-        "q": "99. La economía tecnológica mundial exige para los países una:",
-        "options": ["a) Fuerza laboral altamente cualificada y adaptable.", "b) Reducción drástica del número de escuelas.", "c) Volver a métodos de enseñanza del siglo XVIII."],
-        "correct": 0,
-        "retro": "Las naciones dependen de su capacidad innovadora (Diseño, desarrollo e innovación del currículum, p. 89)."
+        "q": "99. ¿Qué desafíos presenta la economía mundial basada en la tecnología para los países a medida que sus economías nacionales se tornan más dependientes del ámbito internacional?",
+        "options": [
+            "a) Retorno a la agricultura manual.",
+            "b) Prohibir PCs.",
+            "c) La necesidad de innovación constante y dependencia de redes globales."
+        ],
+        "correct": 2,
+        "retro": "El mundo actual exige ciudadanos con altas competencias digitales y éticas. [8, pág. 3]"
     },
     {
-        "q": "100. El currículum real se define como el conjunto de:",
-        "options": ["a) Experiencias, tareas y actividades.", "b) Leyes que rigen la educación nacional.", "c) Libros impresos por la administración."],
+        "q": "100. En «El currículum real y el trabajo escolar», el currículum formal es una imagen de la cultura digna de transmitirse, mientras que el currículum real es...",
+        "options": [
+            "a) La transposición pragmática y efectiva que ocurre en la vida del aula.",
+            "b) Documento bajo llave.",
+            "c) Precio de útiles."
+        ],
         "correct": 0,
-        "retro": "Son los hechos cotidianos que originan aprendizajes (Diseño, desarrollo e innovación del currículum, p. 91)."
+        "retro": "El currículo real es lo que maestros y alumnos construyen en el día a día. [1, pág. 94]"
     }
 ];
     </script>

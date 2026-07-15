@@ -64,6 +64,31 @@ nav.hub a:hover {
     background: #ffd966;
 }
 
+/* ===== Consejo de Estudio ===== */
+.study-tip {
+    max-width: 860px;
+    margin: 0 auto 24px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px 24px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    border-left: 6px solid #f6a623;
+}
+
+.study-tip h2 {
+    font-size: 1.3rem;
+    color: #f6a623;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.study-tip p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.7;
+    margin: 0;
+}
+
 #quiz-container {
     max-width: 860px;
     margin: 0 auto;
@@ -683,4 +708,21 @@ body > .premium-badge:last-child {
         font-size: 0.75rem;
         padding: 7px 12px;
     }
+
+    /* Consejo de Estudio responsive */
+    .study-tip {
+        padding: 16px 18px;
+        margin-bottom: 18px;
+    }
+
+    .study-tip h2 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+
+    .study-tip p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
 }

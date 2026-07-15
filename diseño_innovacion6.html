@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Preguntas - DISEÑO (BLOQUE 6)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Banco de Preguntas - DISEÑO, DESARROLLO E INNOVACIÓN</h1>
+        <div class="subtitle">Examen de Ascenso 2026 - BLOQUE 6</div>
+    </header>
+
+    <div id="quiz-container"></div>
+
+    <div style="text-align: center; margin: 20px 0;">
+        <a href="index.html" class="back-link">&larr; Volver al Inicio</a>
+    </div>
+
+    <script>
+        window.quizData = [
+     {
+        "q": "1436. ¿Qué ventaja específica atribuye el texto a las tres competencias fundamentales del proyecto DeSeCo frente a las propuestas por la Unión Europea?",
+        "options": [
+            "a) Que son competencias metacurriculares: interaccionar de un modo efectivo, interactuar con personas y controlar la propia vida.",
+            "b) Que están centradas únicamente en contenidos académicos tradicionales y asignaturas instrumentales.",
+            "c) Que son más fáciles de medir mediante pruebas estandarizadas de opción múltiple a nivel nacional."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: La ventaja es que las competencias del proyecto DeSeCo son competencias metacurriculares: interaccionar de un modo efectivo, interactuar con personas y controlar la propia vida. Ubicación: Capítulo IV, página 87."
+    },
+    {
+        "q": "1443. Un maestro planifica una actividad grupal, pero al iniciarla nota que la mayoría de estudiantes no comprende la consigna. Sin consultar ningún documento, reorganiza la actividad en el momento. ¿Cómo denomina Perrenoud ese tipo de respuesta docente?",
+        "options": [
+            "a) Negligencia pedagógica ante la normativa oficial por falta de seguimiento del plan.",
+            "b) Improvisación regulada. Ante una situación compleja, el maestro reacciona en función de su hábito profesional.",
+            "c) Falta de planificación curricular previa que obliga a cambios improvisados."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Improvisación regulada. Ante una situación compleja, el maestro reacciona en función de su hábito profesional, y no según un plan o regla explícitos. Ubicación: Capítulo V, página 96."
+    },
+    {
+        "q": "1455. ¿Qué función cumple la cita irónica de Millás sobre la compra de libros de texto en supermercados en el argumento de Sacristán?",
+        "options": [
+            "a) Recomendar la compra de libros en oferta para aliviar el presupuesto de los padres.",
+            "b) Criticar la calidad del papel y la impresión de las editoriales comerciales modernas.",
+            "c) Ironizar sobre la consideración intelectual y social del libro de texto como objeto cultural y su depauperación."
+        ],
+        "correct": 2,
+        "retro": "Respuesta: La cita de Millás ironiza sobre la consideración intelectual y social del libro de texto como objeto cultural. Sirve para introducir la reflexión sobre la depauperación cultural del libro de texto. Ubicación: Capítulo VI, página 113."
+    },
+    {
+        "q": "1456. La historia de la coeducación es presentada para ilustrar las resistencias al cambio en segregación escolar. Lo que la hace ejemplar es que:",
+        "options": [
+            "a) La lucha por la coeducación ha contado con fortísimas resistencias ideológicas, lo que demuestra que la segregación responde a valores morales y religiosos.",
+            "b) Demuestra que la mezcla de sexos reduce el rendimiento escolar en áreas científicas.",
+            "c) Es el único caso donde la administración no intervino para forzar el cambio en las aulas."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: La lucha por la coeducación ha contado con fortísimas resistencias ideológicas, lo que demuestra que la segregación no es algo natural, sino que responde a valores morales y religiosos. Ubicación: Capítulo III, página 65."
+    },
+    {
+        "q": "1466. Feito utiliza la teoría de las inteligencias múltiples de Gardner principalmente para argumentar que:",
+        "options": [
+            "a) La escuela entroniza las inteligencias lógico-matemática y lingüística, ignorando otras inteligencias que dan cuenta de logros imprescindibles.",
+            "b) No todos los alumnos son capaces de aprender contenidos científicos complejos por naturaleza.",
+            "c) La evaluación debe basarse exclusivamente en la inteligencia emocional y social."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: La escuela entroniza dos tipos de inteligencia (lógico-matemática y lingüística)... cuando hay otras inteligencias que dan cuenta de logros imprescindibles para la humanidad. Ubicación: Capítulo IV, página 79."
+    },
+    {
+        "q": "1472. Según Howard Gardner los campos en los que se moviliza la inteligencia humana son: lingüística, lógica-matemática, musical, espacial, corporal-kinestésica, interpersonal, intrapersonal y:",
+        "options": [
+            "a) Gastronómica.",
+            "b) Tecnológica.",
+            "c) Naturalista."
+        ],
+        "correct": 2,
+        "retro": "Respuesta: Naturalista. Ubicación: Capítulo IV, página 80."
+    },
+    {
+        "q": "1475. La racionalidad taylorista aplicada a la organización escolar se plasma en un modelo que tiene como base:",
+        "options": [
+            "a) El fomento de la creatividad y la autonomía total del estudiante en cada curso.",
+            "b) La división de procesos complejos en acciones parciales encadenadas gradualmente, con expertos en tareas especializadas.",
+            "c) La eliminación de los horarios fijos para permitir ritmos de aprendizaje individuales."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: La división de procesos complejos de transformación en acciones parciales encadenadas gradualmente, especializando los tratamientos a cargo de expertos adiestrados en cada una de las tareas... Ubicación: Capítulo III, página 56."
+    },
+    {
+        "q": "1476. Al asociar los grados con la edad de los estudiantes, el currículum asumió una función específica. ¿Cuál es?",
+        "options": [
+            "a) La función de regular a las personas, estableciendo el 'progreso' de los sujetos.",
+            "b) Garantizar la amistad perpetua entre alumnos que nacieron el mismo año.",
+            "c) Ahorrar espacio físico en los patios de recreo al dividir a los niños."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Al asociar contenidos, grados y edad de los estudiantes, el currículum es también un regulador de las personas. Ubicación: Capítulo II, página 27."
+    },
+    {
+        "q": "1478. ¿Cuál es la paradoja estructural que Sacristán identifica en el poder regulador del currículum?",
+        "options": [
+            "a) Que el currículum es obligatorio para los maestros pero opcional para el alumnado.",
+            "b) Organiza y unifica la enseñanza, pero al mismo tiempo refuerza las fronteras que delimitan sus componentes (asignaturas).",
+            "c) Que a pesar de ser un texto oficial, solo se transmite de forma oral en el aula."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: La paradoja es que el currículum desempeña una doble función —organizadora a la vez que unificadora—... a la vez que se produce la paradoja de que en él se refuerzan las fronteras (y murallas) que delimitan sus componentes. Ubicación: Capítulo II, página 26."
+    },
+    {
+        "q": "1491. La posición de que ningún currículum común puede ser neutral, pues refleja valores de grupos dominantes, ¿a qué autor corresponde según Linuesa?",
+        "options": [
+            "a) A Michael Apple.",
+            "b) A Lawrence Stenhouse.",
+            "c) A Benjamin Bloom."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: A Apple. Ubicación: Capítulo I, página 14."
+    },
+    {
+        "q": "1528. ¿Qué beneficio adicional, menos evidente, señala Clemente Linuesa sobre la interdisciplinariedad respecto a los docentes?",
+        "options": [
+            "a) Permite reducir el sueldo de los especialistas al fusionar varias materias en una sola.",
+            "b) Facilita que los alumnos terminen el año escolar en menos tiempo.",
+            "c) Propicia la colaboración y evita el aislamiento tan frecuente en los centros escolares."
+        ],
+        "correct": 2,
+        "retro": "Respuesta: Respecto de los profesores, posibilitaría un modelo de colaboración y no de aislamiento tan frecuente en los centros escolares. Ubicación: Capítulo I, página 21."
+    },
+    {
+        "q": "1529. Según Linuesa, cuando las administraciones prescriben aspectos metodológicos o de evaluación, ¿qué ocurre?",
+        "options": [
+            "a) Se garantiza la uniformidad total de la calidad educativa en todas las provincias.",
+            "b) La administración entra en aspectos profesionales que son competencia exclusiva del profesorado.",
+            "c) Los maestros se sienten más seguros al no tener que tomar ninguna decisión pedagógica."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Prescripciones sobre cuestiones metodológicas, sobre formas de evaluación... son, sin duda, decisiones propias de la función docente. Ubicación: Capítulo I, página 15."
+    },
+    {
+        "q": "1532. ¿Qué distingue al modelo de proceso de Stenhouse respecto del diseño en el ámbito del aula?",
+        "options": [
+            "a) Se basa en que las experiencias de aprendizaje y el conocimiento relevante hacen valioso el currículum.",
+            "b) Propone que los alumnos decidan el 100% de los contenidos sin intervención del docente.",
+            "c) Ignora por completo la evaluación de los sujetos para centrarse en los medios."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: El modelo de proceso como lo considera STENHOUSE (1984) se basa en la idea de que son las experiencias de aprendizaje y el conocimiento relevante lo que hace valioso el currículum. Ubicación: Capítulo I, página 17."
+    },
+    {
+        "q": "1548. La propuesta del profesor Osborne sobre cómo promover debates en clase sugiere que:",
+        "options": [
+            "a) El profesor debe sancionar a quienes expresen opiniones científicamente incorrectas.",
+            "b) Los profesores deben preocuparse menos por enseñar la idea correcta y más por explicar por qué la incorrecta está equivocada.",
+            "c) Los debates solo deben realizarse al final del año escolar para no perder tiempo."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Los profesores podrían promover discusiones en clase si se preocupan menos por enseñar la idea correcta y más por explicar por qué la idea incorrecta está equivocada. Ubicación: Capítulo IV, página 78."
+    },
+    {
+        "q": "1550. Cuando Sacristán et al. plantean que la democracia exige opinar sobre asuntos complejos, ¿qué responsabilidad atribuyen a la escuela?",
+        "options": [
+            "a) Delegar estas opiniones exclusivamente a los expertos técnicos y canales de televisión.",
+            "b) La de formar una ciudadanía culta, capaz de opinar sobre cuestiones como el cambio climático.",
+            "c) Prohibir estos temas en el aula para evitar conflictos ideológicos con los padres."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: La responsabilidad de formar una ciudadanía culta, capaz de opinar sobre cuestiones complejas como el cambio climático o el uso de las células madre. Ubicación: Capítulo IV, página 89."
+    },
+    {
+        "q": "1551. ¿Qué respuesta ofrece Feito sobre el sentido del currículum en la enseñanza obligatoria?",
+        "options": [
+            "a) Proporcionar un listado de mil datos obligatorios para memorizar anualmente.",
+            "b) Suministrar herramientas para que la gente sea capaz de buscar, seleccionar y crear conocimiento por sí misma.",
+            "c) Preparar a los alumnos exclusivamente para superar los tests de ingreso a la universidad."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Se trata de suministrar herramientas a la gente para que sea capaz de buscar, seleccionar y crear conocimiento por sí misma. Ubicación: Capítulo IV, página 68."
+    },
+    {
+        "q": "1552. ¿Qué papel atribuye Perrenoud a la escuela primaria en la formación del sentido común?",
+        "options": [
+            "a) La escuela primaria contribuye porque los maestros son adultos que pasan la mayor parte del tiempo con los niños.",
+            "b) La escuela es el único lugar donde biológicamente se puede inyectar el sentido común.",
+            "c) Los maestros no influyen en el sentido común, su labor es puramente académica."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: La escuela primaria contribuye a la formación del sentido común por el solo hecho de que los maestros son... los adultos que pasan la mayor parte del tiempo con los niños. Ubicación: Capítulo V, página 103."
+    },
+    {
+        "q": "1554. ¿Qué implica formar personas capaces de afrontar retos de vida desde una perspectiva integral?",
+        "options": [
+            "a) Formar personas con capacidad para aprender permanentemente y desarrollar un proyecto personal de vida.",
+            "b) Centrarse exclusivamente en la superación de pruebas de rendimiento estandarizadas.",
+            "c) Eliminar contenidos académicos para enseñar solo habilidades de ocio y recreación."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: La escuela debe formar personas capaces de desarrollar un proyecto personal de vida. Ubicación: Capítulo IV, página 87."
+    },
+    {
+        "q": "1572. Según Sacristán, la escuela comprensiva se define esencialmente por:",
+        "options": [
+            "a) Agrupar a los alumnos según su nivel de inteligencia medido por tests previos.",
+            "b) El mantenimiento de todos los estudiantes juntos, sin segregarlos por especialidades ni niveles.",
+            "c) Tener un solo maestro para todas las materias durante los diez años de estudio."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: El mantenimiento de todos los estudiantes juntos, sin segregarlos por especialidades ni por niveles de capacidad. Ubicación: Capítulo III, página 66."
+    },
+    {
+        "q": "1577. Según Perrenoud, la orientación hacia una escuela más activa tiene una consecuencia paradójica:",
+        "options": [
+            "a) Incrementa la libertad del maestro respecto a la institución, pero amplía la negociación con los alumnos.",
+            "b) El maestro trabaja menos horas pero los alumnos se cansan físicamente mucho más.",
+            "c) Mejora la disciplina aunque el aula parezca un caos sin reglas explícitas."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Incrementa la libertad del maestro respecto a la institución, pero al mismo tiempo amplía el campo de la negociación con sus alumnos. Ubicación: Capítulo V, página 96."
+    },
+    {
+        "q": "1655. Ante el rechazo de contenidos por falta de relación con la vida cotidiana, el giro constructivista propone:",
+        "options": [
+            "a) Insistir en la autoridad del programa oficial aunque no guste a los alumnos.",
+            "b) Conectar los contenidos escolares con las prácticas culturales cotidianas de los estudiantes.",
+            "c) Evaluar con mayor rigor para forzar el interés por los contenidos abstractos."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Conectar los contenidos escolares con las prácticas culturales cotidianas de los estudiantes, considerando sus concepciones previas. Ubicación: Capítulo II, página 44."
+    },
+    {
+        "q": "1708. ¿Cuál es la tensión central en el debate sobre el currículum básico político según Linuesa?",
+        "options": [
+            "a) La tensión entre currículum común para igualdad y la diversidad cultural de los estudiantes.",
+            "b) El conflicto entre el costo de los libros y el presupuesto ministerial anual.",
+            "c) La disputa por el número exacto de páginas que debe tener cada manual."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: La tensión entre la necesidad de un currículum común que garantice la igualdad de oportunidades y la diversidad cultural y social. Ubicación: Capítulo I, páginas 13-14."
+    },
+    {
+        "q": "1709. ¿Entre qué elementos interviene el libro de texto como mediador?",
+        "options": [
+            "a) Entre el director del centro y la junta de padres de familia.",
+            "b) Entre la cultura más elaborada (especialistas) y la recepción del saber (estudiantes).",
+            "c) Entre el mercado de trabajo y los centros de formación técnica nocturnos."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Interviene entre la cultura más elaborada (por los especialistas) y la recepción del saber (por los estudiantes). Ubicación: Capítulo II, página 32."
+    },
+    {
+        "q": "1710. ¿Entre qué fuerzas opuestas se produce la tensión irresuelta descrita por Sacristán?",
+        "options": [
+            "a) Entre la socialización en proyecto común y el respeto a la idiosincrasia del sujeto.",
+            "b) Entre el uso del horario de mañana y el uso del horario de tarde.",
+            "c) Entre la enseñanza con tiza y la enseñanza con proyectores digitales."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Entre la socialización en torno a un proyecto común... y el respeto a la idiosincrasia del sujeto (fomentar la singularidad individual). Ubicación: Capítulo III, página 52."
+    },
+    {
+        "q": "1731. ¿En qué consiste la singularidad del libro de texto según Sacristán?",
+        "options": [
+            "a) Es un objeto peculiar configurado como dominante para proporcionar información traducida pedagógicamente.",
+            "b) Es el único libro que no requiere ser leído para que el alumno aprenda.",
+            "c) Es una invención digital que reemplazó a los antiguos maestros de primaria."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: El libro de texto es un objeto peculiar que se ha configurado como dominante... como un instrumento capital para proporcionar información traducida pedagógicamente. Ubicación: Capítulo VI, página 114."
+    },
+    {
+        "q": "1732. ¿Qué dilema genera la escuela única respecto a la diversidad?",
+        "options": [
+            "a) Cómo hacer compatible la universalidad de la educación con la realidad de diversidad y desigualdad.",
+            "b) Determinar cuántos pupitres de madera caben en un aula estándar de 30 metros.",
+            "c) Obligar a todos los niños a usar uniformes oscuros sin que haya protestas."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: El dilema es cómo hacer compatible la universalidad de la educación... con la realidad de la diversidad y la desigualdad de los estudiantes. Ubicación: Capítulo III, páginas 48-49."
+    },
+    {
+        "q": "1820. ¿Por qué en Finlandia es posible incrementar la autonomía curricular de los centros?",
+        "options": [
+            "a) Porque el profesorado está bien formado y el currículum oficial es reducido.",
+            "b) El gobierno prohíbe cualquier tipo de examen o evaluación externa.",
+            "c) Los alumnos estudian solo en sus casas y van a la escuela a jugar."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: El profesorado está bien formado y el currículum oficial es muy reducido. Ubicación: Capítulo IV, página 88."
+    },
+    {
+        "q": "1821. Las anécdotas sobre García Márquez y Paul McCartney ilustran que:",
+        "options": [
+            "a) Los genios mundiales nunca necesitan asistir a la escuela obligatoria.",
+            "b) Lo importante en la educación es encontrar el juguete que los niños llevan dentro.",
+            "c) El éxito en matemáticas garantiza el éxito en la música y la literatura."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Lo importante en la educación de los niños es encontrar el juguete que llevan dentro. Ubicación: Capítulo IV, página 80."
+    },
+    {
+        "q": "1822. ¿Cuál es la idea central de «¿Qué significa el currículum?» de Sacristán?",
+        "options": [
+            "a) Es una construcción social no neutral que refleja valores, intereses y conflictos.",
+            "b) Es un documento puramente administrativo y burocrático sin carga ideológica.",
+            "c) Debe ser decidido exclusivamente por científicos que ganaron premios Nobel."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: La idea central es que el currículum es una construcción social y cultural... que no es neutral, sino que refleja valores, intereses y conflictos. Ubicación: Capítulo II (pasim)."
+    },
+    {
+        "q": "1823. En la distinción entre trama y tejido, la cultura enseñada y evaluada en el aula es:",
+        "options": [
+            "a) El tejido.",
+            "b) El hilo.",
+            "c) El sastre."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: El tejido. (La trama es el currículum formal, el tejido es el currículum real). Ubicación: Capítulo V, página 92."
+    },
+    {
+        "q": "1824. Según Feito, ¿qué revela la secuencia de atención en una clase magistral?",
+        "options": [
+            "a) Que el alumnado mantiene la atención al máximo durante los 45 minutos.",
+            "b) Revela una caída veloz de la asimilación tras los primeros diez minutos.",
+            "c) Que la atención mejora notablemente al final por miedo al examen de grado."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Revela una pauta de caída veloz de la asimilación tras los primeros 10 minutos. Ubicación: Capítulo IV, página 75."
+    },
+    {
+        "q": "1825. La secuencia histórica del bolígrafo a la calculadora en el texto sostiene que:",
+        "options": [
+            "a) La escuela ha sido históricamente reacia a la introducción de novedades tecnológicas.",
+            "b) El bolígrafo fue el mayor enemigo del aprendizaje en el siglo XIX.",
+            "c) Las calculadoras impiden totalmente el desarrollo del pensamiento lógico."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: La escuela ha sido históricamente reacia a la introducción de cualquier novedad tecnológica e incluso pretecnológica. Ubicación: Capítulo IV, página 77."
+    },
+    {
+        "q": "1832. La condición de situar al alumno en «condiciones didácticas fecundas» exige que:",
+        "options": [
+            "a) El estudiante siempre obtenga algún provecho de lo que haga, sea cual sea su nivel.",
+            "b) Todos los alumnos aprendan lo mismo al mismo segundo exacto.",
+            "c) Se elimine al maestro para que el alumno aprenda solo frente a la pantalla."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Exige que... a cada estudiante se le sitúe en condiciones didácticas fecundas para él; es decir, que siempre pueda obtener algún provecho. Ubicación: Capítulo III, página 63."
+    },
+    {
+        "q": "1833. ¿Qué distingue la visibilidad del trabajo del estudiante respecto al profesional?",
+        "options": [
+            "a) El estudiante trabaja en secreto mientras el profesional es vigilado 24 horas.",
+            "b) El trabajo del estudiante es siempre visible; el profesional no soportaría tal observación.",
+            "c) No existe ninguna diferencia, ambos son vigilados por un jefe de taller."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: El trabajo del estudiante es siempre visible, mientras que el profesional en ejercicio no soportaría que se los observase de modo permanente. Ubicación: Capítulo V, página 112."
+    },
+    {
+        "q": "1843. Lograr consensos sobre lo común en el currículum afecta a los planos de:",
+        "options": [
+            "a) Política general, programación de centros y labor del profesor en el aula.",
+            "b) Economía nacional, sindicatos obreros y partidos políticos regionales.",
+            "c) Arquitectura escolar, mobiliario de aula y tipos de papel para libros."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Los planos de decisión de política general (curriculum básico), la programación que realizan los centros y lo que hace... el profesor en su aula. Ubicación: Capítulo III, página 63."
+    },
+    {
+        "q": "1845. Ante organizaciones contemporáneas, ¿qué capacidades son indispensables en estudiantes?",
+        "options": [
+            "a) Interacción efectiva, interactuar con personas, controlar su vida, trabajo en equipo e iniciativa.",
+            "b) Obediencia ciega, silencio total y repetición exacta de fechas históricas.",
+            "c) Habilidades de supervivencia extrema en entornos naturales sin tecnología."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Capacidades como interaccionar de un modo efectivo, interactuar con personas, controlar la propia vida... iniciativa y espíritu emprendedor. Ubicación: Capítulo IV, página 87."
+    },
+    {
+        "q": "1856. La evidencia sobre atención en pedagogía transmisiva recogida por Feito muestra:",
+        "options": [
+            "a) Que la atención de los alumnos va decreciendo a medida que la explicación se desarrolla.",
+            "b) Que los alumnos aprenden un 300% más si el profesor habla más fuerte.",
+            "c) Que la atención es constante y no depende en absoluto del método didáctico."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: La atención de los alumnos a lo que dice el docente va decreciendo a medida que la explicación se desarrolla. Ubicación: Capítulo IV, página 75."
+    },
+    {
+        "q": "1871. ¿Cuál es el último eslabón en la transmisión cultural escolar?",
+        "options": [
+            "a) El boletín de calificaciones bimestral.",
+            "b) El libro de texto.",
+            "c) La pizarra de tiza y el borrador de lana."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: El libro de texto. Es el último reductor de la experiencia en las aulas, el último paso en el proceso de especialización pedagógica. Ubicación: Capítulo VI, página 115."
+    },
+    {
+        "q": "1872. ¿Qué distinción se establece entre el libro de texto y otros libros?",
+        "options": [
+            "a) El de texto es para tareas y evaluación; otros pueden ser recreativos.",
+            "b) El de texto es gratuito y los otros son siempre propiedad de los directores.",
+            "c) Solo los libros de texto tienen autores reconocidos por leyes internacionales."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: El libro de texto es un libro para llevar a clase, para estudiar y hacer ejercicios, no para entretenerse. Ubicación: Capítulo VI, página 114."
+    },
+    {
+        "q": "1885. La brecha entre currículum declarado y producido es un rasgo estructural porque:",
+        "options": [
+            "a) El currículum real es resultado de una negociación entre maestro y alumnos mediada por la práctica.",
+            "b) Faltan sanciones administrativas fuertes para los maestros que incumplen el plan.",
+            "c) Los planes de estudio oficiales están escritos en idiomas ininteligibles."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: La condición es que el currículum real es el resultado de una negociación entre el maestro y los alumnos, y está mediado por las interpretaciones... Ubicación: Capítulo V (pasim)."
+    },
+    {
+        "q": "1887. Según el habitus de Bourdieu, la escuela no solo transmite saberes sino que:",
+        "options": [
+            "a) Forma hábitos de pensamiento y categorías que permiten comunicación en sociedad.",
+            "b) Es un reglamento disciplinario rígido que los niños deben memorizar en casa.",
+            "c) Debe basar el diseño curricular exclusivamente en la genética del estudiante."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: La escuela no solo transmite saberes particulares, sino que forma hábitos de pensamiento, categorías y esquemas que permiten la comunicación. Ubicación: Capítulo V, páginas 101-102."
+    },
+    {
+        "q": "1910. ¿Qué componentes caracterizan al enfoque reproductor tradicional del currículo?",
+        "options": [
+            "a) Verdad en textos y voz docente, enfoque académico y dominio como éxito.",
+            "b) Trabajo por proyectos abiertos, evaluación formativa y autonomía docente total.",
+            "c) Uso intensivo de internet, debates pluralistas y aprendizaje significativo."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Los componentes son: la verdad está en los textos y en la voz de quien enseña, el currículum se ciñe a los aspectos académicos... Ubicación: Capítulo II, páginas 42-43."
+    },
+    {
+        "q": "1915. Según Perrenoud, en el aula la «excelencia» está vinculada a la «conformidad». Esto revela:",
+        "options": [
+            "a) Que el buen alumno no solo domina contenidos sino que respeta reglas y se compromete.",
+            "b) Que los mejores alumnos son aquellos que rompen todas las normas del centro.",
+            "c) Que la excelencia se mide exclusivamente por la originalidad artística del niño."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Revela que el buen alumno no solo es el que domina el currículum, sino también el que se compromete en las actividades y respeta las reglas. Ubicación: Capítulo V, páginas 109-110."
+    },
+    {
+        "q": "1916. Ante un currículum formal vago y abstracto, el docente debe:",
+        "options": [
+            "a) Limitarse a leer el programa oficial sin hacer ningún cambio creativo.",
+            "b) Realizar un trabajo permanente de reinvención para pasar de la 'trama' al 'tejido'.",
+            "c) Esperar a que el Ministerio le envíe guías detalladas de cada minuto de clase."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: El docente debe realizar un trabajo permanente de reinvención, explicitación, ilustración, reformulación y concreción. Ubicación: Capítulo V, página 92."
+    },
+    {
+        "q": "1921. Sacristán afirma que ciudadanos con comprensión científica son valiosos «pero no basta». ¿Qué falta?",
+        "options": [
+            "a) La dimensión de convivencia, respeto, participación democrática y solidaridad.",
+            "b) El dominio técnico perfecto de al menos cinco lenguas extranjeras.",
+            "c) La acumulación masiva de capital económico para el éxito profesional individual."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Falta la dimensión de la convivencia, el respeto al prójimo, la participación democrática y la solidaridad. Ubicación: Capítulo IV, página 67."
+    },
+    {
+        "q": "1926. ¿Cuál es la idea central de Feito Alonso sobre la educación obligatoria?",
+        "options": [
+            "a) Que debe responder a una sociedad en cambio, superando la pedagogía transmisiva.",
+            "b) Que el currículum debe ser un manual técnico inalterable dictado por políticos.",
+            "c) Que la enseñanza secundaria debe ser exclusivamente para las élites intelectuales."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: El currículum de la educación obligatoria debe responder a las necesidades de una sociedad en continuo cambio, superando la pedagogía transmisiva. Ubicación: Capítulo IV (pasim)."
+    },
+    {
+        "q": "1928. ¿Cuál es la idea central de Perrenoud sobre el currículum?",
+        "options": [
+            "a) El currículum real es diferente del formal y es resultado de negociación maestro-alumno.",
+            "b) El currículum real es idéntico a las leyes educativas nacionales publicadas.",
+            "c) Los alumnos no tienen ninguna influencia sobre lo que sucede dentro del aula."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: La idea central es que el currículum real (lo que realmente se enseña y aprende) es diferente del currículum formal. Ubicación: Capítulo V (pasim)."
+    },
+    {
+        "q": "1929. ¿Qué distingue al currículum real del formal según su naturaleza?",
+        "options": [
+            "a) El formal es imagen de cultura digna de transmitir; el real son experiencias que originan aprendizajes.",
+            "b) El formal es para escuelas privadas de élite y el real para escuelas rurales.",
+            "c) El formal está escrito en papel y el real solo existe en la imaginación del director."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: El currículum formal es una imagen de la cultura digna de transmitirse... el currículum real es un conjunto de experiencias, tareas, actividades. Ubicación: Capítulo V, página 94."
+    },
+    {
+        "q": "1930. El currículum real nunca realiza estrictamente la intención del maestro porque:",
+        "options": [
+            "a) Las resistencias de alumnos y avatares de la práctica impiden el desarrollo previsto.",
+            "b) El maestro no tiene formación académica suficiente para cumplir sus propios deseos.",
+            "c) El Ministerio prohíbe por decreto que los maestros tengan intenciones pedagógicas."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Las actividades, el trabajo escolar de los alumnos, escapan en parte al control del maestro, porque las resistencias de los alumnos y los avatares... Ubicación: Capítulo V, página 95."
+    },
+    {
+        "q": "1931. En la distinción por naturaleza entre currículum formal y real, ¿qué caracteriza al real?",
+        "options": [
+            "a) Es un conjunto de experiencias, tareas y actividades que originan los aprendizajes.",
+            "b) Es gratuito para todos los niveles mientras el formal es pagado en libros.",
+            "c) Es propiedad exclusiva del profesor y el formal es solo del alumno."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: El currículum real es un conjunto de experiencias, tareas, actividades, que originan o se supone han de originar los aprendizajes. Ubicación: Capítulo V, página 94."
+    },
+    {
+        "q": "1932. ¿Cuál es la idea central del texto de María Clemente Linuesa?",
+        "options": [
+            "a) El currículum se desarrolla en tres ámbitos (político, centro y aula) con decisiones específicas.",
+            "b) El diseño curricular debe realizarse únicamente en oficinas gubernamentales centrales.",
+            "c) Las actividades son solo medios mecánicos para memorizar fechas de la historia."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: La idea central es que el currículum se diseña y se desarrolla en tres ámbitos diferenciados (político, centro y aula). Ubicación: Capítulo I (pasim)."
+    },
+    {
+        "q": "1933. Según Sacristán, ¿qué dimensiones pueden ser obstáculos para la escuela inclusiva?",
+        "options": [
+            "a) Dimensiones estructurantes, métodos, evaluación, graduación y actitudes del profesorado.",
+            "b) El color de los uniformes escolares y la marca de los lápices usados en clase.",
+            "c) La distancia geográfica exacta entre la casa del alumno y el edificio escolar."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Las dimensiones estructurantes del currículum, los métodos pedagógicos, los sistemas de evaluación, la organización escolar (graduación, clasificación). Ubicación: Capítulo III (pasim)."
+    },
+    {
+        "q": "1942. ¿Qué par ilustra correctamente lo que regula al currículum y lo que queda regulado por él?",
+        "options": [
+            "a) Regula: tiempo y organización. Regulado: contenidos, actividades y evaluación.",
+            "b) Regula: el sindicato de maestros. Regulado: el salario del portero del centro.",
+            "c) Regula: el clima estacional. Regulado: el tipo de ropa que usan los estudiantes."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Lo que regula al currículum son las dimensiones estructurantes (tiempo, organización, opciones epistémicas). Lo que queda regulado son los contenidos, actividades, evaluación. Ubicación: Capítulo II, página 30-31."
+    },
+    {
+        "q": "1952. ¿Cuál fue el primer antecedente de uso masivo del libro de texto escrito?",
+        "options": [
+            "a) El manual de buenas costumbres de Carreño.",
+            "b) El catecismo.",
+            "c) El diario oficial de la presidencia."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: El catecismo (el primer antecedente de uso masivo de “libro de texto” escrito). Ubicación: Capítulo VI, página 116."
+    },
+    {
+        "q": "1954. «Diseñar el currículum» atribuye a la globalización un fundamento psicológico:",
+        "options": [
+            "a) Adecuar el saber al modo de pensar sincrético y global de los niños (Decroly).",
+            "b) El condicionamiento operante basado en castigos físicos de Skinner.",
+            "c) La teoría de cuerdas aplicada al pensamiento lógico de los adolescentes."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: La globalización fue en principio propuesta por DECROLY... quienes pretendían adecuar el conocimiento al modo de pensar de los niños más pequeños, pensamiento que consideraban sincrético y global. Ubicación: Capítulo I, página 21."
+    },
+    {
+        "q": "1977. La restricción de no hacer cualquier cosa en clase se fundamenta estructuralmente en:",
+        "options": [
+            "a) El miedo a la inspección policial de los centros de educación elemental.",
+            "b) La función reguladora que establece orden secuencial, tiempos y niveles.",
+            "c) La escasez de papel para imprimir planes de estudio nuevos cada lunes."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: La función reguladora del currículum, que establece un orden secuencial de contenidos, tiempos y niveles de exigencia que define lo que es aceptable y normal. Ubicación: Capítulo II, página 28."
+    },
+    {
+        "q": "1985. Gimeno Sacristán sostiene que hay que evitar la sinécdoque en la enseñanza. Esto exige:",
+        "options": [
+            "a) Que el docente se perciba como enseñante-educador, con fines más amplios que contenidos.",
+            "b) Que el docente deje de enseñar contenidos y solo cuente anécdotas de su vida.",
+            "c) Limitarse a aplicar manuales técnicos del gobierno sin cuestionarlos jamás."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Exige que el docente se perciba a sí mismo como enseñante-educador, reconociendo que los fines de la educación son más amplios que los contenidos. Ubicación: Capítulo II, página 35."
+    },
+    {
+        "q": "2001. Al plantear actividades, el docente diseña la práctica en un doble sentido:",
+        "options": [
+            "a) El aprendizaje de contenidos y la vida social del aula.",
+            "b) Que el docente debe cobrar dos sueldos distintos por hora trabajada.",
+            "c) Que las actividades sociales deben realizarse obligatoriamente fuera del centro."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Las actividades no deben diseñarse solo para que los estudiantes aprendan un contenido, sino también para crear una determinada vida social en el aula. Ubicación: Capítulo I, página 22."
+    },
+    {
+        "q": "2027. ¿Qué característica distingue a los proyectos de mejora e innovación según Linuesa?",
+        "options": [
+            "a) Son siempre particulares de cada centro y por tanto no prefigurados de antemano.",
+            "b) Son obligatorios por decreto supremo para todas las escuelas sin excepción.",
+            "c) Tienen un presupuesto de implementación siempre superior al plan nacional."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Los proyectos de mejora e innovación que serán siempre particulares de cada centro y por tanto no prefigurados de antemano. Ubicación: Capítulo I, página 16."
+    },
+    {
+        "q": "2073. Al ilustrar evaluación por competencias, Feito usa la pregunta PISA sobre las tazas porque:",
+        "options": [
+            "a) No tiene ninguna fórmula; basta con sentido común, razonar y excluir lo improbable.",
+            "b) Es una pregunta de física nuclear que requiere diez años de estudio previo.",
+            "c) Los alumnos españoles suelen fallar por falta de tazas en los laboratorios escolares."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: No hay ninguna fórmula que aplicar para resolver esta cuestión. Basta con proceder con el sentido común, razonar y excluir las respuestas improbables. Ubicación: Capítulo IV, página 86."
+    },
+    {
+        "q": "2078. ¿Qué tipo de desviación de la práctica docente es especialmente vigilada por la administración?",
+        "options": [
+            "a) Dejar en la sombra componentes esenciales o introducir contenidos prohibidos.",
+            "b) Usar bolígrafos de color violeta en lugar de los permitidos de color azul.",
+            "c) No saludar militarmente al director al ingresar al edificio escolar cada mañana."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Las desviaciones considerables están prohibidas, especialmente si el maestro deja en la sombra algunos componentes del currículum formal que se consideran esenciales. Ubicación: Capítulo V, páginas 93-94."
+    },
+    {
+        "q": "2124. ¿Qué distingue al criterio psicológico de los demás según Clemente Linuesa?",
+        "options": [
+            "a) Es esencial para organizar y secuenciar contenidos, no solo para seleccionarlos.",
+            "b) Es el único criterio que se basa íntegramente en el presupuesto nacional anual.",
+            "c) No tiene ninguna diferencia conceptual o práctica con el criterio epistemológico."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: El criterio psicológico tiene un carácter distinto a los anteriores, además, es esencial para organizar y secuenciar los contenidos y no solo para seleccionarlos. Ubicación: Capítulo I, página 20."
+    },
+    {
+        "q": "2138. ¿En qué «abismo teleológico» la idea de la educación se empobrece según Sacristán?",
+        "options": [
+            "a) En el abismo entre el discurso educativo (lo deseable) y la realidad de la práctica.",
+            "b) En la falta de conexión a fibra óptica de alta velocidad en las zonas rurales.",
+            "c) En la diferencia salarial entre los maestros de primaria y los de secundaria."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Al aceptar la elevación del currículum a la categoría de proyecto educativo aparece una clara distancia entre el discurso y la realidad. En ese “abismo teleológico” la idea de la educación se empobrece. Ubicación: Capítulo II, página 35."
+    },
+    {
+        "q": "2144. ¿Cuál es la posición de Sacristán respecto al libro de texto y las tecnologías?",
+        "options": [
+            "a) Crítica pero matizada: reconoce importancia pero denuncia monopolio y depauperación.",
+            "b) Apoyo incondicional y entusiasmo total por la digitalización del 100% del aula.",
+            "c) Propone la quema total de libros para volver exclusivamente a la tradición oral."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: La posición de Sacristán es crítica pero matizada. Reconoce la importancia del libro de texto como instrumento, pero critica su monopolio y su depauperación cultural. Ubicación: Capítulo VI (pasim)."
+    },
+    {
+        "q": "2166. ¿Qué efecto tiene la segregación entre centros públicos y privados sobre el sistema?",
+        "options": [
+            "a) Parece formalmente igualador, aunque mantiene desigualdades sociales en su seno.",
+            "b) Los centros privados son siempre mejores que los públicos por una ley natural oculta.",
+            "c) El Estado ahorra una fortuna al permitir que existan empresas de educación privada."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Estamos ante un sistema educativo que, formalmente, parece igualador, aunque sigue manteniendo importantes desigualdades en su seno. Ubicación: Capítulo III, página 65."
+    },
+    {
+        "q": "2169. ¿Qué función cumple la evaluación informal del maestro según Perrenoud?",
+        "options": [
+            "a) Controlar el compromiso del alumno con el trabajo escolar y su calidad.",
+            "b) Determinar quién será el abanderado de la escuela en el desfile de fiestas patrias.",
+            "c) Sancionar económicamente a los padres que no revisan la tarea de sus hijos."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Su papel principal es controlar el compromiso del alumno con el trabajo escolar y su calidad. Ubicación: Capítulo V, página 112."
+    },
+    {
+        "q": "2171. ¿Qué función subyace al currículum moral escolar más allá de lo idealista?",
+        "options": [
+            "a) Interiorizar el orden moral, social, desigualdades y respeto a la autoridad.",
+            "b) Enseñar a los niños a rezar el rosario en latín todos los días de clase.",
+            "c) Prohibir estrictamente que los alumnos hablen durante los diez minutos de recreo."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Contribuir a la socialización de las nuevas generaciones, hacer que interioricen el orden moral y social, la existencia y legitimidad de las desigualdades... Ubicación: Capítulo V, página 97."
+    },
+    {
+        "q": "2173. Según Bourdieu, ¿qué impone la escuela estructuralmente a individuos de una época?",
+        "options": [
+            "a) Un programa homogéneo de percepción, pensamiento y acción (hábito cultivado).",
+            "b) El uso obligatorio de caligrafía palmer para todos los cuadernos de dibujo.",
+            "c) La obligación moral de convertirse en millonarios antes de cumplir los 30 años."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Los individuos “programados”, es decir dotados de un programa homogéneo de percepción, pensamiento y acción, constituyen el producto más específico de un sistema de enseñanza. Ubicación: Capítulo V, página 102."
+    },
+    {
+        "q": "2191. La transposición pragmática se distingue de la simple interpretación porque:",
+        "options": [
+            "a) El currículum real está mediado por restricciones de práctica y dinámica de grupo.",
+            "b) Es un cálculo matemático exacto para traducir objetivos educativos a números.",
+            "c) Consiste simplemente en cambiar el nombre de una materia vieja por una nueva."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Constituye una transposición pragmática... mediada por las restricciones de la práctica, las resistencias de los alumnos y la dinámica del grupo. Ubicación: Capítulo V, página 95."
+    },
+    {
+        "q": "2244. ¿Cuál era la característica principal de la Biblia de los pobres?",
+        "options": [
+            "a) Transmitían mensajes con textos ilustrados que servían de guiones para narrar.",
+            "b) Eran libros de oro puro entregados exclusivamente por los reyes a los santos.",
+            "c) Estaban terminantemente prohibidos por la Iglesia medieval por ser demasiado científicos."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Transmiten los mensajes o contenidos a través de textos ilustrados, o solamente con imágenes, que son utilizadas como guiones para darle significado a la narración. Ubicación: Capítulo VI, página 116."
+    },
+    {
+        "q": "2247. ¿Qué función de la idea de ciclo en primaria es relevante para la diversidad?",
+        "options": [
+            "a) Frena tendencia a especialización, da ritmos diferentes y resta controles jerarquizadores.",
+            "b) Permite que los niños no asistan a clases durante un año entero sin perder el cupo.",
+            "c) Obliga a los padres a comprar tres tipos de libros diferentes cada semestre escolar."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Frena los efectos perniciosos de la tendencia a la especialización... da acogida a ritmos diferentes de aprendizaje y resta oportunidades para que proliferen los controles selectivos. Ubicación: Capítulo III, página 61."
+    },
+    {
+        "q": "2303. La contradicción entre PISA y lo que priorizan los Centros evidencia un problema de:",
+        "options": [
+            "a) Evaluación (competencias versus aprendizaje memorístico).",
+            "b) Falta de mobiliario de oficina moderno para los directores de las escuelas.",
+            "c) Insuficiente cantidad de horas semanales dedicadas a la educación física."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: El PISA evalúa competencias y los centros escolares españoles privilegian lo memorístico. Esto se detecta claramente en las evaluaciones. Ubicación: Capítulo IV, páginas 80-81."
+    },
+    {
+        "q": "2363. Según Perrenoud, las libertades docentes sin control directo consisten en:",
+        "options": [
+            "a) Modular la importancia respectiva de cada encabezamiento o capítulo del programa.",
+            "b) Llegar tarde a las reuniones de consejo técnico sin dar ninguna explicación válida.",
+            "c) Ignorar totalmente el plan de estudios nacional y enseñar artes de pesca."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Respetando todas las materias, todos los encabezamientos de los capítulos, pueden modular la importancia respectiva de cada uno, sin exponerse a un control directo. Ubicación: Capítulo V, página 94."
+    },
+    {
+        "q": "2382. ¿Cuál es la diferencia estructural entre las posturas de Kirk (defensores) y Apple (detractores)?",
+        "options": [
+            "a) Defensores: potencia igualdad. Detractores: cuestionan cohesión dada la diversidad.",
+            "b) Defensores: quieren libros de cartón. Detractores: prefieren libros de madera tallada.",
+            "c) Defensores: piden más vacaciones. Detractores: piden menos días de descanso."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Los defensores (Kirk) argumentan que potencia la igualdad... Los detractores (Apple) cuestionan la virtualidad de crear cohesión social dadas las diferencias. Ubicación: Capítulo I, páginas 13-14."
+    },
+    {
+        "q": "2385. El currículum oculto en sentido estricto se distingue porque:",
+        "options": [
+            "a) Se refiere a rutinas que originan regularmente aprendizajes ignotos (oculto doble).",
+            "b) Es un manual secreto de ritos satánicos enterrado bajo los cimientos del centro.",
+            "c) Se refiere exclusivamente a las materias de religión que se dictan de noche."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: El currículum oculto, en sentido estricto, se refiere a las condiciones y rutinas de la vida escolar que originan regularmente aprendizajes ignotos. Ubicación: Capítulo V, página 101."
+    },
+    {
+        "q": "2415. ¿Qué exigencia impone al estudiante la fragmentación extrema del trabajo escolar?",
+        "options": [
+            "a) La capacidad de movilizar competencias mínimas en muy pocos minutos.",
+            "b) Saber volar de una aula a otra para que el director no le ponga una falta.",
+            "c) Memorizar el horario de transporte público de toda la zona metropolitana."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Exige no solo unas mínimas competencias en cada materia, sino la capacidad de movilizarlas en unos minutos. Ubicación: Capítulo V, páginas 111-112."
+    },
+    {
+        "q": "2459. ¿A qué alude la noción de experiencia codificada en transmisión cultural?",
+        "options": [
+            "a) Al recurso a fuentes (escritura, imagen) para acceder a vivencias de otros tiempos.",
+            "b) A las notas con códigos secretos que los alumnos se pasan durante el examen.",
+            "c) A la encriptación de datos de los servidores centrales del Ministerio de Educación."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Se tiene que recurrir a las fuentes codificadas del saber, única forma de acceder a lo que se hizo, pensó o sintió en otros tiempos y lugares. Ubicación: Capítulo VI, página 116."
+    },
+    {
+        "q": "2461. Un adulto convive en una oficina abarrotada. Perrenoud atribuye esta capacidad a:",
+        "options": [
+            "a) Su experiencia escolar previa (vivir en una masa, tolerar interrupciones).",
+            "b) Una mutación genética producida por la evolución en la era postindustrial.",
+            "c) Un curso intensivo de relajación espiritual realizado durante la universidad."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Si los adultos son capaces de vivir en una cierta promiscuidad con desconocidos, se debe en parte a su experiencia escolar. Ubicación: Capítulo V, página 101."
+    },
+    {
+        "q": "2472. Según «La educación obligatoria», ¿a qué proceso es inherente el bajo rendimiento escolar?",
+        "options": [
+            "a) A la escolarización universal real (obligatoriedad efectiva).",
+            "b) A la invención de la pólvora para los cañones de la edad moderna.",
+            "c) Al descubrimiento accidental del continente americano en el siglo XV."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: La idea de fracaso escolar tiene muy corta historia... la misma que la de la escolarización universal real, ya que el “bajo rendimiento escolar” es inherente a ella. Ubicación: Capítulo III, página 54."
+    }
+];
+    </script>
+    <script src="codes.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>

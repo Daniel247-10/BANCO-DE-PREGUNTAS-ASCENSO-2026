@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Preguntas - DISEÑO (BLOQUE 3)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Banco de Preguntas - DISEÑO, DESARROLLO E INNOVACIÓN</h1>
+        <div class="subtitle">Examen de Ascenso 2026 - BLOQUE 3</div>
+    </header>
+
+    <div id="quiz-container"></div>
+
+    <div style="text-align: center; margin: 20px 0;">
+        <a href="index.html" class="back-link">&larr; Volver al Inicio</a>
+    </div>
+
+    <script>
+        window.quizData = [
+    {
+        "q": "529. Que el currículum refleje distintos tipos de luchas tiene una consecuencia directa para quienes lo gestionan desde enfoques tecnocráticos. ¿Cuál es?",
+        "options": [
+            "a) Que deben renunciar a sus cargos y dejar que los políticos decidan todo.",
+            "b) Que los enfoques tecnocráticos esconden sus opciones culturales en argumentos técnicos.",
+            "c) Que la tecnología resolverá todos los conflictos sociales automáticamente."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Que los enfoques tecnocráticos esconden sus opciones culturales, epistémicas y políticas en argumentos técnicos que poco aclaran los conflictos subyacentes. Ubicación: Capítulo II, página 40-41. [60, 74]"
+    },
+    {
+        "q": "530. Según Sacristán, ¿qué significa que la discusión curricular bajo la óptica de la experiencia cultural subjetiva quede «muy pendiente de la categoría aprendizaje»?",
+        "options": [
+            "a) Que el profesor pierde la dirección en cuanto a la decisión básica: ¿qué cultura impartir?",
+            "b) Que los alumnos aprenden más rápido cuando ellos mismos eligen los libros.",
+            "c) Que los contenidos desaparecen totalmente y solo se evalúa la felicidad del niño."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Significa que si el criterio es la maduración de la experiencia, ese criterio lo ha de encontrar el profesor en cada situación. Es una perspectiva que no proporciona dirección: ¿qué cultura impartir? Ubicación: Capítulo II, página 44. [74, 75]"
+    },
+    {
+        "q": "531. Un maestro omite en la prueba final los contenidos que no alcanzó a desarrollar. ¿Qué principio de \"El currículum real y el trabajo escolar\" explica esto?",
+        "options": [
+            "a) El principio de negligencia profesional por no cumplir el plan estatal.",
+            "b) El principio de que la enseñanza y la evaluación son dos caras de la misma moneda.",
+            "c) El principio de autonomía absoluta que permite al maestro hacer lo que quiera."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: El principio de que la enseñanza y la evaluación son dos caras de la misma moneda. El maestro evalúa a sus alumnos en función de lo que en realidad ha hecho con ellos. Ubicación: Capítulo V, página 91. [74, 76]"
+    },
+    {
+        "q": "532. Se considera normal que los contenidos se organicen por asignaturas separadas. ¿Qué revela esto?",
+        "options": [
+            "a) Que las asignaturas son leyes de la naturaleza imposibles de cambiar.",
+            "b) Revela que las dimensiones estructurantes del currículum son implícitas e invisibles.",
+            "c) Que los alumnos aprenden mejor cuando el conocimiento está fragmentado."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Revela que las dimensiones estructurantes del currículum son implícitas e invisibles para quienes actúan en la práctica. Es una opción no necesaria que podría haber sido de otra manera. Ubicación: Capítulo II, página 33. [74, 77]"
+    },
+    {
+        "q": "533. Sacristán describe una estructura de la práctica educativa moderna. ¿Qué condición hace que esa estructura resulte funcional como sistema?",
+        "options": [
+            "a) La libertad total de los alumnos para entrar y salir del aula cuando quieran.",
+            "b) La regulación a través de un orden secuencial, la clasificación (clase/grado) y métodos estandarizados.",
+            "c) El uso masivo de internet para reemplazar las clases presenciales."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: La estructura es funcional porque permite regular la enseñanza a través del establecimiento de un orden secuencial (currículum), la clasificación de los alumnos y métodos estandarizados. Ubicación: Capítulo II, páginas 27-28. [53, 54, 58, 313/314]"
+    },
+    {
+        "q": "534. El currículum real es resultado de una negociación. ¿Qué aspecto de esa negociación resulta más relevante?",
+        "options": [
+            "a) El monto de dinero que los padres pagan por los materiales adicionales.",
+            "b) Que los alumnos disponen de cierto control sobre el ritmo e intensidad del trabajo escolar.",
+            "c) La votación democrática semanal para elegir qué materias se estudian."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Lo más relevante es que los alumnos disponen de cierto control sobre el ritmo e intensidad del trabajo escolar, y el maestro tiene en cuenta sus preferencias y resistencias. Ubicación: Capítulo V, páginas 95-96. [19, 39, 78]"
+    },
+    {
+        "q": "535. ¿Qué supone la afirmación de Feito de que el proverbio «escucho y olvido, veo y recuerdo y hago y aprendo» sintetiza la crítica a la pedagogía transmisiva?",
+        "options": [
+            "a) Supone que el aprendizaje es más efectivo cuando se hace de manera activa y experimental.",
+            "b) Que el oído es el sentido menos desarrollado de los seres humanos.",
+            "c) Que no se debe hablar en clase para no distraer a los que están haciendo algo."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Supone que el aprendizaje es más efectivo cuando se hace de manera activa y experimental, no solo escuchando pasivamente (pedagogía transmisiva). Ubicación: Capítulo IV, página 75. [78, 79]"
+    },
+    {
+        "q": "539. Sacristán advierte que la incorporación del currículum a la tradición anglosajona no fue casual. ¿Qué consecuencia epistemológica se desprende?",
+        "options": [
+            "a) Que el currículum es una verdad universal válida para todos los planetas.",
+            "b) La consecuencia es que el currículum no es un concepto neutral, sino determinado históricamente.",
+            "c) Que solo los países que hablan inglés saben diseñar currículos educativos."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: La consecuencia es que el currículum no es un concepto neutral, sino que está determinado por fuerzas sociales e ideológicas. Su significado depende del contexto histórico y cultural. Ubicación: Capítulo II, página 26. [78, 80]"
+    },
+    {
+        "q": "540. Cuando Bourdieu sostiene que la escuela actúa como «fuerza formadora de hábitos», ¿qué distingue ese aporte del simple dominio de saberes?",
+        "options": [
+            "a) Que la escuela enseña a cepillarse los dientes y a peinarse correctamente.",
+            "b) Forma hábitos de pensamiento y esquemas que permiten la comunicación en sociedad.",
+            "c) Que los saberes son inútiles si no se acompañan de un título profesional."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: La escuela no solo transmite saberes particulares, sino que forma hábitos de pensamiento, categorías y esquemas que permiten la comunicación. Los individuos \"programados\" son su producto específico. Ubicación: Capítulo V, páginas 101-102. [78, 81]"
+    },
+    {
+        "q": "542. ¿Qué rasgo del currículo moral escolar lleva a Perrenoud a afirmar que no puede considerarse oculto?",
+        "options": [
+            "a) Que está escrito en letras gigantes en la entrada de todos los colegios.",
+            "b) Los actores sociales tienen la intuición de que en la escuela se forman mujeres y hombres.",
+            "c) Que es una materia que tiene examen final con nota obligatoria."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: El currículum moral no puede considerarse verdaderamente oculto porque los políticos, padres y profesionales tienen la intuición de que en la escuela se forman personas para una sociedad. Ubicación: Capítulo V, páginas 97-98. [243, 314/315]"
+    },
+    {
+        "q": "543. ¿Qué distingue las normas de excelencia de las tareas discursivas respecto a las de los ejercicios individuales?",
+        "options": [
+            "a) En las discursivas se valora la iniciativa y originalidad; en los individuales la rapidez y exactitud.",
+            "b) No hay distinción, en ambas solo se evalúa que la letra sea bonita y legible.",
+            "c) En los ejercicios individuales se permite copiar del compañero; en las discursivas no."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: En las tareas discursivas trabajar bien consiste en tomar la iniciativa y dar muestras de originalidad. En los individuales, consiste en ponerse a trabajar con rapidez y hacer todos los ejercicios. Ubicación: Capítulo V, páginas 108-109. [82-84]"
+    },
+    {
+        "q": "545. ¿Qué implica que el aprendizaje del sentido común forme parte del oficio de alumno?",
+        "options": [
+            "a) Que es un aprendizaje funcional que permite al alumno no perturbar el orden escolar.",
+            "b) Que los alumnos deben tener permiso de sus padres para usar el sentido común.",
+            "c) Implica que los alumnos sin sentido común deben ser expulsados del sistema."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Implica que el aprendizaje del sentido común es un aprendizaje funcional para la organización escolar, que permite al alumno desempeñar su papel sin perturbar el orden. Ubicación: Capítulo V, páginas 103-104. [84, 85]"
+    },
+    {
+        "q": "547. Perrenoud sostiene que la valoración del «buen alumno» no se reduce al dominio de contenidos. ¿Qué criterios de excelencia operan realmente?",
+        "options": [
+            "a) La capacidad de pago puntual de las cuotas de la junta de padres.",
+            "b) El compromiso con la tarea y el respeto a las reglas de cooperación y comunicación.",
+            "c) Tener el uniforme escolar siempre impecable y zapatos lustrados."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Revela que el buen alumno no es solo el que domina el currículum, sino también el que se compromete en las actividades y respeta las reglas de cooperación y comunicación. Ubicación: Capítulo V, páginas 109-110. [84, 86]"
+    },
+    {
+        "q": "551. ¿Qué argumento aporta Capra al debate sobre la globalización curricular que Feito incorpora?",
+        "options": [
+            "a) El paso del pensamiento analítico al sistémico: las partes solo se entienden en el conjunto.",
+            "b) Que el calentamiento global obliga a estudiar ciencias naturales todo el día.",
+            "c) Que la globalización económica exige que todos los niños aprendan chino mandarín."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Capra explica la revolución científica como el paso del pensamiento analítico al sistémico. Las propiedades de las partes solo se pueden comprender en el contexto del conjunto. Ubicación: Capítulo IV, página 75. [79, 84]"
+    },
+    {
+        "q": "553. ¿Cuál es la posición de Sacristán respecto de los modelos pedagógicos en referencia al currículo?",
+        "options": [
+            "a) Apoya totalmente el modelo tradicional por su rigor académico.",
+            "b) Critica ambos enfoques (tradicional y progresista) y señala que el giro al aprendizaje no aclara qué cultura impartir.",
+            "c) Propone un modelo basado solo en el uso de computadoras sin intervención docente."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Sacristán critica tanto el enfoque tradicional como el progresista. Considera que el giro hacia el aprendizaje es importante, pero no proporciona una dirección clara sobre qué cultura impartir. Ubicación: Capítulo II, página 44. [75, 87]"
+    },
+    {
+        "q": "554. ¿Qué consecuencia puede inferirse de la expansión de las tecnologías de imagen en los libros de texto?",
+        "options": [
+            "a) Que el libro de texto ahora es tan divertido como un videojuego.",
+            "b) La imagen se convierte a menudo en un mero elemento de ocupación de espacio.",
+            "c) Que los estudiantes ya no necesitan aprender a leer, solo a ver dibujos."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Que el libro de texto pudo haber puesto más énfasis en el texto, pero con la expansión de las imágenes, la imagen se convierte en un elemento de ocupación de espacio. Ubicación: Capítulo VI, página 118. [87, 88]"
+    },
+    {
+        "q": "555. Cuando se compara la cultura escolar con la cultura carcelaria, ¿qué particularidad distingue al estudiante?",
+        "options": [
+            "a) Que el estudiante tiene derecho a salir de la escuela a las 12:30.",
+            "b) Que para los alumnos no hay demarcación clara entre cultura escolar y cultura de la organización.",
+            "c) Que los estudiantes visten uniformes de colores más alegres que los reos."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: La particularidad es que para los alumnos no hay demarcación clara entre la cultura escolar (currículum) y la cultura de la organización. Una encubre a la otra. Ubicación: Capítulo V, página 105. [87, 89]"
+    },
+    {
+        "q": "560. Entre los aspectos del poder regulador figura el modelo de individuo normal. ¿Qué consecuencia tiene?",
+        "options": [
+            "a) Que todos los alumnos terminan siendo idénticos como robots.",
+            "b) Se establece un estándar de normalidad que define el éxito y el fracaso.",
+            "c) Que no se permite la entrada de alumnos con anteojos o zurdos."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: La consecuencia es que se establece un estándar de normalidad que define el éxito y el fracaso. Quienes no se ajustan son etiquetados como \"anormales\". Ubicación: Capítulo II, página 27. [87, 90]"
+    },
+    {
+        "q": "561. ¿Qué implica que la intersección entre cultura escolar y cultura de la organización no sea ni nula ni total?",
+        "options": [
+            "a) Que hay aprendizajes que sirven a la vez a los objetivos del plan y a la funcionalidad escolar.",
+            "b) Que los maestros están confundidos y no saben qué están enseñando realmente.",
+            "c) Que el currículum formal es una mentira absoluta que nadie cumple."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Implica que hay un conjunto de aprendizajes que corresponden a la vez a los objetivos del plan de estudios y a las exigencias funcionales de la organización escolar. Ubicación: Capítulo V, página 106. [266, 316/317]"
+    },
+    {
+        "q": "577. Sacristán recurre a la imagen de un juego para explicar las reglas curriculares. ¿Qué aspecto queda iluminado?",
+        "options": [
+            "a) Que la educación es una broma que no debe tomarse en serio.",
+            "b) Las reglas establecen un marco que define lo permitido y los participantes deben aprender a moverse en él.",
+            "c) Que el que pierde el juego del currículum debe ser expulsado del país."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: La imagen del juego ilumina el aspecto de que las reglas curriculares establecen un marco que define lo que está permitido y lo que no, y que los participantes deben aprender a moverse dentro. Ubicación: Capítulo II, página 33. [91, 92]"
+    },
+    {
+        "q": "578. En «El currículum real y el trabajo escolar», ¿qué justifica la comparación entre el trabajo escolar y actividades laborales lucrativas?",
+        "options": [
+            "a) Que los alumnos reciben un salario mensual por asistir a clases.",
+            "b) Se realizan por motivos externos (aprobación/éxito) sin alegría ni interés personal.",
+            "c) Que los maestros actúan como capataces de una fábrica textil."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: El trabajo escolar se aproxima a las tareas profesionales lucrativas, realizadas sin alegría ni interés personal, que buscan la remuneración (aprobación de adultos y éxito escolar). Ubicación: Capítulo V, página 110. [92, 93]"
+    },
+    {
+        "q": "580. En el análisis sobre clasificaciones escolares, ¿qué consecuencia paradójica se deriva?",
+        "options": [
+            "a) Aunque busca ordenar, una parte de la diversidad permanece como ruido molesto y genera desigualdad.",
+            "b) Que los alumnos clasificados como \"A\" se vuelven amigos de los clasificados como \"C\".",
+            "c) Que las clasificaciones desaparecen automáticamente cuando se usa el internet."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: La consecuencia paradójica es que, aunque la clasificación busca ordenar la diversidad, al distribuir en categorías, una parte de la diversidad permanece en forma de ruido molesto. Ubicación: Capítulo III, página 58. [92, 94, 95]"
+    },
+    {
+        "q": "588. Una docente planifica historia priorizando solo el programa oficial y la secuencia lógica. ¿Qué criterio está descuidando según Linuesa?",
+        "options": [
+            "a) El criterio administrativo de foliación de cuadernos.",
+            "b) Está descuidando el criterio psicológico (nivel de desarrollo y aprendizaje significativo).",
+            "c) El criterio de selección de personal del Ministerio de Trabajo."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Está descuidando el criterio psicológico, que se refiere a tener en cuenta el nivel de desarrollo del alumno y cómo hacer del aprendizaje algo significativo. Ubicación: Capítulo I, páginas 19-20. [92, 96]"
+    },
+    {
+        "q": "594. ¿Qué efecto produce la indistinción entre cultura escolar y de la organización sobre el alumno?",
+        "options": [
+            "a) Que el alumno cree que las rutinas burocráticas son leyes científicas de la naturaleza.",
+            "b) Lo que deben aprender encubre lo que necesitan para desempeñar su \"oficio\" de alumno.",
+            "c) El alumno se vuelve un experto en leyes administrativas escolares."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: La indistinción provoca que lo que deben aprender los alumnos de acuerdo con los objetivos de la enseñanza encubre lo que deben aprender para desempeñar su \"oficio\". Ubicación: Capítulo V, página 105. [264, 317/318]"
+    },
+    {
+        "q": "719. ¿Por qué definir los contenidos de cada materia resulta más conflictivo que establecer qué asignaturas deben enseñarse?",
+        "options": [
+            "a) Porque las asignaturas se eligen por sorteo, pero los contenidos requieren votación.",
+            "b) Porque implica decisiones espinosas (ej. ¿por qué polinomios y no estadística?) que tocan intereses.",
+            "c) Porque los libros de texto ya traen las asignaturas pero no los contenidos."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Porque una vez decidido qué materias forman parte, queda la más espinosa cuestión de cuáles hayan de ser sus contenidos. Ej. ¿por qué polinomios y muy poco de estadística? Ubicación: Capítulo IV, página 71. [97, 98]"
+    },
+    {
+        "q": "721. ¿Por qué Perrenoud afirma que revelar el currículum oculto no provoca su desaparición?",
+        "options": [
+            "a) Porque los maestros son tercos y no quieren cambiar sus hábitos.",
+            "b) Porque genera debate sobre su legitimidad y significación respecto a los nuevos objetivos.",
+            "c) Porque el currículum oculto está protegido por leyes de propiedad intelectual."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Porque la manifestación clara del currículum en realidad oculto no llevará consigo su desaparición, sino el debate sobre su legitimidad y su posible significación. Ubicación: Capítulo V, página 99. [13, 98]"
+    },
+    {
+        "q": "722. ¿Por qué la escuela favorece el orden y la aplicación por encima del espíritu crítico y la creatividad?",
+        "options": [
+            "a) Porque es vital conseguir a corto plazo orden y aplicación para que la clase funcione.",
+            "b) Porque el espíritu crítico es un pecado según la mayoría de las religiones.",
+            "c) Porque el Ministerio de Educación prohíbe explícitamente ser creativo."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Porque para la mayoría de los docentes, es vital conseguir de sus alumnos, a corto plazo, orden y aplicación en su trabajo escolar. La escuela puede pasar sin el espíritu crítico. Ubicación: Capítulo V, página 107. [98, 99]"
+    },
+    {
+        "q": "725. ¿Por qué Perrenoud sostiene que aprender a leer y escribir no puede reducirse a un objetivo de la primaria?",
+        "options": [
+            "a) Porque son condiciones de participación necesarias para proseguir toda la escolaridad.",
+            "b) Porque se debe seguir enseñando a leer incluso en la universidad.",
+            "c) Porque los alumnos de secundaria suelen olvidar cómo leer durante las vacaciones."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Porque aprender a leer y escribir son condiciones de participación para proseguir la escolaridad. Un alumno que no sepa leer no puede desempeñar su papel de alumno. Ubicación: Capítulo V, página 105. [98, 100]"
+    },
+    {
+        "q": "729. ¿Por qué vivir en un ambiente superpoblado es un ejemplo paradigmático del currículum oculto?",
+        "options": [
+            "a) Porque los alumnos no son conscientes de este aspecto de su hábito (tolerar interrupciones, etc.).",
+            "b) Porque es una técnica secreta para ahorrar espacio y dinero en infraestructura.",
+            "c) Porque ayuda a los alumnos a prepararse para vivir en ciudades como Hong Kong."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Porque es un aprendizaje que se produce regularmente en la escuela sin que aparezca entre los objetivos oficiales, y los alumnos no son conscientes. Se aprende a vivir en una masa. Ubicación: Capítulo V, página 101. [249, 318/319]"
+    },
+    {
+        "q": "731. ¿Por qué se afirma que el libro de texto es el último reductor de la experiencia en las aulas?",
+        "options": [
+            "a) Porque es el último paso en la especialización pedagógica que limita la comunicación de la cultura.",
+            "b) Porque es el libro más pequeño que el alumno lleva en su mochila.",
+            "c) Porque reduce el tiempo que los alumnos pasan jugando en el patio."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Porque el libro de texto representa un último paso en el proceso de especialización pedagógica de los procesos de transmisión de los saberes, limitando las posibilidades de lectura. Ubicación: Capítulo VI, página 115. [4, 58, 101]"
+    },
+    {
+        "q": "735. ¿Cuál es la razón fundamental por la que el trabajo escolar difiere de los demás trabajos?",
+        "options": [
+            "a) Porque los niños no tienen derecho a sindicarse ni a pedir aumentos.",
+            "b) Es un trabajo no retribuido, impuesto, fragmentado y supervisado constantemente.",
+            "c) Porque el trabajo escolar es siempre divertido y el laboral siempre triste."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: El trabajo escolar es un trabajo no retribuido, en gran medida impuesto, fragmentado, repetitivo y supervisado constantemente. Carece de utilidad inmediata. Ubicación: Capítulo V, páginas 110-112. [101, 102]"
+    },
+    {
+        "q": "737. ¿Por qué la escolarización no es condición suficiente ni necesaria para la formación del sentido común?",
+        "options": [
+            "a) Porque el sentido común es difuso y está contenido en toda la organización social.",
+            "b) Porque el sentido común se hereda de los padres a través del ADN.",
+            "c) Porque solo las personas con títulos universitarios tienen sentido común real."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Porque el sentido común es difuso, está contenido en la menor práctica, la menor interacción, el más menudo objeto de la organización social. Ubicación: Capítulo V, página 103. [59, 101]"
+    },
+    {
+        "q": "739. ¿Por qué el trabajo escolar se aproxima a las tareas profesionales realizadas por motivos puramente lucrativos?",
+        "options": [
+            "a) Porque se realiza sin interés personal, buscando solo aprobación y éxito (remuneración simbólica).",
+            "b) Porque los alumnos reciben dinero por cada buena calificación obtenida.",
+            "c) Porque el objetivo de la escuela es crear futuros empresarios millonarios."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Porque la mayor parte de las tareas son impuestas y, en el mejor de los casos, se soporta el trabajo para asegurarse ventajas o evitarse problemas, similar a las tareas realizadas por remuneración. Ubicación: Capítulo V, página 110. [93, 101]"
+    },
+    {
+        "q": "741. ¿Por qué lo mejor que puede hacer la administración es producir un buen texto curricular?",
+        "options": [
+            "a) Porque no tiene capacidad técnica para ir más allá de crear el texto; los maestros son los intérpretes.",
+            "b) Porque imprimir libros es la forma más barata de educación masiva.",
+            "c) Porque la administración no confía en que los maestros sepan leer."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Porque la administración, en sus prescripciones, no puede ir más allá de crear un buen texto. En vez de ser agencia de su desarrollo, tendrían que crear condiciones pero no suplir funciones. Ubicación: Capítulo II, página 39. [87, 319/320]"
+    },
+    {
+        "q": "744. ¿Por qué las actividades son el elemento más específico del aula por encima de otros componentes?",
+        "options": [
+            "a) Porque articulan la práctica, conforman la vida social y revelan los esquemas del profesor.",
+            "b) Porque son las únicas que figuran en el boletín de calificaciones bimestrales.",
+            "c) Porque no requieren que el maestro prepare nada con anticipación."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Porque las actividades articulan la propia práctica y son mucho más que configuradoras de aprendizajes. Además, conforman la vida social del aula y diseñan la práctica en doble sentido. Ubicación: Capítulo I, página 21. [48, 103]"
+    },
+    {
+        "q": "747. ¿Por qué la escuela pública representa una apuesta a favor de la igualdad? (Recoge una razón)",
+        "options": [
+            "a) Porque en ella debe tener cabida toda la diversidad de estudiantes.",
+            "b) Porque prohíbe el uso de uniformes caros que los padres no pueden pagar.",
+            "c) Porque sus edificios son siempre más grandes que los de las escuelas privadas."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: La escuela pública es una apuesta histórica a favor de la igualdad, porque posibilita el acceso a quienes no tienen recursos propios, y porque en ella debe tener cabida toda la diversidad. Ubicación: Capítulo III, páginas 65-66. [103, 104]"
+    },
+    {
+        "q": "751. ¿Por qué progresistas y conservadores incurren en errores simétricos respecto al currículum?",
+        "options": [
+            "a) Porque ambos quieren eliminar las matemáticas del plan de estudios.",
+            "b) Porque confunden la cultura escolar (conocimiento escolar) con la cultura que dice representar.",
+            "c) Porque ambos grupos están liderados por las mismas personas del Ministerio."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Porque unos y otros confunden la cultura escolar con la cultura que dice representar. Unos niegan toda cultura al rechazar la escolar, otros defienden la escolar creyendo que es la cultura misma. Ubicación: Capítulo II, página 40. [60, 103]"
+    },
+    {
+        "q": "759. ¿Mediante qué mecanismo la escuela legitima las desigualdades?",
+        "options": [
+            "a) Mediante la apreciación del mérito personal, transformando diferencias en escalonamiento de logros.",
+            "b) Mediante el cobro de mensualidades diferenciadas según el barrio.",
+            "c) Por sorteo aleatorio de títulos profesionales al final de la secundaria."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: La escuela legitima las diferencias y desigualdades entre sujetos por la vía de la apreciación del mérito personal de los alumnos, transformándolas en un escalonamiento de los logros escolares. Ubicación: Capítulo III, página 54. [103, 105]"
+    },
+    {
+        "q": "813. ¿Con qué objetivo se incorpora la referencia a la Biblia pauperum?",
+        "options": [
+            "a) Para demostrar que la educación religiosa es obligatoria en todos los países.",
+            "b) Para ilustrar que antes del libro de texto escrito, se instruía con imágenes como guiones de significado.",
+            "c) Para criticar la falta de fe de los estudiantes modernos."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Para ilustrar que antes de que se utilizara el catecismo, se instruía con la imagen o recurriendo al uso de soportes con texto e imagen. La Biblia pauperum transmitía mensajes con imágenes. Ubicación: Capítulo VI, página 116. [295, 320/321]"
+    },
+    {
+        "q": "829. ¿Qué función específica cumplió el concepto de clase en la escolaridad moderna?",
+        "options": [
+            "a) Dividir a los alumnos por su nivel de ingresos económicos exclusivamente.",
+            "b) Distinguir a los alumnos y agruparlos en categorías que los definan y clasifiquen.",
+            "c) Permitir que los alumnos elijan a su maestro favorito cada semestre."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: El concepto de clase (grupo-clase) sirvió para distinguir a unos alumnos de otros y agruparlos en categorías que los definan y los clasifiquen. Ubicación: Capítulo II, página 27. [106, 107]"
+    },
+    {
+        "q": "843. Según Perrenoud, ¿qué tipo de transgresión al programa es la más vigilada?",
+        "options": [
+            "a) Llegar 5 minutos tarde a la clase de educación física.",
+            "b) Las desviaciones considerables, como dejar en la sombra componentes esenciales o introducir contenidos ajenos.",
+            "c) Usar un bolígrafo de tinta roja en lugar de azul para corregir tareas."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Las desviaciones considerables están prohibidas, especialmente si el maestro deja en la sombra algunos componentes del currículum formal esenciales (pecados por omisión) o introduce ajenos. Ubicación: Capítulo V, páginas 93-94. [107, 108]"
+    },
+    {
+        "q": "845. Según Gimeno Sacristán, ¿cuál es la mayor bondad del libro de texto?",
+        "options": [
+            "a) Que es un instrumento capital para proporcionar información traducida pedagógicamente.",
+            "b) Que sirve como escudo para que el maestro no tenga que hablar demasiado.",
+            "c) Que es gratuito y se entrega a todos los niños del mundo sin excepción."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Su mayor bondad es que es un instrumento capital para proporcionar información que, traducida pedagógicamente, sirve de contenido al conocimiento. Es un compañero insustituible. Ubicación: Capítulo VI, páginas 113-114. [58, 107, 109]"
+    },
+    {
+        "q": "849. El concepto de inseguridad lingüística (Bentolila) describe una situación en la que la incapacidad de expresión:",
+        "options": [
+            "a) Hace que los jóvenes hablen más rápido y con mayor fluidez.",
+            "b) Termina encerrando a los jóvenes en un verdadero gueto social y genera desigualdad.",
+            "c) No tiene ninguna importancia en el mundo laboral moderno dominado por la imagen."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Termina encerrando a los jóvenes en un verdadero gueto social. Esta falencia los condena a la exclusión, los impulsa a la rebelión y a la violencia. Desemboca en grave desigualdad social. Ubicación: Capítulo IV, página 78. [107, 110]"
+    },
+    {
+        "q": "864. ¿Cuál es la condición fundamental que deben respetar todos los modelos de escuela?",
+        "options": [
+            "a) No pueden menoscabar el derecho a la educación en condiciones de igualdad.",
+            "b) Deben tener obligatoriamente una cancha de fútbol de medidas reglamentarias.",
+            "c) Tienen que ser administradas exclusivamente por el clero religioso."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Los modelos institucionales de escuela y la libertad para crearlos y asistir a ellos no pueden menoscabar el derecho a la educación en condiciones de igualdad. Ubicación: Capítulo III, página 66. [157, 321/322]"
+    },
+    {
+        "q": "866. Una escuela adopta los paradigmas científicos más recientes y reporta fracaso. Según el criterio epistemológico, ¿cuál es la causa?",
+        "options": [
+            "a) Que los maestros no estudiaron lo suficiente los nuevos temas.",
+            "b) Que algunos paradigmas son excesivamente complejos para determinados niveles educativos.",
+            "c) La falta de computadoras de alta velocidad para procesar los datos."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: La causa principal es que algunos paradigmas son excesivamente complejos para determinados niveles educativos. La ciencia avanza por superación de paradigmas, pero no debe ser proyección automática. Ubicación: Capítulo I, página 19. [111, 112]"
+    },
+];
+    </script>
+    <script src="codes.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>

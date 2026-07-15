@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Preguntas - ESTILOS DE APRENDIZAJE (BLOQUE 3)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Banco de Preguntas - ESTILOS DE APRENDIZAJE</h1>
+        <div class="subtitle">Examen de Ascenso 2026 - BLOQUE 3</div>
+    </header>
+
+    <div id="quiz-container"></div>
+
+    <div style="text-align: center; margin: 20px 0;">
+        <a href="index.html" class="back-link">&larr; Volver al Inicio</a>
+    </div>
+
+    <script>
+        window.quizData = [
+    {
+        "q": "1292. Según Sáez López, un estudiante que experimentó métodos defectuosos de enseñanza muestra rechazo generalizado hacia todas las materias, incluso aquellas que nunca le generaron problemas. ¿Qué fenómenos del condicionamiento clásico de Pavlov explican esta situación?",
+        "options": [
+            "a) Discriminación de estímulo.",
+            "b) Extinción de la respuesta condicionada.",
+            "c) Generalización de estímulo."
+        ],
+        "correct": 2,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 13. La respuesta a los estímulos de una manera tan generalizada se denomina generalización de estímulo."
+    },
+    {
+        "q": "1329. Para el condicionamiento operante de Skinner, ¿cómo deben diseñarse el proceso de aprendizaje y el entorno?",
+        "options": [
+            "a) Para crear el ambiente de frustración mínima y la máxima satisfacción en un alumno.",
+            "b) Para fomentar la competencia extrema entre compañeros de clase.",
+            "c) Para que el alumno aprenda solo mediante el castigo físico inmediato."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 14. Se busca proporcionar el refuerzo adecuado para el aprendizaje deseado minimizando la frustración."
+    },
+    {
+        "q": "1338. Según los planteamientos sobre estilos y métodos de aprendizaje, ¿qué factores del entorno educativo pueden afectar directamente la motivación del estudiante?",
+        "options": [
+            "a) Únicamente el clima climatológico del día de la clase.",
+            "b) El precio de los uniformes escolares y la marca de los cuadernos.",
+            "c) La naturaleza de la tarea, las características de los estudiantes, la atmósfera de la clase y la personalidad del maestro."
+        ],
+        "correct": 2,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 3, página 85. Describe cómo el entorno y la interacción con el docente condicionan la disposición al estudio."
+    },
+    {
+        "q": "1350. David Kolb considera que las cuatro capacidades son diametralmente opuestas. Estas configuran un modelo bidimensional formado por:",
+        "options": [
+            "a) Percepción y Procesamiento.",
+            "b) Memoria y Olvido.",
+            "c) Atención y Concentración."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 25. La percepción trata sobre el pensamiento concreto vs abstracto, y el procesamiento sobre lo activo vs reflexivo."
+    },
+    {
+        "q": "1354. Cuando los estudiantes que solo trabajan por premios dejan de participar ante la ausencia de los mismos, ¿qué explica este fenómeno?",
+        "options": [
+            "a) La dependencia estudiantil de las recompensas extrínsecas representa uno de los mayores detractores de su uso.",
+            "b) Que los estudiantes han logrado una autonomía total y no necesitan guía.",
+            "c) Que el material de estudio se ha vuelto demasiado fácil para el grupo."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 3, página 86. El refuerzo externo mal gestionado puede socavar la motivación intrínseca del alumno."
+    },
+    {
+        "q": "1395. De acuerdo con José Manuel Sáez López, ¿qué elementos integran una propuesta de enseñanza verdaderamente eficaz?",
+        "options": [
+            "a) Solo el uso de tecnología y la evaluación final sumativa.",
+            "b) Principios de enseñanza, elementos psicológicos, fundamentos de efectividad, motivación y ambiente en el aula.",
+            "c) El cumplimiento del horario y la entrega de planificaciones administrativas."
+        ],
+        "correct": 1,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 3, páginas 77-92. Propone un marco holístico que incluye desde principios didácticos hasta teorías motivacionales."
+    },
+    {
+        "q": "1396. Según el modelo de Kolb, ¿cuál es la característica principal del estilo de aprendizaje «asimilador»?",
+        "options": [
+            "a) Prefieren la acción inmediata y el contacto con personas.",
+            "b) Combinan pensamiento abstracto y procesamiento reflexivo; prefieren aprender de forma secuencial y lógica.",
+            "c) Buscan aplicaciones prácticas inmediatas y asumen riesgos constantes."
+        ],
+        "correct": 1,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 25. Destacan por organizar información concisa y crear modelos teóricos abstractos."
+    },
+    {
+        "q": "1397. ¿Cuál es la característica definitoria que distingue al Aprendizaje Basado en Problemas (ABP) de los métodos tradicionales?",
+        "options": [
+            "a) Los problemas son un estímulo para el aprendizaje, partiendo de conocimientos previos y el trabajo en grupos.",
+            "b) El maestro dicta la solución al problema antes de que los alumnos lo lean.",
+            "c) Es un método individualista donde el alumno no debe hablar con sus pares."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, páginas 45-46. Facilita la adquisición de conocimientos a través del auto-estudio y la interdisciplinariedad."
+    },
+    {
+        "q": "1452. Un maestro nota competencia constante y desmotivación en su aula. ¿Qué dos cambios fundamentales debe implementar según Sáez López?",
+        "options": [
+            "a) Aumentar la dificultad de las tareas y separar a los alumnos por notas.",
+            "b) Hacer la clase más cooperativa y ser entusiasta demostrando la alegría de aprender.",
+            "c) Ignorar el conflicto y centrarse únicamente en terminar el currículo a tiempo."
+        ],
+        "correct": 1,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 3, página 82. El uso de ejercicios grupales cooperativos y el entusiasmo docente revierten climas negativos."
+    },
+    {
+        "q": "1501. ¿Qué caracteriza al principio de proceder del análisis a la síntesis?",
+        "options": [
+            "a) Comenzar con el todo complejo, separarlo en elementos constituyentes y luego volver a integrarlos de forma fija.",
+            "b) Estudiar partes aisladas sin intentar unirlas nunca.",
+            "c) Presentar definiciones abstractas sin descomponerlas previamente."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 3, página 77. El análisis hace la cosa comprensible y la síntesis la hace definitiva en la estructura mental."
+    },
+    {
+        "q": "1557. Según Johnson et al., ¿cuáles son los pasos del procedimiento de la técnica puzle (jigsaw) en el aprendizaje cooperativo?",
+        "options": [
+            "a) Lectura, examen y nota final.",
+            "b) Formación de grupos, preparación en pares, reunión de expertos, retorno al grupo original, tutorización y valoración.",
+            "c) Dictado de un tema dividido en partes para que cada alumno copie una."
+        ],
+        "correct": 1,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, páginas 43-44. Es una estrategia de corresponsabilidad para alcanzar metas grupales."
+    },
+    {
+        "q": "1601. ¿Cuáles son los 7 pasos del Aprendizaje Basado en Problemas para un trabajo sistemático?",
+        "options": [
+            "a) Explicar términos, definir problema, lluvia de ideas, inventario, auto-estudio (formular y realizar), informar y evaluar.",
+            "b) Leer, subrayar, copiar, memorizar, repetir, rendir examen y olvidar.",
+            "c) Solo consta de un paso: entregar el problema al estudiante y esperar la respuesta."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 47. Es la secuencia metodológica para asegurar el auto-estudio guiado."
+    },
+    {
+        "q": "1605. Según David Kolb, a la hora de aprender se ponen en juego cuatro capacidades diferentes. ¿Cuáles son?",
+        "options": [
+            "a) Memoria, Atención, Percepción y Lenguaje.",
+            "b) Experiencia Concreta (EC), Observación Reflexiva (OR), Conceptualización Abstracta (CA) y Experimentación Activa (EA).",
+            "c) Visión, Audición, Olfato y Tacto."
+        ],
+        "correct": 1,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 24. Estas capacidades configuran el ciclo de transformación de la experiencia en saber."
+    },
+    {
+        "q": "1622. Según la Taxonomía de Bloom, identificar premisas ocultas y detectar falacias en un texto argumentativo corresponde al nivel de:",
+        "options": [
+            "a) Conocimiento.",
+            "b) Comprensión.",
+            "c) Análisis."
+        ],
+        "correct": 2,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 20. El análisis implica el desglose de materiales para entender su estructura organizativa."
+    },
+    {
+        "q": "1631. ¿A qué estilos corresponden los alumnos que aprenden en pasos lineales lógicos frente a los que absorben material al azar y ven las conexiones de repente?",
+        "options": [
+            "a) Activos y Reflexivos.",
+            "b) Secuenciales y Globales.",
+            "c) Sensoriales e Intuitivos."
+        ],
+        "correct": 1,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 31. Clasificación basada en el modelo de Felder sobre el progreso del aprendizaje."
+    },
+    {
+        "q": "1701. Según Lowman, ¿qué distingue al 'Maestro Completo' de los demás perfiles docentes?",
+        "options": [
+            "a) Que solo enseña a los alumnos más brillantes de la clase.",
+            "b) Son capaces de actuar magníficamente tanto en conferencias como en seminarios, motivando a todos los niveles de estudiantes.",
+            "c) Que nunca utiliza tecnología en el aula para no distraer."
+        ],
+        "correct": 1,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 4, página 98. El maestro completo combina entusiasmo intelectual con excelente relación interpersonal."
+    },
+    {
+        "q": "1776. Según Sáez López, ¿qué diferencia fundamental existe entre aprendizaje cooperativo y colaborativo?",
+        "options": [
+            "a) En el colaborativo los alumnos mantienen el control de las decisiones; en el cooperativo el profesor diseña y controla la estructura.",
+            "b) Son exactamente lo mismo y se usan como sinónimos.",
+            "c) El cooperativo es solo para niños y el colaborativo solo para adultos."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 41. La distinción radica en quién detenta la autoridad y el diseño de la interacción."
+    },
+    {
+        "q": "1846. ¿A qué conclusión llegó Kohler sobre cómo el estudiante aborda una situación de aprendizaje?",
+        "options": [
+            "a) Que el alumno percibe siempre la situación en conjunto y llega a una solución perspicaz.",
+            "b) Que el aprendizaje es un proceso de memorización de fragmentos sin conexión.",
+            "c) Que el estudiante solo aprende si recibe un castigo físico inmediato ante el error."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 15. Enfatiza la importancia de evaluar toda la relación de factores en la situación."
+    },
+    {
+        "q": "1899. En cuanto a la retroalimentación dentro de la instrucción programada, ¿qué ocurre si el alumno da una respuesta incorrecta?",
+        "options": [
+            "a) El alumno anota el error y pasa a la siguiente unidad de información.",
+            "b) Se le prohíbe continuar con el curso permanentemente.",
+            "c) El profesor debe explicarle el error durante dos horas de forma oral."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 40. La información sobre el acierto o error es inmediata para permitir el avance paso a paso."
+    },
+    {
+        "q": "1913. ¿Por qué se afirma que los tres dominios de Bloom no son mutuamente excluyentes?",
+        "options": [
+            "a) Porque al aprender una habilidad (ajedrez) se integran reglas (cognitivo), movimientos (psicomotor) y gusto por el juego (afectivo).",
+            "b) Porque los docentes solo deben evaluar el dominio cognitivo por ley.",
+            "c) Porque cada dominio pertenece a un hemisferio cerebral distinto que no se comunica."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 21. El aprendizaje es un proceso integral donde las dimensiones se entrelazan."
+    },
+    {
+        "q": "1956. ¿Cuál es el aspecto más crítico del Aprendizaje Basado en Problemas (ABP)?",
+        "options": [
+            "a) El color del aula donde se realiza.",
+            "b) Generar la pregunta apropiada.",
+            "c) La cantidad de hojas del informe final."
+        ],
+        "correct": 1,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 48. La pregunta es el motor que desencadena la investigación y el auto-estudio."
+    },
+    {
+        "q": "2146. ¿Cuál es el objetivo del estudio de caso según el texto?",
+        "options": [
+            "a) La creación de una situación activa y participativa donde el tema refleje el mundo exterior.",
+            "b) Memorizar nombres de personajes históricos sin analizar sus actos.",
+            "c) Resolver ejercicios matemáticos de forma mecánica y repetitiva."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 50. Busca mejorar la capacidad del alumno para identificar principios subyacentes bajo presión."
+    },
+    {
+        "q": "2192. ¿En qué consiste la práctica denominada «proceder de lo empírico a lo racional»?",
+        "options": [
+            "a) Comenzar con lo que vemos, sentimos y experimentamos, y luego discutir, generalizar y explicar.",
+            "b) Empezar con teorías abstractas y prohibir la experimentación sensorial.",
+            "c) Estudiar solo lo que está escrito en los libros antiguos."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 3, página 79. El niño siente la base racional mucho después de haber experimentado el hecho en su vida."
+    },
+    {
+        "q": "2223. ¿Cuál es el factor más importante en la motivación y participación de los estudiantes?",
+        "options": [
+            "a) El contacto frecuente entre los estudiantes y la facultad/centro dentro y fuera de la clase.",
+            "b) La instalación de aire acondicionado en todas las aulas.",
+            "c) Que el profesor nunca haga preguntas durante la lección."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 3, página 83. El vínculo humano y la accesibilidad del docente son claves motivacionales."
+    },
+    {
+        "q": "2341. Un estudiante comprende al relacionar con saberes previos; otro se autoeduca tras un videojuego; otro asiste a talleres comunitarios. ¿Qué tipos de aprendizaje son?",
+        "options": [
+            "a) Significativo, Tangencial y No formal.",
+            "b) Memorístico, Mecánico y Formal.",
+            "c) Tradicional, Tecnológico y Rural."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, páginas 17-18. El aprendizaje tangencial surge de contextos disfrutables y el no formal de actividades fuera del sistema escolar reglado."
+    },
+    {
+        "q": "2496. En el modelo de Lowman, ¿qué interrogantes genera la segunda dimensión (interpersonal) sobre el desempeño docente?",
+        "options": [
+            "a) Si el profesor sabe el nombre de sus alumnos, los alienta y está disponible para preguntas.",
+            "b) Cuánto dinero gana el profesor y cuántos títulos tiene.",
+            "c) Si el profesor sabe usar redes sociales para chatear con los padres."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 4, página 97. Trata sobre el interés genuino en los estudiantes como individuos y el fomento del pensamiento independiente."
+    }
+];
+    </script>
+    <script src="codes.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>

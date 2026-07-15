@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Preguntas - LEY DE DISCAPACIDAD (LEY 223)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Banco de Preguntas - LEY DE DISCAPACIDAD (LEY 223)</h1>
+        <div class="subtitle">Examen de Ascenso 2026</div>
+    </header>
+
+    <div id="quiz-container"></div>
+
+    <script>
+        window.quizData = [
+    {
+        "q": "57. En el marco de los derechos de las personas con discapacidad, la protección de la familia hacia la persona con discapacidad en ningún caso podrá ser entendida como:",
+        "options": [
+            "a) Una forma de sustitución de su voluntad legal.",
+            "b) Una limitación al ejercicio de sus derechos y deberes.",
+            "c) Un requisito obligatorio para acceder a beneficios estatales."
+        ],
+        "correct": 1,
+        "retro": "Ley N° 223, Artículo 7, Parágrafo II, citado en 'ley discapacidad PROFCESAR.pdf', página 6."
+    },
+    {
+        "q": "180. ¿Cuál es la definición de 'Deficiencia' que establece la Ley que regula los derechos de las personas con discapacidad?",
+        "options": [
+            "a) Es la falta de capacidad para realizar actividades laborales de forma permanente.",
+            "b) Son problemas en las funciones fisiológicas o en las estructuras corporales de una persona. Pueden consistir en una perdida, defecto, anomalía o cualquier otra desviación significativa respecto a la norma estadísticamente establecida.",
+            "c) Es el resultado de la interacción entre la persona y las barreras sociales de su entorno."
+        ],
+        "correct": 1,
+        "retro": "Ley N° 223, Artículo 5, inciso d), citado en 'ley discapacidad PROFCESAR.pdf', página 4."
+    },
+    {
+        "q": "220. Conforme a la Ley General para personas con discapacidad, ¿qué condiciones expresas existentes justifican alguna dificultad para llevar a cabo las actividades de la vida diaria en el Grado de Discapacidad Leve?",
+        "options": [
+            "a) Aquellas que impiden totalmente el autocuidado personal.",
+            "b) Aquellas que justifican alguna dificultad para llevar a cabo las actividades de la vida diaria, pero la persona es independiente en su autocuidado.",
+            "c) Únicamente las deficiencias visuales o auditivas menores al 20%."
+        ],
+        "correct": 1,
+        "retro": "Ley N° 223, Artículo 5, definiciones de grados, citado en 'ley discapacidad PROFCESAR.pdf', página 4."
+    },
+    {
+        "q": "¿Qué se entiende por 'Ajustes Razonables' según la Ley N° 223?",
+        "options": [
+            "a) Son las modificaciones y adaptaciones necesarias y adecuadas, que no impongan una carga desproporcionada o indebida, para garantizar el goce o ejercicio en igualdad de condiciones de los derechos humanos.",
+            "b) Son descuentos económicos obligatorios en servicios básicos para familias con PCD.",
+            "c) Son las reformas arquitectónicas obligatorias en todos los edificios construidos antes de 2012."
+        ],
+        "correct": 0,
+        "retro": "Ley N° 223, Artículo 5, inciso v), citado en 'ley discapacidad PROFCESAR.pdf', página 6."
+    },
+    {
+        "q": "353. En el marco de las atribuciones normativas reconocidas a los niveles autonómicos subnacionales para garantizar la accesibilidad de personas con discapacidad, ¿cuál de los siguientes ámbitos está expresamente contemplado como obligación de las Asambleas Legislativas Departamentales y Concejos Municipales?",
+        "options": [
+            "a) La entrega gratuita de sillas de ruedas y prótesis de última tecnología.",
+            "b) Señalización de sistemas de avisos en espacios públicos para orientar a personas con discapacidad, en formatos accesibles.",
+            "c) El pago mensual de un bono de transporte universal para PCD."
+        ],
+        "correct": 1,
+        "retro": "Ley N° 223, Artículo 48, Parágrafo II, inciso b), citado en 'ley discapacidad PROFCESAR.pdf', página 14."
+    },
+    {
+        "q": "364. La Ley General para Personas con Discapacidad establece obligaciones específicas en materia de comunicación para instituciones públicas, servicios privados y Unidades Educativas. ¿Qué dos condiciones deben cumplir obligatoriamente dichas instituciones?",
+        "options": [
+            "a) Contar con traductores en todos los idiomas oficiales del Estado.",
+            "b) Garantizar la atención mediante la Lengua de Señas Boliviana (LSB) y el Sistema Braille u otros sistemas alternativos.",
+            "c) Ofrecer servicios de telefonía gratuita e internet satelital en las aulas."
+        ],
+        "correct": 1,
+        "retro": "Ley N° 223, Artículo 31 y 32, citado en 'ley discapacidad PROFCESAR.pdf', página 14 (pregunta 364)."
+    },
+    {
+        "q": "¿Cuáles son los recursos económicos para la gestión pública en materia de discapacidad según la Ley N° 223?",
+        "options": [
+            "a) El 5% de los impuestos a la propiedad de vehículos de lujo.",
+            "b) Recursos provenientes de la Ley 3925 (eliminación de subsidios a partidos políticos), donaciones, legados y recursos de cooperación nacional e internacional.",
+            "c) Un porcentaje fijo de las exportaciones de gas natural y litio."
+        ],
+        "correct": 1,
+        "retro": "Ley N° 223, Artículo 29, incisos a) y b), citado en 'ley discapacidad PROFCESAR.pdf', página 9."
+    },
+    {
+        "q": "416. Una persona con discapacidad acude a un centro de salud público solicitando orientación en planificación familiar. El personal de salud propone someterla a esterilización sin su consentimiento. ¿Qué obligación tiene el Estado Plurinacional de Bolivia frente a esta situación?",
+        "options": [
+            "a) Debe garantizar el acceso a servicios de información de salud sexual y reproductiva, salvaguardando los derechos contra la esterilización obligatoria.",
+            "b) Debe realizar una junta médica para decidir lo mejor para la paciente.",
+            "c) Solo puede intervenir si la familia de la PCD autoriza el procedimiento por escrito."
+        ],
+        "correct": 0,
+        "retro": "Ley N° 223, Artículo 32, Parágrafo VI, citado en 'ley discapacidad PROFCESAR.pdf', página 10."
+    },
+    {
+        "q": "652. De acuerdo a la Ley General para personas con discapacidad, en el marco del derecho a protección de su familia, ¿cómo se define a la familia en relación con la persona con discapacidad?",
+        "options": [
+            "a) Se limita exclusivamente a los padres y hermanos por consanguinidad.",
+            "b) La definición abarca a quienes tienen el deber de protección, sin que esto limite el ejercicio de derechos del PCD.",
+            "c) Son únicamente los tutores legales nombrados por sentencia judicial."
+        ],
+        "correct": 1,
+        "retro": "Ley N° 223, Artículo 7 y concordantes, citado en 'ley discapacidad PROFCESAR.pdf', página 6 (pregunta 652)."
+    },
+    {
+        "q": "¿Qué beneficios deben dictar las Asambleas Legislativas Departamentales y Concejos Municipales respecto al transporte para PCD?",
+        "options": [
+            "a) Gratuidad absoluta en todos los vuelos internacionales.",
+            "b) Beneficios extraordinarios y descuentos en medios de transporte aéreo, fluvial, ferroviario, lacustre y terrestre para PCD y su acompañante.",
+            "c) Obligación de que el 50% de la flota de buses tenga aire acondicionado."
+        ],
+        "correct": 1,
+        "retro": "Ley N° 223, Artículo 48, Parágrafo II, inciso d), citado en 'ley discapacidad PROFCESAR.pdf', página 14."
+    },
+    {
+        "q": "¿Qué entidad es responsable de mantener y distribuir los equipos multidisciplinarios para la calificación continua de las personas con discapacidad?",
+        "options": [
+            "a) El Ministerio de Educación a través de los CEE.",
+            "b) El Ministerio de Salud y Deportes en coordinación con las entidades territoriales autónomas.",
+            "c) El Ministerio de Trabajo y Previsión Social."
+        ],
+        "correct": 1,
+        "retro": "Ley N° 223, Artículo 32, Parágrafo III, citado en 'ley discapacidad PROFCESAR.pdf', página 10."
+    },
+    {
+        "q": "1042. En materia de educación universitaria para personas con discapacidad, ¿cuál de las siguientes afirmaciones describe correctamente una Obligación que recae exclusivamente sobre el Sistema Universitario Estatal?",
+        "options": [
+            "a) Otorgar títulos profesionales sin necesidad de exámenes de grado.",
+            "b) Deberá contar con planes específicos de liberación de valores en todos sus niveles de estudio para PCD, sus hijos y padres de niños con discapacidad.",
+            "c) Contar únicamente con planes de descuentos y becas para postgrados."
+        ],
+        "correct": 1,
+        "retro": "Ley N° 223, Artículo 31, Parágrafo XI, citado en 'ley discapacidad PROFCESAR.pdf', página 10."
+    },
+    {
+        "q": "¿Qué entidad fiscalizará y regulará a las entidades privadas especializadas en la atención de la discapacidad a través de protocolos técnicos?",
+        "options": [
+            "a) El Ministerio de Economía.",
+            "b) El Estado a través del CONALPEDIS.",
+            "c) Las Direcciones Distritales de Educación."
+        ],
+        "correct": 1,
+        "retro": "Ley N° 223, Artículo 45, Parágrafo IV, citado en 'ley discapacidad PROFCESAR.pdf', página 12."
+    },
+    {
+        "q": "1359. El CONALPEDIS fue creado como una entidad descentralizada para la defensa de los derechos de PCD. ¿Cómo se toman legalmente las decisiones en su Directorio?",
+        "options": [
+            "a) Por unanimidad de todos sus integrantes.",
+            "b) Se toman por mayoría de votos del total de sus miembros.",
+            "c) Únicamente por decisión del Presidente del Comité."
+        ],
+        "correct": 1,
+        "retro": "Ley N° 223, Artículo 46 context, citado en 'ley discapacidad PROFCESAR.pdf', página 12 (pregunta 1359)."
+    },
+    {
+        "q": "1527. ¿Cuál es la definición del objeto de la Ley General para personas con discapacidad?",
+        "options": [
+            "a) Sancionar penalmente a quienes no contraten personal con discapacidad.",
+            "b) Garantizar a las personas con discapacidad el ejercicio pleno de sus derechos y deberes en igualdad de condiciones, equiparación de oportunidades y trato preferente.",
+            "c) Crear un mercado exclusivo de productos ortopédicos subvencionados."
+        ],
+        "correct": 1,
+        "retro": "Ley N° 223, Artículo 1 (OBJETO), citado en 'ley discapacidad PROFCESAR.pdf', página 2."
+    },
+    {
+        "q": "1904. En el ámbito de educación, ¿qué garantiza el Estado Plurinacional para la inclusión de las personas con discapacidad al sistema educativo?",
+        "options": [
+            "a) El ingreso libre a cualquier carrera sin examen de admisión.",
+            "b) El Estado garantiza la formación de equipos multidisciplinarios para la atención e inclusión de PCD al sistema educativo plurinacional.",
+            "c) La jubilación automática de los maestros que tengan hijos con discapacidad."
+        ],
+        "correct": 1,
+        "retro": "Ley N° 223, Artículo 31, Parágrafo I, citado en 'ley discapacidad PROFCESAR.pdf', página 11."
+    },
+    {
+        "q": "2076. ¿Cuál es la obligación del Estado Plurinacional, en todos sus niveles, respecto a la temática de discapacidad en sus programas y proyectos?",
+        "options": [
+            "a) Incorporar planes, programas y proyectos de desarrollo inclusivo basado en la comunidad.",
+            "b) Comprar equipamiento médico extranjero para todos los municipios.",
+            "c) Eliminar el requisito de carnet de discapacidad para trámites bancarios."
+        ],
+        "correct": 0,
+        "retro": "Ley N° 223, Artículo 34, Parágrafo I, citado en 'ley discapacidad PROFCESAR.pdf', página 11."
+    },
+    {
+        "q": "2160. El CONALPEDIS debe velar por compromisos internacionales. ¿Qué par de funciones refleja esta responsabilidad?",
+        "options": [
+            "a) Organizar viajes internacionales para líderes de asociaciones.",
+            "b) Tomar acciones para el cumplimiento de instrumentos jurídicos internacionales y difundir el cumplimiento de obligaciones con gobiernos extranjeros u organismos.",
+            "c) Cobrar multas a organismos internacionales que no inviertan en el país."
+        ],
+        "correct": 1,
+        "retro": "Ley N° 223, Artículo 46, incisos e) y f), citado en 'ley discapacidad PROFCESAR.pdf', página 13."
+    },
+    {
+        "q": "2220. El 'Trato Preferente' garantiza la equiparación e igualdad con el resto de las personas. ¿Con qué carácter se garantiza?",
+        "options": [
+            "a) Con carácter secundario y opcional.",
+            "b) Con carácter de primacía.",
+            "c) Solo en instituciones de carácter público."
+        ],
+        "correct": 1,
+        "retro": "Ley N° 223, Artículo 5, inciso b), citado en 'ley discapacidad PROFCESAR.pdf', página 4."
+    },
+    {
+        "q": "¿Qué obligación tienen las entidades públicas y privadas respecto a su personal con discapacidad según el Artículo 34 de la Ley 223?",
+        "options": [
+            "a) Otorgar vacaciones pagadas de 90 días al año.",
+            "b) Las entidades públicas y privadas deberán brindar accesibilidad a su personal con discapacidad.",
+            "c) Proveer alimentación gratuita de tres tiempos diariamente."
+        ],
+        "correct": 1,
+        "retro": "Ley N° 223, Artículo 34, Parágrafo III, citado en 'ley discapacidad PROFCESAR.pdf', página 11."
+    },
+    {
+        "q": "2324. Respecto al derecho a la comunicación, ¿cuál es la obligación del Estado Plurinacional de Bolivia?",
+        "options": [
+            "a) Distribuir televisores y radios gratis a todas las PCD.",
+            "b) El Estado promueve la comunicación en sistemas y lenguas alternativas para la inclusión y el acceso a la información.",
+            "c) Prohibir el uso de internet en Centros de Educación Especial."
+        ],
+        "correct": 1,
+        "retro": "Ley N° 223, Artículo 31 y definiciones, citado en 'ley discapacidad PROFCESAR.pdf', página 14 (pregunta 2324)."
+    }
+];
+    </script>
+    <script src="codes.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>

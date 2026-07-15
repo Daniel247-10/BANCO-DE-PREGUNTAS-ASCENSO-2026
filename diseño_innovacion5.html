@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Preguntas - DISEÑO (BLOQUE 5)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Banco de Preguntas - DISEÑO, DESARROLLO E INNOVACIÓN</h1>
+        <div class="subtitle">Examen de Ascenso 2026 - BLOQUE 5</div>
+    </header>
+
+    <div id="quiz-container"></div>
+
+    <div style="text-align: center; margin: 20px 0;">
+        <a href="index.html" class="back-link">&larr; Volver al Inicio</a>
+    </div>
+
+    <script>
+        window.quizData = [
+    {
+        "q": "1287. Al reflexionar sobre los límites de la atención individualizada en la escuela obligatoria, se descarta una modalidad específica como solución general. ¿Cuál es?",
+        "options": [
+            "a) El trabajo colaborativo en grupos pequeños tutorizados.",
+            "b) La enseñanza estrictamente individualizada (a través de fichas, guías y planes de trabajo elaborados para alumnos determinados).",
+            "c) El uso de materiales audiovisuales para toda la clase de forma simultánea."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: La enseñanza estrictamente individualizada (a través de fichas, guías y planes de trabajo elaborados para alumnos determinados) solo es viable para situaciones puntuales y para estudiantes con necesidades muy específicas. Ubicación: Capítulo III, página 63."
+    },
+    {
+        "q": "1288. Según Sacristán, la proliferación de más de 60.000 entradas sobre «currículum» en Google Books y 9.000 en la Biblioteca del Congreso de Washington permite inferir que:",
+        "options": [
+            "a) El currículum es un tema de gran importancia y actualidad en el ámbito educativo, con múltiples perspectivas y enfoques.",
+            "b) Existe un consenso universal sobre la definición técnica y única del currículum.",
+            "c) El término currículum es una moda pasajera impulsada por editoriales sin profundidad teórica."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: El currículum es un tema de gran importancia y actualidad en el ámbito educativo, y que existen muchas perspectivas y enfoques diferentes sobre el mismo. Ubicación: Capítulo II, página 46."
+    },
+    {
+        "q": "1289. La polisemia del término currículum no responde a una imprecisión conceptual sino a una condición constitutiva del mismo. ¿Qué factor explica estructuralmente esa condición?",
+        "options": [
+            "a) La falta de diccionarios pedagógicos actualizados en el idioma español.",
+            "b) El hecho de que el currículum se sitúa en la intersección de múltiples dimensiones (política, cultural, pedagógica, social).",
+            "c) La traducción incorrecta de términos anglosajones realizada por Luzuriaga."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: El factor es que el currículum se sitúa en la intersección de múltiples dimensiones (política, cultural, pedagógica, social) y su significado depende del contexto y de la perspectiva desde la que se analice. Ubicación: Capítulo II (pasim)."
+    },
+    {
+        "q": "1290. Aunque compartan el mismo currículum formal y una formación profesional equivalente, los docentes producen currículos reales distintos porque:",
+        "options": [
+            "a) Algunos docentes tienen acceso a mejores recursos tecnológicos y presupuestarios.",
+            "b) No disponen del mismo hábito, ni emplean en su enseñanza los mismos esquemas generadores de contenidos, imágenes de cultura o valores.",
+            "c) El Ministerio de Educación envía diferentes guías metodológicas a cada centro educativo."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: No disponen del mismo hábito, rasgo a rasgo, ni emplean en su enseñanza los mismos esquemas generadores de contenidos, las mismas imágenes de la cultura y de la excelencia, los mismos valores. Ubicación: Capítulo V, página 93."
+    },
+    {
+        "q": "1291. Según Bourdieu, citado en el capítulo «El currículum real y el trabajo escolar», ¿cuál es el producto más específico de un sistema de enseñanza en relación con el hábito cultivado?",
+        "options": [
+            "a) La obtención de títulos académicos oficiales firmados por el Estado.",
+            "b) Individuos \"programados\", dotados de un programa homogéneo de percepción, pensamiento y acción.",
+            "c) La adquisición de habilidades técnicas específicas para el mercado laboral inmediato."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Los individuos \"programados\", es decir dotados de un programa homogéneo de percepción, pensamiento y acción, constituyen el producto más específico de un sistema de enseñanza. La escuela provee no tanto de esquemas de pensamiento particulares, sino de esta disposición general, creadora de esquemas particulares, que podemos denominar hábito cultivado. Ubicación: Capítulo V, página 102."
+    },
+    {
+        "q": "1306. El hecho de que la mayor parte del alumnado se niegue a estudiar más de tres días antes de los exámenes es interpretado en el texto como evidencia de que:",
+        "options": [
+            "a) Los alumnos tienen una memoria a corto plazo muy eficiente para el éxito escolar.",
+            "b) El modelo de evaluación basado en la repetición de datos y la memorización es de usar y tirar.",
+            "c) Los exámenes son demasiado largos para ser estudiados con mayor antelación."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: El modelo de evaluación basado en la repetición de datos y la memorización es un modelo de usar y tirar. El alumnado olvida los contenidos pocas horas después de la evaluación. Ubicación: Capítulo IV, página 80."
+    },
+    {
+        "q": "1307. Al examinar los resultados de distintas pruebas a las que se somete al alumnado, el texto identifica un problema estructural que consiste en que:",
+        "options": [
+            "a) El alumnado es mejor en los aprendizajes pasivos que en los que requieren creatividad o capacidad de autonomía.",
+            "b) El alumnado domina mejor las ciencias exactas que las humanidades en todos los niveles.",
+            "c) Los resultados de primaria son sistemáticamente superiores a los de secundaria en todas las áreas evaluadas."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: El alumnado es mejor en los aprendizajes pasivos que en los que requieren creatividad o capacidad de autonomía. En Lengua es bueno en comprensión lectora y deja mucho que desear en la expresión escrita. En Matemáticas se detecta la dificultad habitual en la resolución de problemas. Ubicación: Capítulo IV, página 81."
+    },
+    {
+        "q": "1308. Walzer introduce el concepto de «igualdad simple» en el marco del debate sobre la escolaridad obligatoria. Asumir ese principio supone aceptar que:",
+        "options": [
+            "a) Todos los alumnos deben recibir la misma calificación final para evitar la competencia.",
+            "b) Se debe proporcionar una enseñanza con contenidos y fines comunes para todos, sin diferenciaciones que generen desigualdades.",
+            "c) La escuela debe ser gratuita exclusivamente para las clases sociales menos favorecidas."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Se debe proporcionar una enseñanza con contenidos y fines comunes para todos, sin diferenciaciones que generen desigualdades. Ubicación: Capítulo III, página 48."
+    },
+    {
+        "q": "1311. ¿Qué posición adopta Apple frente a la supuesta virtualidad del currículum básico para crear cohesión social?",
+        "options": [
+            "a) Sostiene que es la única vía pedagógica para garantizar la paz y unidad nacional.",
+            "b) Cuestiona que pueda crear cohesión social y objetividad dadas las diferencias culturales, económicas y sociales de origen.",
+            "c) Defiende que el currículum básico es una herramienta de liberación social para las minorías."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Apple cuestiona la supuesta virtualidad de crear cohesión social y objetividad, asuntos difíciles de conseguir dadas las diferencias culturales, económicas y sociales de las que parten los alumnos. Para Apple, el currículum básico es una imposición neoconservadora. Ubicación: Capítulo I, página 14."
+    },
+    {
+        "q": "1312. ¿Qué demanda ideológica y social explica que el currículum haya debido ampliar su alcance más allá de la preparación para estudios superiores?",
+        "options": [
+            "a) La presión de las universidades para recibir alumnos con formación técnica previa.",
+            "b) La demanda social de una educación que prepare para la vida, para el trabajo y para la participación ciudadana.",
+            "c) La necesidad estatal de reducir los años de escolaridad obligatoria por falta de presupuesto."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: La demanda social de una educación que prepare para la vida, para el trabajo y para la participación ciudadana, en un contexto de escolarización universal y prolongada. Ubicación: Capítulo IV y Capítulo III (pasim)."
+    },
+    {
+        "q": "1325. En el texto sobre objetivos curriculares, Clemente Linuesa cuestiona una concepción reduccionista y propone una visión más integral. ¿Cuál de las siguientes opciones describe con mayor precisión la diferencia entre ambas concepciones?",
+        "options": [
+            "a) La reduccionista se centra en el docente; la integral exclusivamente en el alumno como individuo.",
+            "b) La reduccionista reduce los objetivos a conductas observables; la integral incluye analizar los procesos de enseñanza para valorar los logros.",
+            "c) La reduccionista ignora los contenidos; la integral se centra solo en los valores morales absolutos."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: La concepción reduccionista reduce los objetivos a la descripción de conductas observables, mientras que la visión integral considera que las intenciones de un diseño curricular no se reducen solo a expresarlas antes de actuar, sino que incluyen analizar los procesos de la propia enseñanza para valorar lo que logramos. Ubicación: Capítulo I, página 18."
+    },
+    {
+        "q": "1327. El arte de enseñar requiere un alto grado de flexibilidad y adaptación que va mucho más allá de la aplicación mecánica de los procedimientos paso a paso. Así:",
+        "options": [
+            "a) Los manuales del profesor son la única guía válida para el éxito docente.",
+            "b) La comprensión adecuada, la apreciación y la aplicación de los principios psicológicos ayudan a los profesores en la mejora general del proceso de enseñanza aprendizaje.",
+            "c) El docente debe ignorar los principios psicológicos para centrarse en la disciplina académica."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: La comprensión adecuada, la apreciación y la aplicación de los principios psicológicos ayudan a los profesores en la mejora general del proceso de enseñanza aprendizaje. Ubicación: Capítulo I, página 18."
+    },
+    {
+        "q": "1328. Clemente Linuesa argumenta que la selección de contenidos es una opción cultural y no una cuestión técnica. A partir de esto, ¿cuál de las siguientes conclusiones es más coherente con su planteamiento?",
+        "options": [
+            "a) El diseño curricular es una actividad técnica que debe delegarse a expertos internacionales.",
+            "b) El diseño curricular es una actividad compleja que implica decisiones culturales y pedagógicas, y no puede reducirse a una aplicación mecánica de criterios técnicos.",
+            "c) La selección de contenidos debe ser neutral y evitar cualquier tipo de carga ideológica o cultural."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: El diseño curricular es una actividad compleja que implica decisiones culturales y pedagógicas, y no puede reducirse a una aplicación mecánica de criterios técnicos. Ubicación: Capítulo I, páginas 20-22."
+    },
+    {
+        "q": "1332. Perrenoud sostiene que la escuela prepara a los alumnos para la vida adulta sin que se sepa con precisión cómo ni en qué consiste esa preparación. ¿Qué tensión curricular fundamental revela esta afirmación?",
+        "options": [
+            "a) Revela la tensión entre las intenciones declaradas de la escuela (preparar para la vida) y la falta de claridad sobre los mecanismos reales.",
+            "b) Revela que la escuela no tiene ningún impacto real en la vida adulta de los estudiantes.",
+            "c) Indica que la vida adulta es idéntica a la vida escolar en todas sus rutinas."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Revela la tensión entre las intenciones declaradas de la escuela (preparar para la vida) y la falta de claridad sobre los mecanismos y resultados de esa preparación. También revela la tensión entre el currículum formal y los efectos reales de la escolarización. Ubicación: Capítulo V, página 98."
+    },
+    {
+        "q": "1333. El libro de texto representa el último eslabón de un proceso de reducción progresiva de la experiencia humana. ¿Qué caracteriza ese proceso?",
+        "options": [
+            "a) El aumento de la creatividad gracias a las ilustraciones coloridas.",
+            "b) La pérdida de posibilidades y las limitaciones en los procesos de comunicación de la cultura como experiencia humana acumulada.",
+            "c) La simplificación técnica para que los padres puedan enseñar en casa."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: El proceso se caracteriza por la pérdida de posibilidades y las limitaciones que el libro de texto conlleva en los procesos de comunicación de la cultura como experiencia humana acumulada. Es un proceso de especialización pedagógica que reduce las fuentes del saber a un único formato. Ubicación: Capítulo VI, página 115."
+    },
+    {
+        "q": "1334. El currículum moral no puede considerarse verdaderamente oculto porque:",
+        "options": [
+            "a) Los actores sociales tienen la intuición de que en la escuela se forman personas para una sociedad y la conciencia de sus efectos es clara.",
+            "b) Aparece detallado en el índice de todos los libros de texto de primaria.",
+            "c) Los alumnos lo memorizan en la clase de religión o ética semanal."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Los hombres políticos, los padres, los profesionales de la escuela y, en alguna medida, los demás adultos tienen la intuición de que en la escuela se forman también mujeres y hombres para una sociedad. La conciencia de los efectos de socialización de la escuela es más clara que la de los mecanismos que la producen. Ubicación: Capítulo V, páginas 97-98."
+    },
+    {
+        "q": "1337. La distancia que un docente mantiene respecto a las didácticas oficiales incide directamente sobre su práctica porque:",
+        "options": [
+            "a) Si guarda distancias, deberá invertir más de sí mismo en su enseñanza, reinventando y creando contenidos.",
+            "b) Tendrá menos trabajo ya que no necesita leer los programas oficiales del Ministerio.",
+            "c) Recibirá sanciones administrativas por no seguir la norma de forma mecánica."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Si prefiere guardar distancias respecto a las didácticas oficiales, deberá invertir más de sí mismo en su enseñanza, reinventando y creando contenidos. Ubicación: Capítulo V, página 93."
+    },
+    {
+        "q": "1341. Cuando Sacristán menciona que ciertos fines educativos no son cuantificables «para los tecnocráticos analistas de la calidad», ¿qué crítica se formula?",
+        "options": [
+            "a) Que los analistas de calidad son demasiado perezosos para medir valores.",
+            "b) Que el enfoque tecnocrático reduce la educación a lo que se puede medir, dejando de lado la formación integral y la solidaridad.",
+            "c) Que la calidad educativa no puede medirse de ninguna forma posible."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: La crítica es que el enfoque tecnocrático de la calidad educativa reduce la educación a lo que se puede medir y cuantificar, dejando de lado aspectos esenciales como la formación integral, la ciudadanía democrática y la solidaridad. Ubicación: Capítulo II, página 35."
+    },
+    {
+        "q": "1346. ¿Qué relación establece Feito entre el silencio del alumnado en el aula y la persistencia de prejuicios?",
+        "options": [
+            "a) El silencio es necesario para que el alumno reflexione sobre sus prejuicios.",
+            "b) El silencio fortalece las ideas erróneas, los preconceptos y los prejuicios al impedir el cambio de actitudes mediante el diálogo.",
+            "c) No existe relación, el silencio es simplemente una norma de disciplina escolar básica."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: El silencio fortalece las ideas erróneas, los preconceptos, los prejuicios. Es difícil, si no imposible, un cambio de actitudes, una predisposición al entendimiento si el alumnado permanece condenado al silencio. Ubicación: Capítulo IV, página 78."
+    },
+    {
+        "q": "1353. Según Clemente Linuesa, las decisiones curriculares del centro deben apoyarse en tres pilares fundamentales. Dos de ellos son el desarrollo profesional y la coordinación. ¿Cuál es el tercero?",
+        "options": [
+            "a) Las relaciones con la comunidad y la apertura al entorno.",
+            "b) El control estricto de la disciplina y el uniforme escolar.",
+            "c) La obtención de fondos privados para la mejora de infraestructura."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Las relaciones con la comunidad, la apertura al entorno. Ubicación: Capítulo I, página 17."
+    },
+    {
+        "q": "1364. ¿Qué tipo de elementos han puesto en cuestión la idea de progreso ciencia-tecnología?",
+        "options": [
+            "a) El aumento de las desigualdades, el deterioro ambiental y los peligros de la ciencia sin moral.",
+            "b) La invención de las redes sociales y la inteligencia artificial.",
+            "c) El abaratamiento de los ordenadores y el acceso masivo a internet."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: La persistencia y aumento de las desigualdades entre los individuos y entre los pueblos, el deterioro del medio ambiente, la escasez de recursos no renovables, los peligros de la técnica y de la ciencia independizada de valores morales. Ubicación: Capítulo II, página 45."
+    },
+    {
+        "q": "1427. ¿Qué consecuencia tiene, según Perrenoud, el hecho de que el trabajo del alumno sea permanentemente visible ante el docente?",
+        "options": [
+            "a) Genera una sensación de seguridad y acompañamiento constante en el alumno.",
+            "b) Dificulta la concentración y la autonomía porque el maestro se inmiscuye sin cesar en su esfera personal.",
+            "c) Garantiza que el alumno nunca cometa errores durante el proceso de aprendizaje."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: El maestro puede mirar por encima del hombro, intervenir en su trabajo... exigirle que elija o que avance más rápido de lo que puede. Esto dificulta la concentración y la autonomía. Ubicación: Capítulo V, página 112."
+    }
+];
+    </script>
+    <script src="codes.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>

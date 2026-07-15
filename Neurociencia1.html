@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neurociencia y Neuroaprendizaje</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Banco de Preguntas - NEUROCIENCIA</h1>
+        <div class="subtitle">Examen de Ascenso 2026</div>
+    </header>
+
+    <div id="quiz-container"></div>
+
+    <div style="text-align: center; margin: 20px 0;">
+        <a href="index.html" class="back-link">&larr; Volver al Inicio</a>
+    </div>
+
+    <script>
+        window.quizData = [
+    {
+        "q": "1. ¿Quién fue el primer científico en proponer la plasticidad en la fuerza y el número de las conexiones neuronales como base del aprendizaje y la memoria?",
+        "options": [
+            "a) Santiago Ramón y Cajal.",
+            "b) Paul MacLean.",
+            "c) Donald Hebb."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 52 (Capítulo 6). Santiago Ramón y Cajal propuso que el aprendizaje se basa en cambios en las conexiones neuronales."
+    },
+    {
+        "q": "18. Desde la neurociencia educativa, cuando la amígdala detecta una amenaza activa una respuesta de lucha liberando cortisol y adrenalina, generando reacciones observables en el estudiante. ¿De qué formas puede manifestarse dicha reacción en el aula?",
+        "options": [
+            "a) Mediante el razonamiento lógico y la calma.",
+            "b) Por lucha (ofensiva o defensiva) o por fuga (huida, omisión o inhibición de la acción).",
+            "c) A través de un aumento inmediato en la capacidad de atención selectiva."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 31 (Capítulo 3). Las reacciones amigdalinas ante amenazas son inmediatas de FUGA O LUCHA."
+    },
+    {
+        "q": "22. Un maestro diseña un aula con normas claras, trato respetuoso y actividades desafiantes pero alcanzables. Desde la neurociencia, esta decisión impacta directamente sobre el cerebro profundo. ¿por qué el funcionamiento de la amígdala influye de manera determinante en el aprendizaje?",
+        "options": [
+            "a) Porque solo procesa información visual.",
+            "b) Porque regula la temperatura corporal necesaria para estudiar.",
+            "c) Porque si se activa por amenaza, se cierra el paso de la información a los lóbulos prefrontales."
+        ],
+        "correct": 2,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 32 (Capítulo 3). La activación amigdalina por estrés impide que el aprendizaje se realice al bloquear los lóbulos prefrontales."
+    },
+    {
+        "q": "38. Desde la neurociencia del aprendizaje, la depresión y la violencia son clasificadas como emociones de tipo:",
+        "options": [
+            "a) Negativas.",
+            "b) Positivas.",
+            "c) Neutras."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 22 (Capítulo 2). Se asocian a estados emocionales negativos que bloquean el aprendizaje."
+    },
+    {
+        "q": "107. Según la neurociencia, del total de treinta mil genes del genoma humano, ¿cuántos están encargados de modelar el cerebro?",
+        "options": [
+            "a) Diez mil genes.",
+            "b) Trece mil genes.",
+            "c) Veinte mil genes."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 51 (Capítulo 6). De los 30.000 genes del genoma, 13.000 modelan el cerebro."
+    },
+    {
+        "q": "148. Según el libro 'Neurociencias Neuroaprendizaje', ¿Cuáles son los tips que favorecen el equilibrio del sistema límbico mediante la modulación de neurotransmisores?",
+        "options": [
+            "a) Sentir la emoción y elegir sentimiento, olores agradables, recuerdos felices, ejercicio físico y evitar pensamiento rumiante.",
+            "b) Consumir cafeína, dormir poco y mantener el pensamiento rumiante.",
+            "c) Aislarse socialmente y evitar cualquier tipo de actividad física."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Páginas: 26-27 (Capítulo 2). Estos tips ayudan a mantener el equilibrio neuroquímico emocional."
+    },
+    {
+        "q": "186. ¿Qué características tienen los «Maestros Completos» según el modelo de enseñanza efectiva?",
+        "options": [
+            "a) Se enfocan solo en habilidades tecnológicas.",
+            "b) Priorizan la disciplina sobre el vínculo emocional.",
+            "c) Combinan alto nivel de entusiasmo intelectual con alta calidez y comprensión interpersonal."
+        ],
+        "correct": 2,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Capítulo 8. Un Maestro Completo destaca tanto en la dimensión académica como en la socio-afectiva."
+    },
+    {
+        "q": "219. ¿Cómo se denomina en neurociencia al sistema que regula la velocidad, el contenido y el tipo de información que transita hacia el sistema límbico?",
+        "options": [
+            "a) Hipocampo.",
+            "b) SARA (Sistema Activador Reticular Ascendente).",
+            "c) Neocórtex."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 59 (Capítulo 6). El SARA determina qué información y a qué velocidad pasa al sistema límbico."
+    },
+    {
+        "q": "238. Una maestra de primaria diseña su clase incluyendo actividades con elementos de novedad y sorpresa. Desde la perspectiva de la neurociencia, ¿qué sustancia química se libera?",
+        "options": [
+            "a) Dopamina.",
+            "b) Cortisol.",
+            "c) Melatonina."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 88 (Capítulo 9). La novedad y el cambio de escenarios motivan al cerebro y despiertan dopamina."
+    },
+    {
+        "q": "290. Una característica del cerebro reptiliano es:",
+        "options": [
+            "a) Pensamiento abstracto y lenguaje.",
+            "b) Regular acciones y funciones básicas como el latir del corazón, respirar y caminar.",
+            "c) Gestión de la inteligencia emocional."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 12 (Capítulo 1). Es la parte más instintiva encargada de funciones vitales automáticas."
+    },
+    {
+        "q": "314. ¿Por qué es fundamental la participación de la amígdala cerebral en el proceso de aprendizaje según el neuroaprendizaje?",
+        "options": [
+            "a) Porque consolida información en la memoria a largo plazo cuando hay emoción positiva.",
+            "b) Porque se encarga exclusivamente del cálculo matemático.",
+            "c) Porque detiene el flujo de sangre al cerebro racional."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Páginas: 57-58 (Capítulo 6). La amígdala consolida lo aprendido bajo emociones agradables; si hay estrés, bloquea el aprendizaje."
+    },
+    {
+        "q": "315. Según la neurociencia, ¿qué son las emociones?",
+        "options": [
+            "a) Decisiones voluntarias del lóbulo frontal.",
+            "b) Reacciones psicofisiológicas que representan modos de adaptación a estímulos.",
+            "c) Sentimientos racionales que duran años."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 23 (Capítulo 2). Ocurren en 125 milésimas de segundo ante estímulos percibidos importantes."
+    },
+    {
+        "q": "319. Según el modelo del «Cerebro triuno», el cerebro reptiliano dota al ser humano de un sentido de territorialidad. ¿En qué consiste este sentido?",
+        "options": [
+            "a) Capacidad de compartir recursos sin conflicto.",
+            "b) Defensa del territorio exterior (posesiones, ideas) e interior (fuga).",
+            "c) Necesidad de innovar y cambiar constantemente de ambiente."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 12 (Capítulo 1). Se manifiesta como defensa de posesiones o ideas (lucha) o retirada (fuga)."
+    },
+    {
+        "q": "336. ¿Qué es la amígdala, según la neurociencia?",
+        "options": [
+            "a) El centro de la memoria emocional.",
+            "b) El epicentro de la atención ejecutiva únicamente.",
+            "c) Una estructura ósea del cráneo."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 29 (Capítulo 3). Es una estructura en forma de almendra que procesa reacciones emocionales."
+    },
+    {
+        "q": "338. ¿A qué tipo de motivación se hace referencia cuando el alumno busca soluciones por iniciativa propia, convirtiendo el aprendizaje en un proceso con valor inherente?",
+        "options": [
+            "a) Motivación extrínseca.",
+            "b) Motivación por castigo.",
+            "c) Motivación intrínseca."
+        ],
+        "correct": 2,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Capítulo 6. Describe el aprendizaje donde el estudiante se motiva por el saber en sí mismo."
+    },
+    {
+        "q": "341. Según el neuroaprendizaje, ¿qué capacidad se ve afectada negativamente en el estudiante ante niveles elevados de estrés?",
+        "options": [
+            "a) La capacidad de aprendizaje.",
+            "b) La capacidad de audición.",
+            "c) La capacidad de sudoración."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 58 (Capítulo 6). El modo supervivencia amigdalino disminuye la capacidad de aprendizaje cognitivo."
+    },
+    {
+        "q": "350. ¿Qué cambios fisiológicos produce la liberación de noradrenalina en el organismo?",
+        "options": [
+            "a) Disminución de la presión arterial.",
+            "b) Aumento del ritmo cardíaco y la presión arterial.",
+            "c) Inducción inmediata al sueño profundo."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Capítulo 4. Prepara el cuerpo para la acción y la alerta mental."
+    },
+    {
+        "q": "355. En el neuroaprendizaje, ¿qué implica un proceso neurofisiológico?",
+        "options": [
+            "a) La creación o recreación de redes neuronales.",
+            "b) El reposo absoluto de la actividad sináptica.",
+            "c) La eliminación total de neuronas por desuso."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 17 (Capítulo 1). El aprendizaje físico se traduce en cambios en las redes de neuronas."
+    },
+    {
+        "q": "358. En neurociencia educativa, la dopamina recibe la denominación de «amiga del aprendizaje». ¿Cuál es el fundamento?",
+        "options": [
+            "a) Porque genera placer y motiva a los estudiantes a trabajar.",
+            "b) Porque adormece al cerebro para evitar el estrés.",
+            "c) Porque reduce la plasticidad para ahorrar energía."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 39 (Capítulo 4). Abre posibilidades para que los estudiantes se dispongan al trabajo."
+    },
+    {
+        "q": "359. Un maestro incorpora al inicio de sus clases una actividad en la que los estudiantes intercambian abrazos entre sí. ¿Cuál es la utilidad?",
+        "options": [
+            "a) Genera emociones positivas, libera dopamina y fomenta entusiasmo.",
+            "b) Identificar problemas de postura física.",
+            "c) Perder tiempo para que la clase sea más corta."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 84 (Capítulo 9). Crea un clima emocional óptimo que facilita la apertura al aprendizaje."
+    },
+    {
+        "q": "360. ¿Qué tipo de destrezas cognitivas ha desarrollado el estudiante si conoce cómo extender, aplicar, analizar y crear?",
+        "options": [
+            "a) Aprendizaje superficial.",
+            "b) Estrategias de aprendizaje profundo y estratégico.",
+            "c) Memorización mecánica básica."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Páginas: 61-62 (Capítulo 6). Corresponden a niveles superiores de procesamiento de información."
+    },
+    {
+        "q": "367. Desde la neurociencia del aprendizaje, ¿cómo se denomina también al neocórtex?",
+        "options": [
+            "a) Cerebro instintivo.",
+            "b) Cerebro emocional.",
+            "c) Cerebro racional."
+        ],
+        "correct": 2,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 13 (Capítulo 1). Es el tercer cerebro del modelo triuno, sede de la inteligencia humana."
+    },
+    {
+        "q": "368. ¿Cuál es la razón por la que el maestro debe retomar contenidos incorporando variaciones cada vez?",
+        "options": [
+            "a) Para que el aprendizaje pase de la memoria de trabajo a la de largo plazo.",
+            "b) Porque los estudiantes se olvidan de todo a los 5 minutos.",
+            "c) Para que el docente no tenga que preparar temas nuevos."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 18 (Capítulo 1). Se recomienda repetir con novedad al menos siete veces para consolidar la red."
+    },
+    {
+        "q": "386. Desde la neurociencia educativa, ¿cómo se denomina también al neocórtex?",
+        "options": [
+            "a) Cerebro racional.",
+            "b) Cerebro de abajo.",
+            "c) Tallo cerebral."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 13 (Capítulo 1). Se identifica con el cerebro superior o humano."
+    },
+    {
+        "q": "391. Para el neuroaprendizaje, ¿en qué proceso de la memoria se produce el análisis de la información según el estímulo?",
+        "options": [
+            "a) Almacenamiento.",
+            "b) Evocación.",
+            "c) Codificación inicial."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 55 (Capítulo 6). El almacenamiento se vincula al análisis en el hipocampo."
+    },
+    {
+        "q": "398. Desde el neuroaprendizaje, ¿en qué nos ayudan las emociones básicas?",
+        "options": [
+            "a) A descubrir y sobrevivir en el entorno durante los primeros años.",
+            "b) A resolver ecuaciones de segundo grado.",
+            "c) A inhibir completamente la respuesta de supervivencia."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 66 (Capítulo 7). Nos permiten adaptarnos y sobrevivir al contexto inicial."
+    },
+    {
+        "q": "407. Según el libro de Marilina Rotger, un cerebro que hubiera perdido plasticidad, no podrá...",
+        "options": [
+            "a) Aprender cosas nuevas.",
+            "b) El cerebro nunca pierde su plasticidad totalmente.",
+            "c) Dejar de generar neurotransmisores."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 43 (Capítulo 5). La plasticidad se mantiene siempre, permitiendo nuevos aprendizajes."
+    },
+    {
+        "q": "419. ¿Cuál de las siguientes definiciones describe correctamente a la emoción?",
+        "options": [
+            "a) Reacciones psicofisiológicas que representan modos de adaptación a estímulos.",
+            "b) Pensamientos lógicos estructurados sobre el pasado.",
+            "c) Acciones motoras lentas y planificadas."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 23 (Capítulo 2). Son respuestas inmediatas ante estímulos significativos o recuerdos."
+    },
+    {
+        "q": "424. Según la neurociencia, ¿qué tipos de emociones existen en el ser humano?",
+        "options": [
+            "a) Emociones primarias y secundarias.",
+            "b) Emociones reales e imaginarias.",
+            "c) Emociones solo cognitivas."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 66 (Capítulo 7). Las primarias son innatas; las secundarias dependen del contexto y experiencia."
+    },
+    {
+        "q": "425. Según el modelo del «Cerebro triuno», ¿en qué cerebro están presentes las funciones ejecutivas?",
+        "options": [
+            "a) Cerebro reptiliano.",
+            "b) Cerebro mamífero.",
+            "c) Cerebro racional (neocórtex)."
+        ],
+        "correct": 2,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 13 (Capítulo 1). El neocórtex es la sede del pensamiento reflexivo y planificación."
+    },
+    {
+        "q": "504. Un estudiante sabe andar en bicicleta pero no puede explicar los pasos verbalmente. ¿Qué revela esto?",
+        "options": [
+            "a) Diferencia entre memoria implícita (procedimental) y explícita.",
+            "b) Que el aprendizaje fue defectuoso.",
+            "c) Que tiene mala memoria a largo plazo."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 57 (Capítulo 6). Andar en bicicleta es un procedimiento automático (memoria implícita)."
+    },
+    {
+        "q": "592. ¿Qué estrategia metodológica permite profundizar progresivamente en la comprensión?",
+        "options": [
+            "a) El examen sorpresa.",
+            "b) La repetición con novedad.",
+            "c) La lectura silenciosa sin guía."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 87 (Capítulo 10). Consolida el aprendizaje de forma motivadora."
+    },
+    {
+        "q": "593. ¿Qué tipo de actividades aprovechan mejor el período de mayor activación cerebral?",
+        "options": [
+            "a) Actividades UPTIME (percepción activa de estímulos).",
+            "b) Actividades de relajación profunda.",
+            "c) Actividades de sueño asistido."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 59 (Capítulo 6). UPTIME es el estado ideal para atender con sentidos alerta."
+    },
+    {
+        "q": "598. ¿Qué propuesta plantea el texto para transformar la percepción del estrés en evaluaciones?",
+        "options": [
+            "a) Eliminar todas las notas.",
+            "b) Verla como proceso de diálogo, mejora y tolerancia al error.",
+            "c) Aumentar la presión para que se acostumbren al riesgo."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Páginas: 94-96 (Capítulo 11). Busca humanizar y desestresar el proceso evaluativo."
+    },
+    {
+        "q": "616. Según la neurociencia, ¿qué caracteriza al cerebro mamífero o límbico?",
+        "options": [
+            "a) Regula ingesta, sueño y necesidad de vínculos afectivos.",
+            "b) Es puramente racional y desapasionado.",
+            "c) No tiene relación con las emociones."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 49 (Capítulo 5). Requiere bienestar emocional y vínculos para operar bien."
+    },
+    {
+        "q": "617. ¿Qué señala el nuevo paradigma de la evaluación según el neuroaprendizaje?",
+        "options": [
+            "a) Es una herramienta hacia el desarrollo de la comprensión.",
+            "b) Es un castigo para controlar la conducta.",
+            "c) Debe generar el máximo estrés posible."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Páginas: 93-96 (Capítulo 11). Debe ser un proceso de mejora y diálogo."
+    },
+    {
+        "q": "618. ¿Cuál de los sistemas de almacenamiento funciona como archivo de conocimientos conceptuales?",
+        "options": [
+            "a) Memoria semántica.",
+            "b) Memoria episódica.",
+            "c) Memoria sensorial."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 57 (Capítulo 6). La memoria semántica guarda datos y conceptos teóricos."
+    },
+    {
+        "q": "619. ¿En qué grupos se divide la memoria a largo plazo?",
+        "options": [
+            "a) Visual y Auditiva.",
+            "b) Declarativa (explícita) e Implícita (procedimental).",
+            "c) Reciente y Antigua."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Páginas: 56-57 (Capítulo 6). Clasificación básica de la memoria duradera."
+    },
+    {
+        "q": "664. Un estudiante se bloquea ante una pregunta. ¿Qué estructura regula esa respuesta afectiva?",
+        "options": [
+            "a) La amígdala cerebral.",
+            "b) El cerebelo.",
+            "c) El páncreas."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Páginas: 30-32 (Capítulo 3). La amígdala bloquea el acceso cognitivo ante situaciones de estrés."
+    },
+    {
+        "q": "667. En relación con las jerarquías sociales del sistema reptiliano:",
+        "options": [
+            "a) A mayor poder, mayor posición dentro del grupo social.",
+            "b) El poder no influye en la posición.",
+            "c) Se basan solo en la empatía."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 12 (Capítulo 1). Es un comportamiento instintivo de organización grupal."
+    },
+    {
+        "q": "672. ¿Cómo se denomina a uno de los mecanismos principales del aprendizaje y la memoria?",
+        "options": [
+            "a) Poda sináptica.",
+            "b) PLP (Potenciación a Largo Plazo).",
+            "c) Glucólisis cerebral."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 52 (Capítulo 6). Fortalece de forma duradera las conexiones neuronales."
+    },
+    {
+        "q": "754. ¿Por qué estructura debe pasar obligatoriamente la información antes de llegar al cerebro racional?",
+        "options": [
+            "a) Por las redes instintivas emocionales.",
+            "b) Directamente al área de Broca.",
+            "c) Por la médula espinal únicamente."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 33 (Capítulo 3). El filtro emocional determina si el aprendizaje fluye o se bloquea."
+    },
+    {
+        "q": "761. ¿Cómo está conformada la estructura del neocórtex?",
+        "options": [
+            "a) Por la neocorteza y los hemisferios cerebrales.",
+            "b) Por el tallo cerebral y bulbo.",
+            "c) Por huesos y músculos craneales."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 13 (Capítulo 1). Es el asiento de la inteligencia intelectual y humana."
+    },
+    {
+        "q": "772. ¿Qué constituye el sistema atencional?",
+        "options": [
+            "a) Un foco de luz externa.",
+            "b) Sistema integrado por foco, conciencia y atención ejecutiva.",
+            "c) Un proceso unitario simple e inmutable."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 54 (Capítulo 6). Posee su propia neuro-bioquímica y circuitos."
+    },
+    {
+        "q": "773. ¿A quién se atribuye: 'El cerebro no es un vaso por llenar, sino una lámpara por encender'?",
+        "options": [
+            "a) Sócrates.",
+            "b) Plutarco.",
+            "c) Marilina Rotger."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 87 (Capítulo 10). Cita utilizada para ilustrar el rol activo del estudiante."
+    },
+    {
+        "q": "775. ¿Cuál sentido reptiliano se expresa mediante rituales, supersticiones y hábitos?",
+        "options": [
+            "a) Resistencia al cambio.",
+            "b) Curiosidad extrema.",
+            "c) Empatía social."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 12 (Capítulo 1). Busca ambientes y personas previsibles por seguridad instintiva."
+    },
+    {
+        "q": "791. ¿Cuáles son tres funciones ejecutivas de la neocorteza?",
+        "options": [
+            "a) Respirar, digerir y latir.",
+            "b) Planificar estrategias, organizar tareas e iniciar/finalizar acciones.",
+            "c) Sentir miedo, ira y asco."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Páginas: 47-48 (Capítulo 5). Permiten lograr objetivos complejos."
+    },
+    {
+        "q": "797. En el aula, ¿qué estados genera el color gris en los estudiantes?",
+        "options": [
+            "a) Paz y tenacidad.",
+            "b) Hambre y sueño.",
+            "c) Agresión e ira."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 92 (Capítulo 10). Aunque se prefieren colores cálidos."
+    },
+    {
+        "q": "801. ¿En qué dimensión temporal opera el sistema límbico?",
+        "options": [
+            "a) Solo en el futuro.",
+            "b) Vive en un tiempo pasado y presente.",
+            "c) Es atemporal absoluto."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 13 (Capítulo 1). Las emociones vinculan lo vivido con el ahora."
+    },
+    {
+        "q": "820. Reconocer los logros del estudiante favorece la liberación de:",
+        "options": [
+            "a) Cortisol.",
+            "b) Insulina.",
+            "c) Serotonina."
+        ],
+        "correct": 2,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 37 (Capítulo 4). Se activa ante el placer de lograr un objetivo motivador."
+    },
+    {
+        "q": "859. ¿Cómo se llama el neurotransmisor que controla el enfoque mental y la atención?",
+        "options": [
+            "a) Acetilcolina.",
+            "b) Noradrenalina.",
+            "c) Dopamina."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 37 (Capítulo 4). Regula humor y excitación física y mental."
+    },
+    {
+        "q": "884. ¿Cómo se denomina la capacidad del cerebro para adaptarse y reorganizarse toda la vida?",
+        "options": [
+            "a) Rigidez cognitiva.",
+            "b) Atrofia selectiva.",
+            "c) Plasticidad cerebral (neuroplasticidad)."
+        ],
+        "correct": 2,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 16 (Capítulo 1). Base fundamental de la educación continua."
+    },
+    {
+        "q": "885. ¿Denominación de la estructura del primer nivel en el Cerebro Triuno?",
+        "options": [
+            "a) Neocórtex.",
+            "b) Cerebro reptiliano.",
+            "c) Sistema Límbico."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 12 (Capítulo 1). Estructura evolutiva más antigua."
+    },
+    {
+        "q": "886. ¿Qué estructura mamífera condiciona el acceso al aprendizaje consciente?",
+        "options": [
+            "a) Cerebro reptil.",
+            "b) Sistema límbico o cerebro mamífero.",
+            "c) Hipófisis."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 12 (Capítulo 1). Gestiona el procesamiento emocional."
+    },
+    {
+        "q": "887. Manifestación de la respuesta de fuga ante una amenaza:",
+        "options": [
+            "a) Ataque agresivo.",
+            "b) Huida, omisión o inhibición de acción.",
+            "c) Análisis crítico pausado."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 31 (Capítulo 3). Reacción inmediata de supervivencia amigdalina."
+    },
+    {
+        "q": "925. Función central de la atención en el aprendizaje:",
+        "options": [
+            "a) Elegir qué estímulos vamos a captar.",
+            "b) Ignorar al profesor.",
+            "c) Dormir para procesar datos."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 105 (Capítulo 12). Evita que la información llegue deformada."
+    },
+    {
+        "q": "927. ¿Con qué se relaciona la forma en que actuamos en determinadas situaciones?",
+        "options": [
+            "a) Con el horóscopo.",
+            "b) Sentimientos y pensamientos ante vivencias y personas.",
+            "c) No tiene relación interna."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Capítulo 7. La conducta es reflejo del mundo interno emocional e intelectual."
+    },
+    {
+        "q": "928. ¿En base a qué el cerebro mamífero genera respuestas de supervivencia?",
+        "options": [
+            "a) Archivo del dolor y archivo de placer.",
+            "b) Cálculos matemáticos.",
+            "c) Instrucciones genéticas rígidas solamente."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 49 (Capítulo 5). Las emociones pasadas dictan la respuesta actual."
+    },
+    {
+        "q": "929. ¿Por qué trabajar el autoconocimiento desde temprana edad?",
+        "options": [
+            "a) Para perder el tiempo.",
+            "b) Manejar frustración y favorecer inserción social futura.",
+            "c) Para ser egoísta."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 82 (Capítulo 9). Es clave para la inteligencia emocional."
+    },
+    {
+        "q": "930. ¿Qué memoria mantiene activa la información actual para resolver situaciones?",
+        "options": [
+            "a) Memoria de trabajo (o a corto plazo).",
+            "b) Memoria eterna.",
+            "c) Memoria muscular."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 56 (Capítulo 6). Limitada en tiempo y capacidad."
+    },
+    {
+        "q": "931. Dimensiones fundamentales de la inteligencia emocional:",
+        "options": [
+            "a) Sumar, restar y dividir.",
+            "b) Autoconciencia, Autorregulación, Motivación, Empatía y Habilidades sociales.",
+            "c) Ver, oír y callar."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 64 (Capítulo 7). Basado en el modelo de Goleman."
+    },
+    {
+        "q": "942. ¿Qué se conoce como neuroplasticidad?",
+        "options": [
+            "a) Muerte de neuronas.",
+            "b) Capacidad del cerebro para adaptarse, reorganizarse y modificarse.",
+            "c) Endurecimiento craneal."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 16 (Capítulo 1). El cerebro cambia con cada pensamiento."
+    },
+    {
+        "q": "946. ¿Autora del libro «Neurociencias, Neuroaprendizaje»?",
+        "options": [
+            "a) Marilina Rotger.",
+            "b) Maria Montessori.",
+            "c) Amanda Céspedes."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Portada. Especialista en el área."
+    },
+    {
+        "q": "948. ¿Para qué sirve el «Botiquín de primeros auxilios emocionales»?",
+        "options": [
+            "a) Curar heridas físicas con gasas.",
+            "b) Registrar síntomas somáticos que manifiestan emociones no reconocidas.",
+            "c) Guardar dulces para premios."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Páginas: 77-78 (Capítulo 9). Herramienta de seguimiento emocional."
+    },
+    {
+        "q": "949. ¿De qué son responsables los impulsos electroquímicos?",
+        "options": [
+            "a) De que adquiramos nuevos conocimientos formando sinapsis.",
+            "b) Del crecimiento del pelo.",
+            "c) De la digestión únicamente."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 17 (Capítulo 1). Base física de la transmisión de información."
+    },
+    {
+        "q": "989. Mecanismo responsable de la formación de conexiones sinápticas duraderas:",
+        "options": [
+            "a) PLP (Potenciación a Largo Plazo).",
+            "b) Poda neuronal.",
+            "c) Amnesia retrógrada."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 52 (Capítulo 6). Fortalece la respuesta sináptica."
+    },
+    {
+        "q": "991. ¿Qué otro componente conforma el sistema límbico?",
+        "options": [
+            "a) El fémur.",
+            "b) El hipocampo.",
+            "c) El bazo."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 23 (Capítulo 2). Estructura clave para memoria y navegación."
+    },
+    {
+        "q": "1017. ¿Qué otorga el cerebro reptil?",
+        "options": [
+            "a) Razonamiento ético.",
+            "b) Territorialidad, Resistencia al cambio y Jerarquías sociales.",
+            "c) Creatividad poética."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 12 (Capítulo 1). Regula también funciones vitales."
+    },
+    {
+        "q": "1020. Epicentro de la atención ejecutiva voluntaria:",
+        "options": [
+            "a) Bulbo raquídeo.",
+            "b) Corteza cingulada anterior.",
+            "c) Retina."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 54 (Capítulo 6). Permite sostener el foco conscientemente."
+    },
+    {
+        "q": "1021. Efecto de usar palabras positivas con frecuencia:",
+        "options": [
+            "a) Estimula centros de motivación y lóbulo frontal.",
+            "b) Ninguno.",
+            "c) Provoca sueño."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 83 (Capítulo 9). Cambia la forma de pensar del cerebro."
+    },
+    {
+        "q": "1028. Sensaciones presentes en el cuerpo según la neurociencia:",
+        "options": [
+            "a) Sonrojo, palidez, palpitaciones, sudor.",
+            "b) Solo el hambre.",
+            "c) Crecimiento de uñas."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 24 (Capítulo 2). Reacciones fisiológicas de la emoción."
+    },
+    {
+        "q": "1030. ¿Con qué cerebro se identifican la neocorteza y hemisferios?",
+        "options": [
+            "a) Cerebro emocional.",
+            "b) Cerebro racional (o humano).",
+            "c) Cerebro reptil."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 13 (Capítulo 1). Estructura superior evolutiva."
+    },
+    {
+        "q": "1031. Sistema vinculado a procesamiento emocional y memoria:",
+        "options": [
+            "a) Sistema digestivo.",
+            "b) Sistema límbico.",
+            "c) Sistema óseo."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 23 (Capítulo 2). Integra amígdala e hipocampo."
+    },
+    {
+        "q": "1032. ¿Qué requiere el cerebro reptiliano para operar bien?",
+        "options": [
+            "a) Oxígeno, rituales, pertenencia al grupo y seguridad.",
+            "b) Silencio absoluto y oscuridad.",
+            "c) Frío extremo."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 48 (Capítulo 5). Habilita el paso a lo racional."
+    },
+    {
+        "q": "1033. Efecto neurológico de las TICS en nativos tecnológicos:",
+        "options": [
+            "a) Motiva al cerebro al situarlo en un contexto conocido.",
+            "b) Desorientación.",
+            "c) No tiene efecto."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 90 (Capítulo 10). Innova y amplía aprendizajes."
+    },
+    {
+        "q": "1036. ¿A quién se atribuye: «El aprendizaje es experiencia, todo lo demás es información»?",
+        "options": [
+            "a) Albert Einstein.",
+            "b) Newton.",
+            "c) Piaget."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 41 (Capítulo 5). Resalta la importancia de la vivencia."
+    },
+    {
+        "q": "1037. ¿Quién afirmó: «Loco es aquel que, haciendo siempre lo mismo, espera resultados distintos»?",
+        "options": [
+            "a) Sigmund Freud.",
+            "b) Albert Einstein.",
+            "c) Burrhus Skinner."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 93 (Capítulo 11). Justifica innovar en evaluación."
+    },
+    {
+        "q": "1040. Capacidad cerebral de adaptarse a cada nuevo entorno:",
+        "options": [
+            "a) Memoria.",
+            "b) Supervivencia.",
+            "c) Agresión."
+        ],
+        "correct": 1,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 15 (Capítulo 1). El cerebro se modifica para sobrevivir."
+    },
+    {
+        "q": "1041. Contraste de las TICS vs métodos tradicionales:",
+        "options": [
+            "a) Las TICS motivan más al ser el lenguaje de nativos digitales.",
+            "b) Lo tradicional es superior siempre.",
+            "c) No hay diferencia."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 90 (Capítulo 10). Los dispositivos motivan e innovan."
+    },
+    {
+        "q": "1050. ¿Por qué contemplar prioritariamente las redes emocionales?",
+        "options": [
+            "a) Porque la información pasa primero por cerebros reptil y mamífero.",
+            "b) No es necesario.",
+            "c) Porque son más rápidas que la luz."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 33 (Capítulo 3). Determinan si el aprendizaje fluye."
+    },
+    {
+        "q": "1138. Factor que inhibe la neuroplasticidad en aula hostil:",
+        "options": [
+            "a) El estrés.",
+            "b) La risa.",
+            "c) El aire puro."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 58 (Capítulo 6). El estrés bloquea la corteza."
+    },
+    {
+        "q": "1139. Proceso para que información sea recuerdo estable:",
+        "options": [
+            "a) Potenciación a Largo Plazo (PLP).",
+            "b) Olvido inmediato.",
+            "c) Repetición monótona."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 52 (Capítulo 6). Requiere emoción y motivación."
+    },
+    {
+        "q": "1153. Hormona que provoca disminución en rendimiento:",
+        "options": [
+            "a) Cortisol.",
+            "b) Serotonina.",
+            "c) Insulina."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 58 (Capítulo 6). Se secreta ante amenaza."
+    },
+    {
+        "q": "1157. Capacidad de procesar, codificar, almacenar, evocar y comunicar:",
+        "options": [
+            "a) Memoria.",
+            "b) Atención.",
+            "c) Percepción."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 55 (Capítulo 6). Definición integral de memoria."
+    },
+    {
+        "q": "1166. Dos módulos importantes del sistema límbico:",
+        "options": [
+            "a) Hipocampo y amígdala.",
+            "b) Ojos y oídos.",
+            "c) Riñones e hígado."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 13 (Capítulo 1). Gestionan memoria y emoción."
+    },
+    {
+        "q": "1175. Reorganización funcional del sistema nervioso:",
+        "options": [
+            "a) Plasticidad cerebral (neuroplasticidad).",
+            "b) Parálisis.",
+            "c) Atrofia."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 16 (Capítulo 1). Capacidad de modificación estructural."
+    },
+    {
+        "q": "1191. El sistema límbico controla nuestras emociones y:",
+        "options": [
+            "a) Motivaciones de supervivencia (miedo e ira).",
+            "b) Crecimiento óseo.",
+            "c) Digestión."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 25 (Capítulo 2). Estructuras primitivas bajo la corteza."
+    },
+    {
+        "q": "1197. Inteligencia múltiple relacionada con autorreflexión:",
+        "options": [
+            "a) Inteligencia intrapersonal.",
+            "b) Inteligencia musical.",
+            "c) Inteligencia espacial."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 46 (Capítulo 5). Permite el autoconocimiento."
+    },
+    {
+        "q": "1210. Expresión mediante danza y drama es inteligencia:",
+        "options": [
+            "a) Corporal-kinestésica.",
+            "b) Lógica.",
+            "c) Musical."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 45 (Capítulo 5). Uso del cuerpo para expresar ideas."
+    },
+    {
+        "q": "1215. Ansiedad y angustia pueden ser provocadas por:",
+        "options": [
+            "a) Pensamiento rumiante o percepción de amenaza.",
+            "b) Comer frutas.",
+            "c) Dormir 8 horas."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Páginas: 27, 30. Estados que alteran el bienestar."
+    },
+    {
+        "q": "1271. Aprendizajes de larga y corta duración se asimilan:",
+        "options": [
+            "a) A través de diferentes capacidades e inteligencias.",
+            "b) Solo leyendo.",
+            "c) Mediante castigo físico."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 44 (Capítulo 5). El cerebro usa múltiples canales."
+    },
+    {
+        "q": "1272. ¿Qué principio explica que retroalimentación positiva mejore el aprendizaje?",
+        "options": [
+            "a) Activación de serotonina ante el logro.",
+            "b) Cansancio ocular.",
+            "c) Enfriamiento neuronal."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 37 (Capítulo 4). El logro activa neuroquímica de placer."
+    },
+    {
+        "q": "1275. Enunciado que refleja el funcionamiento del SNC:",
+        "options": [
+            "a) El cerebro es el órgano del aprendizaje en constante remodelación.",
+            "b) Es estático.",
+            "c) Solo aprende de noche."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Páginas: 41, 57. El aprendizaje modifica conexiones."
+    },
+    {
+        "q": "1313. Estructura que evalúa experiencia como +/-:",
+        "options": [
+            "a) Amígdala.",
+            "b) Lóbulo parietal.",
+            "c) Tiroides."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 30 (Capítulo 3). Condiciona acercamiento al saber."
+    },
+    {
+        "q": "1314. Importancia de neutralizar emociones negativas:",
+        "options": [
+            "a) Porque bloquean aprendizaje cerrando amígdala.",
+            "b) No importa.",
+            "c) Para que no hablen."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 22 (Capítulo 2). Las positivas abren paso al razonamiento."
+    },
+    {
+        "q": "1315. ¿Por qué aprovechar tecnología en el aula?",
+        "options": [
+            "a) Para motivar el cerebro de nativos tecnológicos.",
+            "b) Gastar luz.",
+            "c) El docente descanse."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 90 (Capítulo 10). Contexto conocido para el cerebro."
+    },
+    {
+        "q": "1355. Parte activada cuando examen se percibe como amenaza:",
+        "options": [
+            "a) Amígdala cerebral.",
+            "b) Páncreas.",
+            "c) Médula."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 94 (Capítulo 11). Activa modo supervivencia."
+    },
+    {
+        "q": "1356. ¿Qué estructura consolida contenido con emoción positiva?",
+        "options": [
+            "a) Amígdala.",
+            "b) Cerebelo.",
+            "c) Hipófisis."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 58 (Capítulo 6). Filtro afectivo de memoria."
+    },
+    {
+        "q": "1357. Estructura que impide migrar info al neocórtex sin afectividad:",
+        "options": [
+            "a) Amígdala.",
+            "b) Hipotálamo.",
+            "c) Tallo."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 58 (Capítulo 6). Sin emoción no se alcanza umbral de conexión."
+    },
+    {
+        "q": "1358. ¿Por qué contemplar redes instintivas emocionales primero?",
+        "options": [
+            "a) Info pasa por ahí antes de llegar al racional.",
+            "b) No hace falta.",
+            "c) Son las más lentas."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 33 (Capítulo 3). Determinan si el saber fluye."
+    },
+    {
+        "q": "1362. Mecanismo que fortalece conexiones con práctica repetida:",
+        "options": [
+            "a) PLP (Potenciación a Largo Plazo).",
+            "b) Olvido.",
+            "c) Sueño."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 52 (Capítulo 6). Resultado de alta estimulación sináptica."
+    },
+    {
+        "q": "1363. Consolidación tras resolver problema difícil se debe a:",
+        "options": [
+            "a) Liberación de dopamina y serotonina.",
+            "b) Cortisol alto.",
+            "c) Falta de oxígeno."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Páginas: 39, 58. Crean estado emocional positivo."
+    },
+    {
+        "q": "1366. ¿A quién se atribuye: 'Verdadero arte de memoria es el arte de atención'?",
+        "options": [
+            "a) Ben Jonson.",
+            "b) Shakespeare.",
+            "c) Gardner."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 51 (Capítulo 6). Sin atención no hay registro."
+    },
+    {
+        "q": "1369. ¿De qué emoción primaria deriva la inseguridad?",
+        "options": [
+            "a) Del miedo.",
+            "b) De alegría.",
+            "c) De sorpresa."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 66 (Capítulo 7). Es una emoción secundaria del miedo."
+    },
+    {
+        "q": "1373. Trabajar cooperativamente de forma innata es inteligencia:",
+        "options": [
+            "a) Interpersonal.",
+            "b) Intrapersonal.",
+            "c) Naturalista."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 46 (Capítulo 5). Sensibilidad para el equipo."
+    },
+    {
+        "q": "1380. ¿En qué consisten los recreos mentales?",
+        "options": [
+            "a) Pausas cortas para recuperar atención y oxigenar.",
+            "b) Siesta de una hora.",
+            "c) Gritar fuerte."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 78 (Capítulo 9). Necesarios cada 20 min aproximadamente."
+    },
+    {
+        "q": "1385. ¿Para qué es útil el «panel emocional»?",
+        "options": [
+            "a) Poner palabras a emociones y gestionarlas.",
+            "b) Decorar el aula.",
+            "c) Identificar faltas de ortografía."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 76 (Capítulo 9). Facilita la gestión emocional."
+    },
+    {
+        "q": "1387. Capacidad para explicar, enseñar o persuadir es inteligencia:",
+        "options": [
+            "a) Lingüística.",
+            "b) Lógica.",
+            "c) Espacial."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Páginas: 44-45 (Capítulo 5). Alta capacidad comunicativa."
+    },
+    {
+        "q": "1388. Estudiante consciente de sí mismo y metas tiene inteligencia:",
+        "options": [
+            "a) Intrapersonal.",
+            "b) Interpersonal.",
+            "c) Musical."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 46 (Capítulo 5). Conocimiento claro de emociones propias."
+    },
+    {
+        "q": "1389. Autonomía y reconocimiento de fortalezas es inteligencia:",
+        "options": [
+            "a) Intrapersonal.",
+            "b) Lógica.",
+            "c) Social."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 46 (Capítulo 5). Regulación frente a frustración."
+    },
+    {
+        "q": "1392. Dimensiones que debe abordar el maestro:",
+        "options": [
+            "a) Académico y socio-afectivo.",
+            "b) Solo notas.",
+            "c) Solo conducta física."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 70 (Capítulo 8). Responsabilidad docente integral."
+    },
+    {
+        "q": "1406. Proceso de desarmar redes inactivas:",
+        "options": [
+            "a) Plasticidad negativa.",
+            "b) Plasticidad positiva.",
+            "c) Memoria episódica."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 16 (Capítulo 1). Eliminación por desuso."
+    },
+    {
+        "q": "1407. Reacciones amigdalinas ante amenaza percibida:",
+        "options": [
+            "a) Inmediatas de fuga o lucha.",
+            "b) Reflexivas y lentas.",
+            "c) Solo artísticas."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 31 (Capítulo 3). Antes de razonar la situación."
+    },
+    {
+        "q": "1408. Mecanismo principal del aprendizaje:",
+        "options": [
+            "a) PLP (Potenciación a Largo Plazo).",
+            "b) Amnesia.",
+            "c) Distracción."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 52 (Capítulo 6). Fundamental para fijar memoria."
+    },
+    {
+        "q": "1425. Finalidad de estímulo y afecto en primeros 5 años:",
+        "options": [
+            "a) Vida con aprendizajes y experiencias significativas.",
+            "b) Que no llore.",
+            "c) Que lea en un mes."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Páginas: 42-43 (Capítulo 5). Etapa de máxima consolidación."
+    },
+    {
+        "q": "1428. Razón para anticipar contenidos:",
+        "options": [
+            "a) Relajar cerebro, bajar ansiedad y preparar al alumno.",
+            "b) Arruinar sorpresa.",
+            "c) Salir antes."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 88 (Capítulo 10). Alumnos más pacientes."
+    },
+    {
+        "q": "1442. Sentido fundamental del cerebro reptiliano:",
+        "options": [
+            "a) Territorialidad, resistencia al cambio y jerarquías.",
+            "b) Altruismo.",
+            "c) Creatividad."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 12 (Capítulo 1). Mecanismos de conservación básicos."
+    },
+    {
+        "q": "1445. Sistemas de almacenamiento declarativo:",
+        "options": [
+            "a) Episódico y semántico.",
+            "b) Visual y Auditivo.",
+            "c) Muscular y Visceral."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 57 (Capítulo 6). Clasificación de memoria explícita."
+    },
+    {
+        "q": "1446. Memoria recuperada conscientemente:",
+        "options": [
+            "a) Declarativa o explícita.",
+            "b) Implícita.",
+            "c) De un segundo."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 56 (Capítulo 6). Datos narrables."
+    },
+    {
+        "q": "1480. Estructura que almacena memoria a LP semanas:",
+        "options": [
+            "a) Hipocampo.",
+            "b) Piel.",
+            "c) Estómago."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 57 (Capítulo 6). Luego traslada datos a corteza."
+    },
+    {
+        "q": "1481. Estructuras del Cerebro Triuno:",
+        "options": [
+            "a) Reptiliano, Límbico y Neocórtex.",
+            "b) Cráneo y Médula.",
+            "c) Izquierdo y Derecho."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 12 (Capítulo 1). Evolución secuencial del encéfalo."
+    },
+    {
+        "q": "1482. Dos módulos del sistema límbico:",
+        "options": [
+            "a) Hipocampo y amígdala.",
+            "b) Frontal y Parietal.",
+            "c) Bulbo y Puente."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 13 (Capítulo 1). Centros de memoria y emoción."
+    },
+    {
+        "q": "1483. Estructura comprometida si enseñanza omite lo afectivo:",
+        "options": [
+            "a) Amígdala.",
+            "b) Corazón.",
+            "c) Riñón."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 58 (Capítulo 6). Sin emoción no hay retención duradera."
+    },
+    {
+        "q": "1495. ¿Hacia dónde transferir memoria de trabajo para consolidar?",
+        "options": [
+            "a) Memoria a largo plazo.",
+            "b) Olvido.",
+            "c) Memoria sensorial."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 57 (Capítulo 6). A través del hipocampo a la corteza."
+    },
+    {
+        "q": "1504. Epicentro de atención ejecutiva voluntaria:",
+        "options": [
+            "a) Corteza cingulada anterior.",
+            "b) Occipital.",
+            "c) Cerebelo."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 54 (Capítulo 6). Sostiene foco por voluntad."
+    },
+    {
+        "q": "1506. Recursos para identificar emoción:",
+        "options": [
+            "a) Sonidos, olores, historias y relatos.",
+            "b) Silencio total.",
+            "c) Sedantes."
+        ],
+        "correct": 0,
+        "retro": "Libro: Neurociencia Neuroaprendizaje. Página: 79 (Capítulo 9). Estímulos sensoriales y narrativos."
+    }
+];
+    </script>
+    <script src="codes.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Preguntas - PROTOCOLO DE ACTUACIÓN (VIOLENCIA)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Banco de Preguntas - PROTOCOLO DE ACTUACIÓN (VIOLENCIA)</h1>
+        <div class="subtitle">Examen de Ascenso 2026</div>
+    </header>
+
+    <div id="quiz-container"></div>
+
+    <script>
+        window.quizData = [
+    {
+        "q": "8. La «Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo» refiere que un acto de naturaleza intencionada o cualquier esfuerzo que trata de socavar la valoración que tiene la niña, el niño y/o adolescente de sí mismo es:",
+        "options": [
+            "a) Violencia física por omisión.",
+            "b) Violencia psicológica.",
+            "c) Una infracción leve de convivencia."
+        ],
+        "correct": 1,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, página 14. [1]"
+    },
+    {
+        "q": "56. De acuerdo a la «Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo», cuando se sospeche de abuso sexual, la conversación deberá ser realizada por:",
+        "options": [
+            "a) El maestro de aula o el regente de turno.",
+            "b) El director de la unidad educativa en presencia de los padres.",
+            "c) Personal capacitado de la Defensoría de la Niñez y Adolescencia (DNA) o de los Servicios Legales Integrales Municipales (SLIM)."
+        ],
+        "correct": 2,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, página 53. [2]"
+    },
+    {
+        "q": "79. De acuerdo con la «Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo», la violencia por omisión y supresión presenta mayores dificultades para su identificación, ya que representa:",
+        "options": [
+            "a) Una forma de violencia física con marcas temporales.",
+            "b) Una forma pasiva de violencia que no siempre presenta evidencias visibles.",
+            "c) Un conflicto de intereses exclusivo entre los progenitores."
+        ],
+        "correct": 1,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, páginas 14-15. [3]"
+    },
+    {
+        "q": "111. ¿Cuál de las siguientes opciones corresponde a una consecuencia cognitiva a largo plazo en niñas, niños o adolescentes víctimas de violencia?",
+        "options": [
+            "a) Trastornos del aprendizaje (escritura, lectura, cálculo).",
+            "b) Aislamiento social y falta de empatía.",
+            "c) Hematomas recurrentes y palidez."
+        ],
+        "correct": 0,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, Tabla 2, página 23. [4]"
+    },
+    {
+        "q": "136. A partir de las señales y consecuencias de la violencia a largo plazo descritas en la «Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo», ¿cuál de los siguientes enunciados corresponde al área emocional en la niñez?",
+        "options": [
+            "a) Dificultad para el razonamiento lógico-matemático.",
+            "b) Autoconcepto y autovaloración difusa o negativa, desesperanza aprendida, trastorno depresivo, trastorno de ansiedad generalizada.",
+            "c) Comportamientos de riesgo y delincuencia juvenil."
+        ],
+        "correct": 1,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, Tabla 2, página 23. [4]"
+    },
+    {
+        "q": "235. De acuerdo con la tabla «Orientaciones cuando se conoce un caso de violencia», «Durante la intervención» se establecen acciones que SÍ se pueden hacer. ¿Cuál de los siguientes enunciados corresponden a este momento?",
+        "options": [
+            "a) Confrontar a la víctima con el agresor para aclarar los hechos.",
+            "b) La directora o el director debe asegurarse que las actuaciones del personal docente, administrativo y de toda la unidad educativa sean en un marco de confidencialidad.",
+            "c) Realizar un interrogatorio exhaustivo a la víctima sobre detalles íntimos."
+        ],
+        "correct": 1,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, página 50. [5]"
+    },
+    {
+        "q": "248. En la «Guía para la Identificación y Denuncia de Violencia Intrafamiliar en el Ámbito Educativo», se describe la tabla de señales y consecuencias de la violencia a largo plazo en la adolescencia. ¿Cuál de los siguientes enunciados corresponde al área emocional?",
+        "options": [
+            "a) Desempeño escolar deficiente por falta de atención.",
+            "b) Autoconcepto y autovaloración difusa o negativa, desesperanza aprendida, trastorno depresivo, trastorno de ansiedad generalizada.",
+            "c) Trastornos del sueño y pesadillas recurrentes."
+        ],
+        "correct": 1,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, Tabla 2, página 23. [6]"
+    },
+    {
+        "q": "288. La «Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo» menciona que cuando se observan inconsistencias entre los relatos de la madre, padre, tutor o cuidador, o de la misma víctima, y lo registrado por la maestra o el maestro, es posible que:",
+        "options": [
+            "a) Exista un error administrativo en el llenado de los formularios.",
+            "b) Se esté frente a un caso de violencia.",
+            "c) El estudiante esté confundido por su etapa de desarrollo."
+        ],
+        "correct": 1,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, página 23 y context. [7]"
+    },
+    {
+        "q": "363. Una estudiante es agredida de forma verbal por su maestro frente a toda la clase, en varias ocasiones. ¿Cuál es la acción inmediata que se debe seguir en esta situación por el director de la unidad Educativa?",
+        "options": [
+            "a) Realizar un acta de conciliación entre el maestro y los padres.",
+            "b) Comunicar a la Defensoría de la Niñez y Adolescencia, iniciar el proceso disciplinario y realizar el seguimiento.",
+            "c) Suspender a la alumna hasta que el conflicto se calme."
+        ],
+        "correct": 1,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, Ruta 1, página 59. [8]"
+    },
+    {
+        "q": "413. En la tabla de «Orientaciones cuando se conoce un caso de violencia», de la «Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo» denominado «Durante la intervención» ante un caso de violencia detectado, ¿Cuál de las siguientes opciones identifica lo que NO se puede hacer en este momento?",
+        "options": [
+            "a) No se puede proporcionar o divulgar información de la situación de violencia con otras personas, excepto la información específica para elaborar el informe del caso.",
+            "b) No se puede informar a la Defensoría de la Niñez sin el permiso de los padres.",
+            "c) No se puede derivar el caso a centros de salud si no hay heridas abiertas."
+        ],
+        "correct": 0,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, página 50. [9]"
+    },
+    {
+        "q": "878. La tabla de «Orientaciones cuando se conoce un caso de violencia» está descrita en momentos. Considerando el cuarto momento, denominado «Durante la contrarreferencia o seguimiento», ¿cuál de las siguientes opciones identifica lo que NO se puede hacer?",
+        "options": [
+            "a) Dejar de informar al personal administrativo sobre el caso.",
+            "b) Considerar que la responsabilidad con la víctima NO concluye; debemos continuar garantizando su protección.",
+            "c) Interrogar nuevamente a la víctima para validar el fallo externo."
+        ],
+        "correct": 1,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, página 58. [10]"
+    },
+    {
+        "q": "1077. Rodrigo, estudiante de 14 años, ha sido víctima de agresión reiterada... presenta dificultades severas en lectura y cálculo... ¿Cuál de las siguientes opciones identifica correctamente dicha consecuencia y la distingue de las demás categorías presentes en el caso?",
+        "options": [
+            "a) Consumo de alcohol (consecuencia conductual).",
+            "b) Dificultades severas en lectura y cálculo (Consecuencia cognitiva a mediano plazo).",
+            "c) Percepción negativa de sí mismo (consecuencia emocional)."
+        ],
+        "correct": 1,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, Tabla 2, página 22. [11]"
+    },
+    {
+        "q": "1205. Según la «Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo», es necesario reconocer que la ley no es suficiente y resulta imprescindible unir esfuerzos de los actores sociales y de las instituciones responsables de proteger a:",
+        "options": [
+            "a) Las niñas, niños y adolescentes.",
+            "b) Los bienes inmuebles del Estado.",
+            "c) El prestigio de la unidad educativa."
+        ],
+        "correct": 0,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, página 5. [12]"
+    },
+    {
+        "q": "1538. Según el documento «Convivencia escolar y resolución pacífica de conflictos», los centros educativos se convierten en lugares idóneos para:",
+        "options": [
+            "a) La instrucción técnica exclusivamente.",
+            "b) Prevenir la violencia y promover la cultura de paz.",
+            "c) El juzgamiento penal de los agresores."
+        ],
+        "correct": 1,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, página 5. [13]"
+    },
+    {
+        "q": "1553. ¿Cuál es la combinación de medidas preventivas que la unidad educativa debe implementar de forma articulada, con relación a la obediencia a ciegas hacia un adulto de la comunidad educativa?",
+        "options": [
+            "a) Reforzar la disciplina rígida y el castigo como método de orden.",
+            "b) Formar a las y los estudiantes con un pensamiento reflexivo y crítico, estimulando constantemente su capacidad y derecho a opinar, disentir respetuosamente, frente a pares y adultos y no a la obediencia a ciegas.",
+            "c) Prohibir el diálogo entre estudiantes de diferentes grados académicos."
+        ],
+        "correct": 1,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, página 38. [14]"
+    },
+    {
+        "q": "1555. Según las medidas generales de prevención de violencia, ¿qué acción preventiva debe priorizar el maestro ante la obediencia ciega de estudiantes?",
+        "options": [
+            "a) El castigo ejemplar a los líderes de los grupos.",
+            "b) Formar a las y los estudiantes con un pensamiento reflexivo y crítico, estimulando su derecho a opinar y disentir frente a adultos.",
+            "c) Ignorar la conducta mientras no haya agresión física evidente."
+        ],
+        "correct": 1,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, página 38. [15]"
+    },
+    {
+        "q": "1590. En los niveles múltiples de identificación y prevención el primer nivel (individual) del modelo ecológico pretende identificar:",
+        "options": [
+            "a) El presupuesto asignado a la educación departamental.",
+            "b) Las características del individuo que aumentan la probabilidad de ser víctima o responsable de actos violentos.",
+            "c) La ubicación geográfica de las viviendas de los alumnos."
+        ],
+        "correct": 1,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, context ref. a modelo ecológico. [16]"
+    },
+    {
+        "q": "1591. Las acciones de prevención en el ámbito educativo deben estar dirigidas a:",
+        "options": [
+            "a) Facilitar que las niñas, los niños y adolescentes se empoderen y sean capaces de tomar decisiones respecto a sus proyectos de vida de manera consciente, libre y autónoma.",
+            "b) Incrementar la carga horaria de matemáticas y ciencias exactas.",
+            "c) Vigilar los domicilios de los estudiantes durante las vacaciones."
+        ],
+        "correct": 0,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, página 24. [17]"
+    },
+    {
+        "q": "1793. ¿Qué áreas comprende la tabla de señales y consecuencias de la violencia a corto, mediano y largo plazo, según la «Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo»?",
+        "options": [
+            "a) Área física, área social y área legal.",
+            "b) Área emocional, área cognitiva y área conductual.",
+            "c) Área pedagógica, área disciplinaria y área recreativa."
+        ],
+        "correct": 1,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, Tabla 2, páginas 22-23. [18]"
+    },
+    {
+        "q": "1794. En casos de violencia física y psicológica, si la Defensoría de la Niñez determina que la falta cometida por el maestro no constituye infracción ni delito, ¿qué medida debe adoptar la Directora o Director de la Unidad Educativa?",
+        "options": [
+            "a) Archivar el caso y eliminar el antecedente del maestro.",
+            "b) Amonestar por escrito a la maestra o maestro que ha ejercido malos tratos para que reflexione sobre las causas de su comportamiento.",
+            "c) Denunciar directamente ante el Ministerio de Justicia."
+        ],
+        "correct": 1,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, Ruta 1, página 59. [18]"
+    },
+    {
+        "q": "1799. Si se conoce que la madre de la niña, el niño o adolescente vive una situación de violencia y/o violencia sexual, se le deberá:",
+        "options": [
+            "a) Denunciar a la madre por no haber protegido al menor previamente.",
+            "b) Orientar sobre los pasos a seguir para la denuncia y los servicios de apoyo disponibles.",
+            "c) Prohibir que la madre ingrese a la unidad educativa para evitar conflictos."
+        ],
+        "correct": 1,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, páginas 50-51. [19]"
+    },
+    {
+        "q": "1844. ¿Cuál es la Instancia responsable de realizar el proceso de contención emocional de emergencia de una víctima de violencia sexual?",
+        "options": [
+            "a) El maestro guía del curso o el tutor de PSP.",
+            "b) Personal capacitado de la Defensoría de la Niñez y Adolescencia (DNA) o de los Servicios Legales Integrales Municipales (SLIM).",
+            "c) El médico del centro de salud más cercano únicamente."
+        ],
+        "correct": 1,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, página 53. [20]"
+    },
+    {
+        "q": "1876. Conforme a la «Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo», la unidad educativa es el lugar donde confluye la responsabilidad del Estado, el compromiso docente y:",
+        "options": [
+            "a) El compromiso de las madres y padres de familia como cogarantes.",
+            "b) El apoyo financiero de organismos internacionales obligatoriamente.",
+            "c) La supervisión directa de la policía nacional cada semana."
+        ],
+        "correct": 0,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, página 5. [21]"
+    },
+    {
+        "q": "1878. ¿Cuál es la condición que debe cumplirse obligatoriamente al momento de elaborar el informe del hecho ante un caso de violencia sexual en la unidad educativa?",
+        "options": [
+            "a) El informe debe ser objetivo, evitando juicios de valor o supuestos, y no se deben realizar preguntas adicionales a la víctima.",
+            "b) Debe incluir la firma de por lo menos tres testigos presenciales.",
+            "c) Se debe esperar a que la víctima redacte ella misma el informe de puño y letra."
+        ],
+        "correct": 0,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, página 51. [22]"
+    },
+    {
+        "q": "1925. El «Protocolo de Prevención y Actuación» menciona cuatro pilares fundamentales derivados de la Convención sobre los Derechos del Niño. Tres de ellos son: el interés superior del niño, el derecho a la supervivencia y al desarrollo, y el derecho a la no discriminación. ¿Cuál corresponde al cuarto pilar?",
+        "options": [
+            "a) El derecho a la educación bilingüe.",
+            "b) El derecho a la participación.",
+            "c) El derecho a la propiedad privada."
+        ],
+        "correct": 1,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, página 13. [22]"
+    },
+    {
+        "q": "2016. De acuerdo con la tabla de tipologías de violencia sexual, en los delitos de «Abuso sexual», si la víctima es niña, niño o adolescente, la pena privativa de libertad será de:",
+        "options": [
+            "a) Cinco (5) a diez (10) años.",
+            "b) Diez (10) a quince (15) años.",
+            "c) Veinte (20) a treinta (30) años."
+        ],
+        "correct": 1,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, Tabla 1, página 19. [23]"
+    },
+    {
+        "q": "2070. ¿Cuál es la obligación de las Directoras y Directores Departamentales de Educación ante directores o docentes sindicados de cometer delitos contra la integridad física o sexual de estudiantes?",
+        "options": [
+            "a) Intentar una conciliación privada antes de pasar a la vía legal.",
+            "b) Denunciar y coadyuvar en la acción penal correspondiente hasta su conclusión ante el Ministerio Público.",
+            "c) Únicamente suspenderlos de sus funciones sin goce de haberes temporalmente."
+        ],
+        "correct": 1,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, página 57. [24]"
+    },
+    {
+        "q": "2170. ¿Cuál de las siguientes acciones corresponde a las responsabilidades asignadas a madres, padres y/o tutores en el protocolo de prevención?",
+        "options": [
+            "a) Respetar la integralidad física, psicológica y sexual de las y los estudiantes; contribuir en la generación de planes de convivencia armónica y pacífica; coadyuvar en el control de ingreso y salida.",
+            "b) Calificar el desempeño pedagógico de los maestros cada bimestre.",
+            "c) Realizar auditorías financieras al presupuesto de la unidad educativa."
+        ],
+        "correct": 0,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, página 42. [25]"
+    },
+    {
+        "q": "2224. Un maestro tiene comportamientos fuera del plan de convivencia armónica. ¿Cuál es la acción que corresponde realizar a las madres, padres y/o tutores?",
+        "options": [
+            "a) Informar a la directora o al director de la unidad educativa para que tome las acciones que correspondan.",
+            "b) Realizar un mitin de protesta en la puerta del colegio.",
+            "c) Retirar al estudiante inmediatamente de la institución."
+        ],
+        "correct": 0,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, página 43. [26]"
+    },
+    {
+        "q": "2225. Durante la jornada escolar, una maestra recibe el testimonio de una estudiante que revela haber sido víctima de violencia sexual. ¿Cuál es la acción inmediata que debe realizar la maestra?",
+        "options": [
+            "a) Llamar a los padres de la víctima para que ellos decidan qué hacer.",
+            "b) Comunicar lo sucedido inmediatamente a la directora o al director de la unidad educativa.",
+            "c) Realizar un careo entre la víctima y el presunto agresor para verificar datos."
+        ],
+        "correct": 1,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, página 51. [27]"
+    },
+    {
+        "q": "2261. Según las responsabilidades de la Directora Departamental, ¿qué acción le corresponde respecto a la información de casos registrados?",
+        "options": [
+            "a) Sistematizar la información de los casos de violencia física, psicológica y sexual identificados en el ámbito de la unidad educativa.",
+            "b) Publicar los nombres de las víctimas en la página web oficial para transparencia.",
+            "c) Eliminar los registros al finalizar cada gestión escolar."
+        ],
+        "correct": 0,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, página 31. [28]"
+    },
+    {
+        "q": "2302. ¿Cuál de los siguientes enunciados corresponde al área cognitiva como consecuencia de la violencia a largo plazo en la adolescencia?",
+        "options": [
+            "a) Trastornos del aprendizaje (escritura, lectura, cálculo), disminución del desempeño cognitivo en ámbito escolar.",
+            "b) Hiperactividad y agresividad física recurrente.",
+            "c) Desesperanza aprendida y baja autoestima."
+        ],
+        "correct": 0,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, Tabla 2, página 23. [29]"
+    },
+    {
+        "q": "2366. El Protocolo de Prevención y Actuación establece obligaciones específicas para las maestras y maestros. ¿Cuál de las siguientes afirmaciones describe una de esas obligaciones?",
+        "options": [
+            "a) Derivar oportunamente casos de violencia a las instancias correspondientes.",
+            "b) Diseñar medicamentos para tratar el estrés de los alumnos.",
+            "c) Cobrar multas a los padres que no asistan a talleres de prevención."
+        ],
+        "correct": 0,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, página 42. [30]"
+    },
+    {
+        "q": "2368. Dentro de las responsabilidades de los estudiantes, ¿ante quién deben poner en conocimiento cualquier conducta de violencia que ocurra en la unidad educativa?",
+        "options": [
+            "a) Ante el consejo de curso o la junta de padres de familia.",
+            "b) Ante la directora o director de la unidad educativa.",
+            "c) Ante los medios de comunicación locales únicamente."
+        ],
+        "correct": 1,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, página 44. [31]"
+    },
+    {
+        "q": "2383. ¿Cuál es la distinción entre medidas orientadas al entorno cultural y medidas orientadas al desarrollo de capacidades del estudiante según el Protocolo?",
+        "options": [
+            "a) Las primeras se enfocan en el entorno (infraestructura, normas, formación), las segundas en el estudiante (autoprotección, pensamiento crítico, no obediencia a ciegas).",
+            "b) No existe distinción, ambas se refieren únicamente al castigo físico.",
+            "c) Unas son de carácter nacional y otras son de carácter departamental."
+        ],
+        "correct": 0,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, páginas 37-44. [32]"
+    },
+    {
+        "q": "2411. ¿Cuál de las siguientes consecuencias corresponde a la categoría conductual a corto plazo de la agresión sostenida?",
+        "options": [
+            "a) Ausentismo escolar injustificado, comportamiento agresivo.",
+            "b) Desarrollo de talentos extraordinarios en arte.",
+            "c) Mejora de la memoria a largo plazo."
+        ],
+        "correct": 0,
+        "retro": "Protocolo de Prevención, Actuación y Denuncia, Tabla 2, página 22. [33]"
+    }
+];
+    </script>
+    <script src="codes.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>

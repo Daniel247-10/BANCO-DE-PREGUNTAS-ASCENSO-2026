@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Preguntas - REGLAMENTO DE INCLUSIÓN</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Banco de Preguntas - REGLAMENTO DE INCLUSIÓN</h1>
+        <div class="subtitle">Examen de Ascenso 2026</div>
+    </header>
+
+    <div id="quiz-container"></div>
+
+    <script>
+        window.quizData = [
+    {
+        "q": "415. ¿Cuál de las siguientes opciones describe correctamente el conjunto completo de responsabilidades de las Maestras y Maestros de Aula, de acuerdo con el -Reglamento para el Fortalecimiento de la Educación Inclusiva en el SEP - Modalidad Indirecta?",
+        "options": [
+            "a) Únicamente realizar el seguimiento administrativo de los estudiantes inscritos en el RUDE.",
+            "b) Coordinar y realizar procesos de sensibilización y/o capacitación que garanticen una atención pertinente y oportuna para realizar acciones con la comunidad educativa.",
+            "c) Elaborar exclusivamente los diagnósticos clínicos de los estudiantes con discapacidad."
+        ],
+        "correct": 1,
+        "retro": "Reglamento para el Fortalecimiento de la Educación Inclusiva, Artículos 35 inciso c) y 38 inciso c). Páginas 21 y 22 del archivo PDF."
+    },
+    {
+        "q": "¿En qué turno deberán inscribirse las y los estudiantes con dificultades específicas en el aprendizaje en Centros de Educación Especial para recibir el apoyo educativo correspondiente?",
+        "options": [
+            "a) En el mismo turno de su unidad educativa regular.",
+            "b) En turno nocturno para no interferir con las clases.",
+            "c) En turno alterno para los programas de Modalidad Directa."
+        ],
+        "correct": 2,
+        "retro": "Reglamento para el Fortalecimiento de la Educación Inclusiva, Artículo 44, Inciso d). Página 25 del archivo PDF."
+    },
+    {
+        "q": "828. Considerando que la Educación Inclusiva es parte indisoluble del Modelo Educativo Sociocomunitario productivo, que se constituye como politica educativa del Estado Plurinacional de Bolivia, ¿qué brinda?",
+        "options": [
+            "a) Brinda respuestas educativas oportunas a las necesidades, expectativas, intereses, ritmos, estilos y potencialidades de aprendizaje de las y los estudiantes de la diversidad.",
+            "b) Brinda exclusivamente apoyo económico a las familias de estudiantes con discapacidad grave.",
+            "c) Brinda un currículo único y cerrado para todas las unidades educativas del país."
+        ],
+        "correct": 0,
+        "retro": "Reglamento para el Fortalecimiento de la Educación Inclusiva, Artículo 4, Inciso h). Página 10 del archivo PDF."
+    },
+    {
+        "q": "1068. Considerando las funciones especificas del maestro de apoyo para estudiantes con discapacidad auditiva, ¿qué recursos utiliza el maestro de apoyo cuando el estudiante Sordo no comprende una palabra durante la explicación de un tema?",
+        "options": [
+            "a) Únicamente el uso de diccionarios impresos en español.",
+            "b) Recursos lingüísticos que coadyuven en este propósito (pidgin, señas provisionales, entre otras).",
+            "c) Excluye al estudiante de la actividad hasta que aprenda la seña oficial."
+        ],
+        "correct": 1,
+        "retro": "Reglamento para el Fortalecimiento de la Educación Inclusiva, Artículo 24, Inciso e). Página 18 del archivo PDF."
+    },
+    {
+        "q": "1127. Cuando el Reglamento habla sobre la «capacidad de Orientar en la resolución de conflictos en instituciones o comunidades educativas renuentes a la inclusión de personas con discapacidad visual», se hace referencia a:",
+        "options": [
+            "a) Una función de los directores distritales de educación.",
+            "b) Una atribución de la junta de padres de familia.",
+            "c) Una función del maestro de apoyo para estudiantes con discapacidad visual."
+        ],
+        "correct": 2,
+        "retro": "Reglamento para el Fortalecimiento de la Educación Inclusiva, Artículo 24 context. Página 18 del archivo PDF (Pregunta 1127)."
+    },
+    {
+        "q": "1558. ¿Cuál es la población objetivo que se caracteriza por presentar un desempeño significativamente superior en una o varias áreas del conocimiento o habilidades?",
+        "options": [
+            "a) Estudiantes con Dificultades en el Aprendizaje.",
+            "b) Estudiantes con Talento Extraordinario.",
+            "c) Estudiantes con Discapacidad Intelectual Leve."
+        ],
+        "correct": 1,
+        "retro": "Reglamento para el Fortalecimiento de la Educación Inclusiva, Artículo 51, Inciso b). Página 27 del archivo PDF."
+    },
+    {
+        "q": "1658. ¿Cuál es la función principal del Diseño plural para los Aprendizajes en el marco de la educación boliviana?",
+        "options": [
+            "a) Es un conjunto de orientaciones para el desarrollo del currículo que permite generar condiciones educativas en el marco de los principios de la Educación Inclusiva.",
+            "b) Es una lista de prohibiciones para los maestros de aula regular.",
+            "c) Es un examen estandarizado para clasificar a los estudiantes por su coeficiente intelectual."
+        ],
+        "correct": 0,
+        "retro": "Reglamento para el Fortalecimiento de la Educación Inclusiva, Artículo 4, Inciso g). Página 10 del archivo PDF."
+    },
+    {
+        "q": "1958. ¿Qué instrumento constituye el referente para la planificación y concreción curricular, adaptada a la diversidad de los estudiantes?",
+        "options": [
+            "a) El Plan Operativo Anual (POA).",
+            "b) El «Diseño Plural para los Aprendizajes».",
+            "c) El Reglamento de Faltas y Sanciones."
+        ],
+        "correct": 1,
+        "retro": "Reglamento para el Fortalecimiento de la Educación Inclusiva, Artículo 8, Inciso a). Página 13 del archivo PDF."
+    },
+    {
+        "q": "1995. La siguiente definición: «Acciones operativas de apoyo educativo, organizados sistemáticamente, que realiza la o el maestro de apoyo en coordinación con maestras y maestros de aula...» corresponde al enunciado de:",
+        "options": [
+            "a) Integración Escolar.",
+            "b) Apoyo Educativo.",
+            "c) Adaptación de Infraestructura."
+        ],
+        "correct": 1,
+        "retro": "Reglamento para el Fortalecimiento de la Educación Inclusiva, Artículo 8 context. Página 13 del archivo PDF (Pregunta 1995)."
+    },
+    {
+        "q": "2110. Según el Reglamento, la coordinación entre el maestro de aula y el maestro de apoyo debe resultar en:",
+        "options": [
+            "a) Acciones pedagógicas y administrativas que garanticen una atención educativa de calidad.",
+            "b) La división del aula en dos grupos separados permanentemente.",
+            "c) El cobro de cuotas extra para materiales de apoyo."
+        ],
+        "correct": 0,
+        "retro": "Reglamento para el Fortalecimiento de la Educación Inclusiva, Artículo 9. Página 13 del archivo PDF."
+    },
+    {
+        "q": "2121. Una maestra de apoyo de una Institución Educativa pone dedicación en implementar instrumentos de adaptación y apoyo para estudiantes con discapacidad. Indique qué responsabilidad es la que cumple:",
+        "options": [
+            "a) Elaborar el presupuesto del Centro de Educación Especial.",
+            "b) Promover la creación de condiciones necesarias y pertinentes de accesibilidad pedagógica.",
+            "c) Supervisar la asistencia puntual del personal administrativo."
+        ],
+        "correct": 1,
+        "retro": "Reglamento para el Fortalecimiento de la Educación Inclusiva, Artículo 17, Inciso d). Página 15 del archivo PDF."
+    },
+    {
+        "q": "2309. Cuando la maestra de apoyo de un estudiante con TEA coordina con el equipo multidisciplinario para determinar sus características y necesidades, realiza una:",
+        "options": [
+            "a) Tarea administrativa opcional.",
+            "b) Función específica de los maestros de apoyo a estudiantes con Trastorno del Espectro Autista.",
+            "c) Evaluación médica de diagnóstico definitivo."
+        ],
+        "correct": 1,
+        "retro": "Reglamento para el Fortalecimiento de la Educación Inclusiva, Artículo 38, Inciso d). Página 23 del archivo PDF."
+    },
+    {
+        "q": "2421. ¿Qué instancia deberá revisar y actualizar el Reglamento para el Fortalecimiento de la Educación Inclusiva en el SEP - Modalidad Indirecta?",
+        "options": [
+            "a) El Viceministerio de Educación Regular únicamente.",
+            "b) El Viceministerio de Educación Alternativa y Especial.",
+            "c) Las Juntas Escolares de cada distrito."
+        ],
+        "correct": 1,
+        "retro": "Reglamento para el Fortalecimiento de la Educación Inclusiva, Disposiciones finales. Página 26 del archivo PDF (Pregunta 2421)."
+    },
+    {
+        "q": "¿Qué se entiende por «Equiparación de condiciones» según el Reglamento de Educación Inclusiva?",
+        "options": [
+            "a) Es dar a todos los estudiantes exactamente el mismo libro y el mismo examen.",
+            "b) Son las acciones que permiten el acceso de las y los estudiantes con discapacidad al SEP, eliminando barreras de aprendizaje.",
+            "c) Es el pago de bonos de transporte iguales para todos los maestros."
+        ],
+        "correct": 1,
+        "retro": "Reglamento para el Fortalecimiento de la Educación Inclusiva, Artículo 4 (Definiciones). Página 10 del archivo PDF."
+    }
+];
+    </script>
+    <script src="codes.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>

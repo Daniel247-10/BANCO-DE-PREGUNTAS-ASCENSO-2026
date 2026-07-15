@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Preguntas - Innovación Educativa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Banco de Preguntas - INNOVACIÓN EDUCATIVA</h1>
+        <div class="subtitle">Examen de Ascenso 2026</div>
+    </header>
+
+    <div id="quiz-container"></div>
+
+    <div style="text-align: center; margin: 20px 0;">
+        <a href="index.html" class="back-link">&larr; Volver al Inicio</a>
+    </div>
+
+    <script>
+        window.quizData = [
+    {
+        "q": "39. ¿Cuál es una condición institucional indispensable para que la innovación educativa pueda desarrollarse de manera sostenida en los sistemas educativos?",
+        "options": [
+            "a) Un aumento salarial inmediato para los docentes innovadores.",
+            "b) Un clima de confianza y apoyo que permita atreverse a asumir riesgos y que no censure los errores.",
+            "c) La compra de equipos tecnológicos de última generación para todas las aulas."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 20. Menciona que es vital un clima de apoyo donde los errores sean fuente de aprendizaje. [1, 2]"
+    },
+    {
+        "q": "48. ¿Qué se entiende por innovación educativa?",
+        "options": [
+            "a) Un acto deliberado y planificado de solución de problemas, que apunta a lograr mayor calidad en los aprendizajes.",
+            "b) Cualquier cambio que ocurra por azar dentro de la unidad educativa.",
+            "c) La renovación de la pintura y el mobiliario del centro escolar."
+        ],
+        "correct": 0,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 3. Se define como un acto planificado para superar el paradigma tradicional y mejorar la calidad. [3, 4]"
+    },
+    {
+        "q": "51. Los centros educativos, asumidos en su naturaleza de organismos vivos y dinámicos, requieren potenciar su crecimiento entendido este como:",
+        "options": [
+            "a) Una estabilidad inamovible de sus estructuras jerárquicas.",
+            "b) Un proceso de cambio y mejora continua.",
+            "c) El cumplimiento estricto de tareas administrativas manuales."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 35. La escuela se ve como un sistema vivo donde la innovación nunca está acabada. [5, 6]"
+    },
+    {
+        "q": "65. La innovación en el ámbito escolar es entendida como:",
+        "options": [
+            "a) El rechazo absoluto de cualquier práctica educativa del pasado.",
+            "b) Un proceso de transformación que produce modificaciones materiales y simbólicas, con relación profunda con la tradición.",
+            "c) La implementación de modas pasajeras importadas de otros países."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 11. La innovación no es solo lo nuevo; se construye sobre la base de la tradición. [4, 7]"
+    },
+    {
+        "q": "76. La afirmación de que la innovación está fundamentada sobre el aprendizaje porque éste se encuentra ligado a la acción transformadora del mundo, remite a:",
+        "options": [
+            "a) La memorización de contenidos teóricos complejos.",
+            "b) La capacidad humana de transformar, crear y recrear el mundo.",
+            "c) La repetición de conductas mecánicas en el aula."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 11. El aprendizaje está ligado a la construcción de la capacidad transformadora humana. [8, 9]"
+    },
+    {
+        "q": "78. De acuerdo con los aspectos fundamentales, ¿qué establece la dinámica de acciones con aprendizajes que construye la innovación?",
+        "options": [
+            "a) Una reflexión permanente que permite aprender de los errores.",
+            "b) Un sistema de premios y castigos para los estudiantes.",
+            "c) La obligación de no cometer ninguna falla durante el proceso."
+        ],
+        "correct": 0,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 11. La innovación construye reflexión para aprender de lo que no salió como se esperaba. [9, 10]"
+    },
+    {
+        "q": "88. ¿Cuál de las siguientes afirmaciones describe con mayor precisión la concepción de innovación como capacidad humana?",
+        "options": [
+            "a) Es la habilidad de usar computadoras sin entrenamiento previo.",
+            "b) Es la construcción de la capacidad humana de transformar, crear y recrear el mundo.",
+            "c) Es la disposición para obedecer directrices de las autoridades."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 11. Define la innovación como una herramienta de recreación del mundo por el sujeto. [9, 11]"
+    },
+    {
+        "q": "126. ¿Cuál es el rol que cumplen las estructuras y procesos micropolíticos en los centros escolares?",
+        "options": [
+            "a) Son obstáculos secundarios que no influyen en el aprendizaje.",
+            "b) Son fundamentales para el cambio, la innovación, la estabilidad y el mantenimiento de los centros.",
+            "c) Solo sirven para organizar los horarios de los docentes."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 22. La micropolítica determina la viabilidad de cualquier transformación. [11, 12]"
+    },
+    {
+        "q": "128. ¿Cuál de los siguientes enunciados describe con precisión el carácter de la innovación según la naturaleza de la escuela?",
+        "options": [
+            "a) La innovación tiene un carácter sistémico.",
+            "b) La innovación es un evento aislado que no afecta a otras áreas.",
+            "c) La innovación es un proceso puramente administrativo."
+        ],
+        "correct": 0,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 30. Al ser sistémica, un cambio en un componente repercute en los demás. [13, 14]"
+    },
+    {
+        "q": "133. Para evitar la trampa del 'cambio por el cambio' y el rechazo al pasado, ¿qué debe trabajarse en la educación?",
+        "options": [
+            "a) La adopción rápida de cualquier novedad tecnológica.",
+            "b) Tener una actitud crítica trabajada desde principios que enmarcan la innovación.",
+            "c) El olvido de las prácticas tradicionales para no contaminar lo nuevo."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 10. La actitud crítica evita caer en modas sin fundamento. [15, 16]"
+    },
+    {
+        "q": "137. Según el texto, el 'estado' político de una organización escolar está constituido por:",
+        "options": [
+            "a) El presupuesto anual asignado por el Estado.",
+            "b) Procesos convergentes y divergentes, así como estructuras.",
+            "c) Únicamente el reglamento interno de faltas y sanciones."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 22. Estos procesos y estructuras configuran la vida política de la escuela. [17, 18]"
+    },
+    {
+        "q": "146. Según Baldridge (1970), ¿qué define al cambio en organizaciones escolares tradicionales?",
+        "options": [
+            "a) El diálogo constante entre todos los actores.",
+            "b) Una imposición jerárquica, de arriba abajo, siendo una estrategia política en sí.",
+            "c) La autonomía total de los docentes de aula."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 23. En lo tradicional, el cambio no nace de la base sino del poder. [17, 19]"
+    },
+    {
+        "q": "150. ¿Qué condición caracteriza al trabajo colaborativo para sostener la innovación?",
+        "options": [
+            "a) La competencia entre docentes por mejores resultados.",
+            "b) Genera nexos significativos, con relaciones horizontales y de complementariedad.",
+            "c) El aislamiento del docente dentro de su propio aula."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 32. Los nexos horizontales entre docentes y directivos son clave. [19, 20]"
+    },
+    {
+        "q": "151. ¿Qué rasgos definen al trabajo mancomunado como mecanismo de transformación?",
+        "options": [
+            "a) Un nivel de igualdad en la relación y complementariedad de enfoques y puntos de vista.",
+            "b) El seguimiento estricto de las órdenes de un líder único.",
+            "c) La división de tareas para que nadie sepa qué hace el otro."
+        ],
+        "correct": 0,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 32. Requiere valorar la diversidad de opiniones para enriquecer la práctica. [20, 21]"
+    },
+    {
+        "q": "157. ¿Qué tipo de sujetos busca construir la innovación educativa crítica?",
+        "options": [
+            "a) Sujetos que obedezcan sin cuestionar las reformas.",
+            "b) Sujetos sociales e históricos capaces de realizarla con sentido crítico.",
+            "c) Expertos técnicos que solo se ocupen de la infraestructura."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 11. La innovación empodera a los sujetos para ser críticos y proactivos. [21, 22]"
+    },
+    {
+        "q": "182. ¿Qué papel cumplen los errores al probar nuevas prácticas pedagógicas?",
+        "options": [
+            "a) Deben ser sancionados para evitar que se repitan.",
+            "b) Forman parte del proceso y constituyen una fuente de aprendizaje.",
+            "c) Son señales de que la innovación ha fracasado definitivamente."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 20. El clima de confianza permite ver el error como parte del crecimiento. [2, 23]"
+    },
+    {
+        "q": "183. ¿Cómo se describen los impedimentos y resistencias al cambio?",
+        "options": [
+            "a) Como dificultades que no se pueden observar fácilmente ni descubrir su origen.",
+            "b) Como falta de inteligencia de los miembros de la comunidad.",
+            "c) Como órdenes directas del Ministerio para no innovar."
+        ],
+        "correct": 0,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 19. Son resistencias profundas que requieren autoconocimiento. [23, 24]"
+    },
+    {
+        "q": "184. Si un equipo dice 'no estar preparado' para un cambio, ¿qué naturaleza tiene esa afirmación?",
+        "options": [
+            "a) Es una verdad científica basada en pruebas diagnósticas.",
+            "b) Son ideas en las cabezas que quitan seguridad; creencias formadas desde temprano.",
+            "c) Es una directriz legal ineludible."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 19. Son modelos mentales que actúan como barreras de seguridad. [24, 25]"
+    },
+    {
+        "q": "188. ¿Cómo se caracterizan las iniciativas incipientes hacia la innovación?",
+        "options": [
+            "a) Son proyectos a largo plazo con financiamiento internacional.",
+            "b) Son iniciativas puntuales y pasajeras, poco conectadas con una estrategia de cambio.",
+            "c) Son cambios profundos que transforman toda la cultura escolar de inmediato."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 14. Representan los primeros grados de desarrollo, aún frágiles. [26, 27]"
+    },
+    {
+        "q": "191. ¿Cómo inciden el compromiso y la voluntad de los docentes en la innovación?",
+        "options": [
+            "a) No son necesarios si hay una ley que obligue al cambio.",
+            "b) Son imprescindibles para transformar sus creencias, concepciones y prácticas.",
+            "c) Solo sirven para mejorar el clima social, no lo pedagógico."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 30. Sin la voluntad del docente, no hay transformación real de la práctica. [28, 29]"
+    },
+    {
+        "q": "194. ¿Qué son los modelos mentales y por qué obstaculizan el cambio?",
+        "options": [
+            "a) Son manuales de procedimiento escritos por los directores.",
+            "b) Son estructuras de pensamiento arraigadas que condicionan el actuar de forma inconsciente.",
+            "c) Son aplicaciones informáticas que simulan el pensamiento humano."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 19. Operan sobre la persona sin que esta se dé cuenta. [30, 31]"
+    },
+    {
+        "q": "199. ¿Qué son en realidad las resistencias de 'no estar preparado para los cambios'?",
+        "options": [
+            "a) Son solo ideas y creencias formadas desde etapas tempranas de la vida.",
+            "b) Es la falta física de recursos materiales.",
+            "c) Es la ausencia de títulos académicos de postgrado."
+        ],
+        "correct": 0,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 19. Son verdades subjetivas que se oponen a la evolución institucional. [30, 32]"
+    },
+    {
+        "q": "200. ¿Cómo se originan las ideas que quitan seguridad para aprender algo nuevo?",
+        "options": [
+            "a) Por la lectura de demasiados libros de pedagogía.",
+            "b) Son creencias formadas desde temprano que se convirtieron en verdades adultas.",
+            "c) Por órdenes explícitas de los padres de familia."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 19. Provienen de la internalización temprana de costumbres y normas. [32, 33]"
+    },
+    {
+        "q": "215. ¿Qué implica para las escuelas aceptar que el cambio es un aprendizaje?",
+        "options": [
+            "a) Que deben comprar más libros para la biblioteca.",
+            "b) Que los docentes deben aprender de la experiencia igual que sus estudiantes.",
+            "c) Que no debe haber exámenes para los alumnos."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 29. La escuela se convierte en un sitio de aprendizaje para todos. [33, 34]"
+    },
+    {
+        "q": "225. ¿Cuál es el significado del término innovar según el texto?",
+        "options": [
+            "a) Inventar algo que no existía en el universo.",
+            "b) Mudar o alterar las cosas, introduciendo novedades.",
+            "c) Seguir haciendo lo mismo pero con más rapidez."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 28. Viene del latín 'innovare' (mudar o alterar). [34]"
+    },
+    {
+        "q": "266. ¿Qué ocurre si la política educativa no considera el campo de conocimiento ni los patrones culturales?",
+        "options": [
+            "a) Las experiencias innovadoras no tendrán significados acordes a los contextos.",
+            "b) El presupuesto se aprovechará mejor al ser un modelo único.",
+            "c) Los estudiantes aprenderán más rápido al ser un modelo universal."
+        ],
+        "correct": 0,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 6. La innovación debe responder a las particularidades del territorio. [35, 36]"
+    },
+    {
+        "q": "267. ¿Qué distingue a la innovación como proceso dentro de las instituciones?",
+        "options": [
+            "a) Que es un producto terminado y listo para su venta.",
+            "b) Que es un proceso siempre inconcluso sujeto a revisión crítica constante.",
+            "c) Que se realiza una sola vez y dura para siempre."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 31. Al ser un sistema vivo, la escuela requiere revisión permanente. [37, 38]"
+    },
+    {
+        "q": "280. ¿Qué rasgo comparten los factores personales, conductuales y culturales que dificultan el cambio?",
+        "options": [
+            "a) Son leyes físicas inalterables.",
+            "b) Son modelos mentales y estructuras de pensamiento inconscientes.",
+            "c) Son requisitos pedidos por la UNESCO."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 19. Estos factores condicionan la forma de percibir la realidad. [37, 39]"
+    },
+    {
+        "q": "284. ¿Qué fenómeno se produce cuando la innovación genera una reorganización del sistema?",
+        "options": [
+            "a) Se produce autopoiesis, haciendo visible el carácter abierto del sistema.",
+            "b) El sistema se cierra para protegerse de influencias externas.",
+            "c) El sistema deja de funcionar por el desorden causado."
+        ],
+        "correct": 0,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 11. La autopoiesis revela la organización de lo vivo en la escuela. [39, 40]"
+    },
+    {
+        "q": "286. ¿Qué riesgo hay si la innovación se entiende solo como producto y no como proceso?",
+        "options": [
+            "a) Se corre el riesgo de caer en la rutina con prácticas que ya no son ruptura.",
+            "b) Se ahorra mucho dinero en planificación.",
+            "c) Los resultados son más fáciles de medir estadísticamente."
+        ],
+        "correct": 0,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 31. Se pierde la esencia transformadora al volverse rutina. [40, 41]"
+    },
+    {
+        "q": "297. ¿Cómo contribuyen la investigación-acción y la sistematización a la innovación?",
+        "options": [
+            "a) Son trámites burocráticos para obtener la certificación de calidad.",
+            "b) Son estrategias esenciales para alimentar la innovación y herramientas de formación.",
+            "c) Sirven para sancionar a los docentes que no cumplen el currículo."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 12. Sostienen la innovación y forman profesionalmente al docente. [42, 43]"
+    },
+    {
+        "q": "302. ¿Cuál es el riesgo de concebir la innovación únicamente como un producto?",
+        "options": [
+            "a) La instalación de modelos que en su día fueron ruptura pero hoy son rutina.",
+            "b) Que el producto sea demasiado caro para los padres.",
+            "c) Que los estudiantes no sepan cómo usar el producto."
+        ],
+        "correct": 0,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 31. La innovación debe someterse a revisión crítica constante. [41, 44]"
+    },
+    {
+        "q": "313. ¿Cuál es el aporte central del estudio de la innovación a la labor docente?",
+        "options": [
+            "a) Aprender a usar programas de computación avanzados.",
+            "b) Comprender las dinámicas para orientar y construir innovación en la institución.",
+            "c) Reducir la carga horaria de las clases teóricas."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 6. Busca que el docente asuma un papel protagónico. [45, 46]"
+    },
+    {
+        "q": "335. ¿Qué función cumplen los prejuicios raciales o de género en el análisis de la resistencia?",
+        "options": [
+            "a) Son ejemplos de modelos mentales que condicionan la visión del mundo.",
+            "b) Son temas que no deben tratarse en la escuela.",
+            "c) Son barreras legales que impiden la matriculación."
+        ],
+        "correct": 0,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 19. Los prejuicios son estructuras de pensamiento que imponen 'verdades'. [47, 48]"
+    },
+    {
+        "q": "354. ¿Cómo contribuye la política educativa al impulso del cambio?",
+        "options": [
+            "a) Prohibiendo las iniciativas privadas de los docentes.",
+            "b) Fomentando experiencias innovadoras que dinamicen el cambio hacia la calidad.",
+            "c) Asignando un solo modelo pedagógico para todo el país."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 6. La política debe ser el motor que respalde la innovación 'desde abajo'. [49]"
+    },
+    {
+        "q": "372. ¿Cuál es el objetivo de estudiar los factores que favorecen u obstaculizan la innovación?",
+        "options": [
+            "a) Clasificar a los docentes en 'buenos' y 'malos'.",
+            "b) Reflexionar sobre factores personales, institucionales y sociales que influyen en el cambio.",
+            "c) Eliminar a todos los miembros de la comunidad que se oponen al director."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 18. Es el objetivo central de la Unidad 2 del texto. [50, 51]"
+    },
+    {
+        "q": "398. ¿Qué distingue la concepción del docente investigador de la visión tradicional?",
+        "options": [
+            "a) El docente tradicional solo enseña; el investigador observa, aprende y genera conocimiento de su práctica.",
+            "b) El docente investigador debe tener un doctorado en ciencias puras.",
+            "c) No hay ninguna diferencia real entre ambas visiones."
+        ],
+        "correct": 0,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 31. Legitimado por corrientes como la Pedagogía Popular. [50, 52]"
+    },
+    {
+        "q": "408. ¿Cuál es el paso indispensable para que un maestro sustituya un modelo mental disfuncional?",
+        "options": [
+            "a) Leer un manual de autoayuda pedagógica.",
+            "b) Identificar, observar y reconocer cómo las creencias actúan sobre sus acciones.",
+            "c) Esperar a que el director le asigne una nueva tarea."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 20. Solo tras el reconocimiento es posible optar por la modificación. [53, 54]"
+    },
+    {
+        "q": "448. Al probar nuevas prácticas, ¿qué condición institucional es indispensable?",
+        "options": [
+            "a) Silencio absoluto por parte de los padres de familia.",
+            "b) Un clima de confianza que permita asumir riesgos sin censurar errores.",
+            "c) Un sistema de vigilancia por cámaras en el aula."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 20. La confianza es el suelo fértil para la experimentación. [2, 55]"
+    },
+    {
+        "q": "454. ¿Cuál es el principal obstáculo que presentan los modelos mentales?",
+        "options": [
+            "a) Que son muy caros de mantener.",
+            "b) Que operan sobre la persona condicionándola sin que se dé cuenta.",
+            "c) Que cambian todos los días con el clima."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 19. Su carácter inconsciente los hace difíciles de identificar y superar. [31, 56]"
+    },
+    {
+        "q": "455. ¿Qué hace que los obstáculos institucionales sean difíciles de superar?",
+        "options": [
+            "a) Que son dificultades que no se pueden observar fácilmente ni descubrir su origen.",
+            "b) Que están escritos en idiomas extranjeros.",
+            "c) Que el Estado prohíbe hablar sobre ellos."
+        ],
+        "correct": 0,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 19. Muchas veces son resistencias 'invisibles' de tipo cultural. [31, 57]"
+    },
+    {
+        "q": "456. ¿Qué distingue a una innovación sostenible de una iniciativa aislada?",
+        "options": [
+            "a) El uso de uniformes nuevos para los estudiantes.",
+            "b) Que el cambio sea un aprendizaje que crea nuevo orden y esté apoyado por confianza.",
+            "c) Que tenga un nombre llamativo y mucha publicidad."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Páginas 20 y 29. La sostenibilidad depende de la integración en la cultura escolar. [57, 58]"
+    },
+    {
+        "q": "475. ¿Qué implica afirmar que la innovación es un proceso acumulativo?",
+        "options": [
+            "a) Que se deben guardar todos los papeles viejos de la escuela.",
+            "b) Que lo nuevo se transforma y se define en relación con lo anterior.",
+            "c) Que cada año se debe sumar una hora más de clase."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 28. Lo nuevo no nace de la nada, dialoga con la tradición. [58, 59]"
+    },
+    {
+        "q": "487. ¿Cuál es el criterio que distingue una innovación educativa de una simple mejora?",
+        "options": [
+            "a) La innovación es una transformación y ruptura con esquemas y cultura vigentes.",
+            "b) La innovación siempre debe costar más dinero.",
+            "c) La mejora se hace en el aula y la innovación en la dirección."
+        ],
+        "correct": 0,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 13. La innovación va a lo estructural, no es solo un ajuste cosmético. [60, 61]"
+    },
+    {
+        "q": "490. Según Mangham (1979), ¿qué revelan los estudios sobre micropolítica y cambio?",
+        "options": [
+            "a) Que todos los docentes siempre están de acuerdo con los cambios.",
+            "b) Que la innovación refleja el fuerte apoyo de unos y la férrea oposición de otros.",
+            "c) Que los intereses personales no influyen en la escuela."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 23. La micropolítica es un campo de lucha de intereses y poder. [62, 63]"
+    },
+    {
+        "q": "544. ¿Qué representa la analogía entre la innovación y una pieza de jazz?",
+        "options": [
+            "a) Que el docente debe saber tocar instrumentos musicales.",
+            "b) Pasar del lenguaje de actores (ejecutar guion) al de autores (crear y causar acción).",
+            "c) Que el aula debe tener música de fondo siempre."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 30. El docente innovador crea y corre los límites mientras actúa. [64, 65]"
+    },
+    {
+        "q": "548. ¿Qué condición hace que la incorporación de computadoras sea innovación?",
+        "options": [
+            "a) El simple hecho de que estén encendidas durante la clase.",
+            "b) Que produzcan transformaciones en el enfoque, rol docente y estrategias.",
+            "c) Que sean de la marca más costosa del mercado."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 13. Sin cambio en el enfoque, la tecnología es solo una mejora material. [66, 67]"
+    },
+    {
+        "q": "568. La innovación tiene una relación profunda con la tradición, ¿qué implica esto?",
+        "options": [
+            "a) Que no se puede cambiar nada de lo que hacían los abuelos.",
+            "b) Que la innovación no es solo lo nuevo, sino que se construye sobre la base de lo previo.",
+            "c) Que los docentes deben vestir trajes tradicionales."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 11. Produce modificaciones tanto materiales como simbólicas. [4, 7]"
+    },
+    {
+        "q": "574. ¿Qué condición es indispensable considerar al impulsar la innovación?",
+        "options": [
+            "a) Debe ser organizada y planificada para que logre sus impactos.",
+            "b) Debe ser totalmente improvisada para que sea original.",
+            "c) Solo debe hacerse si hay un premio económico al final."
+        ],
+        "correct": 0,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 10. La innovación no es generación espontánea; requiere plan. [4, 68]"
+    },
+    {
+        "q": "575. Si una institución adapta creativamente las normativas externas, ¿qué revela?",
+        "options": [
+            "a) Que no respeta las leyes del Estado.",
+            "b) El grado de creatividad, autonomía y madurez de la institución.",
+            "c) Que el director no sabe leer los reglamentos."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 21. La recreación de la norma es índice de madurez institucional. [69]"
+    },
+    {
+        "q": "581. ¿Qué condición define al docente como agente innovador?",
+        "options": [
+            "a) Considerarlos como autores del cambio y no actores que ejecutan un libreto.",
+            "b) Que entregue sus planes de clase siempre a tiempo.",
+            "c) Que tenga más de veinte años de antigüedad en el cargo."
+        ],
+        "correct": 0,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 30. El docente debe ser creador de su propio quehacer pedagógico. [29]"
+    },
+    {
+        "q": "582. ¿Qué énfasis caracterizó al movimiento innovador de los años 70 y 80?",
+        "options": [
+            "a) El uso masivo de computadoras personales.",
+            "b) El protagonismo de los docentes y su participación en los cambios.",
+            "c) La centralización absoluta del currículo por parte del Estado."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 12. Fue una señal de 'nuevos tiempos' con participación docente. [70, 71]"
+    },
+    {
+        "q": "584. ¿En qué ámbitos puede producirse el cambio pedagógico transformador?",
+        "options": [
+            "a) Únicamente en las oficinas del Ministerio de Educación.",
+            "b) A nivel de aula, de institución educativa y de sistema escolar.",
+            "c) Solo en los libros de texto de primaria."
+        ],
+        "correct": 1,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 13. El cambio estructural puede nacer en cualquier nivel del sistema. [72, 73]"
+    },
+    {
+        "q": "610. ¿Qué dinámicas generan las TIC y el protagonismo docente?",
+        "options": [
+            "a) Dinámicas de intercambio y trabajo compartido en redes o comunidades.",
+            "b) El aislamiento total del estudiante frente a la pantalla.",
+            "c) La eliminación de la necesidad de directores escolares."
+        ],
+        "correct": 0,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 12. Se fomenta el trabajo colaborativo 'desde abajo'. [72, 74]"
+    },
+    {
+        "q": "646. ¿Qué distingue la innovación del siglo XXI de la de los años 90?",
+        "options": [
+            "a) Se vinculó con el protagonismo de instituciones y docentes en el cambio 'desde abajo'.",
+            "b) Fue impuesta de forma mucho más violenta por el Banco Mundial.",
+            "c) No existe ninguna diferencia, son términos idénticos."
+        ],
+        "correct": 0,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 12. Los años 90 se centraron en modelos de descentralización estatal. [75, 76]"
+    },
+    {
+        "q": "673. ¿Qué produce la sistematización constante de las prácticas?",
+        "options": [
+            "a) Convierte al sujeto en un creador y productor de saber que reorienta su quehacer.",
+            "b) Genera un exceso de papeles inútiles que nadie lee.",
+            "c) Hace que el docente olvide lo que aprendió en la universidad."
+        ],
+        "correct": 0,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 11. El aprendizaje de las prácticas empodera al docente. [77, 78]"
+    },
+    {
+        "q": "689. ¿Por qué reflexionar sobre el alcance de las mejoras antes de llamarlas innovación?",
+        "options": [
+            "a) Para reconocer si son simples mejoras pasajeras o transformaciones profundas.",
+            "b) Para que el profesor pueda cobrar un bono extra por innovación.",
+            "c) Para cumplir con los requisitos de la UNESCO."
+        ],
+        "correct": 0,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 13. Es vital entender si la experiencia deja huellas estructurales. [79, 80]"
+    },
+    {
+        "q": "693. ¿Por qué el riesgo es inherente a la transformación educativa?",
+        "options": [
+            "a) Porque no hay aprendizaje sin desequilibrio ni conflicto cognitivo.",
+            "b) Porque las escuelas son lugares físicamente peligrosos.",
+            "c) Porque innovar es un delito en algunas regiones."
+        ],
+        "correct": 0,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 20. Entrar en lo desconocido implica incertidumbre y conflicto. [81, 82]"
+    },
+    {
+        "q": "696. ¿Por qué reconocer dificultades en instituciones tradicionales y complejas?",
+        "options": [
+            "a) Por las relaciones de poder existentes, cuyo cambio es de las tareas más difíciles.",
+            "b) Porque suelen ser edificios muy antiguos con mala ventilación.",
+            "c) Porque los docentes antiguos no saben usar internet."
+        ],
+        "correct": 0,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 21. Ignorar el sistema de poder resta esfuerzos a los cambios. [83]"
+    },
+    {
+        "q": "699. ¿Por qué la innovación nunca está totalmente acabada?",
+        "options": [
+            "a) Porque la escuela es un sistema vivo y cambiante.",
+            "b) Porque los docentes nunca terminan de leer los manuales.",
+            "c) Porque el presupuesto siempre se acaba antes de tiempo."
+        ],
+        "correct": 0,
+        "retro": "Libro: Innovación Educativa (UNESCO). Página: 35. Al ser un proceso dinámico, requiere adaptación continua. [6]"
+    }
+];
+    </script>
+    <script src="codes.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>

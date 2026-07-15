@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Preguntas - ESCALAFÓN NACIONAL</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Banco de Preguntas - ESCALAFÓN NACIONAL</h1>
+        <div class="subtitle">Examen de Ascenso 2026</div>
+    </header>
+
+    <div id="quiz-container"></div>
+
+    <script>
+        window.quizData = [
+    {
+        "q": "21. ¿Cuál es una de las finalidades del Escalafón Nacional del Servicio de Educación?",
+        "options": [
+            "a) Organizar el kardex centralizando los datos de maestros y administrativos.",
+            "b) Establece la Escala de Categoría y la Escala Jerárquica para el desarrollo de la carrera docente y de la administrativa.",
+            "c) Disponer anualmente las promociones de categoría según el presupuesto vigente."
+        ],
+        "correct": 1,
+        "retro": "Reglamento del Escalafón Nacional DS 4688, Artículo 2°, inciso b), página 2. [1, 2]"
+    },
+    {
+        "q": "66. ¿Cuál es la estructura correcta de las escalas jerárquicas y de promociones establecidas para el personal del magisterio boliviano?",
+        "options": [
+            "a) Una escala única que integra docentes y administrativos con diez categorías de ascenso.",
+            "b) Se establece una escala jerárquica para los ascensos en el sector docente y otra escala jerárquica paralela para los ascensos en el sector administrativo, junto con una escala de cinco promociones de categoría para recompensar el tiempo de servicio.",
+            "c) Una escala jerárquica docente de siete rangos y una escala administrativa de cuatro categorías por antigüedad."
+        ],
+        "correct": 1,
+        "retro": "Reglamento del Escalafón Nacional DS 4688, Artículo 4°, página 3. [2, 3]"
+    },
+    {
+        "q": "264. Un maestro es denunciado por una falta disciplinaria. La autoridad competente, sin haber concluido el proceso ni comprobado culpabilidad, decide suspenderlo preventivamente argumentando que la falta es «grave». ¿Qué principio normativo vulnera esta decisión y cuál es la única excepción legalmente válida para proceder a la suspensión inmediata?",
+        "options": [
+            "a) Vulnera el derecho al trabajo; la excepción es el abandono injustificado de funciones.",
+            "b) Vulnera el principio de inamovilidad docente. La única excepción para la suspensión inmediata es por comisión de actos inmorales, indisciplinarios o delictuosos, previa sentencia después del proceso respectivo, donde se reconozca defensa al acusado.",
+            "c) Vulnera el principio de presunción de inocencia; la excepción es la reincidencia en faltas leves."
+        ],
+        "correct": 1,
+        "retro": "Reglamento del Escalafón Nacional DS 4688, Artículo 73°, página 17. [3-5]"
+    },
+    {
+        "q": "321. De acuerdo al Escalafón Nacional del Magisterio Público, una vez que el Jefe del Distrito dicta el auto de legalización de los comprobantes de servicios, ¿a través de qué instrumento normativo se reconoce oficialmente el tiempo de servicios del docente?",
+        "options": [
+            "a) Mediante Resolución Ministerial.",
+            "b) Por Resolución Suprema.",
+            "c) Por Auto de Distrito debidamente visado."
+        ],
+        "correct": 1,
+        "retro": "Reglamento del Escalafón Nacional DS 4688, Artículo 77°, página 17. [5, 6]"
+    },
+    {
+        "q": "811. Los años de servicios prestados a países extranjeros, ¿para qué fines no se computan?",
+        "options": [
+            "a) Para fines de jubilación ni de calificación de servicios.",
+            "b) Únicamente para fines de ascenso de categoría.",
+            "c) Para la obtención de cargos jerárquicos de nivel nacional."
+        ],
+        "correct": 0,
+        "retro": "Reglamento del Escalafón Nacional DS 4688, Artículo 31°, página 9. [7, 8]"
+    },
+    {
+        "q": "816. ¿Para qué efectos son válidos en el cómputo de antigüedad los servicios prestados por maestros normalistas en cargos administrativos del ramo de educación?",
+        "options": [
+            "a) Solo para el cobro del bono de antigüedad.",
+            "b) Para los efectos de la categorización y la jubilación.",
+            "c) Únicamente para optar a cargos directivos en distritos rurales."
+        ],
+        "correct": 1,
+        "retro": "Reglamento del Escalafón Nacional DS 4688, Artículo 79°, página 18. [9, 10]"
+    },
+    {
+        "q": "1086. El Escalafón Nacional del Servicio de Educación determina las normas que rigen:",
+        "options": [
+            "a) La organización de los sindicatos y las federaciones de maestros.",
+            "b) Las promociones de categoría y los ascensos jerárquicos.",
+            "c) El currículo base y los planes de estudio del sistema escolar."
+        ],
+        "correct": 1,
+        "retro": "Reglamento del Escalafón Nacional DS 4688, Artículo 2°, inciso c), página 2. [1, 10]"
+    },
+    {
+        "q": "1277. El Escalafón Nacional del Servicio de Educación, entre sus finalidades, establece dos escalas orientadas al desarrollo de la carrera docente y administrativa ¿Cuáles son estas dos escalas?",
+        "options": [
+            "a) Escala de Méritos y Escala de Antigüedad.",
+            "b) La Escala de Categoría y la Escala Jerárquica.",
+            "c) Escala de Formación Profesional y Escala de Funciones."
+        ],
+        "correct": 1,
+        "retro": "Reglamento del Escalafón Nacional DS 4688, Artículo 2°, inciso b), página 2. [1, 10]"
+    },
+    {
+        "q": "1780. ¿En cuántas y en qué proyecciones se desarrolla la carrera docente y la administrativa en el Servicio de Educación?",
+        "options": [
+            "a) En tres proyecciones: ingreso, permanencia y retiro.",
+            "b) En dos proyecciones complementarias entre sí: los ascensos de jerarquía y las promociones de categoría.",
+            "c) En una sola proyección basada exclusivamente en el tiempo de servicio."
+        ],
+        "correct": 1,
+        "retro": "Reglamento del Escalafón Nacional DS 4688, Artículo 18°, página 5. [11, 12]"
+    },
+    {
+        "q": "2193. ¿En qué consiste la acumulación según el Reglamento del Escalafón Nacional DS 4688?",
+        "options": [
+            "a) En que los profesores pueden acumular hasta dos cargos completos siempre que exista compatibilidad de horario.",
+            "b) En el derecho a sumar puntos de mérito por cada año trabajado en frontera.",
+            "c) En la capacidad de percibir sueldos de dos ministerios distintos simultáneamente."
+        ],
+        "correct": 0,
+        "retro": "Reglamento del Escalafón Nacional DS 4688, Artículo 72°, página 16. [12, 13]"
+    },
+    {
+        "q": "2478. Un maestro normalista, que no es oriundo del lugar, presta 2 años de servicio continuo en una zona declarada fronteriza, ¿a cuántos años de antigüedad equivalen esos años de servicio y para qué efectos se reconoce dicho beneficio?",
+        "options": [
+            "a) Equivalen a 3 años de antigüedad para fines de jubilación.",
+            "b) Equivalen a 4 años de antigüedad para los efectos de la jubilación, de la calificación de méritos y de la promoción de categoría.",
+            "c) Equivalen a 6 años de antigüedad solo para la promoción de categoría."
+        ],
+        "correct": 1,
+        "retro": "Reglamento del Escalafón Nacional DS 4688, Artículo 29°, página 9. [7, 14, 15]"
+    },
+    {
+        "q": "2480. ¿Dentro de qué término puede apelar el maestro ante la Comisión Nacional las calificaciones asignadas por la Comisión Distrital?",
+        "options": [
+            "a) Dentro del término de 5 días hábiles.",
+            "b) Dentro del término de 10 días a partir de su notificación respectiva.",
+            "c) En un plazo máximo de 15 días calendario."
+        ],
+        "correct": 1,
+        "retro": "Reglamento del Escalafón Nacional DS 4688, Artículo 50°, página 13. [15, 16]"
+    },
+    {
+        "q": "2481. ¿A partir de cuántos años de servicios, el funcionario administrativo del ramo de educación que pase a prestar funciones docentes está obligado a someterse a los exámenes para interinos y titulares a fin de mantener su categoría?",
+        "options": [
+            "a) Después de cumplir 5 años de servicio.",
+            "b) Con más de 10 años de servicios.",
+            "c) Al momento de iniciar sus funciones docentes sin importar su antigüedad."
+        ],
+        "correct": 1,
+        "retro": "Reglamento del Escalafón Nacional DS 4688, Artículo 17°, página 5. [11, 15]"
+    },
+    {
+        "q": "2487. De acuerdo al Escalafón Nacional del Magisterio, ¿en cuántas áreas se juzgan los deméritos del personal docente?",
+        "options": [
+            "a) En 3 áreas principales.",
+            "b) En 5 áreas.",
+            "c) En 10 áreas detalladas por reglamento."
+        ],
+        "correct": 1,
+        "retro": "Reglamento del Escalafón Nacional DS 4688, Artículo 33°, páginas 9 y 10. [17, 18]"
+    },
+    {
+        "q": "2488. ¿En qué plazo están obligados los maestros normalistas a recabar su Título y Visación de título, requisitos sin los cuales no podrán ascender de categoría?",
+        "options": [
+            "a) En el plazo de un año tras su titulación.",
+            "b) En el término de 2 años después de su egreso.",
+            "c) No existe plazo, pero es obligatorio para la primera promoción."
+        ],
+        "correct": 1,
+        "retro": "Reglamento del Escalafón Nacional DS 4688, Artículo 81°, página 18. [18, 19]"
+    },
+    {
+        "q": "2492. ¿Cuántas horas semanales podrán acumular los directores de colegios secundarios dentro del propio establecimiento?",
+        "options": [
+            "a) Hasta 8 horas semanales.",
+            "b) Hasta 10 horas semanales.",
+            "c) No podrán acumular carga docente por ser directivos."
+        ],
+        "correct": 1,
+        "retro": "Reglamento del Escalafón Nacional DS 4688, Artículo 69°, página 16. [19]"
+    }
+];
+    </script>
+    <script src="codes.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>

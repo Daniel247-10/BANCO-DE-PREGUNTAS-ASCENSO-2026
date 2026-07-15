@@ -64,6 +64,200 @@ nav.hub a:hover {
     background: #ffd966;
 }
 
+/* ===== Sección de Cuestionarios Separados ===== */
+.separated-section {
+    max-width: 1100px;
+    margin: 0 auto 32px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    border-top: 6px solid #2a5298;
+}
+
+.separated-title {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #1e3c72;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    font-weight: 800;
+}
+
+.separated-warning {
+    text-align: center;
+    font-size: 1rem;
+    color: #856404;
+    background: #fff3cd;
+    border: 1px solid #ffeeba;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.separated-quizzes {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+}
+
+/* ===== Colores individuales para cada categoría ===== */
+.separated-quizzes .btn-neurociencia {
+    background: #e3f2fd;
+    color: #1565c0;
+    border: 2px solid #1565c0;
+}
+
+.separated-quizzes .btn-neurociencia:hover {
+    background: #1565c0;
+    color: #ffffff;
+}
+
+.separated-quizzes .btn-estilos {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 2px solid #2e7d32;
+}
+
+.separated-quizzes .btn-estilos:hover {
+    background: #2e7d32;
+    color: #ffffff;
+}
+
+.separated-quizzes .btn-innovacion {
+    background: #fff3e0;
+    color: #e65100;
+    border: 2px solid #e65100;
+}
+
+.separated-quizzes .btn-innovacion:hover {
+    background: #e65100;
+    color: #ffffff;
+}
+
+.separated-quizzes .btn-diseño {
+    background: #f3e5f5;
+    color: #6a1b9a;
+    border: 2px solid #6a1b9a;
+}
+
+.separated-quizzes .btn-diseño:hover {
+    background: #6a1b9a;
+    color: #ffffff;
+}
+
+/* Estilos específicos para cada cuestionario individual */
+.separated-quizzes a[href*="Neurociencia1"],
+.separated-quizzes a[href*="Neurociencia2"] {
+    background: #bbdefb;
+    color: #0d47a1;
+    border: 2px solid #0d47a1;
+}
+
+.separated-quizzes a[href*="Neurociencia1"]:hover,
+.separated-quizzes a[href*="Neurociencia2"]:hover {
+    background: #0d47a1;
+    color: #ffffff;
+}
+
+.separated-quizzes a[href*="Estilos_Aprendizaje"] {
+    background: #c8e6c9;
+    color: #1b5e20;
+    border: 2px solid #1b5e20;
+}
+
+.separated-quizzes a[href*="Estilos_Aprendizaje"]:hover {
+    background: #1b5e20;
+    color: #ffffff;
+}
+
+.separated-quizzes a[href*="Innovación_UNESCO"] {
+    background: #ffe0b2;
+    color: #bf360c;
+    border: 2px solid #bf360c;
+}
+
+.separated-quizzes a[href*="Innovación_UNESCO"]:hover {
+    background: #bf360c;
+    color: #ffffff;
+}
+
+.separated-quizzes a[href*="diseño_innovacion"] {
+    background: #e1bee7;
+    color: #4a148c;
+    border: 2px solid #4a148c;
+}
+
+.separated-quizzes a[href*="diseño_innovacion"]:hover {
+    background: #4a148c;
+    color: #ffffff;
+}
+
+.separated-quizzes a[href*="escalafon"] {
+    background: #ffccbc;
+    color: #d84315;
+    border: 2px solid #d84315;
+}
+
+.separated-quizzes a[href*="escalafon"]:hover {
+    background: #d84315;
+    color: #ffffff;
+}
+
+.separated-quizzes a[href*="faltas_sanciones"] {
+    background: #ffcdd2;
+    color: #c62828;
+    border: 2px solid #c62828;
+}
+
+.separated-quizzes a[href*="faltas_sanciones"]:hover {
+    background: #c62828;
+    color: #ffffff;
+}
+
+.separated-quizzes a[href*="identificacion_violencia"] {
+    background: #f8bbd0;
+    color: #ad1457;
+    border: 2px solid #ad1457;
+}
+
+.separated-quizzes a[href*="identificacion_violencia"]:hover {
+    background: #ad1457;
+    color: #ffffff;
+}
+
+.separated-quizzes a[href*="Ley_discapacidad"] {
+    background: #d1c4e9;
+    color: #4527a0;
+    border: 2px solid #4527a0;
+}
+
+.separated-quizzes a[href*="Ley_discapacidad"]:hover {
+    background: #4527a0;
+    color: #ffffff;
+}
+
+.separated-quizzes a[href*="protocolo_prevencion"] {
+    background: #b2dfdb;
+    color: #00695c;
+    border: 2px solid #00695c;
+}
+
+.separated-quizzes a[href*="protocolo_prevencion"]:hover {
+    background: #00695c;
+    color: #ffffff;
+}
+
+.separated-quizzes a[href*="reglamento inclusión"] {
+    background: #b3e5fc;
+    color: #01579b;
+    border: 2px solid #01579b;
+}
+
+.separated-quizzes a[href*="reglamento inclusión"]:hover {
+    background: #01579b;
+    color: #ffffff;
+}
+
 /* ===== Consejo de Estudio ===== */
 .study-tip {
     max-width: 860px;
@@ -119,6 +313,13 @@ nav.hub a:hover {
     border-left: 6px solid #2a5298;
 }
 
+/* Resalta el contorno de la sección mientras se lee la pregunta en audio */
+.question-card.audio-active {
+    outline: 3px solid #f6a623;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px rgba(246, 166, 35, 0.35), 0 3px 10px rgba(0, 0, 0, 0.18);
+}
+
 .question-text {
     font-size: 1.02rem;
     margin-bottom: 12px;
@@ -170,6 +371,15 @@ nav.hub a:hover {
     border-color: #28a745;
     color: #155724;
     font-weight: 600;
+}
+
+/* Señala la respuesta correcta durante la lectura de audio */
+.option.audio-correct {
+    background: #fff3cd;
+    border-color: #f6a623;
+    color: #856404;
+    font-weight: 700;
+    box-shadow: 0 0 0 2px #f6a623 inset;
 }
 
 .feedback {
@@ -498,14 +708,15 @@ body > .premium-badge:last-child {
     margin: 0;
 }
 
-/* ===== Pie de cuestionario: Finalizar e Inicio (flotantes y fijos) ===== */
+/* ===== Pie de cuestionario: Finalizar e Inicio ===== */
 .quiz-footer {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 14px;
-    margin: 26px 0 12px;
+    gap: 6px;
+    margin: 30px auto 20px;
+    max-width: 450px;
     text-align: center;
 }
 
@@ -516,7 +727,7 @@ body > .premium-badge:last-child {
     right: 0;
     bottom: 0;
     z-index: 950;
-    margin: 0;
+    margin: 0 auto;
     padding: 12px 10px;
     background: none;
     box-shadow: none;
@@ -524,9 +735,10 @@ body > .premium-badge:last-child {
 }
 
 .quiz-footer.flotante #finalizarBtn,
-.quiz-footer.flotante .inicio-btn {
+.quiz-footer.flotante .inicio-btn,
+.quiz-footer.flotante #audioControlBtn {
     flex: 1 1 auto;
-    max-width: 220px;
+    max-width: 180px;
 }
 
 .quiz-footer #finalizarBtn {
@@ -544,6 +756,25 @@ body > .premium-badge:last-child {
 }
 
 .quiz-footer #finalizarBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 22px rgba(30, 60, 114, 0.7);
+}
+
+.quiz-footer #audioControlBtn {
+    border: none;
+    background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    padding: 8px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(30, 60, 114, 0.5);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.quiz-footer #audioControlBtn:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 22px rgba(30, 60, 114, 0.7);
 }
@@ -723,6 +954,28 @@ body > .premium-badge:last-child {
         right: 10px;
         font-size: 0.75rem;
         padding: 7px 12px;
+    }
+
+    /* Sección Separada responsive */
+    .separated-section {
+        padding: 18px 14px;
+        margin-bottom: 24px;
+    }
+
+    .separated-title {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .separated-warning {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+        margin-bottom: 16px;
+    }
+
+    .separated-quizzes {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
     }
 
     /* Consejo de Estudio responsive */

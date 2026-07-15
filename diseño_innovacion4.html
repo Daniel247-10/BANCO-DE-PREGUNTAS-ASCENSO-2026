@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Preguntas - DISEÑO (BLOQUE 4)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Banco de Preguntas - DISEÑO, DESARROLLO E INNOVACIÓN</h1>
+        <div class="subtitle">Examen de Ascenso 2026 - BLOQUE 4</div>
+    </header>
+
+    <div id="quiz-container"></div>
+
+    <div style="text-align: center; margin: 20px 0;">
+        <a href="index.html" class="back-link">&larr; Volver al Inicio</a>
+    </div>
+
+    <script>
+        window.quizData = [
+    {
+        "q": "902. ¿Qué función cumple la referencia a la élite nazi que se deleitaba con Wagner?",
+        "options": [
+            "a) Demostrar que los nazis eran las personas más cultas de la historia humana.",
+            "b) Ilustrar que no basta con formar personas cultas si no se aprende a convivir y respetar.",
+            "c) Recomendar la música de Wagner para las clases de apreciación artística."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: La función es ilustrar que no basta con formar personas cultas (que lean, viajen, etc.) si no se aprende a convivir, a amar al prójimo, a respetar a quienes no piensan como nosotros. Ubicación: Capítulo IV, página 67. [112, 113]"
+    },
+    {
+        "q": "950. La condición para que la escuela pública sea integradora y no una desigualdad encubierta es que:",
+        "options": [
+            "a) Mantenga niveles de calidad equiparables a las escuelas privadas.",
+            "b) Prohíba la entrada a alumnos que no vivan en el mismo barrio.",
+            "c) Sea totalmente gratuita incluso para familias multimillonarias."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Mantenga niveles de calidad equiparables a las escuelas privadas. Si no mantiene niveles de calidad equiparables, se estará produciendo una desigualdad ante el derecho a la educación. Ubicación: Capítulo III, página 66. [104, 112]"
+    },
+    {
+        "q": "961. ¿En qué convergen Gimeno, Feito y Linuesa respecto a la selección de contenidos?",
+        "options": [
+            "a) En que debe ser un proceso secreto realizado por una élite de expertos.",
+            "b) En que es una opción cultural y no técnica, considerando diversidad y flexibilidad.",
+            "c) En que las matemáticas deben ocupar el 80% del tiempo escolar."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: En que la selección de contenidos es una opción cultural y no una cuestión técnica, y que debe considerar la diversidad de los estudiantes y el contexto social. Ubicación: Capítulo I y Capítulo II (passim). [112]"
+    },
+    {
+        "q": "962. ¿Qué supuesto subyace a la crítica de Feito a la segmentación disciplinar y pedagogía transmisiva?",
+        "options": [
+            "a) Que son expresiones de un modelo tradicional que no responde a la sociedad actual.",
+            "b) Que son métodos demasiado modernos que los maestros viejos no entienden.",
+            "c) Que el Ministerio de Educación debería subir los impuestos para financiarlos."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: El supuesto común es que estos tres elementos son expresiones de un modelo educativo tradicional que no responde a las necesidades de la sociedad actual y no permite aprendizaje profundo. Ubicación: Capítulo IV (passim). [322/323]"
+    },
+    {
+        "q": "963. Los aspectos verdaderamente ocultos del currículum, según Perrenoud, residen menos en valores que en:",
+        "options": [
+            "a) Los sistemas de pensamiento o al hábito.",
+            "b) La cantidad de hojas de papel que el alumno gasta por semestre.",
+            "c) Las claves de acceso a los servidores de internet del colegio."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Los aspectos más ocultos del currículum atañen menos a los valores y a las representaciones que a los sistemas de pensamiento o al hábito. Ubicación: Capítulo V, página 99. [114, 115]"
+    },
+    {
+        "q": "969. Desde el giro constructivista, ¿qué debe considerar el conocimiento escolar para evitar la enajenación?",
+        "options": [
+            "a) Únicamente los resultados de las pruebas estandarizadas internacionales.",
+            "b) Las concepciones previas y significados populares del estudiante.",
+            "c) La prohibición de usar lenguas indígenas dentro del aula."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Debe considerar las concepciones previas del alumno, las representaciones culturales, los significados populares propios del estudiante como miembro de una cultura externa real. Ubicación: Capítulo II, página 44. [115, 116]"
+    },
+    {
+        "q": "1007. «En esta red de determinaciones quedan prendidos los contenidos». ¿Qué consecuencia se deriva para comprender los contenidos curriculares?",
+        "options": [
+            "a) Que se pueden enseñar de forma aislada sin importar el tiempo ni la organización.",
+            "b) Que no pueden entenderse sin ver sus relaciones con los demás aspectos estructurantes.",
+            "c) Que los contenidos son independientes de la evaluación que se realice."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Que los contenidos no pueden entenderse sin ver sus relaciones con los demás aspectos estructurantes del currículum (tiempo, organización, evaluación, etc.). Ubicación: Capítulo II, página 30. [56, 115]"
+    },
+    {
+        "q": "1008. Según Gimeno Sacristán, confundir la «cultura escolar» con la cultura que representa produce un error simétrico. ¿Cuál es?",
+        "options": [
+            "a) Progresistas niegan valor a toda cultura; conservadores defienden el conocimiento escolar creyéndolo la cultura misma.",
+            "b) Ambos grupos deciden quemar los libros de texto y empezar de cero.",
+            "c) Se llega al consenso de que el currículum no debe tener ningún contenido."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Algunos \"progresistas\" han negado el valor de toda cultura al rechazar una mala cultura escolar, mientras que \"conservadores\" defienden ese conocimiento escolar creyendo que es la cultura que representa. Ubicación: Capítulo II, página 40. [60, 115]"
+    },
+    {
+        "q": "1055. Según Perrenoud, la incorporación plena de la vida cotidiana al aula es inviable porque:",
+        "options": [
+            "a) Los alumnos se distraerían demasiado y no querrían volver a casa.",
+            "b) Quitaría tiempo a lo que el plan de estudios considera esencial: matemáticas, lengua, etc.",
+            "c) No hay suficiente espacio físico en las aulas para meter objetos de la vida real."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Ni el maestro más dado a la apertura puede hacer entrar el mundo en su clase sin quitar tiempo a lo que, dentro del plan de estudios, queda como esencial: matemáticas, lengua, etc. Ubicación: Capítulo V, página 94. [232, 323/324]"
+    },
+    {
+        "q": "1059. Los esquemas que permiten al maestro producir contenidos, ejemplos y ejercicios no previstos tienen su origen en:",
+        "options": [
+            "a) Las órdenes directas que el director da por megáfono cada mañana.",
+            "b) Su hábito profesional, anclado en su relación personal con la cultura.",
+            "c) El manual de usuario que viene con cada libro de texto oficial."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Su hábito profesional, anclado en su relación personal con la cultura, el mundo, la lengua, la excelencia. Ubicación: Capítulo V, página 93. [63, 117]"
+    },
+    {
+        "q": "1060. La transposición pragmática del currículum formal al real no depende exclusivamente del maestro porque:",
+        "options": [
+            "a) Depende también de los alumnos y de la dinámica del grupo de clase.",
+            "b) El Ministerio puede cambiar las leyes a mitad del año escolar.",
+            "c) Los libros de texto tienen errores de imprenta que nadie puede corregir."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Depende también de los alumnos y de la dinámica del grupo de clase. El maestro tiene en cuenta las preferencias y resistencias de sus alumnos en la selección de las actividades. Ubicación: Capítulo V, página 96. [20, 117]"
+    },
+    {
+        "q": "1061. La precisión con que el programa regula los contenidos de cada materia es variable porque:",
+        "options": [
+            "a) El programa resulta elíptico en unas y más indicativo en otras (ej. materias de apertura al mundo).",
+            "b) El Ministerio no tiene tiempo de escribir programas detallados para todas.",
+            "c) Algunas materias no tienen importancia y se dejan a la suerte del docente."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: El programa no alcanza la misma precisión en todas las materias. A veces resulta muy elíptico o más indicativo que imperativo. En las materias de apertura al mundo pueden abordarse numerosos temas. Ubicación: Capítulo V, página 94. [108, 117]"
+    },
+    {
+        "q": "1063. En el texto sobre educación obligatoria, la imposibilidad de una escuela radicalmente individualizada se fundamenta en:",
+        "options": [
+            "a) Razones económicas de recursos, de tiempo y de trabajo de los profesores.",
+            "b) Que a los alumnos les gusta estar amontonados y no les importa la atención personal.",
+            "c) Una prohibición constitucional que exige que todos los niños sean tratados como masa."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Razones económicas de recursos, de tiempo y de trabajo de los profesores. No puede ser posible una escuela para las individualidades y para todas ellas al mismo tiempo. Ubicación: Capítulo III, página 52. [6, 117, 118]"
+    },
+    {
+        "q": "1069. ¿Qué ha ocurrido con la valoración de las diferentes disciplinas en los debates contemporáneos?",
+        "options": [
+            "a) Las humanidades suben en importancia y las matemáticas bajan drásticamente.",
+            "b) Las humanidades bajan en apreciación y ascienden las ciencias, el conocimiento aplicado e idiomas.",
+            "c) Se ha decidido eliminar todas las materias para enseñar solo educación física."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Las humanidades, la cultura clásica y las ciencias sociales bajan en apreciación y ascienden las matemáticas, las ciencias, el conocimiento aplicado e idiomas modernos. Ubicación: Capítulo II, página 45. [88 context; 324]"
+    },
+    {
+        "q": "1076. Sacristán caracteriza las dimensiones como «opciones no necesarias». ¿Qué diferencia estructural expresa respecto a la percepción de los actores?",
+        "options": [
+            "a) Expresa que estas dimensiones son implícitas e invisibles (se dan por sentado).",
+            "b) Indica que los actores las odian pero están obligados a cumplirlas por temor a la policía.",
+            "c) Que los maestros las discuten y cambian cada semana en reuniones de consejo."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: La afirmación expresa que estas dimensiones son implícitas e invisibles para quienes actúan en la práctica. Se suelen dar por sentado y no se cuestionan. Ubicación: Capítulo II, página 33. [70, 324/325]"
+    },
+    {
+        "q": "1078. Clemente Linuesa sostiene que el centro debe tomar decisiones curriculares globales. ¿Cuáles son?",
+        "options": [
+            "a) Líneas metodológicas, actividades generales, coordinación de contenidos, agrupamiento, etc.",
+            "b) Solo la elección del color de la pintura de las fachadas y el menú del comedor.",
+            "c) La selección de qué maestros deben ser despedidos por bajo rendimiento académico."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Son decisiones que afectan globalmente a quienes lo integran: líneas metodológicas, actividades generales, selección y coordinación de contenidos, criterios de evaluación, agrupamiento, etc. Ubicación: Capítulo I, página 17. [29 context; 325]"
+    },
+    {
+        "q": "1087. Perrenoud sostiene que el fracaso escolar y la excelencia son «puras derivaciones del funcionamiento de las escuelas». Esto presupone que:",
+        "options": [
+            "a) Los alumnos nacen con un destino marcado que la escuela no puede cambiar.",
+            "b) El fracaso y la excelencia son construidos por las prácticas escolares (graduación, evaluación).",
+            "c) Las calificaciones se asignan mediante un algoritmo informático imparcial."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: El fracaso y la excelencia no son atributos naturales de los estudiantes, sino que son construidos por las prácticas escolares (la graduación, la evaluación, la selección). Ubicación: Capítulo III, página 60. [119, 120]"
+    },
+    {
+        "q": "1102. Respecto al plano intraindividual de la variabilidad humana, ¿qué afirmación refleja el planteamiento de Sacristán?",
+        "options": [
+            "a) Que las personas somos idénticas a nosotros mismos desde el nacimiento hasta la muerte.",
+            "b) Se refiere a la inconstancia en el modo de ser y comportarse a lo largo de la vida.",
+            "c) Que el carácter de una persona depende exclusivamente de su signo del zodiaco."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: El plano intraindividual se refiere a la inconstancia en el modo de ser y de comportarse a lo largo de su vida, así como en las manifestaciones que tienen sus disponibilidades personales. Ubicación: Capítulo III, página 50. [120, 121]"
+    },
+    {
+        "q": "1103. La contribución de Eggleston al concepto de currículum real consiste en señalar que:",
+        "options": [
+            "a) El currículum real es el resultado de una negociación entre el maestro y sus alumnos.",
+            "b) El currículum real es dictado por los alumnos y el maestro solo obedece.",
+            "c) Los padres de familia son los únicos que negocian los contenidos con la dirección."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: El currículum real es el resultado de una negociación entre el maestro y sus alumnos y, más frecuentemente, de una confrontación de sus estrategias respectivas. Ubicación: Capítulo V, página 96. [235, 325/326]"
+    },
+    {
+        "q": "1178. El énfasis que el docente otorga a ciertos dominios del currículum por encima de otros responde a:",
+        "options": [
+            "a) El tamaño de la letra con que el tema está escrito en el programa oficial.",
+            "b) Sus preferencias, hábito profesional, imagen de cultura y valores.",
+            "c) La cantidad de dibujos y colores que tiene el tema en el libro de texto."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: A sus preferencias, su hábito profesional, su imagen de la cultura y de la excelencia, y a los valores que defiende. Ubicación: Capítulo V, página 93. [231 context; 326]"
+    },
+    {
+        "q": "1182. Cuando Aristóteles sostiene que «la educación debe ser única y la misma para todos», presupone que:",
+        "options": [
+            "a) Hay un fin único para toda ciudad, y la educación debe ser común y no privada.",
+            "b) Los ciudadanos son incapaces de educar a sus propios hijos correctamente.",
+            "c) El Estado debe cobrar impuestos altos para financiar una sola escuela gigante."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Hay un fin único para toda ciudad, y la educación debe ser común y no privada. Presupone la idea de que todos los ciudadanos deben recibir la misma educación para el bien común. Ubicación: Capítulo III, página 48. [122, 123]"
+    },
+    {
+        "q": "1190. ¿Por qué el principio de comprensividad es más polémico en secundaria que en primaria?",
+        "options": [
+            "a) Porque los adolescentes son más difíciles de controlar que los niños pequeños.",
+            "b) Porque la secundaria tiene una tradición selectiva que choca con mantener a todos juntos.",
+            "c) Porque en secundaria los libros son más caros y no alcanzan para todos."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: La enseñanza secundaria tiene una tradición selectiva y elitista, y el principio de comprensividad obliga a mantener a todos juntos sin segregarlos, lo que choca con la mentalidad selectiva. Ubicación: Capítulo III, página 66. [123, 124]"
+    },
+    {
+        "q": "1196. Según los datos sobre el uso de la biblioteca escolar en secundaria, ¿qué conclusión pedagógica se extrae?",
+        "options": [
+            "a) Los estudiantes de secundaria no están desarrollando competencias de búsqueda y uso de información.",
+            "b) Que las bibliotecas de secundaria son las mejores del mundo según el informe PISA.",
+            "c) Que los alumnos prefieren leer en la biblioteca que estar en el recreo."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: La conclusión es que el alumnado de secundaria no está desarrollando competencias de búsqueda y uso de la información, ya que la mayoría de los profesores declara no ir a la biblioteca. Ubicación: Capítulo IV, página 77. [65, 123]"
+    },
+    {
+        "q": "1203. John Stuart Mill comparaba la naturaleza humana con un árbol. ¿Qué queda cuestionado con esta metáfora?",
+        "options": [
+            "a) La necesidad de regar a los alumnos con agua fría cada mañana.",
+            "b) El modelo de escuela que trata a los estudiantes como máquinas a ser construidas según un modelo.",
+            "c) El uso de madera de árbol para fabricar los pupitres escolares tradicionales."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: El modelo de escuela que trata a los estudiantes como máquinas que deben ser construidas según un modelo, en lugar de respetar su desarrollo natural y su diversidad. Ubicación: Capítulo III, página 52. [118, 326/327]"
+    },
+    {
+        "q": "1224. ¿Qué principio subyace a la idea de que abordar en profundidad un problema específico desarrolla capacidades transferibles?",
+        "options": [
+            "a) El principio de que el pensamiento analítico desplegado sirve para aplicarlo en otras cuestiones.",
+            "b) Que los alumnos se aburren si estudian demasiados temas distintos al mismo tiempo.",
+            "c) Que los problemas específicos son más fáciles de resolver que los problemas generales."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: El principio de que el pensamiento analítico que se despliega al estudiar un tema sirve para aplicarlo en otras cuestiones, independientemente de que se hayan visto o no. Ubicación: Capítulo IV, página 73. [34, 125, 126]"
+    },
+    {
+        "q": "1230. ¿Qué relación establece el texto entre innovación educativa y tradición?",
+        "options": [
+            "a) La innovación debe destruir toda tradición para poder ser considerada exitosa.",
+            "b) La innovación tiene una relación profunda con la tradición, produciendo modificaciones simbólicas.",
+            "c) La tradición es el enemigo número uno de cualquier proceso de cambio escolar."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: La innovación educativa produce modificaciones materiales y simbólicas, y por ello tiene una relación profunda con la tradición. No es simple novedad, sino una transformación. Ubicación: Capítulo I y Capítulo II (passim). [126]"
+    },
+    {
+        "q": "1233. ¿Qué tipo de modificaciones produce la innovación educativa como proceso social?",
+        "options": [
+            "a) Solo modificaciones en el color de las paredes de la unidad educativa.",
+            "b) Modificaciones materiales y simbólicas, apoyándose en la tradición y reinterpretándola.",
+            "c) Cambios en los nombres de los maestros pero manteniendo los mismos contenidos."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: La innovación educativa tiene una relación profunda con la tradición, produciendo modificaciones materiales y simbólicas. No rechaza la tradición, sino que la transforma. Ubicación: Capítulo I y Capítulo II (passim). [126]"
+    },
+    {
+        "q": "1241. ¿Cuál de las siguientes tensiones se reconoce como irresuelta en la educación obligatoria?",
+        "options": [
+            "a) La tensión entre diferenciación individualizadora y socialización homogeneizadora.",
+            "b) El conflicto entre el uso de tiza blanca o tiza de colores.",
+            "c) La disputa por quién debe ser el dueño de la llave del laboratorio de química."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: La tensión entre diferenciación individualizadora y socialización homogeneizadora. La educación debe promover la singularidad y, al mismo tiempo, compartir rasgos comunes. Ubicación: Capítulo III, página 52. [6, 126]"
+    },
+    {
+        "q": "1250. Sacristán dice que la escuela eligió someter lo diverso a la norma. ¿Qué revela esto sobre la relación escuela-democracia?",
+        "options": [
+            "a) Revela que la escuela no está naturalmente preparada para la democracia y tiende a homogeneizar.",
+            "b) Que la escuela es la cuna de la democracia y siempre ha sido muy participativa.",
+            "c) Que la democracia solo puede existir si todos los alumnos piensan exactamente igual."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: La escuela no está naturalmente preparada para la democracia, sino que tiende a homogeneizar y normalizar a los estudiantes. Ubicación: Capítulo III, páginas 49-50. [107 context; 327/328]"
+    }
+];
+    </script>
+    <script src="codes.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>

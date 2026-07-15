@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Preguntas - DISEÑO (BLOQUE 1)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Banco de Preguntas - DISEÑO, DESARROLLO E INNOVACIÓN</h1>
+        <div class="subtitle">Examen de Ascenso 2026 - BLOQUE 1</div>
+    </header>
+
+    <div id="quiz-container"></div>
+
+    <div style="text-align: center; margin: 20px 0;">
+        <a href="index.html" class="back-link">&larr; Volver al Inicio</a>
+    </div>
+
+    <script>
+        window.quizData = [
+    {
+        "q": "35. Perrenoud distingue entre currículum formal y currículum real señalando que no son de la misma naturaleza. ¿Qué diferencia estructural fundamental explica que ambos currículums operen en planos distintos dentro del sistema educativo?",
+        "options": [
+            "a) El currículum formal es una imagen de la cultura digna de transmitirse; el currículum real es un conjunto de experiencias, tareas y actividades que originan los aprendizajes.",
+            "b) El currículum real es la ley escrita por el Estado, mientras que el formal es lo que el profesor decide enseñar cada día.",
+            "c) No existe diferencia, ya que el currículum real es la ejecución exacta y sin cambios del plan de estudios oficial."
+        ],
+        "correct": 0,
+        "retro": "Libro: Diseño, desarrollo e innovación del currículum. Capítulo V, página 94. El currículum formal es un plan ideal; el real es una transposición pragmática en la acción."
+    },
+    {
+        "q": "45. Cuando una institución educativa adapta e incluso recrea la normativa externa a sus características concretas, esto refleja principalmente:",
+        "options": [
+            "a) La falta de respeto a las leyes educativas nacionales.",
+            "b) La autonomía del centro y su capacidad para ejercer decisiones curriculares comportándose como un organismo.",
+            "c) Un error administrativo que debe ser corregido por el Ministerio de Educación."
+        ],
+        "correct": 1,
+        "retro": "Libro: Diseño, desarrollo e innovación del currículum. Capítulo I, páginas 16-17. El centro como unidad de análisis potencia la calidad mediante su capacidad de innovación propia."
+    },
+    {
+        "q": "47. El desplazamiento en el modo de formular las finalidades educativas entre el siglo XIX y la actualidad expresa:",
+        "options": [
+            "a) El paso de una educación centrada en la disciplina y el patriotismo hacia una centrada en la expansión personal, autonomía y creatividad.",
+            "b) Una pérdida de valores morales que afecta la calidad del sistema educativo actual.",
+            "c) El cambio del uso de libros de papel por el uso obligatorio de tablets en el aula."
+        ],
+        "correct": 0,
+        "retro": "Libro: Diseño, desarrollo e innovación del currículum. Capítulo V, página 98. Las finalidades actuales abrazan la psicología del desarrollo y la identidad personal."
+    },
+    {
+        "q": "4. Según la definición de estilo de aprendizaje como conjunto de elementos exteriores que influyen en el contexto, ¿cuáles son los indicadores estables que los alumnos perciben, interaccionan y responden a sus ambientes?",
+        "options": [
+            "a) Los rasgos cognitivos, afectivos y fisiológicos.",
+            "b) La marca de los útiles escolares y el nivel económico de la familia.",
+            "c) El número de horas que el estudiante pasa frente a una pantalla."
+        ],
+        "correct": 0,
+        "retro": "Libro: Diseño, desarrollo e innovación del currículum. Capítulo I, página 23. Se cita la definición de Keefe sobre indicadores estables de interacción."
+    },
+    {
+        "q": "49. La cultura escolar, tal como opera en la práctica pedagógica concreta, se caracteriza por:",
+        "options": [
+            "a) Ser una construcción cultural especial, 'curricularizada', seleccionada y empaquetada bajo moldes sui generis.",
+            "b) Ser una copia fiel y exacta de los descubrimientos científicos de último momento.",
+            "c) Estar aislada de cualquier influencia política o social del entorno."
+        ],
+        "correct": 0,
+        "retro": "Libro: Diseño, desarrollo e innovación del currículum. Capítulo II, página 30. El conocimiento escolar es una realidad modelada por los usos y contextos institucionales."
+    },
+    {
+        "q": "50. Respecto al valor del conocimiento, ¿cuál es la diferencia fundamental entre la posición realista y la relativista?",
+        "options": [
+            "a) La realista cree que el conocimiento refleja una realidad externa fiable; la relativista lo ve como una construcción social con valores dominantes.",
+            "b) La realista solo admite libros de texto, mientras que la relativista admite el uso de internet.",
+            "c) La realista es para escuelas privadas y la relativista para escuelas públicas."
+        ],
+        "correct": 0,
+        "retro": "Libro: Diseño, desarrollo e innovación del currículum. Capítulo I, página 14. Son dos formas contrapuestas de entender la relevancia del conocimiento educativo."
+    },
+    {
+        "q": "52. La afirmación de que en sociedades medianamente complejas el ámbito de la experiencia personal directa es muy reducido, ¿qué estereotipo cultural presupone?",
+        "options": [
+            "a) Que el aprendizaje solo es posible a través del juego espontáneo.",
+            "b) Que la experiencia codificada (escritura, imagen) es la única forma de acceder a lo que otros pensaron o sintieron.",
+            "c) Que las personas ya no son capaces de aprender por sí mismas sin ayuda de un maestro."
+        ],
+        "correct": 1,
+        "retro": "Libro: Diseño, desarrollo e innovación del currículum. Capítulo VI, página 116. Esta limitación justifica la existencia de la escolaridad alfabetizadora."
+    },
+    {
+        "q": "55. Cuando el currículum formal se describe como una «trama» y la enseñanza como un «tejido», la metáfora implica que el paso de uno al otro requiere:",
+        "options": [
+            "a) Un trabajo permanente de reinvención, ilustración y concreción por parte del maestro.",
+            "b) Comprar materiales textiles para las clases de manualidades.",
+            "c) Seguir el manual del profesor de forma mecánica y sin realizar ningún cambio."
+        ],
+        "correct": 0,
+        "retro": "Libro: Diseño, desarrollo e innovación del currículum. Capítulo V, página 92. El maestro 'teje' la práctica diaria a partir de la trama abstracta del plan oficial."
+    },
+    {
+        "q": "58. Para construir una representación realista del currículum real, Perrenoud propone abandonar la oposición entre currículum manifiesto y oculto en favor de:",
+        "options": [
+            "a) Una gradación continua, yendo desde lo más patente a lo más oculto sin solución de continuidad.",
+            "b) Ignorar por completo el currículum oculto para centrarse solo en los exámenes.",
+            "c) Un sistema de cámaras que vigilen todas las acciones del docente."
+        ],
+        "correct": 0,
+        "retro": "Libro: Diseño, desarrollo e innovación del currículum. Capítulo V, página 99. Los aprendizajes se sitúan en un espectro que va de lo prescrito a lo inconsciente."
+    },
+    {
+        "q": "62. Cuando el currículum transita por distintas instancias de decisión, su contenido no permanece intacto. ¿Qué proceso caracteriza ese tránsito?",
+        "options": [
+            "a) El proceso de transposición pragmática y la interpretación de los docentes.",
+            "b) Un proceso de fotocopiado masivo por parte de la administración.",
+            "c) El cumplimiento estricto y literal de las órdenes ministeriales."
+        ],
+        "correct": 0,
+        "retro": "Libro: Diseño, desarrollo e innovación del currículum. Capítulo V, páginas 92-94. El currículum se reconoce y transforma en el proceso de su desarrollo."
+    },
+    {
+        "q": "63. ¿Qué relación establece Feito entre la formación docente y la autonomía curricular de los centros?",
+        "options": [
+            "a) Si el profesorado está bien formado, es más fácil incrementar los niveles de autonomía curricular del centro.",
+            "b) La formación docente es irrelevante para la autonomía, ya que esta depende solo del director.",
+            "c) A mayor formación docente, menos autonomía debe tener el centro para evitar errores."
+        ],
+        "correct": 0,
+        "retro": "Libro: Diseño, desarrollo e innovación del currículum. Capítulo IV, página 88. Países con docentes bien formados, como Finlandia, tienen currículos oficiales reducidos."
+    },
+    {
+        "q": "67. La caracterización de la imagen como una llamada de atención para relajarse del proceso de descodificar la escritura revela:",
+        "options": [
+            "a) Una visión donde el texto es lo fundamental y la imagen es solo un complemento secundario.",
+            "b) Que las imágenes son más importantes que las palabras en la educación moderna.",
+            "c) Que los niños de hoy ya no saben leer textos largos sin dibujos."
+        ],
+        "correct": 0,
+        "retro": "Libro: Diseño, desarrollo e innovación del currículum. Capítulo VI, página 118. Refleja la tradición de la metodología 'libresca' que infravalora lo visual."
+    },
+    {
+        "q": "68. La afirmación de que la experiencia directa genera un conocimiento seguro e imborrable revela un sesgo epistemológico que:",
+        "options": [
+            "a) Otorga un valor superior a la experiencia directa frente a la experiencia codificada.",
+            "b) Niega la posibilidad de aprender a través de los libros.",
+            "c) Considera que el único conocimiento válido es el que se obtiene en el laboratorio."
+        ],
+        "correct": 0,
+        "retro": "Libro: Diseño, desarrollo e innovación del currículum. Capítulo VI, página 116. Gimeno analiza cómo valoramos la vivencia personal sobre el saber transmitido."
+    },
+    {
+        "q": "72. Si una maestra presenta los contenidos como verdades históricamente construidas, según «Diseñar el currículum», ¿qué decisión toma?",
+        "options": [
+            "a) Una decisión basada en el criterio socioideológico, viendo la enseñanza como opción cultural.",
+            "b) Una decisión técnica basada únicamente en el ahorro de tiempo.",
+            "c) Una infracción legal por no presentar los contenidos como verdades absolutas."
+        ],
+        "correct": 0,
+        "retro": "Libro: Diseño, desarrollo e innovación del currículum. Capítulo I, página 19. El sentido dado a las disciplinas (absolutas o construidas) es una opción de valor."
+    },
+    {
+        "q": "74. La tensión entre diferenciación individualizadora y socialización homogeneizadora en la educación se presenta como:",
+        "options": [
+            "a) Una de las contradicciones que hay que resolver con equilibrios siempre inestables.",
+            "b) Un problema que ya fue resuelto por la pedagogía tradicional en el siglo pasado.",
+            "c) Un requisito burocrático que no afecta la vida real de los estudiantes."
+        ],
+        "correct": 0,
+        "retro": "Libro: Diseño, desarrollo e innovación del currículum. Capítulo III, página 52. La escuela debe conciliar el proyecto común con el respeto a la singularidad."
+    },
+    {
+        "q": "77. ¿Qué paradoja encierra que un texto escolar dedique dos tercios a la lingüística y solo uno a toda la literatura de los siglos XIX y XX?",
+        "options": [
+            "a) Se pretende crear un público lector, pero el resumen sucinto hace imposible acercarse a la obra de los autores.",
+            "b) Que los estudiantes aprenden más literatura leyendo menos páginas.",
+            "c) Que la lingüística es la base necesaria para disfrutar de cualquier novela."
+        ],
+        "correct": 0,
+        "retro": "Libro: Diseño, desarrollo e innovación del currículum. Capítulo IV, página 72. El academicismo fragmentado impide la formación de un hábito lector real."
+    },
+    {
+        "q": "90. Cuando un alumno aprende a vivir en un espacio superpoblado y a diferir la satisfacción de sus deseos, ¿qué está adquiriendo?",
+        "options": [
+            "a) El oficio de alumno y las rutinas del currículum oculto.",
+            "b) Malos hábitos que deben ser corregidos por un psicólogo escolar.",
+            "c) Una capacitación técnica para trabajar en fábricas de producción masiva."
+        ],
+        "correct": 0,
+        "retro": "Libro: Diseño, desarrollo e innovación del currículum. Capítulo V, página 100. Aprender a 'vivir en una masa' es parte de la socialización escolar invisible."
+    },
+    {
+        "q": "92. Según Eggleston, ¿qué aprendizaje produce regularmente el funcionamiento escolar al margen de los objetivos oficiales?",
+        "options": [
+            "a) Aprender a dejarse evaluar por otros y a satisfacer expectativas ajenas.",
+            "b) Aprender los nombres de todos los ríos de Europa en orden alfabético.",
+            "c) Aprender a usar programas de diseño gráfico avanzado."
+        ],
+        "correct": 0,
+        "retro": "Libro: Diseño, desarrollo e innovación del currículum. Capítulo V, páginas 100-101. Son aprendizajes que favorecen el mantenimiento del orden institucional."
+    },
+    {
+        "q": "94. ¿Cuál de las siguientes situaciones ejemplifica lo que Boudon denomina como 'efecto perverso'?",
+        "options": [
+            "a) Prácticas que producen aprendizajes ajenos al proyecto didáctico del maestro (ej. aprender pasividad).",
+            "b) Un estudiante que saca nota máxima sin haber estudiado nada.",
+            "c) El uso de uniformes de colores muy llamativos que distraen a los alumnos."
+        ],
+        "correct": 0,
+        "retro": "Libro: Diseño, desarrollo e innovación del currículum. Capítulo V, páginas 96-97. Son resultados no deseados pero generados por la propia estructura escolar."
+    },
+    {
+        "q": "98. Según Perrenoud, hacer visible lo que estaba oculto en el currículum no conduce a su eliminación sino a:",
+        "options": [
+            "a) El debate y la polémica sobre su legitimidad y significación.",
+            "b) La sanción inmediata de los profesores que lo practicaban.",
+            "c) Un aumento automático en el rendimiento académico de los estudiantes."
+        ],
+        "correct": 0,
+        "retro": "Libro: Diseño, desarrollo e innovación del currículum. Capítulo V, página 99. La visibilidad permite cuestionar la arbitrariedad de lo que se daba por sentado."
+    },
+    {
+        "q": "100. En «El currículum real y el trabajo escolar», el currículum formal es una imagen de la cultura, mientras que el real es:",
+        "options": [
+            "a) Un conjunto de experiencias, tareas y actividades que originan los aprendizajes.",
+            "b) El registro de asistencia y las notas finales de los alumnos.",
+            "c) El reglamento de faltas y sanciones que rige la conducta en el aula."
+        ],
+        "correct": 0,
+        "retro": "Libro: Diseño, desarrollo e innovación del currículum. Capítulo V, página 94. El currículum real es la praxis, lo que efectivamente sucede."
+    },
+    {
+        "q": "101. Según Sacristán, ¿qué representó el currículo para la crítica progresista frente al conocimiento academicista?",
+        "options": [
+            "a) La denuncia de la inadecuación del saber escolar para las necesidades reales y el desarrollo del alumno.",
+            "b) Una oportunidad para incluir más horas de latín y griego en la primaria.",
+            "c) La defensa absoluta de los exámenes de opción múltiple como único método."
+        ],
+        "correct": 0,
+        "retro": "Libro: Diseño, desarrollo e innovación del currículum. Capítulo II, página 43. Se opuso a los contenidos 'logocéntricos' buscando una escuela 'a la medida'."
+    },
+    {
+        "q": "108. Un director aplica criterios de selección de contenidos como una 'lista de verificación' mecánica. Según el texto, ¿qué error comete?",
+        "options": [
+            "a) Tratar la selección como cuestión técnica cuando es una opción cultural y marco de discusión.",
+            "b) Olvidar poner la firma y el sello oficial en la lista de verificación.",
+            "c) No incluir suficientes contenidos de tecnología digital en la lista."
+        ],
+        "correct": 0,
+        "retro": "Libro: Diseño, desarrollo e innovación del currículum. Capítulo I, página 20. Los criterios deben orientar la reflexión docente, no sustituirla."
+    },
+    {
+        "q": "112. Según «Diseñar el currículum», ¿qué ocurre cuando los niveles de los estudiantes frenan el trabajo de ciertos contenidos?",
+        "options": [
+            "a) Debe ser un reto adecuarlos para que sean asimilados sin acumular deficiencias básicas.",
+            "b) El profesor debe abandonar esos contenidos y pasar al siguiente tema inmediatamente.",
+            "c) Los alumnos deben ser expulsados del sistema para no retrasar al grupo."
+        ],
+        "correct": 0,
+        "retro": "Libro: Diseño, desarrollo e innovación del currículum. Capítulo I, página 20. El criterio psicológico evalúa carencias para ajustar la intervención pedagógica."
+    },
+    {
+        "q": "113. Estudiantes trabajan con lentitud y el maestro deja temas sin cubrir para profundizar otros. ¿Qué concepto explica esto?",
+        "options": [
+            "a) La transposición pragmática y la negociación del trabajo entre maestro y alumnos.",
+            "b) Una falta de planificación profesional por parte del docente.",
+            "c) La obligación legal de cumplir el programa al 100% sin importar el ritmo."
+        ],
+        "correct": 0,
+        "retro": "Libro: Diseño, desarrollo e innovación del currículum. Capítulo V, páginas 94-96. El volumen de trabajo es independiente de la sola voluntad docente."
+    },
+    {
+        "q": "113. En una clase, los estudiantes trabajan con lentitud sostenida durante varias semanas, lo que obliga al maestro a dejar sin cubrir varios temas del programa y a profundizar otros no previstos. ¿Qué concepto explica ese resultado según Perrenoud?",
+        "options": [
+            "a) El fracaso escolar por falta de disciplina y control del tiempo por parte del docente.",
+            "b) La transposición pragmática del currículum formal al real y la negociación entre maestro y alumnos.",
+            "c) La ineficiencia del sistema educativo que no proporciona maestros especialistas."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: La transposición pragmática del currículum formal al real y la negociación entre maestro y alumnos. El currículum real es el resultado de una negociación entre el maestro y sus alumnos, hora a hora, de sus estrategias respectivas. Ubicación: Capítulo V, páginas 94-96. [15, 19, 20]"
+    },
+    {
+        "q": "115. Desde la concepción tradicional del proceso de aprendizaje, ¿cuál de las siguientes caracteriza con mayor precisión el rol que desempeña el docente en la gestión del conocimiento dentro del aula?",
+        "options": [
+            "a) El docente es un facilitador que guía el descubrimiento del alumno.",
+            "b) El docente es el transmisor del conocimiento, que existe fuera de la conciencia humana.",
+            "c) El docente es un mediador que fomenta el debate y el pensamiento crítico."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: El docente es el transmisor del conocimiento, que existe fuera de la conciencia humana, y el aprendizaje se reduce a la absorción y la memorización de aquél por parte de unos estudiantes a los que se considera maleables. Ubicación: Capítulo IV, página 74. [21, 22]"
+    },
+    {
+        "q": "122. La propuesta de implementar el aprendizaje orientado a proyectos como estrategia se enmarca en una estructura curricular que se caracteriza por ser:",
+        "options": [
+            "a) Una estructura segmentada en asignaturas independientes de 45 minutos.",
+            "b) Una estructura que busca la globalización curricular y el trabajo multidisciplinar.",
+            "c) Un modelo basado exclusivamente en el refuerzo de conductas operantes."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Una estructura que busca la globalización curricular, el trabajo por proyectos multidisciplinares o centros de interés, integrando destrezas y contenidos de diferentes áreas curriculares, superando la balcanización curricular. Ubicación: Capítulo IV, páginas 75-76. [22, 23]"
+    },
+    {
+        "q": "144. ¿A partir de qué modelo surgió la concepción imperante sobre el proceso de aprendizaje a comienzos del siglo XX y a qué propósito sirvió?",
+        "options": [
+            "a) El modelo constructivista que sirvió para empoderar al estudiante.",
+            "b) El modelo de la psicología conductista, que considera que se aprende por fragmentos.",
+            "c) El modelo de la Gestalt que priorizaba la visión holística del saber."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: El modelo de la psicología conductista. El modelo educativo actual se basa en el planteamiento de la psicología conductista que considera que se aprende mejor a partir de fragmentos que se van añadiendo unos a otros en sucesivas sesiones lectivas. Ubicación: Capítulo IV, página 75. [22, 24]"
+    },
+    {
+        "q": "147. La noción de currículum oculto emerge vinculada a una visión racionalista de la escuela porque:",
+        "options": [
+            "a) Busca cuantificar matemáticamente cada conducta social de los niños.",
+            "b) Se muestra como el campo de lo \"no-dicho\", de lo que escapa a una formulación precisa.",
+            "c) Permite a la dirección del centro controlar los pensamientos íntimos de los docentes."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Porque se muestra como el campo de lo \"no-dicho\", de lo que escapa a una formulación precisa, incluidos los objetivos \"no cognitivos\" o \"socioafectivos\". Esta noción forma parte de una visión reciente de la escuela. Ubicación: Capítulo V, páginas 98-99. [22, 25]"
+    },
+    {
+        "q": "157. ¿Qué tipo de sujetos busca construir la innovación educativa cuando se orienta con un sentido crítico?",
+        "options": [
+            "a) Sujetos dóciles que se adapten sin cuestionar a las demandas del mercado laboral.",
+            "b) Sujetos críticos, reflexivos, capaces de cuestionar el orden establecido y participar democráticamente.",
+            "c) Estudiantes que memoricen los contenidos oficiales para obtener las mejores notas en PISA."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Sujetos críticos, reflexivos, capaces de cuestionar el orden establecido, de participar democráticamente y de transformar la realidad. Personas que no se adapten pasivamente a la sociedad, sino que la transformen. Ubicación: Capítulo IV, página 74 (basado en Freire). [22, 26]"
+    },
+    {
+        "q": "163. ¿Cuál de las siguientes descripciones se ajusta a una limitación de los libros de texto según Sacristán?",
+        "options": [
+            "a) Son excesivamente pesados para que los niños los carguen en sus mochilas.",
+            "b) El libro de texto es el último reductor de la experiencia en las aulas.",
+            "c) Proporcionan demasiada información contradictoria que confunde al alumno."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: El libro de texto es el último reductor de la experiencia en las aulas, ya que representa un último paso en el proceso de especialización pedagógica de los procesos de transmisión de los saberes. Ubicación: Capítulo VI, página 115. [4, 22]"
+    },
+    {
+        "q": "185. El estilo de aprendizaje es un conjunto de elementos exteriores que influyen en el contexto. ¿Cuáles son los indicadores relativamente estables de cómo los estudiantes perciben interacciones y responden a sus ambientes de aprendizaje?",
+        "options": [
+            "a) Son únicamente los niveles de coeficiente intelectual medidos por tests estándar.",
+            "b) Son los rasgos cognitivos, afectivos y fisiológicos que sirven como indicadores.",
+            "c) Son las condiciones socioeconómicas de la familia y el barrio del estudiante."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Son los rasgos cognitivos, afectivos y fisiológicos que sirven como indicadores relativamente estables de cómo los alumnos perciben interacciones y responden a sus ambientes de aprendizaje (Keefe, 1988). Ubicación: Capítulo I, página 23. [27, 28]"
+    },
+    {
+        "q": "193. Las competencias genéricas constituyen un soporte imprescindible para el desempeño laboral. ¿Cuál de las siguientes afirmaciones describe con mayor precisión su naturaleza?",
+        "options": [
+            "a) Son habilidades técnicas específicas como saber programar o manejar maquinaria.",
+            "b) Son competencias metacurriculares que permiten interaccionar de un modo efectivo y controlar la propia vida.",
+            "c) Son listas de contenidos teóricos que deben ser memorizados para aprobar exámenes estatales."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Son competencias metacurriculares que permiten interaccionar de un modo efectivo, interactuar con personas y controlar la propia vida. Ayudan a hacer frente a una serie de demandas en una diversidad de contextos. Ubicación: Capítulo IV, páginas 87-88. [28, 29]"
+    },
+    {
+        "q": "204. La experiencia de «vivir dentro de una masa» constituye, según Eggleston, un componente del currículum oculto porque:",
+        "options": [
+            "a) Fomenta el liderazgo individual y la competitividad entre pares.",
+            "b) La escuela enseña a vivir en un ambiente superpoblado, a tolerar interrupciones y a diferir deseos.",
+            "c) Obliga a los estudiantes a marchar en formación militar durante los recreos."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Porque la escuela enseña a vivir en un ambiente superpoblado, a tolerar interrupciones, a diferir la satisfacción de los deseos personales y a renunciar a ellos. Esto no aparece entre los objetivos oficiales. Ubicación: Capítulo V, página 100. [9, 28]"
+    },
+    {
+        "q": "206. El aprendizaje es un proceso activo; aprender es explorar, conceptualizar, experimentar e interactuar. ¿Cuál de las afirmaciones se relaciona con lo descrito previamente?",
+        "options": [
+            "a) Esta descripción se relaciona con el enfoque constructivista y el aprendizaje por competencias.",
+            "b) Corresponde al modelo de instrucción directa basado en el castigo y la recompensa.",
+            "c) Describe la metodología de aprendizaje pasivo-receptivo de la escuela tradicional."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Esta descripción se relaciona con el enfoque constructivista y el aprendizaje por competencias, donde el alumno es protagonista de su aprendizaje y el conocimiento se construye a través de la experiencia. Ubicación: Capítulo IV, página 74. [23, 28]"
+    },
+    {
+        "q": "215. Desde los planteamientos sobre innovación educativa, aceptar que el cambio es un aprendizaje implica que las escuelas deberían ser:",
+        "options": [
+            "a) Edificios estáticos donde el conocimiento se resguarda bajo llave.",
+            "b) Organizaciones que aprenden, capaces de cambiar desde su responsabilidad.",
+            "c) Centros de distribución de materiales producidos exclusivamente por el Ministerio."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Organizaciones que aprenden, capaces de cambiar desde su responsabilidad, de dar respuestas adecuadas a las demandas de una sociedad en cambio continuo. Ubicación: Capítulo I y Capítulo II (passim) [Ref. Bolívar, 2000, pág. 16/29; 303]"
+    },
+    {
+        "q": "274. El texto sostiene que los fines de la educación escolarizada son más amplios que lo que habitualmente se reconoce como contenidos curriculares. ¿Qué consecuencia tiene esta visión para el rol del docente?",
+        "options": [
+            "a) Lo convierte en un simple técnico que aplica programas sin opinar.",
+            "b) Invierten la lógica al priorizar la formación integral de la persona por encima de la mera transmisión de contenidos.",
+            "c) Exige que el docente sea un experto en una sola disciplina académica aislada."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Invierten la lógica al priorizar la formación integral de la persona por encima de la mera transmisión de contenidos. El docente se percibe como enseñante-educador. Ubicación: Capítulo II, páginas 35-36. [77, 303/304]"
+    },
+    {
+        "q": "275. Desde la psicología, el vuelco cultural rescata la construcción del significado como objeto de atención preferente. ¿Cómo se define el aprendizaje bajo esta óptica?",
+        "options": [
+            "a) Como la memorización de datos externos que el alumno debe repetir fielmente.",
+            "b) El aprendizaje es un proceso de elaboración y reconstrucción interna en el que lo nuevo interacciona con los significados previos.",
+            "c) Como un cambio de conducta observable producido por estímulos externos."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: El aprendizaje es un proceso de elaboración y reconstrucción interna en el que lo nuevo interacciona con los significados previos. El significado supone centrarse en las representaciones internas. Ubicación: Capítulo II, página 44. [30, 31]"
+    },
+    {
+        "q": "276. En el texto «El currículum real y el trabajo escolar», ¿qué caracteriza la relación entre la cultura escolar y la cultura de la organización escolar?",
+        "options": [
+            "a) Son dos esferas totalmente separadas que nunca se cruzan en la práctica.",
+            "b) No existe una demarcación clara, es más adecuado hablar de una intersección entre ambas.",
+            "c) La cultura escolar absorbe totalmente a la organización, eliminando las rutinas burocráticas."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: No existe una demarcación clara entre la cultura escolar y la cultura de la organización escolar, pero tampoco hay un solapamiento absoluto. Es más adecuado hablar de intersección. Ubicación: Capítulo V, páginas 105-106. [31, 32]"
+    },
+    {
+        "q": "281. ¿En qué se han basado las nuevas formas de concebir el proceso de aprendizaje y el cambio hacia un aprendizaje centrado en el alumno?",
+        "options": [
+            "a) En el giro epistemológico hacia el alumno, la psicología constructivista y la crítica al academicismo.",
+            "b) En el refuerzo de la jerarquía docente y el uso intensivo de exámenes tipo test.",
+            "c) En la eliminación de todos los contenidos para centrarse solo en la felicidad del niño."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: En el giro epistemológico hacia el alumno, la psicología constructivista, y la crítica al academicismo. El aprendizaje se concibe como un proceso de construcción de significados. Ubicación: Capítulo II, páginas 43-44. [16, 31, 33]"
+    },
+    {
+        "q": "284. Desde la perspectiva sistémica de la innovación educativa, ¿qué fenómeno se produce cuando la innovación genera una reorganización del sistema en el que ocurre?",
+        "options": [
+            "a) Se produce la parálisis del sistema por exceso de cambios imprevistos.",
+            "b) La innovación produce autopoiesis, es decir, una reorganización que revela su naturaleza dinámica.",
+            "c) Se genera un retorno a las prácticas tradicionales para restaurar el orden perdido."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: La innovación produce autopoiesis, es decir, una reorganización del sistema que revela su naturaleza sistémica y dinámica. La innovación no es un cambio aislado. Ubicación: Capítulo I y Capítulo II (passim). [31]"
+    },
+    {
+        "q": "285. Según Rafael Feito Alonso, ¿cuál es la consecuencia pedagógica más profunda de organizar el currículum de forma estrictamente secuencial y avanzar sin detenerse en los intereses del alumnado?",
+        "options": [
+            "a) Que se logra terminar el programa oficial en el tiempo previsto por el Ministerio.",
+            "b) Que el alumnado no llega a desarrollar destrezas fundamentales como escribir, investigar o resolver problemas.",
+            "c) Que los estudiantes adquieren una disciplina férrea que les servirá para el servicio militar."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Que el alumnado no llega a desarrollar destrezas fundamentales como escribir, investigar, resolver problemas, las cuales solo pueden adquirirse si se dedica el suficiente tiempo y energía. Ubicación: Capítulo IV, página 73. [31, 34]"
+    },
+    {
+        "q": "287. Según Gimeno Sacristán, ¿cuál es la principal implicación de que las dimensiones estructurantes del currículum sean implícitas e invisibles para quienes actúan en la práctica?",
+        "options": [
+            "a) Que son fáciles de cambiar porque nadie las defiende activamente.",
+            "b) Que se suelen dar por sentado y no se cuestionan, aunque son opciones no necesarias.",
+            "c) Que el Ministerio no las conoce y por lo tanto no puede evaluarlas."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Que se suelen dar por sentado y no se cuestionan. Por ejemplo, se considera normal que el desarrollo de una materia se realice en tramos de 50-60 minutos. Estas son opciones no necesarias. Ubicación: Capítulo II, página 33. [70, 304/305]"
+    },
+    {
+        "q": "292. Según Perrenoud, ¿qué ocurre con el interés inicial que despiertan las actividades nuevas en los estudiantes?",
+        "options": [
+            "a) Crece exponencialmente a medida que se repiten los ejercicios cada día.",
+            "b) Se esfuma en la medida en que la escuela tiene el secreto de la repetición y del ejercicio.",
+            "c) Se mantiene constante si el maestro utiliza siempre el mismo libro de texto."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Se esfuma en la medida en que la escuela tiene el secreto de la repetición y del ejercicio. Muchos alumnos manifiestan curiosidad inicial, pero ese interés se desvanece al repetir las tareas. Ubicación: Capítulo V, páginas 110-111. [35, 36]"
+    },
+    {
+        "q": "298. ¿Qué afirmación se hace sobre el origen de las disciplinas escolares respecto de las universitarias, según Linuesa?",
+        "options": [
+            "a) Son réplicas exactas y simplificadas de lo que se enseña en la Universidad.",
+            "b) Las disciplinas escolares no son simples adaptaciones del conocimiento científico universitario.",
+            "c) No tienen ninguna relación, pues la escuela enseña solo valores y la universidad solo ciencia."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Las disciplinas escolares no son simples adaptaciones del conocimiento científico universitario. Adquieren formas peculiares y no son simples adaptaciones, como sostiene Chervel. Ubicación: Capítulo I, página 20. [36, 37]"
+    },
+    {
+        "q": "301. ¿Qué caracteriza al aprendizaje en el modelo educativo tradicional y qué limitación presenta?",
+        "options": [
+            "a) Se caracteriza por la pedagogía transmisiva y el alumno es un receptor pasivo.",
+            "b) Se basa en la experimentación y el alumno es un investigador autónomo.",
+            "c) Utiliza la evaluación formativa y el alumno es autocrítico."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Se caracteriza por la pedagogía transmisiva, donde el conocimiento existe fuera de la conciencia humana y el aprendizaje se reduce a la absorción. La limitación es que el alumno es un receptor pasivo. Ubicación: Capítulo IV, página 74. [21, 36]"
+    },
+    {
+        "q": "309. ¿Qué ámbitos propone Stenhouse para extraer el currículum escolar?",
+        "options": [
+            "a) Solo de las leyes nacionales y los decretos de los gobiernos de turno.",
+            "b) Disciplinas académicas, artes, destrezas básicas, lenguas, convenciones y valores.",
+            "c) Únicamente de las demandas del sector empresarial y las industrias tecnológicas."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Stenhouse plantea distintos ámbitos de los que extraer el currículum escolar: 1) de las disciplinas académicas, 2) del campo de las artes, 3) las destrezas básicas, 4) las lenguas, y 5) convenciones y valores. Ubicación: Capítulo I, páginas 14-15. [36, 38]"
+    },
+    {
+        "q": "310. Para ilustrar el sentido del aprendizaje por competencias, Feito recurre al caso de quien domina la ley de Ohm pero es incapaz de explicar una linterna, con lo que sostiene que:",
+        "options": [
+            "a) La teoría es más importante que la práctica en la educación científica.",
+            "b) Saber significa ser capaz de utilizar lo aprendido en nuevas situaciones.",
+            "c) La física solo debe enseñarse a quienes van a ser ingenieros."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Saber significa ser capaz de utilizar lo aprendido en nuevas situaciones. No es de recibo que se conozca la ley de Ohm y al mismo tiempo se sea incapaz de explicar el funcionamiento del circuito de una linterna. Ubicación: Capítulo IV, página 85. [208, 305/306]"
+    },
+    
+];
+    </script>
+    <script src="codes.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>

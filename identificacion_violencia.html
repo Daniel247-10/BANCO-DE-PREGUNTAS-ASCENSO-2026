@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Preguntas - IDENTIFICACIÓN Y DENUNCIA DE VIOLENCIA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Banco de Preguntas - IDENTIFICACIÓN Y DENUNCIA DE VIOLENCIA</h1>
+        <div class="subtitle">Examen de Ascenso 2026</div>
+    </header>
+
+    <div id="quiz-container"></div>
+
+    <script>
+        window.quizData = [
+    {
+        "q": "8. ¿Qué tipo de violencia describe la situación? (docente denuncia que su esposo le retiró acceso a cuenta bancaria)",
+        "options": [
+            "a) Corresponde a violencia psicológica por supresión de derechos.",
+            "b) La situación descrita corresponde a violencia patrimonial/económica, que se enmarca dentro de la violencia por acción en el ámbito familiar.",
+            "c) Se clasifica como una falta civil menor resuelta por conciliación."
+        ],
+        "correct": 1,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Página 17."
+    },
+    {
+        "q": "9. ¿Qué tipo de violencia se considera cuando progenitores, encargados de custodia, guardadores o tutores ponen en peligro la integridad física o psicológica del niño?",
+        "options": [
+            "a) Se considera violencia contra la niñez y adolescencia.",
+            "b) Se tipifica como maltrato institucional por negligencia.",
+            "c) Corresponde exclusivamente a violencia por omisión de cuidado alimentario."
+        ],
+        "correct": 0,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Página 15."
+    },
+    {
+        "q": "10. ¿Qué enunciados corresponden a delitos según la guía, considerando la violencia por acción y la tipología de violencia sexual?",
+        "options": [
+            "a) Insinuaciones, espiar en el baño y toqueteos accidentales.",
+            "b) Hostigamiento verbal, exclusión social y discriminación por género.",
+            "c) Los delitos correspondientes son: Violación, Abuso sexual, Estupro, Trata y tráfico."
+        ],
+        "correct": 2,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Página 18, Tabla 1."
+    },
+    {
+        "q": "80. ¿Cómo se define el riesgo en la valoración para intervención en casos de violencia?",
+        "options": [
+            "a) El riesgo es una medida de la gravedad de la lesión física presentada.",
+            "b) La valoración del riesgo estará definida de acuerdo a un riesgo bajo, medio o alto. Dependiendo del tipo de violencia, la intervención será diferente.",
+            "c) Se define por la recurrencia de los actos de agresión verbal detectados."
+        ],
+        "correct": 1,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Página 38."
+    },
+    {
+        "q": "149. ¿Cómo se puede clasificar la violencia según el tipo de comportamiento o expresión?",
+        "options": [
+            "a) La violencia se puede clasificar según el tipo de comportamiento o expresión en acción, omisión y supresión.",
+            "b) Se divide en violencia directa, indirecta y simbólica.",
+            "c) Se clasifica en leve, grave y muy grave según el daño causado."
+        ],
+        "correct": 0,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Página 16."
+    },
+    {
+        "q": "159. ¿Cuál es el impacto de la violencia en las posibilidades de desarrollo de los estudiantes?",
+        "options": [
+            "a) Genera una baja temporal en el rendimiento académico que se recupera sin ayuda.",
+            "b) La violencia impacta directamente en las posibilidades de desarrollo de las y los estudiantes y supone un mayor riesgo de enfrentar problemas sociales, emocionales y cognitivos de por vida.",
+            "c) Afecta únicamente la esfera social impidiendo la interacción con pares."
+        ],
+        "correct": 1,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Página 20."
+    },
+    {
+        "q": "171. ¿De qué deben ser guardianes los actores educativos?",
+        "options": [
+            "a) De la calidad de la enseñanza y el cumplimiento curricular.",
+            "b) Deben ser guardianes de su seguridad y protección en todo momento.",
+            "c) Del patrimonio de la unidad educativa y la moral de los estudiantes."
+        ],
+        "correct": 1,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Página 7."
+    },
+    {
+        "q": "226. ¿Cuándo existe violencia en el ámbito familiar?",
+        "options": [
+            "a) Existe cuando hay maltrato entre miembros de la familia, con comportamientos deliberados y recurrentes, en los que uno o más componentes de la familia con mayor poder, abusan de otros con menor poder.",
+            "b) Se da únicamente cuando hay agresiones físicas visibles de padres a hijos.",
+            "c) Cuando hay una discusión aislada por temas económicos entre los cónyuges."
+        ],
+        "correct": 0,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Página 15."
+    },
+    {
+        "q": "236. ¿La situación de insultos, apodos humillantes y exclusión deliberada configura violencia psicológica?",
+        "options": [
+            "a) No, se considera una etapa normal del desarrollo en la convivencia escolar.",
+            "b) Sí, configura violencia psicológica. Es un acto de naturaleza intencionada o cualquier esfuerzo que trata de socavar la valoración que tiene el NNA de sí mismo.",
+            "c) Solo si estas conductas son realizadas por personas ajenas al núcleo familiar."
+        ],
+        "correct": 1,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Página 17."
+    },
+    {
+        "q": "247. ¿Cuáles son las señales y consecuencias de la violencia en el área emocional para la niñez y la adolescencia a corto plazo?",
+        "options": [
+            "a) En la niñez: sentimientos de culpa e impotencia. En la adolescencia: angustia emocional y recuerdos recurrentes.",
+            "b) Únicamente el aislamiento y la falta de apetito.",
+            "c) Hiperactividad extrema y conductas delictivas inmediatas."
+        ],
+        "correct": 0,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Páginas 20-21, Tabla 2."
+    },
+    {
+        "q": "248. A partir de las señales y consecuencias de la violencia a largo plazo en la niñez, ¿cuál corresponde al área emocional?",
+        "options": [
+            "a) Trastornos del aprendizaje (escritura, lectura, cálculo).",
+            "b) Autoconcepto y autovaloración difusa o negativa, desesperanza aprendida, trastorno depresivo, trastorno de ansiedad generalizada.",
+            "c) Comportamientos adictivos y delincuencia habitual."
+        ],
+        "correct": 1,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Página 23, Tabla 2 (y Protocolo Actuación)."
+    },
+    {
+        "q": "249. ¿Qué opción corresponde al área conductual en la niñez (corto y mediano plazo)?",
+        "options": [
+            "a) Disminución de la capacidad de concentración y atención.",
+            "b) Retraimiento, preferencia a estar en soledad mucho tiempo o hiperactividad; irritabilidad y altos niveles de hostilidad; conductas regresivas.",
+            "c) Sentimientos de culpa e impotencia ante el agresor."
+        ],
+        "correct": 1,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Página 20, Tabla 2."
+    },
+    {
+        "q": "288. ¿Qué indica cuando hay inconsistencias entre los relatos de la madre/padre/tutor y lo registrado por la maestra?",
+        "options": [
+            "a) Indica una falta de coordinación en los registros administrativos.",
+            "b) Es posible que se esté frente a un caso de violencia.",
+            "c) Indica que el estudiante está confundiendo los hechos reales."
+        ],
+        "correct": 1,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Página 32."
+    },
+    {
+        "q": "852. ¿Cómo propone el Informe Mundial sobre la Violencia (OMS, 2002) examinar este fenómeno?",
+        "options": [
+            "a) Como una patología individual del agresor que requiere tratamiento médico.",
+            "b) Propone un modelo como instrumento de examen de las raíces de la violencia y con enfoque global de la prevención.",
+            "c) Como un problema de seguridad pública que debe resolverse mediante la fuerza policial."
+        ],
+        "correct": 1,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Página 22."
+    },
+    {
+        "q": "873. ¿Qué NO se puede hacer «Durante la referencia si corresponde»?",
+        "options": [
+            "a) No crear ideas que no se pueden realizar; no permitir que se piense que no hay solución; no dejar obstáculos sin examinar; no retraerse de tomar decisiones.",
+            "b) No informar a la Defensoría hasta tener pruebas físicas del maltrato.",
+            "c) No involucrar a los directivos para mantener la privacidad del caso."
+        ],
+        "correct": 0,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Página 32, Tabla 5."
+    },
+    {
+        "q": "878. Considerando el momento de «contrarreferencia o seguimiento», ¿qué es lo que NO se puede hacer?",
+        "options": [
+            "a) Olvidar que la responsabilidad con la víctima NO concluye.",
+            "b) Informar a los padres del agresor sobre los avances del proceso.",
+            "c) Esperar a que la instancia externa resuelva el caso de forma definitiva sin intervenir."
+        ],
+        "correct": 0,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Página 58 (Protocolo de Prevención y Actuación)."
+    },
+    {
+        "q": "943. ¿Qué características tienen las niñas, niños y adolescentes que sufren violencia física y sexual?",
+        "options": [
+            "a) Tienen un mayor riesgo de enfrentar problemas sociales, emocionales y cognitivos de por vida.",
+            "b) Suelen desarrollar una capacidad de liderazgo superior para autodefenderse.",
+            "c) Presentan únicamente secuelas físicas menores que sanan en corto plazo."
+        ],
+        "correct": 0,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Página 20."
+    },
+    {
+        "q": "1011. ¿Qué deben considerar los programas de prevención integral?",
+        "options": [
+            "a) Junto a la atención de los problemas individuales del alumnado, deben tener en cuenta las necesidades de los docentes y de las familias, estableciendo vínculos de colaboración.",
+            "b) Deben enfocarse en la aplicación de sanciones severas para dar ejemplo a la comunidad.",
+            "c) Deben priorizar exclusivamente la vigilancia física de los predios escolares."
+        ],
+        "correct": 0,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Páginas 12 y 23."
+    },
+    {
+        "q": "1122. ¿Qué estrategias puede utilizar un adulto para involucrar a una niña/niño en actividades sexuales?",
+        "options": [
+            "a) Únicamente la fuerza física o el rapto violento.",
+            "b) Seducción y manipulación emocional; palabras eróticas; inventar juegos con finalidad sexual; chantaje y/o amenaza.",
+            "c) El uso de incentivos académicos como notas de aprobación."
+        ],
+        "correct": 1,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Páginas 18-19."
+    },
+    {
+        "q": "1205. ¿Qué instituciones deben unir esfuerzos para proteger a la niñez y adolescencia?",
+        "options": [
+            "a) Es imprescindible unir esfuerzos de los actores sociales y de las instituciones responsables de proteger a la niñez y a la adolescencia.",
+            "b) Solo la Policía Nacional y el Ministerio Público.",
+            "c) Exclusivamente las Juntas Escolares de Padres de Familia."
+        ],
+        "correct": 0,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Página 7."
+    },
+    {
+        "q": "1418. ¿Cuáles son los factores de riesgo para la violencia?",
+        "options": [
+            "a) Los factores de riesgo se clasifican en: Individuales, Familiares, Comunitarios y Sociales.",
+            "b) Se limitan a la falta de recursos económicos y bajo nivel escolar de los padres.",
+            "c) Son principalmente genéticos y hereditarios por parte del agresor."
+        ],
+        "correct": 0,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Páginas 23-24, Tabla 3."
+    },
+    {
+        "q": "1587. ¿Qué corresponde a factores comunitarios de riesgo?",
+        "options": [
+            "a) Antecedentes de conducta violenta o permanentes conflictos conyugales.",
+            "b) Diferencias en las condiciones de habitabilidad; migración con dificultad de adaptación; falta de satisfacción de necesidades básicas.",
+            "c) Inexistencia de límites o reglas claras en el hogar."
+        ],
+        "correct": 1,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Página 24, Tabla 3."
+    },
+    {
+        "q": "1588. ¿Qué corresponde a signos o indicadores de comportamiento ante la violencia?",
+        "options": [
+            "a) Cambios bruscos de comportamiento (agresividad, retraimiento, sumisión); sentimientos de culpa; silencio llamativo; mentiras o mutismo selectivo.",
+            "b) Mejora repentina en el aseo personal y el orden de los útiles escolares.",
+            "c) Aumento en el interés por participar en actividades de liderazgo escolar."
+        ],
+        "correct": 0,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Página 30, Tabla 4."
+    },
+    {
+        "q": "1878. ¿Qué condición debe cumplirse al elaborar el informe en casos de violencia sexual?",
+        "options": [
+            "a) El informe debe ser objetivo, evitando juicios de valor o supuestos, y nunca existe la opción de mediación con la persona agresora.",
+            "b) Se debe realizar un interrogatorio exhaustivo a la víctima para detallar el hecho.",
+            "c) Se debe buscar primero un arreglo extrajudicial con la familia del agresor."
+        ],
+        "correct": 0,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Página 39 y 51."
+    },
+    {
+        "q": "1907. ¿Cuáles son las cuatro categorías de factores de influencia según el modelo ecológico?",
+        "options": [
+            "a) La escuela, el barrio, el hospital y la comisaría.",
+            "b) El niño, la familia, la comunidad y la sociedad.",
+            "c) Lo biológico, lo legal, lo ético y lo espiritual."
+        ],
+        "correct": 1,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Página 11."
+    },
+    {
+        "q": "1925. ¿Cuál es el cuarto pilar de la Convención sobre los Derechos del Niño (que se incumple con el castigo físico)?",
+        "options": [
+            "a) El derecho a la identidad y a la nacionalidad.",
+            "b) El derecho a la no discriminación.",
+            "c) El derecho al juego y la recreación."
+        ],
+        "correct": 1,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Página 25."
+    },
+    {
+        "q": "2158. ¿A qué elemento de intervención corresponde la recomendación sobre mapeo de actores?",
+        "options": [
+            "a) Al elemento «Asegurar la atención integral», detectando instancias que ofrecen atención especializada.",
+            "b) A la recolección de cuotas para el mantenimiento de la unidad educativa.",
+            "c) A la selección de maestros que dictarán talleres de oratoria."
+        ],
+        "correct": 0,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Página 34, Tabla 6."
+    },
+    {
+        "q": "2168. ¿Qué corresponde a una manifestación de violencia sexual?",
+        "options": [
+            "a) Toqueteos, caricias, manoseos o acercamientos; insinuaciones o comentarios sexuales; espiar al estudiante en el baño.",
+            "b) Gritos y lenguaje soez durante el recreo escolar.",
+            "c) Falta de higiene personal o ropa inadecuada al clima."
+        ],
+        "correct": 0,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Páginas 18-19."
+    },
+    {
+        "q": "2170. ¿Qué responsabilidades tienen madres, padres y/o tutores en el protocolo de prevención?",
+        "options": [
+            "a) Establecimiento de límites sin emplear violencia y la aplicación de las «Siete claves para la crianza positiva».",
+            "b) Vigilar las clases de los maestros desde la puerta del aula para evitar abusos.",
+            "c) Cobrar multas a otros padres que no asistan a las reuniones escolares."
+        ],
+        "correct": 0,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Páginas 38-39."
+    },
+    {
+        "q": "2174. ¿Qué derecho tienen los NNA según la Convención sobre los Derechos del Niño?",
+        "options": [
+            "a) El derecho a ser protegidos contra toda forma de violencia, perjuicio o abuso físico o mental, descuido o negligencia, mientras se encuentren bajo tutela.",
+            "b) El derecho a elegir a sus propios maestros y autoridades educativas.",
+            "c) Únicamente el derecho a una alimentación gratuita proporcionada por el municipio."
+        ],
+        "correct": 0,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Página 11."
+    },
+    {
+        "q": "2175. ¿Cuál es la secuencia correcta de acciones ante una estudiante con hematomas?",
+        "options": [
+            "a) 1) Informar a la maestra o autoridad, 2) comunicar a familiar de confianza que no sea el agresor, 3) derivar a la DNA.",
+            "b) 1) Llamar a la policía, 2) suspender a la alumna, 3) citar al agresor para careo.",
+            "c) 1) Curar las heridas, 2) esperar a que los padres hablen, 3) cerrar el caso."
+        ],
+        "correct": 0,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Páginas 29, 38 y 40."
+    },
+    {
+        "q": "2176. ¿Qué corresponde al área conductual en la adolescencia (largo plazo) ante la violencia?",
+        "options": [
+            "a) Comunicación interpersonal basada en conductas agresivas; consumo de sustancias; comportamientos de riesgo; incremento del riesgo de suicidio.",
+            "b) Trastornos leves del aprendizaje que se resuelven con tareas extra.",
+            "c) Deseo excesivo de participar en grupos religiosos o deportivos."
+        ],
+        "correct": 0,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Página 22, Tabla 2."
+    },
+    {
+        "q": "2186. ¿Cuáles son las responsabilidades institucionales del Ministerio de Educación en casos de violencia?",
+        "options": [
+            "a) Desarrollar diferentes herramientas de prevención, actuación y denuncia traducidos en protocolos y rutas de actuación.",
+            "b) Reemplazar a la policía en la detención de agresores intrafamiliares.",
+            "c) Financiar exclusivamente los gastos médicos de todas las víctimas de violencia."
+        ],
+        "correct": 0,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Página 7."
+    },
+    {
+        "q": "2256. ¿Cuál es la secuencia correcta de pasos que debe seguir la directora ante violencia psicológica?",
+        "options": [
+            "a) 1) Recibir reporte, 2) comunicar a familiar de confianza, 3) derivar a DNA, 4) dar seguimiento a medidas de protección.",
+            "b) 1) Realizar un acta de conciliación, 2) amonestar a los padres, 3) archivar el reporte.",
+            "c) 1) Evaluar psicológicamente ella misma a la alumna, 2) enfrentar al agresor."
+        ],
+        "correct": 0,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Páginas 29, 38, 40 y 41."
+    },
+    {
+        "q": "2411. ¿Cuál es una consecuencia conductual a corto plazo de la agresión sostenida?",
+        "options": [
+            "a) Ausentismo escolar injustificado y comportamiento agresivo.",
+            "b) Desarrollo de una memoria fotográfica excepcional sobre el trauma.",
+            "c) Aumento notable en las calificaciones de matemáticas y ciencias."
+        ],
+        "correct": 0,
+        "retro": "Guía para la Identificación y Denuncia de la Violencia Intrafamiliar en el Ámbito Educativo, Página 22, Tabla 2 (Protocolo Actuación)."
+    }
+];
+    </script>
+    <script src="codes.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>

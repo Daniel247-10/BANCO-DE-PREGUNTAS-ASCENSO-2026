@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESTILOS DE APRENDIZAJE (BLOQUE 1)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>ESTILOS DE APRENDIZAJE</h1>
+        <div class="subtitle">Examen de Ascenso 2026 - BLOQUE 1</div>
+    </header>
+
+    <div id="quiz-container"></div>
+
+    <script>
+        window.quizData = [
+    {
+        "q": "1. El aprendizaje es:",
+        "options": [
+            "a) El almacenamiento de datos aislados en la memoria a corto plazo.",
+            "b) Un cambio de comportamiento relativamente permanente que se produce como resultado de la experiencia o la práctica.",
+            "c) Una respuesta instintiva que no requiere de la práctica previa."
+        ],
+        "correct": 1,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 8. Define el aprendizaje como un cambio relativamente permanente fruto de la práctica."
+    },
+    {
+        "q": "2. Algunas condiciones del aprendizaje son:",
+        "options": [
+            "a) La retroalimentación, la motivación, la práctica experimentación.",
+            "b) El aislamiento social y la competencia extrema entre pares.",
+            "c) El castigo físico y la repetición monótona sin variaciones."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, páginas 9-11 (Auto evaluación p. 60). Detalla factores clave para la efectividad del proceso."
+    },
+    {
+        "q": "3. El condicionamiento clásico fue demostrado experimentalmente por:",
+        "options": [
+            "a) B.F. Skinner.",
+            "b) Edward Thorndike.",
+            "c) Pavlov."
+        ],
+        "correct": 2,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 13 (Auto evaluación p. 60). Pavlov es el referente del aprendizaje por asociación de estímulos."
+    },
+    {
+        "q": "4. Se destacan como tipos de aprendizaje:",
+        "options": [
+            "a) Aprendizaje por azar, aprendizaje genético y aprendizaje mecánico.",
+            "b) Aprendizaje mejorado por tecnología, Aprendizaje por rutina o memorístico y Aprendizaje significativo.",
+            "c) Aprendizaje estático, aprendizaje unidireccional y aprendizaje forzado."
+        ],
+        "correct": 1,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, páginas 15-19 (Auto evaluación p. 60). Describe modalidades según la interacción pedagógica."
+    },
+    {
+        "q": "5. Los dominios del aprendizaje:",
+        "options": [
+            "a) Cognitivo, afectivo y psicomotor.",
+            "b) Teórico, práctico y lúdico.",
+            "c) Individual, grupal y comunitario."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, páginas 20-21 (Auto evaluación p. 60). Clasificación basada en los niveles de Bloom."
+    },
+    {
+        "q": "6. Algunas teorías del aprendizaje son:",
+        "options": [
+            "a) El funcionalismo biológico y el estructuralismo anatómico.",
+            "b) El conductismo, las teorías cognitivas y el constructivismo.",
+            "c) El empirismo radical y el racionalismo puro únicamente."
+        ],
+        "correct": 1,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, páginas 11-12 (Auto evaluación p. 61). Marcos fundamentales que explican el proceso educativo."
+    },
+    {
+        "q": "7. El aprendizaje significativo:",
+        "options": [
+            "a) Hace referencia a que el concepto de que el conocimiento aprendido se entiende completamente en la medida en que se relaciona con otros conocimientos.",
+            "b) Es la capacidad de repetir un dato exactamente igual a como fue dictado.",
+            "c) Consiste en aprender conceptos aislados sin conexión con la realidad."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 17 (Auto evaluación p. 61). Se basa en la integración de nuevos saberes en estructuras previas."
+    },
+    {
+        "q": "8. El estilo de aprendizaje:",
+        "options": [
+            "a) Es la inteligencia innata que determina la capacidad fija del alumno.",
+            "b) El uniforme escolar que eligen los alumnos para asistir a clases.",
+            "c) Son los rasgos cognitivos, afectivos y fisiológicos que sirven como indicadores relativamente estables de cómo los alumnos perciben interacciones y responden a sus ambientes de aprendizaje."
+        ],
+        "correct": 2,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 24 (Auto evaluación p. 61). Definición de Keefe sobre indicadores estables de interacción."
+    },
+    {
+        "q": "9. El modelo de Kolb diferencia entre cuatro estilos de aprendizaje:",
+        "options": [
+            "a) Rápidos, lentos, medios y pausados.",
+            "b) Divergentes, Asimiladores, Convergentes y acomodadores.",
+            "c) Visuales, auditivos, kinestésicos y mixtos."
+        ],
+        "correct": 1,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, páginas 25-26 (Auto evaluación p. 61). Describe cómo se percibe y procesa la información."
+    },
+    {
+        "q": "10. El método docente son las decisiones relativas a los procedimientos en los procesos pedagógicos que se relacionan con los elementos curriculares. Algunos métodos son:",
+        "options": [
+            "a) Lección magistral, método de proyectos, Aprendizaje cooperativo, Aprendizaje Basado en problemas.",
+            "b) Dictado tradicional, copia de pizarra y examen sorpresa únicamente.",
+            "c) Castigos ejemplares, premios materiales y aislamiento preventivo."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, páginas 33-52 (Auto evaluación p. 62). Estrategias para operacionalizar el currículum."
+    },
+    {
+        "q": "17. Según el libro «Estilos de Aprendizaje y Métodos de Enseñanza», ¿cuál es el aspecto clave del aprendizaje activo que los estudiantes deben reconocer?",
+        "options": [
+            "a) La comprensión de la información.",
+            "b) La cantidad de páginas leídas por día.",
+            "c) La velocidad con la que terminan los ejercicios."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 18. Es crucial que el alumno reconozca qué entiende y qué no."
+    },
+    {
+        "q": "33. Según el libro «Estilos de Aprendizaje y Métodos de Enseñanza», ¿qué caracteriza específicamente al aprendizaje multimedia?",
+        "options": [
+            "a) Se limita exclusivamente al uso de libros de texto impresos.",
+            "b) Es cuando una persona usa estímulos auditivos y visuales para aprender información.",
+            "c) Es el aprendizaje que ocurre mediante el tacto en total oscuridad."
+        ],
+        "correct": 1,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 16. Utiliza diversos canales sensoriales apoyados en tecnología."
+    },
+    {
+        "q": "34. ¿Qué distingue al aprendizaje episódico de otros tipos de aprendizaje?",
+        "options": [
+            "a) Es un cambio en el comportamiento que se produce como resultado de un evento.",
+            "b) Se basa en la repetición constante de tablas de multiplicar.",
+            "c) Ocurre únicamente en entornos de laboratorio controlados."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 16. Vinculado a vivencias o sucesos específicos."
+    },
+    {
+        "q": "36. Según el texto «Estilos de Aprendizaje y Métodos de Enseñanza», ¿cuántos objetivos de aprendizaje recomienda la mejor práctica?",
+        "options": [
+            "a) Al menos 15 para cubrir todo el tema.",
+            "b) Solo uno general para todo el año.",
+            "c) No más de 6."
+        ],
+        "correct": 2,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 22. Una cantidad limitada asegura foco y medibilidad."
+    },
+    {
+        "q": "121. ¿Qué riesgo específico genera el uso excesivo de recompensas según la visión conductista?",
+        "options": [
+            "a) Puede conducir a la transferencia limitada, a la dependencia de los maestros y a socavar la motivación intrínseca.",
+            "b) Aumenta la creatividad de forma desmedida y espontánea.",
+            "c) Genera estudiantes totalmente independientes que no necesitan guía."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 3, página 87. El refuerzo externo mal manejado limita la autonomía real."
+    },
+    {
+        "q": "130. ¿Cuál es el estilo de los estudiantes reflexivos?",
+        "options": [
+            "a) Necesitan estar en movimiento constante para concentrarse.",
+            "b) Prefieren pensar en ello en silencio primero, piensan en primer lugar, prefieren trabajar solos.",
+            "c) Prefieren actuar inmediatamente sin realizar análisis previos."
+        ],
+        "correct": 1,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 30. Destacan por la observación y el análisis antes de la acción."
+    },
+    {
+        "q": "131. El conductismo interpreta el aprendizaje como asociación estímulo-respuesta. ¿Qué teorías se incluyen bajo esta categoría?",
+        "options": [
+            "a) La teoría de Thorndike sobre el ensayo y el aprendizaje de errores, las teorías clásicas (Pavlov) y las teorías de condicionamiento operante (Skinner).",
+            "b) La teoría socio-cultural de Vygotsky y el aprendizaje por descubrimiento de Bruner.",
+            "c) Las teorías humanistas de Rogers y Abraham Maslow únicamente."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 11. Se centran en aspectos objetivamente observables."
+    },
+    {
+        "q": "166. ¿Qué distingue a las estrategias de aprendizaje de las simples técnicas para aprender?",
+        "options": [
+            "a) Las estrategias son más cortas en tiempo que las técnicas.",
+            "b) Las estrategias requieren de la aplicación de conocimientos metacognitivos.",
+            "c) Las técnicas siempre son digitales y las estrategias son manuales."
+        ],
+        "correct": 1,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 23. La metacognición permite la selección inteligente de alternativas."
+    },
+    {
+        "q": "168. Si los estudiantes aplican técnicas mecánicamente sin reflexionar ni adaptar su enfoque a la complejidad, ¿qué están ignorando?",
+        "options": [
+            "a) Ignoran que su uso implica que el aprendiz tome decisiones y las seleccione de forma inteligente.",
+            "b) Ignoran el uso de materiales costosos proporcionados por el docente.",
+            "c) Ignoran la necesidad de copiar el texto palabra por palabra sin errores."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 23. Las estrategias reales requieren conciencia y control del aprendiz."
+    },
+    {
+        "q": "256. Según Nisbet y Shucksmith, ¿cuál es el propósito de las estrategias de aprendizaje?",
+        "options": [
+            "a) Lograr que el alumno termine la tarea más rápido que sus pares.",
+            "b) Facilitar la adquisición, el almacenamiento y/o la utilización de información o conocimientos.",
+            "c) Obedecer ciegamente las instrucciones del docente sin cuestionarlas."
+        ],
+        "correct": 1,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 23. Son herramientas para la gestión eficiente del saber."
+    },
+    {
+        "q": "273. ¿Qué consecuencia genera el uso de métodos convencionales centrados en la clase magistral y la memorización?",
+        "options": [
+            "a) Los estudiantes pasan a ser pasivos, sin tener mucho espacio para la interacción y la participación.",
+            "b) Un aumento drástico en la creatividad y participación activa inmediata.",
+            "c) El desarrollo instantáneo de habilidades de liderazgo grupal."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 36. Limita el espacio para el intercambio y genera monotonía."
+    },
+    {
+        "q": "277. Según Kohler, el alumno percibe la situación en conjunto y evalúa relaciones para llegar a una:",
+        "options": [
+            "a) Respuesta memorizada mecánicamente tras la repetición.",
+            "b) Confusión total y fragmentada del objeto de estudio.",
+            "c) Solución perspicaz (o por insight)."
+        ],
+        "correct": 2,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 15. Principio del cognitivismo y la Psicología Gestalt."
+    },
+    {
+        "q": "300. ¿Qué limitación reconoce el texto sobre la práctica principal del aprendizaje memorístico?",
+        "options": [
+            "a) Aunque criticado, el aprendizaje de memoria es una necesidad en muchas situaciones.",
+            "b) Que es la única forma de aprender ciencia avanzada con éxito.",
+            "c) Que borra los recuerdos anteriores del estudiante permanentemente."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 17. No debe ser el único método, pero es útil para ciertos datos."
+    },
+    {
+        "q": "320. ¿Para qué situaciones específicas puede utilizarse la lluvia de ideas?",
+        "options": [
+            "a) Para enfrentar problemas, buscar ideas y para tomar decisiones.",
+            "b) Únicamente para evaluar la caligrafía de los estudiantes.",
+            "c) Para obligar a los estudiantes a estar en silencio absoluto."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 28. Promueve la interacción grupal y la creatividad colectiva."
+    },
+    {
+        "q": "327. ¿Qué fundamento respalda la incorporación de mapas y esquemas elaborados por los estudiantes?",
+        "options": [
+            "a) Ayuda a gastar los materiales de escritorio del centro educativo.",
+            "b) Utilice imágenes y aprendizaje visual; aporta una mejor retención.",
+            "c) Evita que el maestro tenga que hablar durante la sesión de clases."
+        ],
+        "correct": 1,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 3, página 81. El aprendizaje visual es el preferido por la mayoría."
+    },
+    {
+        "q": "330. Si una maestra no varía el enfoque, no retroalimenta y tiene bajas expectativas, ¿qué vulnera?",
+        "options": [
+            "a) Solo las normas de limpieza y orden del aula física.",
+            "b) El derecho de los estudiantes a tener recreos más extensos.",
+            "c) Individualizar el estilo de enseñanza, Proporcionar comentarios-retroalimentación, Tener expectativas positivas."
+        ],
+        "correct": 2,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 3, páginas 81-82. Son principios psicológicos básicos de la enseñanza."
+    },
+    {
+        "q": "374. ¿Qué define la Capacidad de Experimentación Activa según Kolb?",
+        "options": [
+            "a) Ser capaz de emplear estas teorías para tomar decisiones y solucionar problemas.",
+            "b) Sentarse a observar cómo otros trabajan sin participar.",
+            "c) La habilidad de leer libros en voz alta rápidamente sin errores."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 25. Es la fase pragmática del ciclo de aprendizaje experiencial."
+    },
+    {
+        "q": "459. ¿Qué criterios ignora un docente al formular objetivos demasiado abstractos o limitados a niveles inferiores?",
+        "options": [
+            "a) Los objetivos no deben ser demasiado abstractos ni demasiado concretos; deben apoyar la meta general.",
+            "b) Que los objetivos deben escribirse obligatoriamente en verso.",
+            "c) Que no se deben usar objetivos en la educación primaria bajo ningún motivo."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 22. Cada objetivo debe estar alineado con la meta del curso."
+    },
+    {
+        "q": "466. ¿Qué transformación fundamental ignora un docente que solo usa lección magistral?",
+        "options": [
+            "a) La obligatoriedad de usar pizarras digitales en todas las sesiones.",
+            "b) En los últimos años ha habido un cambio notable de actividades basadas en lección magistral hacia actividades centradas en los estudiantes.",
+            "c) Que ahora los maestros deben vestir de forma informal para enseñar."
+        ],
+        "correct": 1,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 34. Los estilos han evolucionado hacia la participación activa."
+    },
+    {
+        "q": "499. ¿Cuáles son los estilos que el modelo de Kolb diferencia?",
+        "options": [
+            "a) Divergentes, asimiladores, convergentes y acomodadores.",
+            "b) Teóricos, prácticos, artísticos y científicos.",
+            "c) Memorísticos, reflexivos, auditivos y manuales."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 25. Clasificación estándar de las diferencias individuales en el procesamiento."
+    },
+    {
+        "q": "500. ¿Qué planteamiento de Kolb sustenta partir de experiencias directas o lecturas para llegar al conocimiento?",
+        "options": [
+            "a) Solo la lectura teórica produce conocimiento real y duradero.",
+            "b) Podemos partir de experiencia concreta o conceptualización abstracta; ambas se transforman al reflexionar y experimentar.",
+            "c) La reflexión es una pérdida de tiempo que retrasa el aprendizaje práctico."
+        ],
+        "correct": 1,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 26. El conocimiento es el resultado de procesar activamente la experiencia."
+    },
+    {
+        "q": "577. Según el texto, ¿qué representa una autoevaluación o cuestionario?",
+        "options": [
+            "a) Un castigo para los alumnos que no prestaron atención.",
+            "b) Representa las opiniones de los estudiantes sobre el tema del curso en el momento en que se complete.",
+            "c) La nota definitiva e inalterable del semestre."
+        ],
+        "correct": 1,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 22. Sirve como indicador del estado de opinión y conocimiento actual."
+    },
+    {
+        "q": "597. Según el principio de hacer la clase más cooperativa, ¿qué acción concreta corresponde?",
+        "options": [
+            "a) Utilizar ejercicios de grupo cooperativos.",
+            "b) Fomentar la competencia individual por premios únicos.",
+            "c) Separar a los estudiantes por su nivel de notas permanentemente."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 3, página 82. El aprendizaje mejora con el esfuerzo conjunto del equipo."
+    },
+    {
+        "q": "609. Cuando los estudiantes muestran ansiedad y miedo al fracaso, ¿qué deben hacer los maestros?",
+        "options": [
+            "a) Ignorar la situación para no dar importancia a los sentimientos.",
+            "b) Incrementar la dificultad de los exámenes para que se acostumbren.",
+            "c) Ayudar a los estudiantes a eliminar actitudes negativas, ansiedad y miedo al fracaso."
+        ],
+        "correct": 2,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 3, página 89. El clima emocional influye directamente en la disposición al aprendizaje."
+    },
+    {
+        "q": "614. ¿Cómo define el texto al aprendizaje informal?",
+        "options": [
+            "a) Es el que se imparte exclusivamente en universidades de prestigio.",
+            "b) Ocurre a través de la experiencia de las situaciones del día a día; es aprender de la vida.",
+            "c) Es el aprendizaje que requiere de títulos y diplomas oficiales del Estado."
+        ],
+        "correct": 1,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 18. Se da en situaciones cotidianas como jugar o comer en familia."
+    },
+    {
+        "q": "620. Un maestro enseña geometría sin usar objetos reales. ¿Qué principio incumple?",
+        "options": [
+            "a) Proceder de lo real a lo representativo.",
+            "b) Proceder de lo difícil a lo fácil.",
+            "c) Proceder de lo imaginario a lo concreto."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 3, página 80. El niño aprende más rápido manipulando objetos tangibles."
+    },
+    {
+        "q": "621. Si una maestra presenta definiciones directas sin partir de lo concreto o conocido, incumple:",
+        "options": [
+            "a) Solo las normas de convivencia del aula escolar.",
+            "b) El principio de autoridad docente indiscutible.",
+            "c) Proceder de lo conocido a lo desconocido y de lo concreto a lo abstracto."
+        ],
+        "correct": 2,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 3, páginas 77-78. Son puentes necesarios para asimilar el nuevo saber."
+    },
+    {
+        "q": "622. Representa una de las prácticas generales de la enseñanza:",
+        "options": [
+            "a) Proceder de lo conocido a lo desconocido.",
+            "b) Mantener el misterio absoluto sobre el tema a tratar.",
+            "c) Empezar siempre por lo más complejo para filtrar alumnos."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 3, página 77. Facilita la 'bienvenida' del nuevo conocimiento mediante la experiencia previa."
+    },
+    {
+        "q": "623. ¿Qué limitación presenta una clase donde solo se escucha y copia pasivamente?",
+        "options": [
+            "a) Los estudiantes no aprenden mucho simplemente sentados; deben hablar, escribir y aplicarlo.",
+            "b) Es la forma más eficiente de aprender que existe actualmente.",
+            "c) Solo sirve para estudiantes de nivel superior y postgrado."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 3, página 83. Fundamento de fomentar el aprendizaje activo e involucrado."
+    },
+    {
+        "q": "647. ¿Cuál es el criterio fundamental para seleccionar un método de enseñanza?",
+        "options": [
+            "a) El método que sea más económico en cuanto a materiales.",
+            "b) La aptitud para el objetivo de aprendizaje.",
+            "c) El que prefiera el director de la unidad educativa únicamente."
+        ],
+        "correct": 1,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 34. Ningún método alcanza efectivamente a todos a la vez."
+    },
+    {
+        "q": "657. ¿Qué principios satisface el aprendizaje programado según Skinner?",
+        "options": [
+            "a) La retroalimentación, el auto-aprendizaje y el aprendizaje individualizado.",
+            "b) El castigo físico y la competencia individual extrema.",
+            "c) El azar y la improvisación constante sin planificación."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 40. Estructura el saber en pasos acumulativos y coherentes."
+    },
+    {
+        "q": "662. Si un maestro no ofrece comentarios sobre el desempeño, ¿qué elemento esencial ignora?",
+        "options": [
+            "a) El uso de uniformes correctos en los exámenes.",
+            "b) Dar pronta respuesta (retroalimentación adecuada sobre el rendimiento).",
+            "c) La limpieza profunda del aula antes de cada clase."
+        ],
+        "correct": 1,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 3, página 83. Los alumnos necesitan conocer su nivel de logro para mejorar."
+    },
+    {
+        "q": "663. Si los grupos no logran debatir un caso por falta de destrezas analíticas, ¿qué se omitió?",
+        "options": [
+            "a) Darles más tiempo de descanso antes de la actividad.",
+            "b) Que los estudiantes deben tener cierta experiencia y conocimientos previos.",
+            "c) Que el debate debe ser siempre en voz baja por reglamento."
+        ],
+        "correct": 1,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 52. El método de caso requiere habilidades de análisis previas."
+    },
+    {
+        "q": "665. ¿Qué riesgo presenta un componente asimilador excesivo en el estilo de Kolb?",
+        "options": [
+            "a) Pueden tender a construir «castillos en el aire» y ser incapaces de aplicar sus conocimientos.",
+            "b) Que se vuelven demasiado agresivos físicamente con sus pares.",
+            "c) Que olvidan cómo leer y escribir de forma correcta."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 26. Su enfoque tiende a ser demasiado teórico y abstracto."
+    },
+    {
+        "q": "666. ¿Qué distingue al estudiante intuitivo del sensorial?",
+        "options": [
+            "a) Los intuitivos solo usan el tacto y los sensoriales el oído.",
+            "b) Los sensoriales tienden a aprender hechos; los intuitivos prefieren descubrir posibilidades y relaciones.",
+            "c) No existe ninguna diferencia significativa entre ambos estilos."
+        ],
+        "correct": 1,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, página 30. Define la preferencia por la repetición vs la novedad e innovación."
+    },
+    {
+        "q": "668. El perfil docente que reflexiona sistemáticamente y colabora en equipo es:",
+        "options": [
+            "a) Práctico reflexivo.",
+            "b) Maestro autoritario.",
+            "c) Docente improvisado."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 4, página 99. Concibe su profesionalización en colaboración y mejora continua."
+    },
+    {
+        "q": "671. ¿Qué efecto produce que los estudiantes identifiquen capacidades y reciban comentarios?",
+        "options": [
+            "a) Contribuye a su crecimiento y satisfacción personal, desarrollando inteligencia emocional.",
+            "b) Genera un sentimiento de superioridad destructivo e insano.",
+            "c) Produce cansancio físico extremo por el esfuerzo intelectual."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, p. 32; Cap 3, p. 90. Desarrolla las dimensiones intra e interpersonales."
+    },
+    {
+        "q": "688. ¿Por qué es esencial el «manejo efectivo del tiempo» en la enseñanza?",
+        "options": [
+            "a) Para que los estudiantes salgan antes al receso escolar.",
+            "b) Porque aprender a usar el tiempo de uno es esencial, tanto para estudiantes como profesionales.",
+            "c) Porque el tiempo no tiene ninguna importancia real en el aula."
+        ],
+        "correct": 1,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 3, página 83. Es un fundamento básico para alcanzar la excelencia educativa."
+    },
+    {
+        "q": "691. ¿Por qué presentar material sencillo antes que los contenidos complejos?",
+        "options": [
+            "a) Para mantener el interés de los alumnos en la lección.",
+            "b) Para que el profesor trabaje menos tiempo en la pizarra.",
+            "c) Porque los estudiantes nunca podrán aprender temas difíciles."
+        ],
+        "correct": 0,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 3, página 78. Evita la frustración inicial y favorece el enganche con el tema."
+    },
+    {
+        "q": "699. ¿Por qué la innovación educativa es un proceso que nunca está acabado?",
+        "options": [
+            "a) Porque los maestros nunca se ponen de acuerdo en las reuniones.",
+            "b) Porque no existen libros suficientes sobre el tema en las bibliotecas.",
+            "c) Porque no es un producto, sino un proceso que requiere de una actitud crítica y de mejora continua."
+        ],
+        "correct": 2,
+        "retro": "Libro: Estilos de aprendizaje y métodos de enseñanza. Capítulo 1, p. 38; Cap 4, p. 99. Se basa en la reflexión constante sobre la práctica."
+    }
+];
+    </script>
+    <script src="codes.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>

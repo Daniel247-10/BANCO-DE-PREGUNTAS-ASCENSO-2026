@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Preguntas - DISEÑO, DESARROLLO E INNOVACIÓN (PARTE 2)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Banco de Preguntas - DISEÑO, DESARROLLO E INNOVACIÓN</h1>
+        <div class="subtitle">Examen de Ascenso 2026 - SEGUNDO BLOQUE</div>
+    </header>
+
+    <div id="quiz-container"></div>
+
+    <div style="text-align: center; margin: 20px 0;">
+        <a href="index.html" class="back-link">&larr; Volver al Inicio</a>
+    </div>
+
+    <script>
+        window.quizData = [
+    {
+        "q": "318. La improvisación que el maestro despliega ante situaciones imprevistas en el aula se distingue de una improvisación libre porque:",
+        "options": [
+            "a) Es una improvisación regulada, en la que el maestro reacciona en función de su hábito profesional.",
+            "b) Es una improvisación caótica que depende del humor del docente cada mañana.",
+            "c) Solo se permite si el director de la unidad educativa la autoriza previamente por escrito."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Es una improvisación regulada, en la que el maestro reacciona en función de su hábito profesional, y no según un plan o regla explícitos. Cada maestro dispone de un sistema de intervención. Ubicación: Capítulo V, página 96. [19, 40]"
+    },
+    {
+        "q": "332. Los modelos educativos actuales demandan un proceso enseñanza-aprendizaje más activo y dinámico, en el que sus protagonistas deben:",
+        "options": [
+            "a) Los estudiantes deben ser protagonistas y los docentes facilitadores.",
+            "b) Los docentes deben dictar apuntes y los alumnos transcribirlos velozmente.",
+            "c) El Ministerio debe enviar videos y los alumnos verlos en silencio."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Los estudiantes deben ser protagonistas de su aprendizaje, y los docentes deben ser facilitadores que ayuden a construir conocimiento. El aprendizaje debe estar conectado con el desarrollo personal. Ubicación: Capítulo IV, página 68. [23, 40]"
+    },
+    {
+        "q": "334. ¿Qué rasgo diferencia a las disciplinas escolares del conocimiento científico del que provienen, según Linuesa?",
+        "options": [
+            "a) No hay diferencia, son exactamente el mismo conocimiento en distinto nivel.",
+            "b) Adquieren formas peculiares y se transforman por los usos de las instituciones escolares.",
+            "c) Las disciplinas escolares son menos rigurosas porque los maestros no son científicos."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Las disciplinas escolares no son simples adaptaciones del conocimiento científico; adquieren formas peculiares y son algo más, integran discursos y prácticas que se transforman por los usos escolares. Ubicación: Capítulo I, página 20. [40, 41]"
+    },
+    {
+        "q": "348. En «El sentido del currículum en la enseñanza obligatoria», ¿qué función cumple la cita de Ortega sobre el esfuerzo inútil y la melancolía?",
+        "options": [
+            "a) Se utiliza para elogiar la disciplina de los alumnos que copian libros enteros.",
+            "b) La cita de Ortega se utiliza para criticar el esfuerzo inútil que propone la escuela, como copiar de una enciclopedia.",
+            "c) Sirve para justificar la tristeza de los docentes ante los bajos sueldos."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: La cita de Ortega se utiliza para criticar el esfuerzo inútil que propone la escuela, como copiar de una enciclopedia, que conduce a la melancolía. Se contrapone a la resolución de problemas reales. Ubicación: Capítulo IV, página 77. [40, 42]"
+    },
+    {
+        "q": "354. Respecto a la Innovación Educativa, ¿cómo contribuye la política educativa al impulso del cambio?",
+        "options": [
+            "a) Dictando órdenes estrictas que prohíben la creatividad docente.",
+            "b) Debe crear condiciones y proporcionar medios, pero no suplir las funciones de los docentes.",
+            "c) Reemplazando a los maestros por máquinas de enseñanza programada."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Se deduce que la política educativa debe crear condiciones y proporcionar medios, pero no suplir las funciones de los intérpretes (docentes). Ubicación: Capítulo II, página 39. [43, 44]"
+    },
+    {
+        "q": "367. La incorporación de criterios de eficiencia introdujo unidades de tiempo intermedias. ¿Qué consecuencia estructural tuvo esto sobre la práctica educativa?",
+        "options": [
+            "a) La creación del recreo como única unidad de descanso legítima.",
+            "b) La consecuencia fue la creación del curso o grado, que reguló el tiempo global.",
+            "c) La división de la jornada escolar en tres turnos: mañana, tarde y noche."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: La consecuencia fue la creación del curso o grado, que estableció la regulación del tiempo global de la escolaridad en una sucesión de tramos ordenados como una escalera ascendente. Ubicación: Capítulo II, página 27 y Cap. III, 59-60. [44-47]"
+    },
+    {
+        "q": "376. Según María Clemente Linuesa, ¿qué papel cumplen las actividades en el ámbito del aula, más allá de generar aprendizaje?",
+        "options": [
+            "a) Sirven solo para mantener a los alumnos ocupados y en silencio.",
+            "b) Las actividades conforman la vida social del aula y diseñan la práctica.",
+            "c) Son herramientas para justificar el gasto en materiales de escritorio."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Las actividades conforman la vida social del aula y diseñan la práctica en un doble sentido: aprendizaje y vida social del aula. Articulan la propia práctica. Ubicación: Capítulo I, páginas 21-22. [44, 48]"
+    },
+    {
+        "q": "385. En el texto de Gimeno Sacristán, la operación de simplificación mediante categorías o tipologías para comprender la variedad humana cumple una función de:",
+        "options": [
+            "a) Fomentar la discriminación racial y de género en las escuelas.",
+            "b) Facilita el trato con los demás y acomoda las respuestas hacia los otros.",
+            "c) Preparar a los alumnos para los censos de población nacionales."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Facilita el trato con los demás y acomoda las respuestas hacia los otros. Si sé de qué categoría eres, me comporto contigo y espero de ti que actúes en esa dirección. Ubicación: Capítulo III, página 50. [44, 49]"
+    },
+    {
+        "q": "389. Aprender mediante proyectos, desde la perspectiva didáctica planteada, pretende colocar a los estudiantes en situaciones que los conduzcan a:",
+        "options": [
+            "a) Integrar en una problemática concreta destrezas y contenidos de diferentes áreas.",
+            "b) Memorizar una lista de 50 pasos para realizar cualquier tarea técnica.",
+            "c) Trabajar de forma aislada sin hablar con sus compañeros durante un mes."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Integrar en una problemática concreta destrezas y contenidos de diferentes áreas curriculares, desarrollando habilidades de investigación, resolución de problemas y trabajo en equipo. Ubicación: Capítulo IV, página 68. [23, 44]"
+    },
+    {
+        "q": "423. ¿Qué autor analiza prioritariamente el currículum real desde la sociología de la experiencia escolar y las desigualdades que reproduce?",
+        "options": [
+            "a) José Gimeno Sacristán.",
+            "b) María Clemente Linuesa.",
+            "c) Philippe Perrenoud."
+        ],
+        "correct": 2,
+        "retro": "Respuesta: Philippe Perrenoud analiza el currículum real desde la sociología de la experiencia escolar, examinando cómo la escuela produce desigualdades a través del currículum oculto. Ubicación: Capítulo V (passim). [50, 51]"
+    },
+    {
+        "q": "426. ¿Cuál de los siguientes enunciados ilustra mejor que la conciencia de los efectos de socialización escolar es más clara que la de los mecanismos que los producen?",
+        "options": [
+            "a) Los alumnos saben exactamente qué página del libro deben estudiar para el examen.",
+            "b) Las personas acusan a la escuela globalmente de laxitud sin indicar nada concreto.",
+            "c) El Ministerio publica anualmente los resultados de las pruebas de eficiencia."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Las personas que acusan a la escuela, lo hacen globalmente, sin indicar nada concreto, vituperando la laxitud o izquierdismo de los docentes. La conciencia de los efectos es más clara que la de los mecanismos. Ubicación: Capítulo V, página 98. [51, 52]"
+    },
+    {
+        "q": "429. Según «El currículum real y el trabajo escolar», ¿qué ocurre con los aprendizajes producidos por el currículum oculto una vez concluida la escolaridad?",
+        "options": [
+            "a) Se olvidan inmediatamente al salir por la puerta del establecimiento.",
+            "b) Producen efectos más allá de la escolaridad, pertinentes para la integración social.",
+            "c) Son reemplazados por los conocimientos técnicos adquiridos en el trabajo."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Producen efectos más allá de la escolaridad, pertinentes para la integración social en su sentido más amplio. La experiencia escolar es trasladable a otros tipos de organizaciones. Ubicación: Capítulo V, página 104. [51, 53]"
+    },
+    {
+        "q": "430. En \"Diseñar el currículum\", ¿qué argumento esgrimía Kirk (1989) frente a quienes objetaban las limitaciones del currículum común?",
+        "options": [
+            "a) Que el currículum común es inamovible y los profesores no deben cambiarlo.",
+            "b) Que sus posibles limitaciones serían resueltas con respuestas de los profesores.",
+            "c) Que la diversidad de los alumnos es un mito que no debe afectar el plan oficial."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Kirk defendía el currículum común argumentando que sus posibles limitaciones serían resueltas con respuestas de los profesores. Constituye una garantía para la igualdad y base de educación integral. Ubicación: Capítulo I, páginas 13-14. [20 context; 308]"
+    },
+    {
+        "q": "431. Se objeta que el currículum común no puede atender la diversidad. Desde Kirk, ¿cómo se responde?",
+        "options": [
+            "a) Si es un currículum de mínimos, deja ciertas cuotas o márgenes de decisión.",
+            "b) El currículum debe ser idéntico para todos sin ninguna excepción.",
+            "c) Los alumnos diversos deben ir a escuelas especiales fuera del currículum común."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Kirk respondía que sus posibles limitaciones serían resueltas con respuestas de los profesores en el quehacer profesional. Si es un currículum de mínimos, deja ciertas cuotas de decisión. Ubicación: Capítulo I, páginas 13-14. [20 context; 308]"
+    },
+    {
+        "q": "432. Una maestra planifica enfocándose exclusivamente en contenidos. ¿Qué dimensión esencial está omitiendo según Linuesa?",
+        "options": [
+            "a) La dimensión económica del costo de los libros.",
+            "b) La dimensión de que las actividades conforman la vida social del aula.",
+            "c) El cumplimiento de la carga horaria semanal estricta."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Está omitiendo la dimensión de que las actividades conforman la vida social del aula. Cuando las planteamos estamos diseñando la práctica en ese doble sentido: aprendizaje y vida social. Ubicación: Capítulo I, página 22. [42, 308/309]"
+    },
+    {
+        "q": "433. Una maestra plantea una actividad grupal solo para aprender un contenido. ¿Qué concepción limitada revela?",
+        "options": [
+            "a) Revela una concepción reduccionista de las actividades como solo generadoras de aprendizaje.",
+            "b) Una visión avanzada de la eficiencia educativa en el aula.",
+            "c) El cumplimiento estricto de las normas de convivencia del centro."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Revela una concepción reduccionista de las actividades, que las considera solo como generadoras de aprendizajes aislados, sin considerar que una actividad en grupo es una estructura de socialización. Ubicación: Capítulo I, página 18. [54, 55]"
+    },
+    {
+        "q": "434. El conocimiento escolar no equivale a la ciencia en abstracto. ¿Qué proceso explica esa diferencia?",
+        "options": [
+            "a) La burocratización de la enseñanza por parte del Estado.",
+            "b) La intermediación didáctica.",
+            "c) La falta de laboratorios científicos en las escuelas públicas."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: La intermediación didáctica. En la enseñanza no se transmite literatura o ciencia en abstracto, sino algo de todo eso modelado especialmente por los usos y contextos escolares. Ubicación: Capítulo II, página 30. [55-57]"
+    },
+    {
+        "q": "435. ¿Cuál es una miseria señalada sobre el libro de texto?",
+        "options": [
+            "a) Que su precio es muy elevado para las familias de clase baja.",
+            "b) El libro de texto es el último reductor de la experiencia en las aulas.",
+            "c) Que sus páginas se rompen con facilidad por el uso diario."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: El libro de texto es el último reductor de la experiencia en las aulas. Su uso dominante provoca que la cultura transmitida por la escuela sea considerada empobrecida. Ubicación: Capítulo VI, páginas 113-115. [4, 55, 58]"
+    },
+    {
+        "q": "436. Cuando se examina la formación del sentido común en la escuela, ¿qué limitación se reconoce?",
+        "options": [
+            "a) La escuela es la única instancia que puede formar el sentido común de forma válida.",
+            "b) La escuela no es condición necesaria para la formación del sentido común.",
+            "c) El sentido común no puede enseñarse, solo se adquiere por herencia genética."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: La escuela no es condición necesaria para la formación del sentido común, aunque está inscrito también en las prácticas escolares. El sentido común es difuso y está contenido en la menor práctica. Ubicación: Capítulo V, página 103. [55, 59]"
+    },
+    {
+        "q": "437. ¿Qué posición puede inferirse del análisis de Sacristán sobre los enfoques tecnocráticos?",
+        "options": [
+            "a) Sacristán los apoya porque aportan orden y claridad científica al currículum.",
+            "b) Critica los enfoques tecnocráticos porque esconden sus opciones culturales en argumentos técnicos.",
+            "c) Considera que son insuficientes pero necesarios para evaluar el desempeño docente."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Sacristán critica los enfoques tecnocráticos porque esconden sus opciones culturales, epistémicas y políticas en argumentos técnicos que poco aclaran los conflictos subyacentes. Ubicación: Capítulo II, página 40-41. [55, 60]"
+    },
+    {
+        "q": "460. ¿A qué se refieren las pruebas o actividades que tienen todas las características de la evaluación pero no dan lugar a nota?",
+        "options": [
+            "a) Son pérdidas de tiempo que el docente debe evitar para cubrir el programa.",
+            "b) Son ejercicios de transición entre el trabajo ordinario y la evaluación para nota.",
+            "c) Son castigos disciplinarios para los alumnos que no prestan atención."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Son ejercicios de transición entre el trabajo ordinario y la evaluación para nota. En determinadas clases el trabajo se presenta como una preparación para la evaluación. Ubicación: Capítulo V, página 92. [61, 62]"
+    },
+    {
+        "q": "463. ¿Qué consecuencia tiene que los maestros dispongan de distintos hábitos aunque hayan recibido la misma formación?",
+        "options": [
+            "a) Que todos imparten exactamente la misma enseñanza gracias al currículum formal.",
+            "b) Que los maestros no impartan, de hecho, la misma enseñanza, ni propongan el mismo currículum real.",
+            "c) Que el Ministerio deba unificar las metodologías mediante guías semanales obligatorias."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Que los maestros, encargados de aplicar el mismo currículum formal, no impartan, de hecho, la misma enseñanza, ni propongan el mismo currículum real. No disponen del mismo hábito. Ubicación: Capítulo V, página 93. [62, 63]"
+    },
+    {
+        "q": "464. ¿Qué condición distingue los casos en que la intermediación cultural logra preservar la calidad del conocimiento?",
+        "options": [
+            "a) El uso exclusivo de tecnología digital de última generación en el aula.",
+            "b) El juego de perspectivas entre la calidad cultural del profesorado y la de los textos.",
+            "c) La supervisión directa de científicos de la Universidad en cada clase de primaria."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: La calidad del contenido hecho realidad es el resultado de un proceso de juego de perspectivas entre la calidad cultural y pedagógica del profesorado y la de los textos y demás materiales. Ubicación: Capítulo II, página 32. [62, 64]"
+    },
+    {
+        "q": "465. ¿Qué implica que la escolarización no sea condición necesaria para la formación del sentido común?",
+        "options": [
+            "a) Que la escuela debería cerrarse porque los niños aprenden lo mismo en la calle.",
+            "b) Implica que el sentido común es difuso y está contenido en la menor práctica social.",
+            "c) Que solo los saberes académicos son importantes para la vida en sociedad."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Implica que el sentido común es difuso y está contenido en la menor práctica, la menor interacción, el más menudo objeto. Un niño que no asistiera a la escuela pensaría de manera similar. Ubicación: Capítulo V, página 103. [59, 62]"
+    },
+    {
+        "q": "467. ¿Qué crítica formula Feito sobre la recomendación de lecturas en secundaria?",
+        "options": [
+            "a) Critica que se descuida la lectura de libros de historia, química o matemáticas.",
+            "b) Critica que los libros de literatura son demasiado largos para los jóvenes actuales.",
+            "c) Sostiene que no se debería obligar a leer ningún libro fuera del horario de clase."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Critica que se descuida la lectura de libros de historia, de química o de matemáticas. Lo habitual es que, cuando se recomienda la lectura de libros, estos sean de literatura. Ubicación: Capítulo IV, página 77. [62, 65]"
+    },
+    {
+        "q": "468. ¿Qué argumento de Sacristán relativiza las críticas más rotundas sobre el libro de texto?",
+        "options": [
+            "a) Que son la única fuente de verdad absoluta y por eso deben mantenerse.",
+            "b) Se pregunta qué sería de la docencia si los profesores no contaran con este compañero insustituible.",
+            "c) Que las empresas editoriales generan muchos empleos que no deben perderse."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Sacristán se pregunta qué sería de la docencia si los profesores no contaran con este \"hermano\" y compañero insustituible para desarrollar los quehaceres en la educación. Ubicación: Capítulo VI, página 113. [289, 310/311]"
+    },
+    {
+        "q": "471. Según «El currículum real y el trabajo escolar», ¿qué recursos moviliza el docente para dar forma y sustancia al currículum real?",
+        "options": [
+            "a) Únicamente los formularios de asistencia y las actas de notas.",
+            "b) Moviliza lo que sabe, su formación didáctica y su cultura general.",
+            "c) Las sanciones disciplinarias para asegurar que nadie hable en clase."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: El docente moviliza lo que sabe para dar forma y sustancia al currículum real. Su formación didáctica le proporciona un método, pero su cultura general le permite encontrar ejemplos. Ubicación: Capítulo V, página 93. [63, 66]"
+    },
+    {
+        "q": "474. ¿Qué implica que la excelencia escolar se identifique con el ejercicio cualificado del oficio de alumno?",
+        "options": [
+            "a) Que los mejores alumnos son aquellos que memorizan el diccionario completo.",
+            "b) Implica que la evaluación consiste en asegurar que el alumno desempeñe su cometido adecuadamente.",
+            "c) Que la escuela solo premia el talento genético de los estudiantes superdotados."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Implica que la evaluación informal consiste en asegurar que el alumno aprenda y desempeñe su cometido de manera adecuada. El dominio de los saberes se empareja con las formas de un trabajo escolar. Ubicación: Capítulo V, página 107. [66, 67]"
+    },
+    {
+        "q": "475. En el texto de Innovación Educativa, ¿qué implica afirmar que la innovación es el resultado de un proceso acumulativo?",
+        "options": [
+            "a) Implica que la innovación no es un evento aislado, sino que se construye sobre cambios previos.",
+            "b) Que cada año se debe cambiar todo lo que se hizo el año anterior sin mirar atrás.",
+            "c) Que la innovación solo ocurre cuando se acumula suficiente presupuesto estatal."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: Implica que la innovación no es un evento aislado, sino un proceso que se construye sobre cambios previos. La innovación educativa lleva tiempo y nunca está totalmente acabada. Ubicación: Capítulo I y Capítulo II (passim). [66]"
+    },
+    {
+        "q": "476. ¿Qué implica asumir el principio de sospecha epistémica en el pensamiento pedagógico?",
+        "options": [
+            "a) Desconfiar de la honestidad de los alumnos durante los exámenes.",
+            "b) Implica que lo que la realidad propone como evidencia es solo la parte visible del iceberg.",
+            "c) Creer que todo lo que dicen los libros de texto es falso por naturaleza."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Implica que lo que la realidad nos propone como evidencia es solo la parte visible del iceberg. Debemos sospechar que la enseñanza no equivale al aprendizaje. Ubicación: Capítulo II, página 38. [66, 68]"
+    },
+    {
+        "q": "481. ¿Qué tensión revela la coexistencia de pruebas externas (competencias) y evaluaciones internas (memorístico)?",
+        "options": [
+            "a) Una armonía perfecta que garantiza la calidad total del sistema.",
+            "b) Revela la tensión entre dos concepciones de la educación: aplicación práctica vs memorización.",
+            "c) Un error de impresión en los manuales del Ministerio de Educación."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Revela la tensión entre dos concepciones de la educación: una que valora la aplicación práctica del conocimiento y otra que valora la memorización de datos. Ubicación: Capítulo IV, páginas 80-81. [66, 69, 70]"
+    },
+    {
+        "q": "482. Dos maestros con el mismo programa y formación producen aprendizajes distintos. ¿Qué explica este fenómeno según Perrenoud?",
+        "options": [
+            "a) La diferencia de sueldos que percibe cada uno según su categoría.",
+            "b) Los maestros no disponen del mismo hábito ni emplean los mismos esquemas generadores.",
+            "c) Que uno de los maestros tiene alumnos más inteligentes por naturaleza."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Aunque todos sean docentes y hayan recibido la misma formación, los maestros no disponen del mismo hábito, ni emplean en su enseñanza los mismos esquemas generadores de contenidos. Ubicación: Capítulo V, página 93. [231, 311/312]"
+    },
+    {
+        "q": "520. Quienes denuncian la intermediación didáctica como degradación intelectual parten de una premisa que el texto cuestiona. ¿Cuál es?",
+        "options": [
+            "a) La premisa es que la enseñanza consiste en enfrentar la mente inculta con las ideas mejor elaboradas.",
+            "b) Que los maestros no tienen capacidad para entender las ciencias complejas.",
+            "c) Que los niños solo deben aprender a leer y escribir y nada más."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: La premisa es que la enseñanza sustanciosa consiste en enfrentar la mente inculta con el espejo deslumbrante de las ideas mejor elaboradas. El texto cuestiona esta premisa. Ubicación: Capítulo II, página 32. [57, 71]"
+    },
+    {
+        "q": "521. La intermediación didáctica impone configuraciones específicas. ¿Qué tensión irresuelta genera?",
+        "options": [
+            "a) La tensión entre simplificar el conocimiento para enseñar y el riesgo de deformarlo.",
+            "b) El conflicto entre el sindicato de maestros y el Ministerio de Educación.",
+            "c) La falta de tiempo para cubrir todas las materias del quadrivium."
+        ],
+        "correct": 0,
+        "retro": "Respuesta: La tensión entre la necesidad de simplificar y adecuar el conocimiento para su enseñanza y el riesgo de deformarlo o empobrecerlo (caricaturas del saber). Ubicación: Capítulo II, página 32. [57, 71]"
+    },
+    {
+        "q": "522. La diversidad de denominaciones sobre los resultados del aprendizaje (conductas, competencias, etc.) ¿qué implica?",
+        "options": [
+            "a) Una confusión lingüística que debería ser resuelta por la Real Academia Española.",
+            "b) Implica que hay diferentes formas de valorar y nombrar los logros, reflejando distintas concepciones.",
+            "c) Que los pedagogos no se ponen de acuerdo porque no tienen una base científica sólida."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Implica que hay diferentes formas de valorar y nombrar los logros educativos (formación, competencias, asimilación cultural, etc.), lo que refleja diferentes concepciones de la educación. Ubicación: Capítulo II, páginas 41-42. [71, 72]"
+    },
+    {
+        "q": "523. En el texto sobre escolaridad obligatoria, se propone que diversificar la pedagogía tiene una condición sine qua non. ¿Cuál es?",
+        "options": [
+            "a) Que el presupuesto educativo aumente un 10% anualmente.",
+            "b) La condición es que la diferenciación no introduzca más desigualdad.",
+            "c) Que todos los maestros tengan el grado de Doctor en Pedagogía."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: La condición es que la diferenciación no introduzca más desigualdad. Diversificar en la escuela obligatoria, que tiene la meta de la igualdad, supone introducir fórmulas de compensación. Ubicación: Capítulo III, página 62. [71, 73]"
+    },
+    {
+        "q": "525. ¿Qué implicación tiene concebir la selección de contenidos como una opción cultural y no como una cuestión técnica?",
+        "options": [
+            "a) Implica que no se necesitan expertos técnicos en el Ministerio.",
+            "b) Implica que la selección refleja valores, ideologías y opciones sociales.",
+            "c) Que cada padre de familia puede elegir qué temas estudia su hijo cada día."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: Implica que la selección de contenidos no es un acto neutral, sino que refleja valores, ideologías y opciones sociales. Requiere una reflexión profunda sobre qué cultura se quiere transmitir. Ubicación: Capítulo I, página 20. [17, 71]"
+    },
+    {
+        "q": "527. ¿Qué paradoja emerge al relacionar \"la democracia se practica\" con la descripción del funcionamiento de las aulas de Feito Alonso?",
+        "options": [
+            "a) La paradoja de que los alumnos son más democráticos que sus propios maestros.",
+            "b) Que aunque debería practicarse, el funcionamiento habitual es autoritario y condena al silencio.",
+            "c) Que la democracia solo puede practicarse en el recreo pero no durante las clases de matemáticas."
+        ],
+        "correct": 1,
+        "retro": "Respuesta: La paradoja es que, aunque la democracia debería practicarse en la escuela, el funcionamiento habitual de las aulas es autoritario y no permite la participación democrática (condena al silencio). Ubicación: Capítulo IV, página 68. [159, 189, 312/313]"
+    },
+];
+    </script>
+    <script src="codes.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>

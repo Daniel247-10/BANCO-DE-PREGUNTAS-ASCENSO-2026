@@ -54,15 +54,22 @@
             const shuffledOptions = shuffleArray(originalOptions);
             const newCorrectIndex = shuffledOptions.indexOf(correctAnswer);
             
-            // Crear una copia del item con las opciones randomizadas
+            // Crear una copia del item con las opciones randomizadas y nuevos incisos
+            const incisos = ["a", "b", "c"];
+            const randomizedOptions = shuffledOptions.map(function(opt, idx) {
+                // Remover el inciso original si existe (a), b), c), A), B), C))
+                const textoSinInciso = opt.replace(/^[a-cA-C]\)\s*/, '');
+                return incisos[idx] + ") " + textoSinInciso;
+            });
+            
             const randomizedItem = {
                 q: item.q,
-                options: shuffledOptions,
+                options: randomizedOptions,
                 correct: newCorrectIndex,
                 retro: item.retro
             };
 
-            shuffledOptions.forEach(function (opt, idx) {
+            randomizedOptions.forEach(function (opt, idx) {
                 const li = document.createElement("li");
                 li.className = "option";
                 li.innerText = opt;
@@ -107,15 +114,22 @@
                 const shuffledOptions = shuffleArray(originalOptions);
                 const newCorrectIndex = shuffledOptions.indexOf(correctAnswer);
                 
-                // Crear una copia del item con las opciones randomizadas
+                // Crear una copia del item con las opciones randomizadas y nuevos incisos
+                const incisos = ["a", "b", "c"];
+                const randomizedOptions = shuffledOptions.map(function(opt, idx) {
+                    // Remover el inciso original si existe (a), b), c), A), B), C))
+                    const textoSinInciso = opt.replace(/^[a-cA-C]\)\s*/, '');
+                    return incisos[idx] + ") " + textoSinInciso;
+                });
+                
                 const randomizedItem = {
                     q: item.q,
-                    options: shuffledOptions,
+                    options: randomizedOptions,
                     correct: newCorrectIndex,
                     retro: item.retro
                 };
-                
-                shuffledOptions.forEach(function (opt, idx) {
+
+                randomizedOptions.forEach(function (opt, idx) {
                     const li = document.createElement("li");
                     li.className = "option";
                     li.innerText = opt;

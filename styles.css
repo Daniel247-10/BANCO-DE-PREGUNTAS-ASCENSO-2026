@@ -68,25 +68,41 @@ nav.hub a:hover {
 .study-tip {
     max-width: 860px;
     margin: 0 auto 24px;
-    background: #ffffff;
+    background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
     border-radius: 12px;
-    padding: 20px 24px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-    border-left: 6px solid #f6a623;
+    padding: 24px 28px;
+    box-shadow: 0 6px 25px rgba(246, 166, 35, 0.4);
+    border-left: 8px solid #ff6f00;
+    border-top: 3px solid #ff8f00;
+    animation: pulse-border 2s ease-in-out infinite;
+}
+
+@keyframes pulse-border {
+    0%, 100% {
+        border-left-color: #ff6f00;
+        box-shadow: 0 6px 25px rgba(246, 166, 35, 0.4);
+    }
+    50% {
+        border-left-color: #ff9800;
+        box-shadow: 0 6px 35px rgba(255, 152, 0, 0.6);
+    }
 }
 
 .study-tip h2 {
-    font-size: 1.3rem;
-    color: #f6a623;
-    margin-bottom: 12px;
+    font-size: 1.5rem;
+    color: #e65100;
+    margin-bottom: 14px;
     letter-spacing: 0.5px;
+    font-weight: 800;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .study-tip p {
-    font-size: 1rem;
-    color: #444;
-    line-height: 1.7;
+    font-size: 1.05rem;
+    color: #bf360c;
+    line-height: 1.8;
     margin: 0;
+    font-weight: 600;
 }
 
 #quiz-container {
@@ -711,18 +727,20 @@ body > .premium-badge:last-child {
 
     /* Consejo de Estudio responsive */
     .study-tip {
-        padding: 16px 18px;
+        padding: 18px 20px;
         margin-bottom: 18px;
     }
 
     .study-tip h2 {
-        font-size: 1.1rem;
+        font-size: 1.25rem;
         margin-bottom: 10px;
     }
 
     .study-tip p {
         font-size: 0.95rem;
         line-height: 1.6;
+        color: #bf360c;
+        font-weight: 600;
     }
 
 }

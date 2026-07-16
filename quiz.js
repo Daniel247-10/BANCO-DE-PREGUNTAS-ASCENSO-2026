@@ -38,6 +38,18 @@
     }
     window.speakText = speakText;
 
+    // Detener la síntesis de voz al cambiar de página, recargar o cerrar la pestaña/sesión.
+    // Sin esto, el audio sigue reproduciéndose aunque el usuario navegue a otra página
+    // o cierre la sesión, hasta que lo pause/detenga explícitamente.
+    function detenerVozAlSalir() {
+        if ('speechSynthesis' in window) {
+            try { window.speechSynthesis.cancel(); } catch (e) {}
+        }
+    }
+    window.addEventListener('beforeunload', detenerVozAlSalir);
+    window.addEventListener('pagehide', detenerVozAlSalir);
+    window.addEventListener('unload', detenerVozAlSalir);
+
     function shuffleArray(array) {
         const shuffled = array.slice();
         for (let i = shuffled.length - 1; i > 0; i--) {
@@ -55,8 +67,8 @@
             return;
         }
 
-        // Límite gratuito: solo se muestran las primeras 10 preguntas
-        const LIMITE_GRATIS = 10;
+        // Límite gratuito: solo se muestran las primeras 25 preguntas
+        const LIMITE_GRATIS = 25;
         const visibleCount = Math.min(window.quizData.length, LIMITE_GRATIS);
 
         for (let index = 0; index < visibleCount; index++) {

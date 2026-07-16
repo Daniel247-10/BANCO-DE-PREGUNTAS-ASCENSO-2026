@@ -996,4 +996,36 @@ body > .premium-badge:last-child {
         font-weight: 600;
     }
 
+    /* ===== Barra superior de descarga de PDF ===== */
+    .pdf-download-bar {
+        text-align: center;
+        margin-bottom: 18px;
+    }
+
+    .download-pdf-btn {
+        display: inline-block;
+        border: none;
+        background: linear-gradient(135deg, #e94e1b 0%, #c0392b 100%);
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 0.95rem;
+        letter-spacing: 0.5px;
+        padding: 12px 26px;
+        border-radius: 30px;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(192, 57, 43, 0.5);
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .download-pdf-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 22px rgba(192, 57, 43, 0.7);
+    }
+
+    .download-pdf-btn:disabled {
+        opacity: 0.6;
+        cursor: default;
+        transform: none;
+        box-shadow: none;
+    }
 }

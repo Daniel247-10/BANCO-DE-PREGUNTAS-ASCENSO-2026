@@ -45,10 +45,81 @@
         if ('speechSynthesis' in window) {
             try { window.speechSynthesis.cancel(); } catch (e) {}
         }
+        detenerKeepAlive();
     }
     window.addEventListener('beforeunload', detenerVozAlSalir);
     window.addEventListener('pagehide', detenerVozAlSalir);
     window.addEventListener('unload', detenerVozAlSalir);
+
+    // ---- Mantener el audio (TTS) activo cuando se apaga/bloquea la pantalla del celular ----
+    // En móviles, al apagarse la pantalla el navegador pausa speechSynthesis y el audio se detiene.
+    // Reproducimos un audio silencioso en bucle para conservar la sesión de audio del sistema y
+    // reanudamos automáticamente la voz si el navegador la pausa sin que el usuario lo haya pedido.
+    var keepAliveAudio = null;
+    var vozManualPausada = false;
+    var ultimoReanude = 0;
+
+    function crearAudioSilencio() {
+        try {
+            var sampleRate = 8000, duration = 1, numSamples = sampleRate * duration;
+            var buffer = new ArrayBuffer(44 + numSamples * 2);
+            var view = new DataView(buffer);
+            function writeString(offset, str) {
+                for (var i = 0; i < str.length; i++) view.setUint8(offset + i, str.charCodeAt(i));
+            }
+            writeString(0, 'RIFF');
+            view.setUint32(4, 36 + numSamples * 2, true);
+            writeString(8, 'WAVE');
+            writeString(12, 'fmt ');
+            view.setUint32(16, 16, true);
+            view.setUint16(20, 1, true);
+            view.setUint16(22, 1, true);
+            view.setUint32(24, sampleRate, true);
+            view.setUint32(28, sampleRate * 2, true);
+            view.setUint16(32, 2, true);
+            view.setUint16(34, 16, true);
+            writeString(36, 'data');
+            view.setUint32(40, numSamples * 2, true);
+            return URL.createObjectURL(new Blob([buffer], { type: 'audio/wav' }));
+        } catch (e) {
+            return null;
+        }
+    }
+
+    function iniciarKeepAlive() {
+        if (keepAliveAudio) return;
+        try {
+            var src = crearAudioSilencio();
+            if (!src) return;
+            keepAliveAudio = new Audio();
+            keepAliveAudio.src = src;
+            keepAliveAudio.loop = true;
+            keepAliveAudio.setAttribute('playsinline', '');
+            keepAliveAudio.setAttribute('webkit-playsinline', '');
+            keepAliveAudio.volume = 0;
+            var p = keepAliveAudio.play();
+            if (p && typeof p.catch === 'function') p.catch(function () {});
+        } catch (e) {}
+    }
+
+    function detenerKeepAlive() {
+        if (keepAliveAudio) {
+            try { keepAliveAudio.pause(); } catch (e) {}
+            try { if (keepAliveAudio.src) URL.revokeObjectURL(keepAliveAudio.src); } catch (e) {}
+            keepAliveAudio = null;
+        }
+    }
+
+    if ('speechSynthesis' in window) {
+        window.speechSynthesis.onpause = function () {
+            // Pausa automática del navegador (p. ej. pantalla apagada): reanudar la voz.
+            if (vozManualPausada) return;
+            var ahora = Date.now();
+            if (ahora - ultimoReanude < 500) return; // evitar bucle de pausa/reanudación
+            ultimoReanude = ahora;
+            try { window.speechSynthesis.resume(); } catch (e) {}
+        };
+    }
 
     function shuffleArray(array) {
         const shuffled = array.slice();
@@ -59,6 +130,183 @@
         return shuffled;
     }
 
+    // ---- Descarga de PDF (OFFLINE, sin dependencias externas) ----
+    function sanitizarNombre(texto) {
+        return (texto || "cuestionario")
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, "_")
+            .replace(/^_+|_+$/g, "")
+            .substring(0, 60) || "cuestionario";
+    }
+
+    function escapePDF(s) {
+        return String(s).replace(/\\/g, "\\\\").replace(/\(/g, "\\(").replace(/\)/g, "\\)");
+    }
+
+    function strToBytes(s) {
+        const b = new Uint8Array(s.length);
+        for (let i = 0; i < s.length; i++) b[i] = s.charCodeAt(i) & 0xff;
+        return b;
+    }
+
+    // Envuelve el texto en líneas que caben en maxW usando canvas (medición real)
+    function envolverTexto(texto, size, maxW) {
+        const canvas = document.createElement("canvas");
+        const ctx = canvas.getContext("2d");
+        ctx.font = size + "pt Helvetica";
+        const words = texto.split(/\s+/);
+        const lines = [];
+        let cur = "";
+        words.forEach(function (w) {
+            const test = cur ? cur + " " + w : w;
+            if (!cur || ctx.measureText(test).width <= maxW) {
+                cur = test;
+            } else {
+                lines.push(cur);
+                cur = w;
+            }
+        });
+        if (cur) lines.push(cur);
+        return lines.length ? lines : [""];
+    }
+
+    // Construye un PDF válido (A4) a partir de páginas de líneas {text,size,x,y}
+    function buildPDFBytes(pagesLines) {
+        const N = pagesLines.length;
+        const totalObjs = 3 + 2 * N;
+        const objStrings = new Array(totalObjs + 1);
+        objStrings[1] = "<< /Type /Catalog /Pages 2 0 R >>";
+        const kids = [];
+        for (let i = 0; i < N; i++) kids.push((4 + 2 * i) + " 0 R");
+        objStrings[2] = "<< /Type /Pages /Kids [ " + kids.join(" ") + " ] /Count " + N + " >>";
+        objStrings[3] = "<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>";
+
+        for (let i = 0; i < N; i++) {
+            const pn = 4 + 2 * i;
+            const cn = 5 + 2 * i;
+            objStrings[pn] = "<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] " +
+                "/Resources << /Font << /F1 3 0 R >> >> /Contents " + cn + " 0 R >>";
+            let stream = "";
+            pagesLines[i].forEach(function (line) {
+                stream += "BT\n/F1 " + line.size + " Tf\n" + line.x + " " + line.y + " Td\n(" +
+                    escapePDF(line.text) + ") Tj\nET\n";
+            });
+            const len = strToBytes(stream).length;
+            objStrings[cn] = "<< /Length " + len + " >>\nstream\n" + stream + "\nendstream";
+        }
+
+        const bytes = [];
+        let offset = 0;
+        function push(s) {
+            const b = strToBytes(s);
+            for (let i = 0; i < b.length; i++) bytes.push(b[i]);
+            offset += b.length;
+        }
+        push("%PDF-1.4\n");
+        const offsets = new Array(totalObjs + 1);
+        for (let n = 1; n <= totalObjs; n++) {
+            offsets[n] = offset;
+            push(n + " 0 obj\n" + objStrings[n] + "\nendobj\n");
+        }
+        const xrefStart = offset;
+        push("xref\n0 " + (totalObjs + 1) + "\n");
+        push("0000000000 65535 f \n");
+        for (let n = 1; n <= totalObjs; n++) {
+            push(("0000000000" + offsets[n]).slice(-10) + " 00000 n \n");
+        }
+        push("trailer\n<< /Size " + (totalObjs + 1) + " /Root 1 0 R >>\n");
+        push("startxref\n" + xrefStart + "\n%%EOF\n");
+        return new Uint8Array(bytes);
+    }
+
+    function generarPDF(btn, container) {
+        if (btn) {
+            btn.disabled = true;
+            btn.innerHTML = "Generando PDF...";
+        }
+        try {
+            const pageW = 612, pageH = 792, margin = 40;
+            const maxW = pageW - margin * 2;
+            const h1 = document.querySelector("header h1");
+            const titulo = h1 ? h1.innerText : "Cuestionario";
+
+            const rawLines = [];
+            envolverTexto(titulo, 14, maxW).forEach(function (t) {
+                rawLines.push({ text: t, size: 14 });
+            });
+            rawLines.push({ text: "", size: 11 });
+
+            const cards = container.querySelectorAll(".question-card");
+            cards.forEach(function (card) {
+                const qEl = card.querySelector(".question-text");
+                const qText = qEl ? qEl.innerText : "";
+                const idx = parseInt(card.dataset.correctIndex, 10);
+                const opciones = card.querySelectorAll(".option");
+                const respRaw = opciones[idx] ? opciones[idx].innerText : "";
+                const resp = respRaw.replace(/^[a-cA-C]\)\s*/, "");
+                const bloque = qText + "\nRespuesta: " + resp;
+                bloque.split("\n").forEach(function (parrafo) {
+                    envolverTexto(parrafo, 11, maxW).forEach(function (t) {
+                        rawLines.push({ text: t, size: 11 });
+                    });
+                });
+                rawLines.push({ text: "", size: 11 });
+            });
+
+            const leading = { 14: 20, 11: 15 };
+            const pagesLines = [];
+            let curPage = [];
+            let y = pageH - margin;
+            rawLines.forEach(function (line) {
+                const lh = leading[line.size] || 15;
+                if (y - lh < margin) {
+                    pagesLines.push(curPage);
+                    curPage = [];
+                    y = pageH - margin;
+                }
+                curPage.push({ text: line.text, size: line.size, x: margin, y: y });
+                y -= lh;
+            });
+            if (curPage.length) pagesLines.push(curPage);
+
+            const pdfBytes = buildPDFBytes(pagesLines);
+            const blob = new Blob([pdfBytes], { type: "application/pdf" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = sanitizarNombre(titulo) + ".pdf";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+            if (btn) {
+                btn.disabled = false;
+                btn.innerHTML = "&#11015; Descargar PDF (preguntas y respuestas)";
+            }
+        } catch (err) {
+            console.error("Error al generar PDF:", err);
+            alert("No se pudo generar el PDF.");
+            if (btn) {
+                btn.disabled = false;
+                btn.innerHTML = "&#11015; Descargar PDF (preguntas y respuestas)";
+            }
+        }
+    }
+
+    function agregarBotonPDF(container) {
+        const bar = document.createElement("div");
+        bar.className = "pdf-download-bar";
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "download-pdf-btn";
+        btn.innerHTML = "&#11015; Descargar PDF (preguntas y respuestas)";
+        btn.addEventListener("click", function () {
+            generarPDF(btn, container);
+        });
+        bar.appendChild(btn);
+        container.insertBefore(bar, container.firstChild);
+    }
+
     function renderQuiz() {
         const container = document.getElementById("quiz-container");
         if (!container) return;
@@ -67,9 +315,11 @@
             return;
         }
 
-        // Límite gratuito: solo se muestran las primeras 25 preguntas
-        const LIMITE_GRATIS = 25;
-        const visibleCount = Math.min(window.quizData.length, LIMITE_GRATIS);
+        // Barra superior con el botón de descarga de PDF (preguntas + respuestas)
+        agregarBotonPDF(container);
+
+        // Modo libre: se muestran TODAS las preguntas sin límite ni restricción de acceso.
+        const visibleCount = window.quizData.length;
 
         for (let index = 0; index < visibleCount; index++) {
             const item = window.quizData[index];
@@ -124,98 +374,6 @@
 
             card.dataset.correctIndex = newCorrectIndex;
             container.appendChild(card);
-        }
-
-        // Si el usuario ya desbloqueó PREMIUM, mostramos todo el cuestionario
-        const desbloqueado = (function () {
-            try { return localStorage.getItem("premiumUnlocked") === "1"; }
-            catch (e) { return false; }
-        })();
-
-        if (desbloqueado) {
-            // Render completo sin límite, continuando desde la pregunta 11
-            for (let index = LIMITE_GRATIS; index < window.quizData.length; index++) {
-                const item = window.quizData[index];
-                const card = document.createElement("div");
-                card.className = "question-card";
-                const qText = document.createElement("div");
-                qText.className = "question-text";
-                qText.innerHTML = "<strong>" + item.q + "</strong>";
-                card.appendChild(qText);
-                const list = document.createElement("ul");
-                list.className = "options-list";
-                
-                // Randomizar opciones y rastrear la nueva posición de la respuesta correcta
-                const originalOptions = item.options.slice();
-                const correctAnswer = originalOptions[item.correct];
-                const shuffledOptions = shuffleArray(originalOptions);
-                const newCorrectIndex = shuffledOptions.indexOf(correctAnswer);
-                
-                // Crear una copia del item con las opciones randomizadas y nuevos incisos
-                const incisos = ["a", "b", "c"];
-                const randomizedOptions = shuffledOptions.map(function(opt, idx) {
-                    // Remover el inciso original si existe (a), b), c), A), B), C))
-                    const textoSinInciso = opt.replace(/^[a-cA-C]\)\s*/, '');
-                    return incisos[idx] + ") " + textoSinInciso;
-                });
-                
-                const randomizedItem = {
-                    q: item.q,
-                    options: randomizedOptions,
-                    correct: newCorrectIndex,
-                    retro: item.retro
-                };
-
-                randomizedOptions.forEach(function (opt, idx) {
-                    const li = document.createElement("li");
-                    li.className = "option";
-                    li.innerText = opt;
-                    li.addEventListener("click", function () {
-                        responder(list, li, idx, randomizedItem, index);
-                    });
-                    list.appendChild(li);
-                });
-                card.appendChild(list);
-                const fb = document.createElement("div");
-                fb.id = "fb-" + index;
-                fb.className = "feedback";
-                card.appendChild(fb);
-                card.dataset.correctIndex = newCorrectIndex;
-                container.appendChild(card);
-            }
-        } else if (window.quizData.length > LIMITE_GRATIS) {
-            const lock = document.createElement("div");
-            lock.className = "premium-lock";
-            lock.innerHTML =
-                "<h3>SOLICITA TU ACCESO PREMIUN</h3>" +
-                "<p>Has explorado tus " + LIMITE_GRATIS + " preguntas gratis de este cuestionario.</p>" +
-                "<div class='code-box'>" +
-                "<input type='text' id='codeInput' maxlength='4' placeholder='Código (4 caracteres)' autocomplete='off'>" +
-                "<button type='button' id='codeBtn'>Desbloquear</button>" +
-                "<div id='codeMsg' class='code-msg'></div>" +
-                "</div>" +
-                "<a class=\"modal-wa\" href=\"https://wa.link/kmeemk\" target=\"_blank\" rel=\"noopener\">Solicitar código por WhatsApp</a>";
-            container.appendChild(lock);
-
-            const input = document.getElementById("codeInput");
-            const btn = document.getElementById("codeBtn");
-            const msg = document.getElementById("codeMsg");
-
-            function intentar() {
-                const val = (input.value || "").trim().toUpperCase();
-                const lista = window.PREMIUM_CODES || [];
-                if (val.length === 4 && lista.indexOf(val) !== -1) {
-                    try { localStorage.setItem("premiumUnlocked", "1"); } catch (e) {}
-                    location.reload();
-                } else {
-                    msg.textContent = "Código no válido. Solicítalo por WhatsApp.";
-                    msg.style.color = "#dc3545";
-                }
-            }
-            btn.addEventListener("click", intentar);
-            input.addEventListener("keydown", function (e) {
-                if (e.key === "Enter") intentar();
-            });
         }
 
         // Pie de cuestionario: botón Finalizar (muestra % de aciertos) e Inicio
@@ -285,6 +443,8 @@
                 cards.forEach(function (c) { c.classList.remove("audio-active"); });
                 audioActivo = false;
                 audioPausado = false;
+                vozManualPausada = false;
+                detenerKeepAlive();
                 audioBtn.innerHTML = "&#128266; Audio";
                 return;
             }
@@ -343,16 +503,20 @@
                 window.speechSynthesis.cancel();
                 audioActivo = true;
                 audioPausado = false;
+                vozManualPausada = false;
+                iniciarKeepAlive();
                 audioBtn.innerHTML = "&#9208; Pausar";
                 procesarPaso();
             } else if (audioPausado) {
                 // Reanudar desde donde quedó
                 audioPausado = false;
+                vozManualPausada = false;
                 audioBtn.innerHTML = "&#9208; Pausar";
                 window.speechSynthesis.resume();
             } else {
-                // Pausar
+                // Pausar (pausa manual: no debe reanudarse solo)
                 audioPausado = true;
+                vozManualPausada = true;
                 audioBtn.innerHTML = "&#9654; Continuar";
                 window.speechSynthesis.pause();
             }

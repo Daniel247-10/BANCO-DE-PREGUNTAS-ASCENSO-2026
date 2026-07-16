@@ -17,6 +17,7 @@ function makeEl(tag) {
         innerHTML: '',
         innerText: '',
         _listeners: {},
+        dataset: {},
         classList: {
             _s: new Set(),
             add(c){ this._s.add(c); },
@@ -24,6 +25,13 @@ function makeEl(tag) {
             contains(c){ return this._s.has(c); }
         },
         appendChild(c){ this.children.push(c); return c; },
+        insertBefore(node, ref){
+            if (!ref) { this.children.push(node); return node; }
+            const i = this.children.indexOf(ref);
+            if (i === -1) { this.children.push(node); }
+            else { this.children.splice(i, 0, node); }
+            return node;
+        },
         addEventListener(ev, fn){ this._listeners[ev] = fn; },
         scrollIntoView(){},
         querySelectorAll(sel){
@@ -68,7 +76,7 @@ function runQuiz(premium) {
         body: { style: {} },
         addEventListener(){}
     };
-    const windowMock = { quizData: quizData, PREMIUM_CODES: ["TEST"] };
+    const windowMock = { quizData: quizData, PREMIUM_CODES: ["TEST"], addEventListener(){} };
     const localStorageMock = {
         _d: premium ? { premiumUnlocked: "1" } : {},
         getItem(k){ return this._d[k] || null; },
@@ -98,6 +106,7 @@ let cards = r.container.children.filter(c => c.className === 'question-card');
 check('renders exactly 10 free cards', cards.length === 10);
 check('each card has 3 options', cards.every(c => c.querySelectorAll('.option').length === 3));
 check('each card has a feedback div', cards.every(c => c.querySelectorAll('.feedback').length === 1));
+check('pdf download bar present at top', r.container.children.some(c => c.className === 'pdf-download-bar'));
 check('finalizar button created', !!r.byId['finalizarBtn']);
 
 // Answer first question by clicking option 0

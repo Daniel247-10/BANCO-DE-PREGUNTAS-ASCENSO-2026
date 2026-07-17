@@ -99,106 +99,16 @@
     <script>
     (function () {
         "use strict";
-        var FREE_LIMIT = 50;
-        var KEY_PREMIUM = "premiumUnlocked";
-        var KEY_COUNT = "separatedFreeCount";
-
-        function isPremium() {
-            try { return localStorage.getItem(KEY_PREMIUM) === "1"; } catch (e) { return false; }
+        // MODO LIBRE: acceso ilimitado sin código de activación PREMIUM.
+        // Se desactiva el límite de 50 cuestionarios y el modal de código.
+        var info = document.getElementById("freeInfo");
+        if (info) {
+            info.innerHTML = "✅ <strong>MODO PREMIUM ACTIVO</strong> — Acceso ilimitado a todos los cuestionarios.";
+            info.classList.add("premium-active");
         }
-        function getCount() {
-            try { return parseInt(localStorage.getItem(KEY_COUNT) || "0", 10) || 0; } catch (e) { return 0; }
-        }
-        function setCount(n) {
-            try { localStorage.setItem(KEY_COUNT, String(n)); } catch (e) {}
-        }
-        function validCode(code) {
-            code = (code || "").trim().toUpperCase();
-            return Array.isArray(window.PREMIUM_CODES) && window.PREMIUM_CODES.indexOf(code) !== -1;
-        }
-
-        // Todos los cuestionarios (partes 1-25 y separados) comparten el mismo límite.
-        var links = Array.prototype.slice.call(document.querySelectorAll("nav.hub a"));
-
-        function updateInfo() {
-            var info = document.getElementById("freeInfo");
-            if (!info) return;
-            if (isPremium()) {
-                info.innerHTML = "✅ <strong>MODO PREMIUM ACTIVO</strong> — Acceso ilimitado a todos los cuestionarios.";
-                info.classList.add("premium-active");
-            } else {
-                var remaining = Math.max(0, FREE_LIMIT - getCount());
-                info.innerHTML = "🎁 Tienes <strong>" + remaining + " acceso(s) gratuito(s)</strong> en todos los cuestionarios. " +
-                    "Activa la versión <strong>PREMIUM</strong> para acceso ilimitado.";
-                info.classList.remove("premium-active");
-            }
-        }
-
-        function showModal() {
-            var m = document.getElementById("premiumModal");
-            if (m) m.classList.add("active");
-        }
-        function hideModal() {
-            var m = document.getElementById("premiumModal");
-            if (m) m.classList.remove("active");
-        }
-
-        function activatePremium() {
-            try { localStorage.setItem(KEY_PREMIUM, "1"); } catch (e) {}
-            hideModal();
-            updateInfo();
-        }
-
-        // Interceptar clics en todos los cuestionarios
-        links.forEach(function (link) {
-            link.addEventListener("click", function (e) {
-                if (isPremium()) return; // acceso total
-                var count = getCount();
-                if (count < FREE_LIMIT) {
-                    setCount(count + 1);
-                    updateInfo();
-                    return; // permitir navegación
-                }
-                // Límite alcanzado
-                e.preventDefault();
-                showModal();
-            });
-        });
-
-        // Lógica del modal premium
+        // Asegurar que el modal de activación nunca se muestre.
         var modal = document.getElementById("premiumModal");
-        if (modal) {
-            var closeBtn = document.getElementById("modalClose");
-            var codeInput = document.getElementById("modalCodeInput");
-            var codeBtn = document.getElementById("modalCodeBtn");
-            var codeMsg = document.getElementById("modalCodeMsg");
-
-            if (closeBtn) closeBtn.addEventListener("click", hideModal);
-            modal.addEventListener("click", function (e) {
-                if (e.target === modal) hideModal();
-            });
-
-            function tryActivate() {
-                if (!codeInput) return;
-                if (validCode(codeInput.value)) {
-                    codeMsg.style.color = "#155724";
-                    codeMsg.textContent = "¡Código correcto! Activando PREMIUM...";
-                    activatePremium();
-                } else {
-                    codeMsg.style.color = "#c62828";
-                    codeMsg.textContent = "Código inválido. Verifícalo u obtén uno por WhatsApp.";
-                }
-            }
-            if (codeBtn) codeBtn.addEventListener("click", tryActivate);
-            if (codeInput) {
-                codeInput.addEventListener("keydown", function (e) {
-                    if (e.key === "Enter") tryActivate();
-                });
-            }
-        }
-
-        // Estado inicial
-        updateInfo();
+        if (modal) modal.parentNode && modal.parentNode.removeChild(modal);
     })();
     </script>
 

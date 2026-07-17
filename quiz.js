@@ -533,10 +533,16 @@
         const fb = document.getElementById("fb-" + index);
         fb.style.display = "block";
 
+        // Fuente / referencia bibliográfica: se muestra SIEMPRE,
+        // tanto si la respuesta es correcta como si es incorrecta.
+        const fuente = item.retro
+            ? "<div class='feedback-source'>&#128218; Fuente: " + item.retro + "</div>"
+            : "";
+
         if (idxElegido === item.correct) {
             liSeleccionado.classList.add("selected-correct");
             fb.className = "feedback correct";
-            fb.innerHTML = "<strong>&iexcl;Correcto!</strong> " + (item.retro || "");
+            fb.innerHTML = "<strong>&iexcl;Correcto!</strong>" + fuente;
         } else {
             liSeleccionado.classList.add("selected-incorrect");
             todas[item.correct].classList.add("show-correct");
@@ -544,8 +550,7 @@
             fb.innerHTML =
                 "<strong>&iexcl;Incorrecto!</strong> La respuesta correcta es: <em>" +
                 item.options[item.correct] +
-                "</em>.<br>" +
-                (item.retro ? "<br>" + item.retro : "");
+                "</em>." + fuente;
         }
 
         aciertos[index] = (idxElegido === item.correct);

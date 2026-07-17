@@ -435,6 +435,20 @@ nav.hub a:hover {
     border: 1px solid #ffeeba;
 }
 
+/* Fuente / referencia bibliográfica mostrada en la retroalimentación
+   (visible tanto si la respuesta es correcta como incorrecta) */
+.feedback-source {
+    margin-top: 8px;
+    padding: 8px 10px;
+    background: rgba(30, 60, 114, 0.06);
+    border-left: 3px solid #1e3c72;
+    border-radius: 4px;
+    font-size: 0.88rem;
+    font-style: italic;
+    color: #1e3c72;
+    line-height: 1.45;
+}
+
 .back-link {
     display: block;
     text-align: center;

@@ -103,6 +103,30 @@ nav.hub a:hover {
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
 }
 
+.separated-quizzes a {
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.separated-free-info {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #1e3c72;
+    background: #eaf1fb;
+    border: 1px solid #cfe0f7;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+
+.separated-free-info.premium-active {
+    color: #5a2d00;
+    background: linear-gradient(135deg, #fff3cd 0%, #ffe9a8 100%);
+    border-color: #f6a623;
+}
+
 /* ===== Colores individuales para cada categoría ===== */
 .separated-quizzes .btn-neurociencia {
     background: #e3f2fd;
@@ -982,11 +1006,15 @@ body > .premium-badge:last-child {
     }
 
     .separated-quizzes a {
-        min-height: 48px;
-        padding: 12px 6px;
-        font-size: 0.8rem;
-        line-height: 1.15;
+        min-height: auto;
+        padding: 10px 6px;
+        font-size: 0.78rem;
+        line-height: 1.1;
+        text-align: center;
+        white-space: normal;
         overflow-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
     }
 
     /* Consejo de Estudio responsive */

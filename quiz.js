@@ -14,6 +14,66 @@
 
     var aciertos = {};   // registro de respuestas: index -> true/false
 
+    // ---- Orden de cuestionarios (debe coincidir con index.html) ----
+    // Se usa para mostrar el siguiente cuestionario al finalizar.
+    var QUIZ_ORDER = [
+        { file: "parte1.html", name: "PARTE 1" },
+        { file: "parte2.html", name: "PARTE 2" },
+        { file: "parte3.html", name: "PARTE 3" },
+        { file: "parte4.html", name: "PARTE 4" },
+        { file: "parte5.html", name: "PARTE 5" },
+        { file: "parte6.html", name: "PARTE 6" },
+        { file: "parte7.html", name: "PARTE 7" },
+        { file: "parte8.html", name: "PARTE 8" },
+        { file: "parte9.html", name: "PARTE 9" },
+        { file: "parte10.html", name: "PARTE 10" },
+        { file: "parte11.html", name: "PARTE 11" },
+        { file: "parte12.html", name: "PARTE 12" },
+        { file: "parte13.html", name: "PARTE 13" },
+        { file: "parte14.html", name: "PARTE 14" },
+        { file: "parte15.html", name: "PARTE 15" },
+        { file: "parte16.html", name: "PARTE 16" },
+        { file: "parte17.html", name: "PARTE 17" },
+        { file: "parte18.html", name: "PARTE 18" },
+        { file: "parte19.html", name: "PARTE 19" },
+        { file: "parte20.html", name: "PARTE 20" },
+        { file: "parte21.html", name: "PARTE 21" },
+        { file: "parte22.html", name: "PARTE 22" },
+        { file: "parte23.html", name: "PARTE 23" },
+        { file: "parte24.html", name: "PARTE 24" },
+        { file: "parte25.html", name: "PARTE 25" },
+        { file: "Neurociencia1.html", name: "NEUROCIENCIA I" },
+        { file: "Neurociencia2.html", name: "NEUROCIENCIA II" },
+        { file: "Estilos_Aprendizaje.html", name: "ESTILOS APRENDIZAJE I" },
+        { file: "Estilos_Aprendizaje2.html", name: "ESTILOS APRENDIZAJE II" },
+        { file: "Estilos_Aprendizaje3.html", name: "ESTILOS APRENDIZAJE III" },
+        { file: "Innovación_UNESCO.html", name: "INNOVACIÓN UNESCO I" },
+        { file: "Innovación_UNESCO2.html", name: "INNOVACIÓN UNESCO II" },
+        { file: "diseño_innovacion.html", name: "DISEÑO INNOVACIÓN I" },
+        { file: "diseño_innovacion2.html", name: "DISEÑO INNOVACIÓN II" },
+        { file: "diseño_innovacion3.html", name: "DISEÑO INNOVACIÓN III" },
+        { file: "diseño_innovacion4.html", name: "DISEÑO INNOVACIÓN IV" },
+        { file: "diseño_innovacion5.html", name: "DISEÑO INNOVACIÓN V" },
+        { file: "diseño_innovacion6.html", name: "DISEÑO INNOVACIÓN VI" },
+        { file: "escalafon.html", name: "ESCALAFÓN" },
+        { file: "faltas_sanciones.html", name: "FALTAS Y SANCIONES" },
+        { file: "identificacion_violencia.html", name: "IDENTIFICACIÓN VIOLENCIA" },
+        { file: "Ley_discapacidad.html", name: "LEY DISCAPACIDAD" },
+        { file: "protocolo_prevencion.html", name: "PROTOCOLO PREVENCIÓN" },
+        { file: "reglamento inclusión.html", name: "REGLAMENTO INCLUSIÓN" }
+    ];
+
+    // Devuelve el siguiente cuestionario según el archivo actual.
+    function obtenerSiguienteCuestionario() {
+        var archivo = (window.location.pathname || "").split("/").pop();
+        for (var i = 0; i < QUIZ_ORDER.length; i++) {
+            if (QUIZ_ORDER[i].file === archivo) {
+                return QUIZ_ORDER[i + 1] || null;
+            }
+        }
+        return null;
+    }
+
     // Función de texto a voz
     function speakText(text, callback) {
         if ('speechSynthesis' in window) {
@@ -383,7 +443,8 @@
             "<button type='button' id='finalizarBtn'>Finalizar</button>" +
             "<button type='button' id='audioControlBtn'>&#128266; Audio</button>" +
             "<a href='index.html' class='inicio-btn'>&larr; Inicio</a>" +
-            "<div id='resultadoFinal' class='resultado-final'></div>";
+            "<div id='resultadoFinal' class='resultado-final'></div>" +
+            "<div id='siguienteQuiz' class='siguiente-quiz'></div>";
         container.appendChild(footer);
 
         document.body.style.paddingBottom = "80px";
@@ -401,6 +462,22 @@
             rFinal.innerHTML = "Acertaste " + correctas + " de " + respondidas +
                 " pregunta(s) respondida(s) &mdash; " + pct + "% de aciertos";
             rFinal.scrollIntoView({ behavior: "smooth", block: "center" });
+
+            // Mostrar el siguiente cuestionario disponible.
+            const sigQuiz = document.getElementById("siguienteQuiz");
+            if (sigQuiz) {
+                const sig = obtenerSiguienteCuestionario();
+                sigQuiz.style.display = "block";
+                if (sig) {
+                    sigQuiz.innerHTML =
+                        "<span class='siguiente-quiz-label'>SIGUIENTE CUESTIONARIO</span>" +
+                        "<a class='siguiente-quiz-link' href='" + encodeURI(sig.file) + "'>" +
+                        sig.name + "</a>";
+                } else {
+                    sigQuiz.innerHTML =
+                        "<span class='siguiente-quiz-label'>Has completado el último cuestionario disponible.</span>";
+                }
+            }
         });
 
         // Botón de audio: lee preguntas, señala la respuesta correcta

@@ -859,6 +859,47 @@ body > .premium-badge:last-child {
     font-weight: 700;
 }
 
+/* Bloque del siguiente cuestionario (aparece al finalizar) */
+.siguiente-quiz {
+    flex-basis: 100%;
+    display: none;
+    margin-top: 10px;
+    padding: 14px 18px;
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.siguiente-quiz-label {
+    display: block;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.siguiente-quiz-link {
+    display: inline-block;
+    margin-top: 2px;
+    padding: 8px 22px;
+    background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(30, 60, 114, 0.5);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.siguiente-quiz-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 22px rgba(30, 60, 114, 0.7);
+}
+
 /* ===== Diseño responsive para celulares ===== */
 @media (max-width: 600px) {
     body {

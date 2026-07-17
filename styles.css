@@ -55,6 +55,9 @@ nav.hub a {
     border-radius: 10px;
     font-weight: 700;
     font-size: 1rem;
+    min-width: 0;
+    overflow-wrap: break-word;
+    text-align: center;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     transition: transform 0.15s ease, background 0.15s ease;
 }
@@ -97,7 +100,7 @@ nav.hub a:hover {
 }
 
 .separated-quizzes {
-    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
 }
 
 /* ===== Colores individuales para cada categoría ===== */
@@ -974,8 +977,16 @@ body > .premium-badge:last-child {
     }
 
     .separated-quizzes {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
         gap: 8px;
+    }
+
+    .separated-quizzes a {
+        min-height: 48px;
+        padding: 12px 6px;
+        font-size: 0.8rem;
+        line-height: 1.15;
+        overflow-wrap: break-word;
     }
 
     /* Consejo de Estudio responsive */
@@ -1027,5 +1038,18 @@ body > .premium-badge:last-child {
         cursor: default;
         transform: none;
         box-shadow: none;
+    }
+}
+
+/* ===== Móviles muy estrechos: una sola columna en sección separada ===== */
+@media (max-width: 380px) {
+    .separated-quizzes {
+        grid-template-columns: 1fr;
+    }
+
+    .separated-quizzes a {
+        font-size: 0.95rem;
+        padding: 14px 10px;
+        min-height: 50px;
     }
 }

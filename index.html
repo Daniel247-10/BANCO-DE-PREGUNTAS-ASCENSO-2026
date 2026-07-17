@@ -134,15 +134,6 @@
             }
         }
 
-        function showBadge() {
-            if (document.getElementById("premiumBadgeSep")) return;
-            var b = document.createElement("div");
-            b.id = "premiumBadgeSep";
-            b.className = "premium-badge";
-            b.textContent = "★ MODO PREMIUM ACTIVO";
-            document.body.appendChild(b);
-        }
-
         function showModal() {
             var m = document.getElementById("premiumModal");
             if (m) m.classList.add("active");
@@ -155,7 +146,6 @@
         function activatePremium() {
             try { localStorage.setItem(KEY_PREMIUM, "1"); } catch (e) {}
             hideModal();
-            showBadge();
             updateInfo();
         }
 
@@ -208,7 +198,6 @@
         }
 
         // Estado inicial
-        if (isPremium()) showBadge();
         updateInfo();
     })();
     </script>

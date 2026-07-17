@@ -100,13 +100,19 @@ nav.hub a:hover {
 }
 
 .separated-quizzes {
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
 .separated-quizzes a {
     white-space: normal;
-    word-break: break-word;
-    overflow-wrap: break-word;
+    font-size: 0.8rem;
+    min-width: 0;
+    flex: 1 1 150px;
+    max-width: 200px;
+    line-height: 1.2;
 }
 
 .separated-free-info {
@@ -1001,20 +1007,15 @@ body > .premium-badge:last-child {
     }
 
     .separated-quizzes {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
         gap: 8px;
     }
 
     .separated-quizzes a {
-        min-height: auto;
-        padding: 10px 6px;
-        font-size: 0.78rem;
+        padding: 10px 8px;
+        font-size: 0.68rem;
         line-height: 1.1;
         text-align: center;
         white-space: normal;
-        overflow-wrap: break-word;
-        word-break: break-word;
-        hyphens: auto;
     }
 
     /* Consejo de Estudio responsive */
@@ -1071,13 +1072,9 @@ body > .premium-badge:last-child {
 
 /* ===== Móviles muy estrechos: una sola columna en sección separada ===== */
 @media (max-width: 380px) {
-    .separated-quizzes {
-        grid-template-columns: 1fr;
-    }
-
     .separated-quizzes a {
-        font-size: 0.95rem;
-        padding: 14px 10px;
-        min-height: 50px;
+        font-size: 0.72rem;
+        padding: 12px 10px;
+        white-space: normal;
     }
 }
